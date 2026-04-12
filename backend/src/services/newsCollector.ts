@@ -11,9 +11,19 @@ const parser = new Parser({
 });
 
 const RSS_SOURCES = [
+  // 日本語ソース
   { name: 'nhk_business', url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
-  { name: 'imf_news', url: 'https://www.imf.org/en/News/RSS', source: 'imf' },
   { name: 'boj', url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
+  { name: 'nikkei', url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
+  // 海外ソース
+  { name: 'reuters', url: 'https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best', source: 'reuters' },
+  { name: 'cnbc', url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
+  { name: 'bloomberg', url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
+  { name: 'marketwatch', url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
+  { name: 'ft', url: 'https://www.ft.com/rss/home', source: 'ft' },
+  // 国際機関
+  { name: 'imf', url: 'https://www.imf.org/en/News/RSS', source: 'imf' },
+  { name: 'worldbank', url: 'https://feeds.worldbank.org/rss/topic/poverty', source: 'worldbank' },
 ];
 
 interface RawArticle {

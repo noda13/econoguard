@@ -64,9 +64,19 @@ function scoreToLevel(s: number): string {
 
 // --- News ---
 const RSS_SOURCES = [
+  // 日本語ソース
   { url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
-  { url: 'https://www.imf.org/en/News/RSS', source: 'imf' },
   { url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
+  { url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
+  // 海外ソース
+  { url: 'https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best', source: 'reuters' },
+  { url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
+  { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
+  { url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
+  { url: 'https://www.ft.com/rss/home', source: 'ft' },
+  // 国際機関
+  { url: 'https://www.imf.org/en/News/RSS', source: 'imf' },
+  { url: 'https://feeds.worldbank.org/rss/topic/poverty', source: 'worldbank' },
 ];
 
 async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
