@@ -55,7 +55,8 @@ export interface CompositeRisk {
 // --- Static JSON fetchers ---
 
 async function fetchStaticJson<T>(filename: string): Promise<T> {
-  const res = await fetch(`/data/${filename}`);
+  const base = import.meta.env.BASE_URL || '/';
+  const res = await fetch(`${base}data/${filename}`);
   if (!res.ok) throw new Error(`Failed to load ${filename}`);
   return res.json();
 }
