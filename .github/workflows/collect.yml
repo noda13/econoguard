@@ -28,7 +28,7 @@ jobs:
       - name: Run collection
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: npx tsx scripts/collect-static.ts
+        run: pnpm exec tsx scripts/collect-static.ts
 
       - name: Commit data
         run: |
