@@ -1,5 +1,655 @@
 [
   {
+    "id": "91ff6ff6f1a2c8e1",
+    "source": "nikkei",
+    "originalTitle": "台湾株13日　5日続伸、出遅れ半導体株に買い　TSMCは下落",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL134800T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.113Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7c797d5c2d63d7dd",
+    "source": "nikkei",
+    "originalTitle": "半導体量子コンピューター、トランジスタ活用で回路小型化へ　帝京大",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOSG101KH0Q6A410C2000000/",
+    "publishedAt": "2026-04-13T09:06:17.113Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3d181f1faa36734a",
+    "source": "nikkei",
+    "originalTitle": "ドバイ原油・13日午後、上昇",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB1360G0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "aaa6052a482d7eb1",
+    "source": "nikkei",
+    "originalTitle": "台湾・頼清徳氏、エスワティニ訪問へ　アフリカ唯一の外交相手",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB135XE0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "47d7b1e51e72e02b",
+    "source": "nikkei",
+    "originalTitle": "卓球・早田ひなや張本兄妹ら10人、アジア大会代表に",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOKC134KF0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "46d23e33708e4ef2",
+    "source": "nikkei",
+    "originalTitle": "キリンビバ、給食に「免疫ケア」飲料を提供　まず都内小学校に",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC130NE0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "f8df6955aec5e10e",
+    "source": "nikkei",
+    "originalTitle": "JPX日経400大引け　反落　170ポイント安の3万3681",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL135L80T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1b4ddfa2aad2a6b4",
+    "source": "nikkei",
+    "originalTitle": "韓国・ポーランド首脳が会談　防衛産業での協力拡大で一致",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM1317S0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9294a0a5b78fe27c",
+    "source": "nikkei",
+    "originalTitle": "東証大引け　日経平均は反落　421円安　中東混迷や原油高が重荷",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL134Z00T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8157f7a25f7b9629",
+    "source": "nikkei",
+    "originalTitle": "イオン、株主参加をアプリで促進　IR発信や議決権行使",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB25BO80V20C26A3000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1a8c412544f70e54",
+    "source": "nikkei",
+    "originalTitle": "台湾・頼清徳政権、中国の経済優遇策に反発　選挙介入を警戒",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM131VD0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9b35826361cb9ace",
+    "source": "nikkei",
+    "originalTitle": "欧州国債早朝　ドイツ長期金利、上昇　3.0%台後半",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1356L0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7b513870ad2e88f2",
+    "source": "nikkei",
+    "originalTitle": "韓国株13日　反落、中東情勢を警戒　個人の買いは支え",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL131I90T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "55186f91e1d1cce2",
+    "source": "nikkei",
+    "originalTitle": "不二製油、業務向けエビ風味の植物性だし　ビーガンやアレルギー対応",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF0964E0Z00C26A3000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3d673a4ef081806b",
+    "source": "nikkei",
+    "originalTitle": "新興株13日　グロース250が反落　中東の協議決裂で投資家心理悪化",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1344Y0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "37575bc5e9c14feb",
+    "source": "nikkei",
+    "originalTitle": "鳥越製粉、業務用小麦粉を値上げ　6月から",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOJC132ZE0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c68eaccb892797f3",
+    "source": "nikkei",
+    "originalTitle": "日経平均大引け　反落　421円安の5万6502円",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL134YL0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9fcbd2b5b4f7556c",
+    "source": "nikkei",
+    "originalTitle": "日鉄鋼板、建設用鋼材を2年ぶり値上げ　上げ幅10~15%",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB089F70Y6A400C2000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "f88a9f17f29defb9",
+    "source": "nikkei",
+    "originalTitle": "カンボジア、日本支援の港に大拡張構想　50年に能力7倍",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM02BHD0S6A400C2000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ffaf61ddef293e1a",
+    "source": "nikkei",
+    "originalTitle": "債券15時　長期金利、一時29年ぶり高水準　5年金利は過去最高に",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL132CQ0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9fa022daa62878ea",
+    "source": "nikkei",
+    "originalTitle": "日EU経済界、レアアース供給網の協力提言　対中国念頭に協調",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA091D50Z00C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "80fcef5415baa3c0",
+    "source": "nikkei",
+    "originalTitle": "欧州外為早朝　ユーロ、対ドルで下落　1.16ドル台後半",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL134N60T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ffe45069b92b2c62",
+    "source": "nikkei",
+    "originalTitle": "世界ラリー選手権、勝田貴元が2連勝　日本勢初のポイントリーダーに",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOKC1222G0S6A410C2000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "13f1df361852c9df",
+    "source": "nikkei",
+    "originalTitle": "タカラベルモント、大阪本社に移設した万博展示ブースを報道公開",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF130S20T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9ea96641479aa703",
+    "source": "nikkei",
+    "originalTitle": "みずほ銀行、VISAとキャッシュレスで協業　法人サービス拡大",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB131RE0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9198ddaedf8eb069",
+    "source": "nikkei",
+    "originalTitle": "ユニ・チャーム、猛暑にらみ「涼しさ」提案　紙おむつからペットまで",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC1332Q0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "02918d5d8da0fa9a",
+    "source": "nikkei",
+    "originalTitle": "ペルー大統領選、ケイコ氏が決選投票に進む公算　故フジモリ氏の長女",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN130XZ0T10C26A4000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bb113189cc4a4d55",
+    "source": "nikkei",
+    "originalTitle": "後期高齢者の医療保険料、月7989円　過去最高の見通し",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA10C4L0Q6A410C2000000/",
+    "publishedAt": "2026-04-13T09:06:17.112Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "581b778a7afa1b33",
+    "source": "bloomberg",
+    "originalTitle": "Why India’s Weak Rupee Is About More Than the Iran War",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/inr-usd-why-is-india-s-rupee-so-weak-how-is-the-rbi-defending-the-currency",
+    "publishedAt": "2026-04-13T09:04:35.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "79c4d48740aa8172",
+    "source": "cnbc",
+    "originalTitle": "OpenAI announces first permanent London office after halting UK Stargate project",
+    "originalUrl": "https://www.cnbc.com/2026/04/13/openai-london-office-sam-altman-uk-stargate.html",
+    "publishedAt": "2026-04-13T09:03:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3fbd9465b7fc055d",
+    "source": "marketwatch",
+    "originalTitle": "Keep calm and carry on buying the dip, says JPMorgan",
+    "originalUrl": "https://www.marketwatch.com/story/keep-calm-and-carry-on-buying-the-dip-says-jpmorgan-9eaafd2c?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-13T09:03:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "da829635b05ef61d",
+    "source": "marketwatch",
+    "originalTitle": "Mariah Carey lists ‘MTV Cribs’ penthouse in New York City for a whopping $27 million",
+    "originalUrl": "https://www.marketwatch.com/story/mariah-carey-lists-mtv-cribs-penthouse-in-new-york-city-for-a-whopping-27-million-902f19c3?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-13T09:02:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "252a2ecee5f78e8b",
+    "source": "marketwatch",
+    "originalTitle": "Watch out for more tax cuts — or even tax hikes — as Republicans try for another budget bill",
+    "originalUrl": "https://www.marketwatch.com/story/watch-out-for-more-tax-cuts-or-even-tax-hikes-as-republicans-try-for-another-budget-bill-90177955?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-13T09:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e7267d6c793840ba",
+    "source": "marketwatch",
+    "originalTitle": "Why elevated U.S. tariffs could stick around for years — even after Trump leaves office",
+    "originalUrl": "https://www.marketwatch.com/story/why-elevated-u-s-tariffs-could-stick-around-for-years-even-after-trump-leaves-office-f39cfd54?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-13T09:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "be18f3232c5621a8",
+    "source": "marketwatch",
+    "originalTitle": "Leonardo DiCaprio takes his $20 million Malibu beachfront mansion off market even after lowering the price",
+    "originalUrl": "https://www.marketwatch.com/story/leonardo-dicaprio-takes-his-20-million-malibu-beachfront-mansion-off-market-even-after-lowering-the-price-0bca0b79?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-13T08:59:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "03c258b20a400444",
+    "source": "nhk",
+    "originalTitle": "関税措置で引き受け停止の米国向け郵便物 14日に再開 日本郵便",
+    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015098281000",
+    "publishedAt": "2026-04-13T08:36:17.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "99a1a5e047e30f90",
+    "source": "bloomberg",
+    "originalTitle": "China’s 30-Year Bonds Gain Amid Bets on Issuance Duration Cut",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/china-s-30-year-bonds-gain-amid-bets-on-issuance-duration-cut",
+    "publishedAt": "2026-04-13T08:32:28.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "89ff011771a24b8b",
+    "source": "bloomberg",
+    "originalTitle": "How Would Trump’s Blockade of the Strait of Hormuz Work?",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/how-would-trump-s-blockade-of-the-strait-of-hormuz-work",
+    "publishedAt": "2026-04-13T08:25:24.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "012f64eb59bdb9d9",
+    "source": "bloomberg",
+    "originalTitle": "Zambia’s Planned Refinery to Rely on Oil Delivery by Road, Rail",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/zambia-s-planned-refinery-to-rely-on-oil-delivery-by-road-rail",
+    "publishedAt": "2026-04-13T08:21:02.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "16c2182ec84a2889",
+    "source": "bloomberg",
+    "originalTitle": "Fund Managers Seek Reporting Crackdown After Philippines Scandal",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/fund-managers-seek-reporting-crackdown-after-philippines-scandal",
+    "publishedAt": "2026-04-13T08:12:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2d28fa6507e5318e",
+    "source": "bloomberg",
+    "originalTitle": "China Starts Bankruptcy Liquidation of Shadow Bank Zhongzhi",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/china-starts-bankruptcy-liquidation-of-shadow-bank-zhongzhi",
+    "publishedAt": "2026-04-13T08:07:34.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a2020e056c634f93",
+    "source": "cnbc",
+    "originalTitle": "Trump threatens 50% tariffs on China as report suggests plans for arms shipment to Iran",
+    "originalUrl": "https://www.cnbc.com/2026/04/13/trump-threatens-50percent-tariffs-on-china-as-report-suggests-plans-for-arms-shipment-to-iran.html",
+    "publishedAt": "2026-04-13T08:03:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b57a2bc383208834",
+    "source": "bloomberg",
+    "originalTitle": "Ziad Daoud Explains How War with Iran Will Reshape the Gulf",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/ziad-daoud-explains-how-war-with-iran-will-reshape-the-gulf",
+    "publishedAt": "2026-04-13T08:00:05.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ff818bd1af32c70d",
+    "source": "bloomberg",
+    "originalTitle": "Odd Lots: Daoud on How Iran War Will Reshape the Gulf (Podcast)",
+    "originalUrl": "https://www.bloomberg.com/news/audio/2026-04-13/odd-lots-daoud-on-how-iran-war-will-reshape-the-gulf-podcast",
+    "publishedAt": "2026-04-13T08:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "de8f7c8d38b24025",
+    "source": "nhk",
+    "originalTitle": "長期金利 一時2.49％に 1999年2月以来の高水準 物価上昇懸念で",
+    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015097981000",
+    "publishedAt": "2026-04-13T07:57:26.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "6f5d51466e563cef",
+    "source": "bloomberg",
+    "originalTitle": "Hong Kong Issues 53% More IPO Banker Licenses to Ease Shortage",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/hong-kong-issues-53-more-ipo-banker-licenses-to-ease-shortage",
+    "publishedAt": "2026-04-13T07:55:42.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "78d50988cd630bd4",
+    "source": "ft",
+    "originalTitle": "Trump lashes out at Pope Leo for criticism of Iran war",
+    "originalUrl": "https://www.ft.com/content/5cfc03ff-6966-46fd-a62f-01b2452402dc",
+    "publishedAt": "2026-04-13T07:54:41.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c615f3607bf90e76",
+    "source": "bloomberg",
+    "originalTitle": "Horizons Middle East & Africa 4/13/2026",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/horizons-middle-east-africa-4-13-2026-video",
+    "publishedAt": "2026-04-13T07:46:48.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "435d6818d58cabfc",
+    "source": "nhk",
+    "originalTitle": "株価 400円余 値下がり 米イラン協議合意至らず売り優勢",
+    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015098141000",
+    "publishedAt": "2026-04-13T07:46:37.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "efd1d11a1712dae9",
+    "source": "bloomberg",
+    "originalTitle": "Shallow Losses for Stocks Despite Hormuz Blockade: 3-Minutes MLIV",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/stocks-outlook-after-hormuz-blockade-3-minutes-mliv-video",
+    "publishedAt": "2026-04-13T07:28:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ef562359c1d4cde6",
+    "source": "bloomberg",
+    "originalTitle": "US to Blockade all Traffic Entering, Exiting Iran Ports",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/us-to-blockade-all-traffic-entering-exiting-iran-ports-video",
+    "publishedAt": "2026-04-13T07:27:53.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "732bc8f001f47c6e",
+    "source": "bloomberg",
+    "originalTitle": "Top Polish Bank PKO Speeds Up Hungary Branch Plan After Election",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/top-polish-bank-pko-speeds-up-hungary-branch-plan-after-election",
+    "publishedAt": "2026-04-13T07:25:02.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bfa733e2dd94645d",
+    "source": "cnbc",
+    "originalTitle": "Dow futures pare losses after Trump announces Strait of Hormuz blockade as talks fail: Live updates",
+    "originalUrl": "https://www.cnbc.com/2026/04/12/stock-market-today-live-updates.html",
+    "publishedAt": "2026-04-13T07:19:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "034c4e4fe420d898",
+    "source": "bloomberg",
+    "originalTitle": "Hormuz Blockade Is a US-Iran 'Game of Chicken': Roubini",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/hormuz-blockade-is-a-us-iran-game-of-chicken-roubini-video",
+    "publishedAt": "2026-04-13T07:17:18.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1cb3a258b58f10f1",
+    "source": "bloomberg",
+    "originalTitle": "China’s TCL Is Said to Consider Stake Sale in India TV Business",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/china-s-tcl-is-said-to-consider-stake-sale-in-india-tv-business",
+    "publishedAt": "2026-04-13T07:16:14.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2456ef3796a40700",
+    "source": "nhk",
+    "originalTitle": "イラン情勢影響で調達不安定 TOTOがシステムバスなど受注停止",
+    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015098231000",
+    "publishedAt": "2026-04-13T07:14:37.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "abec84ce54e6ce1e",
+    "source": "nhk",
+    "originalTitle": "給付付き税額控除 “2年を待たずに簡素な形で導入を” 経団連",
+    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015098251000",
+    "publishedAt": "2026-04-13T07:13:20.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "de3ed659be070524",
+    "source": "bloomberg",
+    "originalTitle": "Lufthansa Pilot Strike Set to Cancel Hundreds of Flights",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/lufthansa-two-day-pilot-strike-set-to-cancel-hundreds-of-flights",
+    "publishedAt": "2026-04-13T07:13:10.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "854a8f98a392996f",
+    "source": "cnbc",
+    "originalTitle": "Hormuz blockade could deepen world’s worst energy crisis — and risk a dangerous misstep",
+    "originalUrl": "https://www.cnbc.com/2026/04/13/trump-hormuz-blockade-oil-shock-china-iran-india-vessels-peace-talks.html",
+    "publishedAt": "2026-04-13T07:08:45.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "d63af4729bab36a1",
+    "source": "bloomberg",
+    "originalTitle": "State Street Advises Further De-Risking Amid Inflation Threat",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/state-street-advises-de-risking-amid-inflation-threat-video",
+    "publishedAt": "2026-04-13T06:55:59.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "acfab6cf00ba4e2f",
+    "source": "bloomberg",
+    "originalTitle": "Oil, Gas Surge as Trump Orders Hormuz Blockade & Hungary's Orbán Ousted| Daybreak Europe 4/13/2026",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/daybreak-europe-4-13-2026-video",
+    "publishedAt": "2026-04-13T06:55:58.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0723842521673fbb",
+    "source": "bloomberg",
+    "originalTitle": "Wise on Track for Nasdaq Listing in May as Income Jumps 24%",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/wise-on-track-for-nasdaq-listing-next-month-as-income-jumps-24",
+    "publishedAt": "2026-04-13T06:55:51.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b477cb44714fe172",
+    "source": "bloomberg",
+    "originalTitle": "Lebanon Min of Industry: War Imposed by Hezbollah",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/lebanon-min-of-industry-war-imposed-by-hezbollah-video",
+    "publishedAt": "2026-04-13T06:46:04.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4a0ea27f10c62a25",
+    "source": "bloomberg",
+    "originalTitle": "Traders Run For Cover as US Prepares Hormuz Blockade | The China Show 4/13/2026",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-13/the-china-show-4-13-2026-video",
+    "publishedAt": "2026-04-13T06:30:15.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "805beba2878efbf8",
+    "source": "bloomberg",
+    "originalTitle": "Dolce &amp; Gabbana Names Ex-Gucci Boss Cantino as Co-CEO",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/dolce-gabbana-appoints-stefano-cantino-as-co-ceo-mnwt9w5c",
+    "publishedAt": "2026-04-13T06:28:08.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "69fc56217ab6a9b7",
     "source": "nikkei",
     "originalTitle": "東証14時　日経平均、下げ渋り　押し目買いの動き",
@@ -490,6 +1140,36 @@
     "riskCategories": []
   },
   {
+    "id": "fea16d7790b5ad8a",
+    "source": "google_biz",
+    "originalTitle": "How Merck turned its wonder drug into a blockbuster — and priced out cancer patients worldwide - International Consortium of Investigative Journalists - ICIJ",
+    "originalUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMk5LaGdVU2tqbkJ4QlJGOEZkbHRSdkI4T2dPVF91dkI5Ti0xaXpfM29UZFZORm9iTklORU9oRHZyRl9MOW1Cdno2NGlhaVN5b1lRbE1GZURmOVhCYnRDb0tqeDk1SGtiVVdVUWRIMHVqYTQ3bGFsRjVZeUFNN3VyUHpqcjRoUTBvaFl3LWVn?oc=5",
+    "publishedAt": "2026-04-13T04:02:55.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "451e7eb6edb4da65",
+    "source": "google_biz",
+    "originalTitle": "China’s Electrostate Is Poised to Win From War in the Middle East - The New York Times",
+    "originalUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVW85TUw5cU02dHhfNzlDX3dLbWhuNldQMHJ5WHBMeFlLUUxGQ096eTZLaUUwcjZ2UlhfY3gxTmplM0ptQ0pVSG10MFlxcThXcV8zZEtIYlBkWThoYWg3eGtQVHpCMXpEb0ItQ25jMVdwN1lKN0RyTTZ6UTlQLWRiNWFIZzBMdm9ZT244SkNCNVNIWWQxREJzcw?oc=5",
+    "publishedAt": "2026-04-13T04:01:07.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0042833c92ca6f01",
+    "source": "cnbc",
+    "originalTitle": "Goldman Sachs is set to report first-quarter earnings — here's what Wall Street expects",
+    "originalUrl": "https://www.cnbc.com/2026/04/13/goldman-sachs-gs-earnings-1q-2026.html",
+    "publishedAt": "2026-04-13T04:01:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "414d316d9e3c6f88",
     "source": "cnbc",
     "originalTitle": "Asia markets trade lower as oil surges after U.S. moves to blockade Iran ports",
@@ -505,6 +1185,16 @@
     "originalTitle": "What happens in Sudan will not stay in Sudan",
     "originalUrl": "https://www.ft.com/content/4ff2b813-e347-4373-8355-d19a49af5391",
     "publishedAt": "2026-04-13T04:00:12.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "53e272cc2e5ac8e0",
+    "source": "google_biz",
+    "originalTitle": "Meta builds AI version of Mark Zuckerberg to interact with staff - Financial Times",
+    "originalUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPcWRsVTAzWDBkc3daQlRFZGZYYjdsd1BfNnBiSG9LT1JXb3NvcFE3Q0RId2ZwNUtPZlpGaEpwd2pGLTRQaExYR3Q3MERuN0VQVlBCWGs5Mzc2bXhJdGN6Snl0bW5ZVEliR2tScGgtb0JqMHNlYmo1bk92VnkxVlBfcEo2WmY?oc=5",
+    "publishedAt": "2026-04-13T04:00:04.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -880,6 +1570,16 @@
     "riskCategories": []
   },
   {
+    "id": "701706806be2e91f",
+    "source": "bloomberg",
+    "originalTitle": "Three Tankers Attempt Hormuz Transit After US Flags Blockade",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/two-oil-tankers-attempt-hormuz-exit-after-us-announces-blockade",
+    "publishedAt": "2026-04-13T03:35:16.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "2b97dbefe3671987",
     "source": "bloomberg",
     "originalTitle": "Two Oil Tankers Attempt Hormuz Exit After US Announces Blockade",
@@ -1190,6 +1890,16 @@
     "riskCategories": []
   },
   {
+    "id": "da5eeffda1dc2d6e",
+    "source": "google_biz",
+    "originalTitle": "Global Bonds Slide as Failure of Talks Adds to Inflation Fears - Bloomberg.com",
+    "originalUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeldKMmhWelhMdFJiOUVrNzJEREM2MkQ0c1pTVEFXNEYwR0pKbXRGS0JpcmZOcjRPTWJxMG9wdHpTOFBFa28xT1FPWE9qUzg0OEUxT20zVlFkanA5LXNTOGZhT2cyM2hUVC0wcUMzMmZIOGZERnFlWWZZNTFkU0d3cUJITE9lTE5mVFJTUEdjVmZLVGZpakt5QXJWenhlbFpDaFp1Z1JPMndpTThwUlpQdUVlQQ?oc=5",
+    "publishedAt": "2026-04-13T00:56:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "274f5b0dda1ba38d",
     "source": "bloomberg",
     "originalTitle": "What Would a US Blockade of Hormuz Mean for Energy Markets",
@@ -1280,721 +1990,11 @@
     "riskCategories": []
   },
   {
-    "id": "550d2c26007291fa",
-    "source": "marketwatch",
-    "originalTitle": "Trump says he’s closing the Strait of Hormuz. Has he been reading MarketWatch?",
-    "originalUrl": "https://www.marketwatch.com/story/trump-says-hes-closing-the-strait-of-hormuz-has-he-been-reading-marketwatch-e059dd07?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-13T00:18:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9a9f460883f968df",
-    "source": "bloomberg",
-    "originalTitle": "Ping An Seeks to Sell $1 Billion Software-Focused PE Assets",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-13/ping-an-seeks-to-sell-1-billion-software-focused-pe-assets",
-    "publishedAt": "2026-04-13T00:01:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7765249436f98b40",
-    "source": "bloomberg",
-    "originalTitle": "Japan’s 10-Year Bond Yield Rises to 1997 High on Iran Tensions",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/japan-s-10-year-bond-yield-rises-to-highest-level-since-1997-mnwf6fwk",
-    "publishedAt": "2026-04-12T23:53:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ac50024f6c9692cd",
-    "source": "bloomberg",
-    "originalTitle": "Taiwan Plans Drills to Break Potential Chinese Energy Blockade",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/taiwan-plans-drills-to-break-potential-chinese-energy-blockade",
-    "publishedAt": "2026-04-12T23:50:40.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a7c881f882e78dac",
-    "source": "boj",
-    "originalTitle": "マネーストック（3月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/money/ms/ms2603.pdf",
-    "publishedAt": "2026-04-12T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cc9630a33811c907",
+    "id": "3c2f4cee14426396",
     "source": "google_biz",
-    "originalTitle": "Elon Musk, Who Owns X, Appears to Post on TikTok - The New York Times",
-    "originalUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBSbDRWRHdtV3N5TW1YeVdlVG1LTU5udmloWXFRZmF2TnNrQ0dKM0p6LVRtUHJhRW0xVl9tbkEtVExOWTlFc0R5VEZlMU42NzlRYjN3eE5lSnN5SC1laDlxMHZvS3RqNldualByd1o2dUdXQlhmMWc?oc=5",
-    "publishedAt": "2026-04-12T23:43:47.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "52b2b9b3be9f4d94",
-    "source": "bloomberg",
-    "originalTitle": "Aussie’s One-Year Rally Versus Kiwi Is Peaking, Strategists Say",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/aussie-s-one-year-rally-versus-kiwi-is-peaking-strategists-say",
-    "publishedAt": "2026-04-12T23:37:49.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "76db9716cc9b28e5",
-    "source": "ft",
-    "originalTitle": "Hungary opposition delivers ‘regime change’",
-    "originalUrl": "https://www.ft.com/content/b348e8f5-c70a-4176-920e-168354846cc5",
-    "publishedAt": "2026-04-12T23:12:05.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "77040aa49b818729",
-    "source": "google_biz",
-    "originalTitle": "Trump endorsed Palantir stock, and the market reacted - thestreet.com",
-    "originalUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPS2hHZzBvZ1AtVllSZ2c1M1BTZUw4QVBDVmhZb3RWMW94TWRTTlZ5Wmh1eS04dTJnbHhiOHhWb2tZb1RITlFPUk84cTh4SDR1QzZMUVZ1RkxYZDJUN21KLURwN3QtMHlFRlhEMkNTUjlUV1JyeTZYM0M4MjdQVkRuVlRQRWk3cGFfV2pvY0JVQXJHdTAzNnFtS3J6Zw?oc=5",
-    "publishedAt": "2026-04-12T23:03:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "28a4ab8367982c9e",
-    "source": "cnbc",
-    "originalTitle": "Hungary's conservative icon Orban defeated by center-right opposition",
-    "originalUrl": "https://www.cnbc.com/2026/04/12/hungarians-vote-in-closely-watched-landmark-election-.html",
-    "publishedAt": "2026-04-12T22:44:16.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9c3bb4aed3ae43ff",
-    "source": "google_biz",
-    "originalTitle": "Dollar and oil rise as US-Iran peace talks collapse - Reuters",
-    "originalUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8ydTVxR1h6OEZrRThiOWhsZEJ5WHRzcGlSV3p5WHc5V3JBMTBQd1FiX3ZwdlhvQjQ4VXRGSE91eWtsTlA0WFg2dENEd3lZVUp1T09xTFdySVh4YUxHTE5OSEJsT3RHUXRJOVlJRWx1dTRMY3dtNHRmYjRGMA?oc=5",
-    "publishedAt": "2026-04-12T22:33:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6a26377ec0f2e019",
-    "source": "google_biz",
-    "originalTitle": "Unfinished Quonset Hut-Style Home in Maine Hits the Market for Under $300K - Realtor.com",
-    "originalUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTE1uUjA4R2Njdkc3RC1kUVgtM29OWmJMNEZKbVlBcHZ5aUxLWkJQcE45eW5NOHdoOFZWWnJRYm5DaVVlYVJyVmdPSDNjYlhVX1J4aXRNQ2dNZTJrR2ZsWEFCV2dQWlY1bWdVMW9pMXU4UzBfX1hCSkhTU2JXMFZKVmNpQmJzc2R6RndjX1VwWUNEemEzWVRBUmJkaw?oc=5",
-    "publishedAt": "2026-04-12T22:29:49.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8fe9e3776510c4a7",
-    "source": "google_biz",
-    "originalTitle": "Hawaiian fast food chain closes Kansas City area locations - FOX4KC.com",
-    "originalUrl": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkZfTmlTejlybnFtVDl0aFFYNFNMQUhoRkxjUDFqcEI2US1NVi1FSnpOMDNpLUJ2T2JtdE0zZE54QTl3RUhSUTgyNTQzZ3k1TjcyZnpCS29HNERZQjBZR21SQS1xcDcwRjlSX0F2NEdITUxPVUlCQk9KeXVVdjU3Tk85U0ZEem5MN2dhbU5NX3fSAZYBQVVfeXFMTjkyX1RRYTVVNFdBSjlRalV1M3ZzWlI3NTBDMmhsUEF3TXN1T2J6dENXdlAxb1FZWmNyQVVaZW1nck1zbXV4c1BfWFB3c0wwOXEzVWxpdGRhbGZheHQyS2k4TTVrYkFDaFdNU0Nub18zVkh6ampaY004Vl9mTDJUVGQ5ZGNnZUJXbnZrSDgtV2FybFQ5Ukx3?oc=5",
-    "publishedAt": "2026-04-12T22:26:31.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "adc48e156d0baf7b",
-    "source": "nhk",
-    "originalTitle": "NY原油 WTI先物価格上昇 一時1バレル＝105ドル台 供給面に懸念",
-    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015097911000",
-    "publishedAt": "2026-04-12T22:26:20.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "389cb8ca7c532b03",
-    "source": "google_biz",
-    "originalTitle": "Economic shock of Middle East war to cast shadow over IMF, World Bank meetings - Reuters",
-    "originalUrl": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWjVjWTRTMHFUV2RHeTIzQVlNcmJicEJZQVhsSVpOOTVhVnY2SmdDeEpON09iSHE3TFg0bi15NE9EQlV6TktBSllHQTd2V2JfRGlBT1Z5UUZnZU44NGxza2hlbmFLNnJKLWRvdTdQSEx5R0Y3M191czA1bERveEFYV1hoR2JPeVNaVC1rT1UzeHFhZW5mc1F0bWl3RzQ2NEF2MjZWV2pEZVBCWDdVSVBUM2hhdzNoTldYc1FzT01HZm9vOFhC?oc=5",
-    "publishedAt": "2026-04-12T22:23:42.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0a2076ddc064fc53",
-    "source": "cnbc",
-    "originalTitle": "Oil prices surge above $100 as U.S. Navy to blockade Iran's ports after peace talks fail",
-    "originalUrl": "https://www.cnbc.com/2026/04/12/oil-prices-iran-war-strait-hormuz-blockade.html",
-    "publishedAt": "2026-04-12T22:22:21.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bdea486580912865",
-    "source": "bloomberg",
-    "originalTitle": "China’s Victory Giant Seeks Up to $2.2 Billion in Hong Kong Listing",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/china-s-victory-giant-seeks-up-to-2-2-billion-in-hong-kong-listing",
-    "publishedAt": "2026-04-12T22:20:35.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "52a2e5dbeaf8c910",
-    "source": "google_biz",
-    "originalTitle": "Fidelity, AARP warn Americans on 401(k)s - thestreet.com",
-    "originalUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OLWtvb2tLOHNwaG1felFLdGUwNVdtWDBOQmpDR3JQNDZuQTdXeDljbU5lUGRTUnF0WGgxa1pBaVdjYXBvOWdSOERhWmRLNDBHNE9hR0R4MDVsekU2T1IySEQzZllldkpocWc4MXFkNVdkaFNnUmVydGNmWTJnNUk?oc=5",
-    "publishedAt": "2026-04-12T22:19:21.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e9c84c6d2320ce87",
-    "source": "bloomberg",
-    "originalTitle": "Gold Falls as US Blockade of Hormuz Raises Inflationary Risks",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/gold-falls-as-us-prepares-to-blockade-hormuz-after-failed-talks",
-    "publishedAt": "2026-04-12T22:14:19.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5b0c5f70ed505937",
-    "source": "bloomberg",
-    "originalTitle": "Oil Jumps, Stocks Drop on Trump’s Hormuz Threat: Markets Wrap",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/oil-surges-us-futures-drop-on-hormuz-blockade-markets-wrap",
-    "publishedAt": "2026-04-12T22:08:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d7c039ec43007f1a",
-    "source": "bloomberg",
-    "originalTitle": "Oil Jumps, Stocks Drop on US Plan to Block Hormuz: Markets Wrap",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/oil-surges-us-futures-drop-on-hormuz-blockade-markets-wrap",
-    "publishedAt": "2026-04-12T22:08:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8310de8f149ef306",
-    "source": "bloomberg",
-    "originalTitle": "Oil Rallies as US Blockade of Iran Brings ‘Dangerous’ Escalation",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/latest-oil-market-news-and-analysis-for-april-13",
-    "publishedAt": "2026-04-12T22:01:56.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ff776140c32b16ff",
-    "source": "bloomberg",
-    "originalTitle": "Oil Surges With Gas as US Blockade of Hormuz Escalates Crisis",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/latest-oil-market-news-and-analysis-for-april-13",
-    "publishedAt": "2026-04-12T22:01:56.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f96db85a676adb9c",
-    "source": "google_biz",
-    "originalTitle": "Sam Altman’s home targeted in second attack; two suspects arrested - The San Francisco Standard",
-    "originalUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdDFmODc1TWptM0t3SG1GazE1LTk4bzdxOWtYcTB3NHBMQUszVTZvS3NqbHJndk9DVEZrNVhCTmNzN092UEJuaTA4T2s1N0E3d2JRSk5RdFZwYmVwazhmLTlLNmM2eExKeDR0bndSeU5TNlE3bGRhVjVOUUVTYlJyWA?oc=5",
-    "publishedAt": "2026-04-12T22:01:24.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7fb1b8492d8009b4",
-    "source": "google_biz",
-    "originalTitle": "'The plan is working': Trump's trade chief brushes off economic fears in Rust Belt tour - Politico",
-    "originalUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRmNSQ3BES3VQV3lLa2JZVFZmRGV6QVhmZmk0N2Z1TGhuVm5RNU8xLXBzRUdWMks0VklOWjZDaHlsR2JjZDJUN3lDaU45NzF1ZFRmenlGWGtSWXd0UmpBWnBXQ0J5Z2hoOUhtWHRiUlNnNm1lVFhtYkFIcDZWeFRRYVZZV3lkWmxsZ3NHQ2U0QS04Q1Q3NkswNmN3?oc=5",
-    "publishedAt": "2026-04-12T21:52:18.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5eb15a1ea72504e5",
-    "source": "nhk",
-    "originalTitle": "ソフトバンク コスト増で基本料金値上げへ 引き上げ動き広がる",
-    "originalUrl": "https://news.web.nhk/newsweb/na/na-k10015097751000",
-    "publishedAt": "2026-04-12T21:44:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4f422abeabd80486",
-    "source": "nikkei",
-    "originalTitle": "水産国タイ「漁師8割休業も」　イラン攻撃で燃料価格3倍",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM02CTW0S6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bf966c1a301888ec",
-    "source": "nikkei",
-    "originalTitle": "熊本地震10年、外国人宿泊者2.5倍に　復興の裏に「ルフィの手紙」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOJC01BGM0R00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cd0fd9fda5665084",
-    "source": "nikkei",
-    "originalTitle": "スバル「自分の技術に執着するな」　独自HV誕生の陰に縦割り打破",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC10BC40Q6A310C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c94e20d63204ae6c",
-    "source": "nikkei",
-    "originalTitle": "太陽光から水素生成、信州大学が寒さに強い新技術　今夏に実証試験へ",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOSG12ATG0S6A310C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "786bc09920b11982",
-    "source": "nikkei",
-    "originalTitle": "漸進的改革こそ保守、価値観より現実的判断を　宇野重規東大教授",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA06AIA0W6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b8d724eca4d82c6a",
-    "source": "nikkei",
-    "originalTitle": "ジムの手続きスマホで楽々　hacomono、小規模施設の集客も支援",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC23A3C0T20C26A3000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "22b6330d24d54dd3",
-    "source": "nikkei",
-    "originalTitle": "オンラインカジノ、強制遮断は誰が判断？　問われる「通信の秘密」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA089V20Y6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "adb417e1a076f3b2",
-    "source": "nikkei",
-    "originalTitle": "「特定技能」外国人受け入れ停止、外食に打撃　磯丸水産は時短も視野",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC099SV0Z00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "26b6de2af0caece2",
-    "source": "nikkei",
-    "originalTitle": "乱立する高価格米、定着に明暗　販路開拓を後回し開発も",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCC249J00U6A320C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b0f9f7d5f09f3c3e",
-    "source": "nikkei",
-    "originalTitle": "出演者が消費カロリー競う異色の舞台、鈴木保奈美主演",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOIH039MR0T00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5fd4fe8df3c786ef",
-    "source": "nikkei",
-    "originalTitle": "横浜園芸博で｢持続できる森林経営の関心広げたい｣　ITTO事務局長",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCC1690T0W6A310C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1920e4bd19018cc7",
-    "source": "nikkei",
-    "originalTitle": "バークレイズCEO、ファンド融資「注意深く見守る」　日本事業は楽観",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD089760Y6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7f1351726a1ff9ce",
-    "source": "nikkei",
-    "originalTitle": "米主要企業の決算本格化　AI需要支えに上振れ期待、中東混乱が影",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB108EM0Q6A410C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a4cfa2bc05ee88e6",
-    "source": "nikkei",
-    "originalTitle": "浜松市・商議所、高校生向け企業説明会　国内最大級4500人参加へ",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCC0789V0X00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "81145f4436b00177",
-    "source": "nikkei",
-    "originalTitle": "コアスタッフ戸沢社長「産業機器向け半導体の需給、4〜6月に正常化」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC2482A0U6A320C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "16358e7d9711c6f2",
-    "source": "nikkei",
-    "originalTitle": "中小も労務費を価格転嫁、統計使い自動計算　面倒かけず賃上げ原資に",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF127VA0S6A310C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "585a15f675538e93",
-    "source": "nikkei",
-    "originalTitle": "北海道企業の賃上げ、3年連続高水準　物価上昇分には追いつかず",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFC087FS0Y6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "87dd13535f3ddf3b",
-    "source": "nikkei",
-    "originalTitle": "ソニーG、「コンテンツ×技術」で探る新生エンタメ　AIダンサー躍動",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC0679N0W6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8af47a14d70c9c0f",
-    "source": "nikkei",
-    "originalTitle": "食品減税のレジ改修に1年、税率「ゼロ」が壁　ポイント対応にも時間",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC1070X0Q6A410C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "41c50fc4e22c0d8d",
-    "source": "nikkei",
-    "originalTitle": "仕事でAI、その使い方は大丈夫？　知らぬ間に権利侵害や情報漏洩も",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD3068C0Q6A330C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "92c5ae600ea14e76",
-    "source": "nikkei",
-    "originalTitle": "廃棄衣料ゼロへ大阪で官民大連合　広く深く回収、セメントで使い切り",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF305QJ0Q6A330C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b1769af8a1ac299a",
-    "source": "nikkei",
-    "originalTitle": "1〜5週間先の気象予想、誤差減らす手法を開発　東京大学など",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOSG075LM0X00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2c45a173428d777a",
-    "source": "nikkei",
-    "originalTitle": "雌のタマバエのみ誘引する特殊な香り、受粉に活用　神戸大学など",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOSG074TK0X00C26A4000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "13272dbbb30c0eb1",
-    "source": "nikkei",
-    "originalTitle": "異端児ローム、EV停滞で遠のく「世界10位」　東芝と三菱電機に秋波",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF064PX0W6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2e3f0438a99297e2",
-    "source": "nikkei",
-    "originalTitle": "ちゅうぎんFG、出向でDX人材育成　地域けん引へ3000人めざす",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCC064B50W6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d08ac5ad99120964",
-    "source": "nikkei",
-    "originalTitle": "5分でわかる決算書　ROEは株主のお金を増やす力、世界標準は15〜20%",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB3146R0R30C26A3000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6d160865b0af4696",
-    "source": "nikkei",
-    "originalTitle": "物品の「代理購入」持ちかけ、実は新手の詐欺　受注業者の心理突く",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUD273VU0X20C26A2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4889a142ee1e63ad",
-    "source": "nikkei",
-    "originalTitle": "鬼滅の刃やワンピース、世界を席巻するマンガIPがわかる10選",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC083QR0Y6A400C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c40c3dbf00f1b190",
-    "source": "nikkei",
-    "originalTitle": "マイナビ出版が欧州800書店で販売　ドイツ企業と契約",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC292PS0Z20C26A3000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "efd463478e2451bd",
-    "source": "nikkei",
-    "originalTitle": "LINEヤフー「飲食店DX」に本格参入　中小型店に勝機、大手は慎重",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC302CJ0Q6A330C2000000/",
-    "publishedAt": "2026-04-12T21:43:33.860Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d72285e6aca26a27",
-    "source": "ft",
-    "originalTitle": "Hungary’s Orbán concedes defeat as opposition secures landslide win",
-    "originalUrl": "https://www.ft.com/content/a9b635f0-6fff-41e5-8e27-245de4500863",
-    "publishedAt": "2026-04-12T21:39:16.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "30647984084c56ed",
-    "source": "cnbc",
-    "originalTitle": "Hungary's Orban concedes landmark defeat to center-right opposition",
-    "originalUrl": "https://www.cnbc.com/2026/04/12/hungarians-vote-in-closely-watched-landmark-election-.html",
-    "publishedAt": "2026-04-12T21:37:31.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "64002b02685c7b71",
-    "source": "ft",
-    "originalTitle": "Hungary’s Orbán concedes defeat as opposition heads for landslide win",
-    "originalUrl": "https://www.ft.com/content/a9b635f0-6fff-41e5-8e27-245de4500863",
-    "publishedAt": "2026-04-12T21:20:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e1321ebe7d816562",
-    "source": "google_biz",
-    "originalTitle": "Trump officials may be encouraging banks to test Anthropic’s Mythos model - TechCrunch",
-    "originalUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2Q0dEJHS2xXVEEyZXBCRFVyckNhR18zTEdlRExsb1l4aEo3UnhIdlBTMUdnTGpDWmxvTXBDLUplN1JOOWR3N01NTE5OMHRORFhqMTFTUkFuOUdoaTZlcHJ5ZURXNVJXRzE2NVVDZFpYdUs1cnVwNjZodkdTS1VDTFpkZk5YOUxreUg3SklKS1lwQ3A2QU9MTWx4TnN2OWZ2VjhFTl84UjdLWWs?oc=5",
-    "publishedAt": "2026-04-12T21:14:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4c3f63430dc94a7a",
-    "source": "google_biz",
-    "originalTitle": "Wary Investors Eye Another Escalation in Iran War - Bloomberg.com",
-    "originalUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNYWw2MWNrdGxkUmZRTmk1TWdxYWkyN2Q2T3NjekJBWG9jeTEyQldwTTdEYmdCbVRETzV0SmtNY3R1cy1NSjFoTGQxVjROeWRtNV94T2ZOTEFMVFNzRHFNQnA0VHlweWxrZzVsYXF3clZjQm1MQVBpT252NHdnbUx0TzA4bkZ2UE1ySzg2RFdWVk1tUGZPZG5odVNUckJqMUxzcjA0N3FTcUhqRWJnSlRVR09WTQ?oc=5",
-    "publishedAt": "2026-04-12T21:11:11.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c74e815a326eac65",
-    "source": "bloomberg",
-    "originalTitle": "Retail-trading Apps Go Upscale to Keep Rich Traders Loyal",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-12/retail-trading-apps-go-upscale-to-keep-rich-traders-loyal",
-    "publishedAt": "2026-04-12T21:00:05.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b8c2f6be48bd87bd",
-    "source": "google_biz",
-    "originalTitle": "Southwest Is About to Limit Power Banks on Flights - Gizmodo",
-    "originalUrl": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSzhILVFWeGg3QXhZM1M1N1BvbDg2ZkUxYkZlU2VmbjJlYnhKYlNtaThRSnF1Sjl6T051aWtZbGdMYm1wSHdIZmFRU3FLVW1UMGpzTFVXX2JpYTNIZWJHMHNNVmQ5OGREdUZMaXNnR2xmUFp0ZGZuOEtYYmpWX0tOWmdicHRIM0J0?oc=5",
-    "publishedAt": "2026-04-12T20:59:21.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2031e17e402be940",
-    "source": "marketwatch",
-    "originalTitle": "‘I feel pressured’: My husband has early Alzheimer’s and wants to visit Europe, but I’m terrified of flying. What should I do?",
-    "originalUrl": "https://www.marketwatch.com/story/i-feel-pressured-my-husband-has-early-alzheimers-and-wants-to-visit-europe-but-im-terrified-of-flying-what-should-i-do-c5cc01bf?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-12T20:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f8cc3d11b534cd05",
-    "source": "marketwatch",
-    "originalTitle": "We asked our wedding guests to give money to St. Jude’s Children’s Hospital. Can we write off their donations?",
-    "originalUrl": "https://www.marketwatch.com/story/we-asked-our-wedding-guests-to-give-money-to-st-judes-childrens-hospital-can-we-write-off-their-donations-0a326156?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-12T20:44:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "99e981bf88892909",
-    "source": "marketwatch",
-    "originalTitle": "‘I am at a crossroads’: I’m 37 and have $1.3 million. Do I stop working to spend time with my young kids?",
-    "originalUrl": "https://www.marketwatch.com/story/i-am-at-a-crossroads-im-37-and-have-1-3-million-do-i-stop-working-to-spend-time-with-my-young-kids-fb2f1b20?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-12T20:44:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a29cbdf7375c0896",
-    "source": "bloomberg",
-    "originalTitle": "Forint Surges as Orban’s Loss Starts New Era for Hungary-EU Ties",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/forint-jumps-to-three-year-high-as-hungary-s-orban-is-voted-out",
-    "publishedAt": "2026-04-12T20:06:05.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f909f2d48798ac64",
-    "source": "bloomberg",
-    "originalTitle": "Wary Investors Eye Another Escalation in Iran War",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-12/wary-investors-eye-another-escalation-in-iran-war-markets-wrap",
-    "publishedAt": "2026-04-12T19:50:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "dcf509354c74c692",
-    "source": "google_biz",
-    "originalTitle": "Dollar jumps as failed US/Iran peace talks spark fresh safe-haven push - Reuters",
-    "originalUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBVa1Y5VkktOERjcEtSR0xYQkVPSVJyckhVVDhwZDk0dnJXcGpFX1k2OHJrVDFxVTRiX2FEdkxZVHVaa2pCbEtSNlZIbXZPUjhtNHdrVl9sNE04eHV2U1NKT3dVdXE3MngydWctREx6UGU4OGpKVWEyUHRsdS1uQQ?oc=5",
-    "publishedAt": "2026-04-12T19:41:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1c2369e3f2700ba5",
-    "source": "cnbc",
-    "originalTitle": "Why the stock market has stayed resilient despite the Iran war and software stock rout",
-    "originalUrl": "https://www.cnbc.com/2026/04/12/jim-cramer-iran-war-software-stock-selloff-earnings-season-investing-club.html",
-    "publishedAt": "2026-04-12T19:40:10.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7e7d60e776658cc7",
-    "source": "google_biz",
-    "originalTitle": "Someone Has to Be Happy. Why Not Lauren Sánchez Bezos? - The New York Times",
-    "originalUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeDF6QzlNUUtQdTBaN0syZjEyMzBYWkxFUzhYd1hnUG9JR2Y1aHl0Tlk2aXYtbk9NR0JWakFreE5USk1YbDJWdHZudk9UOV9GZkRFTENVZDBWVzV0TlpJczdlMXdIcm5KRTNxaHhVRkk0YXlHZDNWWEpKbnNoUEZKQ3Rhbi0tclk?oc=5",
-    "publishedAt": "2026-04-12T19:20:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f1eb228fa3c5e60d",
-    "source": "google_biz",
-    "originalTitle": "Quantum computers are coming to break our codes faster than anyone expected - The Conversation",
-    "originalUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYWd3b19XcUZlbDUxLVhneUhRX3hzQlRhM1JHUFVxZEcxQWZfUWtzRFNqbHJRaGQwWWpTdTctcGJiWXdmWk5YeTROcFU4UFRTSWNMenZMamFNX21OZFdKWTBNZk1yQ0E4Qi1aVm9UZkVaLWxjNWVPalN6QUVxMzUwbVd0bXRLQ29OZ0ZvSkJndUFDZ21xa3VXODBfYzFyMzhfUVRBWjU1aUs3V0xsNWxJ?oc=5",
-    "publishedAt": "2026-04-12T19:14:36.000Z",
+    "originalTitle": "The Supreme Court Just Saved Your Internet Connection (And I'm a Hacker Saying That) - Daily Kos",
+    "originalUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOSXl0elhuaGdlby0wc1d5UC04RlptQmM2OHF1UXJBRGI1bVNacVJZb0lySVNFcmQ3ZlZvLTJjcFBYYmJuX0hvUmtSQjBSc0szUlpXWTRyV2tHeDE3d3V0NU5Kc3JNQTI5Xzhld3NSV1J5YnBCdnhnNi1wMTdBdnJkNDJYOXM3ektWRlFSdnMzRkdMMXVkMndreHB5REQyZEdZaEMtSVd3d3FmS1lhdm5SUkI0NWtOQlo5anNvTEtKNEtKdjBDQmI1QjBFQ3RhTW8?oc=5",
+    "publishedAt": "2026-04-13T00:18:35.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
