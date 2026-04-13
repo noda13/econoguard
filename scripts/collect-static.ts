@@ -133,36 +133,111 @@ async function collectIndicators(prev: EconomicIndicator[]): Promise<EconomicInd
   return result;
 }
 
-// --- Groq LLM ---
-async function callGroq(system: string, user: string): Promise<string> {
-  const key = process.env.GROQ_API_KEY;
-  if (!key) throw new Error('No GROQ_API_KEY');
+// --- LLM Provider ---
+// Supports any OpenAI-compatible API (Groq, OpenAI, Together, OpenRouter, etc.) + Gemini
+//
+// Config via env vars:
+//   LLM_PROVIDER=groq|gemini|openai (auto-detect if not set)
+//   LLM_BASE_URL=https://api.groq.com/openai/v1 (override API endpoint)
+//   LLM_MODEL=llama-3.3-70b-versatile (override model)
+//   LLM_API_KEY=... (override API key)
+//
+// Provider-specific keys (auto-detect):
+//   GROQ_API_KEY, GEMINI_API_KEY, OPENAI_API_KEY
 
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+interface LLMConfig {
+  provider: string;
+  baseUrl: string;
+  model: string;
+  key: string;
+}
+
+const PROVIDER_DEFAULTS: Record<string, { baseUrl: string; model: string }> = {
+  groq:     { baseUrl: 'https://api.groq.com/openai/v1', model: 'llama-3.3-70b-versatile' },
+  openai:   { baseUrl: 'https://api.openai.com/v1', model: 'gpt-4o-mini' },
+  together: { baseUrl: 'https://api.together.xyz/v1', model: 'meta-llama/Llama-3.3-70B-Instruct-Turbo' },
+  openrouter: { baseUrl: 'https://openrouter.ai/api/v1', model: 'meta-llama/llama-3.3-70b-instruct' },
+};
+
+function detectProvider(): LLMConfig | null {
+  // Explicit full config
+  if (process.env.LLM_API_KEY && process.env.LLM_BASE_URL) {
+    return {
+      provider: process.env.LLM_PROVIDER || 'custom',
+      baseUrl: process.env.LLM_BASE_URL,
+      model: process.env.LLM_MODEL || 'default',
+      key: process.env.LLM_API_KEY,
+    };
+  }
+
+  // Auto-detect from provider-specific keys
+  const explicit = process.env.LLM_PROVIDER;
+  const pairs: Array<[string, string | undefined]> = [
+    ['groq', process.env.GROQ_API_KEY],
+    ['gemini', process.env.GEMINI_API_KEY],
+    ['openai', process.env.OPENAI_API_KEY],
+  ];
+
+  // Prioritize explicit provider
+  if (explicit) {
+    const match = pairs.find(([p]) => p === explicit);
+    if (match?.[1]) {
+      const defaults = PROVIDER_DEFAULTS[explicit] || { baseUrl: '', model: '' };
+      return {
+        provider: explicit,
+        baseUrl: process.env.LLM_BASE_URL || defaults.baseUrl,
+        model: process.env.LLM_MODEL || defaults.model,
+        key: match[1],
+      };
+    }
+  }
+
+  // Auto-detect: first available key wins
+  for (const [provider, key] of pairs) {
+    if (key) {
+      const defaults = PROVIDER_DEFAULTS[provider] || { baseUrl: '', model: '' };
+      return { provider, baseUrl: defaults.baseUrl, model: defaults.model, key };
+    }
+  }
+
+  return null;
+}
+
+async function callLLM(system: string, user: string): Promise<string> {
+  const config = detectProvider();
+  if (!config) throw new Error('No LLM configured. Set GROQ_API_KEY, GEMINI_API_KEY, or LLM_API_KEY+LLM_BASE_URL.');
+
+  if (config.provider === 'gemini') {
+    return callGemini(system, user, config.key);
+  }
+  return callOpenAICompatible(system, user, config);
+}
+
+async function callOpenAICompatible(system: string, user: string, config: LLMConfig): Promise<string> {
+  const res = await fetch(`${config.baseUrl}/chat/completions`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-    },
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.key}` },
     body: JSON.stringify({
-      model: 'llama-3.3-70b-versatile',
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user },
-      ],
+      model: config.model,
+      messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
       temperature: 0.3,
       max_tokens: 4096,
       response_format: { type: 'json_object' },
     }),
   });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`Groq ${res.status}: ${err}`);
-  }
-
+  if (!res.ok) throw new Error(`${config.provider} ${res.status}: ${await res.text()}`);
   const data = await res.json() as { choices: Array<{ message: { content: string } }> };
   return data.choices[0].message.content;
+}
+
+async function callGemini(system: string, user: string, key: string): Promise<string> {
+  const { GoogleGenerativeAI } = await import('@google/generative-ai');
+  const model = new GoogleGenerativeAI(key).getGenerativeModel({
+    model: process.env.LLM_MODEL || 'gemini-2.0-flash',
+    systemInstruction: system,
+  });
+  const r = await model.generateContent(user);
+  return r.response.text();
 }
 
 function parseJson(text: string): unknown {
@@ -188,7 +263,7 @@ async function summarize(articles: NewsArticle[]) {
     const batch = todo.slice(i, i + 10);
     const msg = batch.map((a, j) => `[${j}] ${a.source}: ${a.originalTitle}`).join('\n');
     try {
-      const raw = await callGroq(SYS, msg);
+      const raw = await callLLM(SYS, msg);
       const parsed = parseJson(raw) as { results: Array<{ index: number; summaryJa: string; relevanceScore: number; riskCategories: string[] }> };
       const results = parsed.results || [];
       for (const r of results) {
@@ -222,7 +297,7 @@ async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev
   for (const i of indicators) ctx += `- ${i.name}: ${i.value}${i.unit}${i.previousValue ? ` (前回:${i.previousValue})` : ''}\n`;
   if (prev.length) { ctx += '\n## 前回スコア\n'; for (const r of prev) ctx += `- ${r.category}: ${r.score}\n`; }
 
-  const raw = await callGroq(SYS, ctx);
+  const raw = await callLLM(SYS, ctx);
   const res = parseJson(raw) as { assessments: Array<{ category: string; score: number; summary: string; factors: string[] }> };
   const now = new Date().toISOString();
   return res.assessments.map(a => ({ category: a.category, score: a.score, level: scoreToLevel(a.score), summaryJa: a.summary, factorsJa: a.factors, assessedAt: now }));
@@ -246,10 +321,11 @@ async function main() {
   console.log(`Total: ${indicators.length}\n`);
 
   let risks = prevRisks;
-  if (process.env.GROQ_API_KEY) {
-    console.log('--- Groq: Summarize ---');
+  const llm = detectProvider();
+  if (llm) {
+    console.log(`--- LLM (${llm.provider}): Summarize ---`);
     await summarize(news);
-    console.log('\n--- Groq: Risk Assessment ---');
+    console.log(`\n--- LLM (${llm.provider}): Risk Assessment ---`);
     try {
       risks = await assess(news, indicators, prevRisks);
       const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 90);
@@ -261,7 +337,7 @@ async function main() {
       console.log('Risk assessment done');
     } catch (e) { console.error('Assessment failed:', e instanceof Error ? e.message : e); }
   } else {
-    console.log('GROQ_API_KEY not set, skipping LLM\n');
+    console.log('No LLM API key set (GROQ_API_KEY or GEMINI_API_KEY), skipping\n');
   }
 
   const weights: Record<string, number> = { currency_finance: 0.3, geopolitics_supply_chain: 0.3, technology: 0.2, social_policy: 0.2 };
