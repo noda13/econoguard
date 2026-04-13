@@ -63,36 +63,22 @@ function scoreToLevel(s: number): string {
 }
 
 // --- News ---
-// RSSHub public instance (for X/Twitter monitoring)
-const RSSHUB = process.env.RSSHUB_URL || 'https://rsshub.app';
-
 const RSS_SOURCES = [
-  // === 日本語ソース ===
+  // 日本語ソース
   { url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
   { url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
   { url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
-  { url: 'https://www.mof.go.jp/rss/whatsnew.xml', source: 'mof_jp' },
-  // === 海外メディア ===
   { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtcGhHZ0pLVUNnQVAB', source: 'google_biz' },
-  { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNREpmTjNRU0FtcGhHZ0pLVUNnQVAB', source: 'google_world' },
+  // 海外メディア
   { url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
   { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
   { url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
   { url: 'https://www.ft.com/rss/home', source: 'ft' },
-  // === 中央銀行・政府機関 ===
+  // 中央銀行・政府機関
   { url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'fed' },
   { url: 'https://www.ecb.europa.eu/rss/press.html', source: 'ecb' },
-  // === 金融特化メディア ===
+  // 金融特化メディア
   { url: 'https://feeds.feedburner.com/zerohedge/feed', source: 'zerohedge' },
-  // === X/Twitter via RSSHub（著名投資家・エコノミスト） ===
-  { url: `${RSSHUB}/twitter/user/RayDalio`, source: 'x_dalio' },
-  { url: `${RSSHUB}/twitter/user/elikinosian`, source: 'x_elikan' },
-  { url: `${RSSHUB}/twitter/user/jimrickards`, source: 'x_rickards' },
-  { url: `${RSSHUB}/twitter/user/GoldTelegraph_`, source: 'x_goldtelegraph' },
-  { url: `${RSSHUB}/twitter/user/WallStreetSilv`, source: 'x_wss' },
-  { url: `${RSSHUB}/twitter/user/elerianm`, source: 'x_elerian' },
-  { url: `${RSSHUB}/twitter/user/NourielRoubini`, source: 'x_roubini' },
-  { url: `${RSSHUB}/twitter/user/PeterSchiff`, source: 'x_schiff' },
 ];
 
 async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
@@ -147,14 +133,36 @@ async function collectIndicators(prev: EconomicIndicator[]): Promise<EconomicInd
   return result;
 }
 
-// --- Gemini ---
-async function callGemini(system: string, user: string): Promise<string> {
-  const key = process.env.GEMINI_API_KEY;
-  if (!key) throw new Error('No GEMINI_API_KEY');
-  const { GoogleGenerativeAI } = await import('@google/generative-ai');
-  const model = new GoogleGenerativeAI(key).getGenerativeModel({ model: 'gemini-2.0-flash', systemInstruction: system });
-  const r = await model.generateContent(user);
-  return r.response.text();
+// --- Groq LLM ---
+async function callGroq(system: string, user: string): Promise<string> {
+  const key = process.env.GROQ_API_KEY;
+  if (!key) throw new Error('No GROQ_API_KEY');
+
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${key}`,
+    },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      temperature: 0.3,
+      max_tokens: 4096,
+      response_format: { type: 'json_object' },
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Groq ${res.status}: ${err}`);
+  }
+
+  const data = await res.json() as { choices: Array<{ message: { content: string } }> };
+  return data.choices[0].message.content;
 }
 
 function parseJson(text: string): unknown {
@@ -167,30 +175,55 @@ async function summarize(articles: NewsArticle[]) {
   const todo = articles.filter(a => !a.summaryJa);
   if (!todo.length) return;
 
-  const SYS = `経済ニュースを分析し、JSON配列で応答してください。各記事: summaryJa(日本語2-3文), relevanceScore(0-1), riskCategories(["currency_finance","geopolitics_supply_chain","technology","social_policy"]から選択)。JSON配列のみ出力: [{"index":0,"summaryJa":"...","relevanceScore":0.8,"riskCategories":[...]}]`;
+  const SYS = `あなたは経済ニュースアナリストです。与えられたニュース記事を分析し、JSON形式で応答してください。
+
+各記事について:
+- summaryJa: 日本語で2-3文の簡潔な要約（経済的インパクトを中心に）
+- relevanceScore: 世界経済リスクとの関連度（0.0-1.0）
+- riskCategories: 関連するカテゴリの配列。選択肢: "currency_finance", "geopolitics_supply_chain", "technology", "social_policy"
+
+応答は必ず以下のJSON形式: {"results":[{"index":0,"summaryJa":"...","relevanceScore":0.8,"riskCategories":["currency_finance"]}]}`;
 
   for (let i = 0; i < Math.min(todo.length, 50); i += 10) {
     const batch = todo.slice(i, i + 10);
     const msg = batch.map((a, j) => `[${j}] ${a.source}: ${a.originalTitle}`).join('\n');
     try {
-      const res = parseJson(await callGemini(SYS, msg)) as Array<{ index: number; summaryJa: string; relevanceScore: number; riskCategories: string[] }>;
-      for (const r of res) { if (batch[r.index]) { batch[r.index].summaryJa = r.summaryJa; batch[r.index].relevanceScore = r.relevanceScore; batch[r.index].riskCategories = r.riskCategories; } }
-      console.log(`  Batch ${Math.floor(i / 10) + 1} done`);
+      const raw = await callGroq(SYS, msg);
+      const parsed = parseJson(raw) as { results: Array<{ index: number; summaryJa: string; relevanceScore: number; riskCategories: string[] }> };
+      const results = parsed.results || [];
+      for (const r of results) {
+        if (batch[r.index]) {
+          batch[r.index].summaryJa = r.summaryJa;
+          batch[r.index].relevanceScore = r.relevanceScore;
+          batch[r.index].riskCategories = r.riskCategories;
+        }
+      }
+      console.log(`  Batch ${Math.floor(i / 10) + 1} done (${results.length} summarized)`);
     } catch (e) { console.error('  Summarize failed:', e instanceof Error ? e.message : e); }
-    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, 1000));
+    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, 500));
   }
 }
 
 async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev: RiskAssessment[]): Promise<RiskAssessment[]> {
-  const SYS = `グローバル経済リスクアナリスト。4カテゴリ(currency_finance, geopolitics_supply_chain, technology, social_policy)を0-100で評価。JSONのみ: {"assessments":[{"category":"...","score":65,"summary":"日本語概要","factors":["因子1","因子2"]}]}`;
+  const SYS = `あなたはグローバル経済リスクアナリストです。提供データに基づき、4カテゴリのリスクを0-100で評価してください。
 
-  let ctx = '## ニュース\n';
+カテゴリ: currency_finance(通貨・金融), geopolitics_supply_chain(地政学・供給網), technology(テクノロジー), social_policy(社会・政策)
+
+スコア基準: 0-20:低, 21-40:中程度, 41-60:やや高い, 61-80:高い, 81-100:危機的
+
+応答は必ず以下のJSON形式:
+{"assessments":[{"category":"currency_finance","score":65,"summary":"日本語2-3文の概要","factors":["寄与因子1","寄与因子2","寄与因子3"]}]}
+
+4カテゴリ全て含めてください。`;
+
+  let ctx = '## 最新ニュース\n';
   for (const a of news.filter(a => a.summaryJa).slice(0, 20)) ctx += `- [${a.source}] ${a.summaryJa}\n`;
-  ctx += '\n## 指標\n';
+  ctx += '\n## 経済指標\n';
   for (const i of indicators) ctx += `- ${i.name}: ${i.value}${i.unit}${i.previousValue ? ` (前回:${i.previousValue})` : ''}\n`;
-  if (prev.length) { ctx += '\n## 前回\n'; for (const r of prev) ctx += `- ${r.category}: ${r.score}\n`; }
+  if (prev.length) { ctx += '\n## 前回スコア\n'; for (const r of prev) ctx += `- ${r.category}: ${r.score}\n`; }
 
-  const res = parseJson(await callGemini(SYS, ctx)) as { assessments: Array<{ category: string; score: number; summary: string; factors: string[] }> };
+  const raw = await callGroq(SYS, ctx);
+  const res = parseJson(raw) as { assessments: Array<{ category: string; score: number; summary: string; factors: string[] }> };
   const now = new Date().toISOString();
   return res.assessments.map(a => ({ category: a.category, score: a.score, level: scoreToLevel(a.score), summaryJa: a.summary, factorsJa: a.factors, assessedAt: now }));
 }
@@ -213,10 +246,10 @@ async function main() {
   console.log(`Total: ${indicators.length}\n`);
 
   let risks = prevRisks;
-  if (process.env.GEMINI_API_KEY) {
-    console.log('--- Gemini: Summarize ---');
+  if (process.env.GROQ_API_KEY) {
+    console.log('--- Groq: Summarize ---');
     await summarize(news);
-    console.log('--- Gemini: Risk Assessment ---');
+    console.log('\n--- Groq: Risk Assessment ---');
     try {
       risks = await assess(news, indicators, prevRisks);
       const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 90);
@@ -225,9 +258,10 @@ async function main() {
         riskHistory[r.category].push(r);
         riskHistory[r.category] = riskHistory[r.category].filter(h => new Date(h.assessedAt) > cutoff);
       }
+      console.log('Risk assessment done');
     } catch (e) { console.error('Assessment failed:', e instanceof Error ? e.message : e); }
   } else {
-    console.log('GEMINI_API_KEY not set, skipping LLM\n');
+    console.log('GROQ_API_KEY not set, skipping LLM\n');
   }
 
   const weights: Record<string, number> = { currency_finance: 0.3, geopolitics_supply_chain: 0.3, technology: 0.2, social_policy: 0.2 };
@@ -244,7 +278,7 @@ async function main() {
   writeJson('risk-history.json', riskHistory);
   writeJson('meta.json', { lastUpdated: new Date().toISOString() });
 
-  console.log('=== Saved to frontend/public/data/ ===');
+  console.log('\n=== Saved to frontend/public/data/ ===');
 }
 
 main().catch(e => { console.error('Fatal:', e); process.exit(1); });
