@@ -68,7 +68,7 @@ router.get('/composite', async (_req, res) => {
 // GET /api/risks/:category - Get risk history for a category
 router.get('/:category', async (req, res) => {
   const { category } = req.params;
-  const days = parseInt(req.query.days as string) || 30;
+  const days = Math.min(Math.max(parseInt(req.query.days as string) || 30, 1), 365);
   const since = new Date();
   since.setDate(since.getDate() - days);
 

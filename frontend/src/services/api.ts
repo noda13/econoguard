@@ -54,18 +54,22 @@ export interface CompositeRisk {
 
 // --- Static JSON fetchers ---
 
-async function fetchStaticJson<T>(filename: string): Promise<T> {
-  const base = import.meta.env.BASE_URL || '/';
-  const res = await fetch(`${base}data/${filename}`);
-  if (!res.ok) throw new Error(`Failed to load ${filename}`);
-  return res.json();
+async function fetchStaticJson<T>(filename: string, fallback: T): Promise<T> {
+  try {
+    const base = import.meta.env.BASE_URL || '/';
+    const res = await fetch(`${base}data/${filename}`);
+    if (!res.ok) return fallback;
+    return await res.json();
+  } catch {
+    return fallback;
+  }
 }
 
 // --- API functions ---
 
 export const fetchNews = async (limit = 20, _category?: string): Promise<NewsArticle[]> => {
   if (isStatic) {
-    const all = await fetchStaticJson<NewsArticle[]>('news.json');
+    const all = await fetchStaticJson<NewsArticle[]>('news.json', []);
     return all.slice(0, limit);
   }
   const params: Record<string, string> = { limit: String(limit) };
@@ -76,7 +80,7 @@ export const fetchNews = async (limit = 20, _category?: string): Promise<NewsArt
 
 export const fetchRisks = async (): Promise<RiskAssessment[]> => {
   if (isStatic) {
-    return fetchStaticJson<RiskAssessment[]>('risks.json');
+    return fetchStaticJson<RiskAssessment[]>('risks.json', []);
   }
   const { data } = await api.get('/risks');
   return data;
@@ -84,7 +88,7 @@ export const fetchRisks = async (): Promise<RiskAssessment[]> => {
 
 export const fetchRiskHistory = async (category: string, _days = 30): Promise<RiskAssessment[]> => {
   if (isStatic) {
-    const history = await fetchStaticJson<Record<string, RiskAssessment[]>>('risk-history.json');
+    const history = await fetchStaticJson<Record<string, RiskAssessment[]>>('risk-history.json', {});
     return history[category] || [];
   }
   const { data } = await api.get(`/risks/${category}`, { params: { days: _days } });
@@ -93,7 +97,7 @@ export const fetchRiskHistory = async (category: string, _days = 30): Promise<Ri
 
 export const fetchIndicators = async (): Promise<EconomicIndicator[]> => {
   if (isStatic) {
-    return fetchStaticJson<EconomicIndicator[]>('indicators.json');
+    return fetchStaticJson<EconomicIndicator[]>('indicators.json', []);
   }
   const { data } = await api.get('/indicators');
   return data;
@@ -101,7 +105,7 @@ export const fetchIndicators = async (): Promise<EconomicIndicator[]> => {
 
 export const fetchCompositeRisk = async (): Promise<CompositeRisk> => {
   if (isStatic) {
-    return fetchStaticJson<CompositeRisk>('composite-risk.json');
+    return fetchStaticJson<CompositeRisk>('composite-risk.json', { compositeScore: 0, level: 'low', breakdown: [] });
   }
   const { data } = await api.get('/risks/composite');
   return data;

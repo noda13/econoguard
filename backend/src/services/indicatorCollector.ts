@@ -23,7 +23,7 @@ async function fetchFRED(seriesId: string): Promise<number | null> {
     url.searchParams.set('sort_order', 'desc');
     url.searchParams.set('limit', '1');
 
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { signal: AbortSignal.timeout(10000) });
     if (!response.ok) throw new Error(`FRED responded with ${response.status}`);
 
     const data = await response.json() as {
@@ -44,6 +44,7 @@ async function fetchCoinGecko(coinId: string): Promise<number | null> {
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd`;
     const response = await fetch(url, {
       headers: { 'User-Agent': 'Econoguard/1.0' },
+      signal: AbortSignal.timeout(10000),
     });
     if (!response.ok) throw new Error(`CoinGecko responded with ${response.status}`);
 
@@ -63,7 +64,7 @@ async function fetchExchangeRate(currency: string): Promise<number | null> {
 
   try {
     const url = `https://openexchangerates.org/api/latest.json?app_id=${config.openExchangeRatesAppId}`;
-    const response = await fetch(url);
+    const response = await fetch(url, { signal: AbortSignal.timeout(10000) });
     if (!response.ok) throw new Error(`OpenExchangeRates responded with ${response.status}`);
 
     const data = await response.json() as { rates?: Record<string, number> };

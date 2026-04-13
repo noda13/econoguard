@@ -5,10 +5,11 @@ const router = Router();
 
 // GET /api/news - Get latest news articles
 router.get('/', async (req, res) => {
-  const limit = parseInt(req.query.limit as string) || 20;
+  const limit = Math.min(Math.max(parseInt(req.query.limit as string) || 20, 1), 100);
   const category = req.query.category as string | undefined;
+  const validCategories = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
 
-  const where = category
+  const where = category && validCategories.includes(category)
     ? { riskCategories: { contains: category } }
     : {};
 

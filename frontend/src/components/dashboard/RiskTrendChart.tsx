@@ -11,41 +11,32 @@ const CATEGORY_COLORS: Record<string, string> = {
   social_policy: '#a78bfa',
 };
 
-const CATEGORIES = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
+const CATEGORIES = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'] as const;
 
 interface ChartDataPoint {
   date: string;
-  currency_finance?: number;
-  geopolitics_supply_chain?: number;
-  technology?: number;
-  social_policy?: number;
+  [key: string]: string | number | undefined;
 }
 
 export function RiskTrendChart() {
-  const queries = CATEGORIES.map((cat) => ({
-    queryKey: ['riskHistory', cat],
-    queryFn: () => fetchRiskHistory(cat, 30),
-  }));
+  const q1 = useQuery({ queryKey: ['riskHistory', 'currency_finance'], queryFn: () => fetchRiskHistory('currency_finance', 30) });
+  const q2 = useQuery({ queryKey: ['riskHistory', 'geopolitics_supply_chain'], queryFn: () => fetchRiskHistory('geopolitics_supply_chain', 30) });
+  const q3 = useQuery({ queryKey: ['riskHistory', 'technology'], queryFn: () => fetchRiskHistory('technology', 30) });
+  const q4 = useQuery({ queryKey: ['riskHistory', 'social_policy'], queryFn: () => fetchRiskHistory('social_policy', 30) });
 
-  const results = queries.map((q) =>
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useQuery(q)
-  );
-
+  const results = [q1, q2, q3, q4];
   const isLoading = results.some((r) => r.isLoading);
 
   if (isLoading) return <LoadingSpinner />;
 
-  // Merge all category data into a single timeline
   const dataMap = new Map<string, ChartDataPoint>();
-
   for (let i = 0; i < CATEGORIES.length; i++) {
     const cat = CATEGORIES[i];
     const data = results[i].data || [];
     for (const item of data) {
       const dateStr = new Date(item.assessedAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' });
       const point = dataMap.get(dateStr) || { date: dateStr };
-      (point as Record<string, unknown>)[cat] = item.score;
+      point[cat] = item.score;
       dataMap.set(dateStr, point);
     }
   }

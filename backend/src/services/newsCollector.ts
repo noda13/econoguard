@@ -103,7 +103,7 @@ async function fetchNewsAPI(): Promise<RawArticle[]> {
     url.searchParams.set('pageSize', '20');
     url.searchParams.set('apiKey', config.newsApiKey);
 
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { signal: AbortSignal.timeout(10000) });
     if (!response.ok) {
       throw new Error(`NewsAPI responded with ${response.status}`);
     }

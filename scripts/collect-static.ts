@@ -111,7 +111,7 @@ async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
 // --- Indicators ---
 async function fetchPrice(ids: string): Promise<Record<string, Record<string, number>> | null> {
   try {
-    const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd,jpy`, { headers: { 'User-Agent': 'Econoguard/1.0' } });
+    const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd,jpy`, { headers: { 'User-Agent': 'Econoguard/1.0' }, signal: AbortSignal.timeout(10000) });
     return r.ok ? await r.json() as Record<string, Record<string, number>> : null;
   } catch { return null; }
 }
@@ -216,6 +216,7 @@ async function callLLM(system: string, user: string): Promise<string> {
 async function callOpenAICompatible(system: string, user: string, config: LLMConfig): Promise<string> {
   const res = await fetch(`${config.baseUrl}/chat/completions`, {
     method: 'POST',
+    signal: AbortSignal.timeout(30000),
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.key}` },
     body: JSON.stringify({
       model: config.model,
@@ -232,18 +233,25 @@ async function callOpenAICompatible(system: string, user: string, config: LLMCon
 
 async function callGemini(system: string, user: string, key: string): Promise<string> {
   const { GoogleGenerativeAI } = await import('@google/generative-ai');
-  const model = new GoogleGenerativeAI(key).getGenerativeModel({
+  const genAI = new GoogleGenerativeAI(key);
+  const model = genAI.getGenerativeModel({
     model: process.env.LLM_MODEL || 'gemini-2.0-flash',
     systemInstruction: system,
   });
-  const r = await model.generateContent(user);
+  const r = await model.generateContent({ contents: [{ role: 'user', parts: [{ text: user }] }] });
   return r.response.text();
 }
 
 function parseJson(text: string): unknown {
-  let s = text.trim();
-  if (s.startsWith('```')) s = s.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
-  return JSON.parse(s);
+  try {
+    let s = text.trim();
+    if (s.startsWith('```')) s = s.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+    return JSON.parse(s);
+  } catch (e) {
+    console.error('JSON parse failed:', e instanceof Error ? e.message : e);
+    console.error('Raw text (first 200 chars):', text.slice(0, 200));
+    throw new Error('LLM returned invalid JSON');
+  }
 }
 
 async function summarize(articles: NewsArticle[]) {

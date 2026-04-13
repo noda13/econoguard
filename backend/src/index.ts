@@ -1,4 +1,5 @@
 import express from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import newsRoutes from './routes/news.js';
@@ -18,6 +19,12 @@ app.use('/api/news', newsRoutes);
 app.use('/api/risks', risksRoutes);
 app.use('/api/indicators', indicatorsRoutes);
 app.use('/api/admin', adminRoutes);
+
+// Global error handler
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
+  console.error('Unhandled error:', err.message);
+  res.status(500).json({ error: 'Internal server error' });
+});
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, '0.0.0.0', () => {
