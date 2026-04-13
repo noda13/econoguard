@@ -10,19 +10,35 @@ const parser = new Parser({
   },
 });
 
+const RSSHUB = process.env.RSSHUB_URL || 'https://rsshub.app';
+
 const RSS_SOURCES = [
-  // 日本語ソース
-  { name: 'nhk_business', url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
+  // === 日本語ソース ===
+  { name: 'nhk', url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
   { name: 'boj', url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
   { name: 'nikkei', url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
-  // 海外ソース
+  { name: 'mof_jp', url: 'https://www.mof.go.jp/rss/whatsnew.xml', source: 'mof_jp' },
+  // === 海外メディア ===
   { name: 'google_biz', url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtcGhHZ0pLVUNnQVAB', source: 'google_biz' },
+  { name: 'google_world', url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNREpmTjNRU0FtcGhHZ0pLVUNnQVAB', source: 'google_world' },
   { name: 'cnbc', url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
   { name: 'bloomberg', url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
   { name: 'marketwatch', url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
   { name: 'ft', url: 'https://www.ft.com/rss/home', source: 'ft' },
-  // 国際機関
-  { name: 'google_world', url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNREpmTjNRU0FtcGhHZ0pLVUNnQVAB', source: 'google_world' },
+  // === 中央銀行・政府機関 ===
+  { name: 'fed', url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'fed' },
+  { name: 'ecb', url: 'https://www.ecb.europa.eu/rss/press.html', source: 'ecb' },
+  // === 金融特化メディア ===
+  { name: 'zerohedge', url: 'https://feeds.feedburner.com/zerohedge/feed', source: 'zerohedge' },
+  // === X/Twitter via RSSHub ===
+  { name: 'x_dalio', url: `${RSSHUB}/twitter/user/RayDalio`, source: 'x_dalio' },
+  { name: 'x_elikan', url: `${RSSHUB}/twitter/user/elikinosian`, source: 'x_elikan' },
+  { name: 'x_rickards', url: `${RSSHUB}/twitter/user/jimrickards`, source: 'x_rickards' },
+  { name: 'x_goldtelegraph', url: `${RSSHUB}/twitter/user/GoldTelegraph_`, source: 'x_goldtelegraph' },
+  { name: 'x_wss', url: `${RSSHUB}/twitter/user/WallStreetSilv`, source: 'x_wss' },
+  { name: 'x_elerian', url: `${RSSHUB}/twitter/user/elerianm`, source: 'x_elerian' },
+  { name: 'x_roubini', url: `${RSSHUB}/twitter/user/NourielRoubini`, source: 'x_roubini' },
+  { name: 'x_schiff', url: `${RSSHUB}/twitter/user/PeterSchiff`, source: 'x_schiff' },
 ];
 
 interface RawArticle {

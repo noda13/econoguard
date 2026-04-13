@@ -63,19 +63,36 @@ function scoreToLevel(s: number): string {
 }
 
 // --- News ---
+// RSSHub public instance (for X/Twitter monitoring)
+const RSSHUB = process.env.RSSHUB_URL || 'https://rsshub.app';
+
 const RSS_SOURCES = [
-  // 日本語ソース
+  // === 日本語ソース ===
   { url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
   { url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
   { url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
-  // 海外ソース
+  { url: 'https://www.mof.go.jp/rss/whatsnew.xml', source: 'mof_jp' },
+  // === 海外メディア ===
   { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtcGhHZ0pLVUNnQVAB', source: 'google_biz' },
+  { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNREpmTjNRU0FtcGhHZ0pLVUNnQVAB', source: 'google_world' },
   { url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
   { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
   { url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
   { url: 'https://www.ft.com/rss/home', source: 'ft' },
-  // 国際機関
-  { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNREpmTjNRU0FtcGhHZ0pLVUNnQVAB', source: 'google_world' },
+  // === 中央銀行・政府機関 ===
+  { url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'fed' },
+  { url: 'https://www.ecb.europa.eu/rss/press.html', source: 'ecb' },
+  // === 金融特化メディア ===
+  { url: 'https://feeds.feedburner.com/zerohedge/feed', source: 'zerohedge' },
+  // === X/Twitter via RSSHub（著名投資家・エコノミスト） ===
+  { url: `${RSSHUB}/twitter/user/RayDalio`, source: 'x_dalio' },
+  { url: `${RSSHUB}/twitter/user/elikinosian`, source: 'x_elikan' },
+  { url: `${RSSHUB}/twitter/user/jimrickards`, source: 'x_rickards' },
+  { url: `${RSSHUB}/twitter/user/GoldTelegraph_`, source: 'x_goldtelegraph' },
+  { url: `${RSSHUB}/twitter/user/WallStreetSilv`, source: 'x_wss' },
+  { url: `${RSSHUB}/twitter/user/elerianm`, source: 'x_elerian' },
+  { url: `${RSSHUB}/twitter/user/NourielRoubini`, source: 'x_roubini' },
+  { url: `${RSSHUB}/twitter/user/PeterSchiff`, source: 'x_schiff' },
 ];
 
 async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
