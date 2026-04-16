@@ -26,10 +26,10 @@ jobs:
 
       - uses: pnpm/action-setup@v6
         with:
-          version: 9
+          version: 10
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: cd frontend && pnpm run build
