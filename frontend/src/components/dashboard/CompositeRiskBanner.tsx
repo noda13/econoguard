@@ -1,12 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchCompositeRisk } from '../../services/api';
+import { fetchCompositeRisk, fetchRisks } from '../../services/api';
 import { riskLevelConfig } from '../../lib/riskColors';
+import { useUserProfile } from '../../contexts/UserProfileContext';
+import { usePersonalizedRisk } from '../../hooks/usePersonalizedRisk';
+import { ACTION_SIGNAL_CONFIG } from '../../lib/actionSignals';
 
 export function CompositeRiskBanner() {
   const { data } = useQuery({
     queryKey: ['compositeRisk'],
     queryFn: fetchCompositeRisk,
   });
+
+  const { data: risks } = useQuery({
+    queryKey: ['risks'],
+    queryFn: fetchRisks,
+  });
+
+  const { result: personalized, isConfigured } = usePersonalizedRisk(data, risks);
 
   if (!data) return null;
 
@@ -40,6 +50,31 @@ export function CompositeRiskBanner() {
           ))}
         </div>
       </div>
+      {personalized && (() => {
+        const signalConfig = ACTION_SIGNAL_CONFIG[personalized.signal];
+        return (
+          <div className="mt-4 pt-4 border-t border-gray-700/50">
+            <div className="flex items-center gap-4 flex-wrap">
+              <div className="flex items-baseline gap-2">
+                <span className="text-sm text-gray-400">あなたのリスク:</span>
+                <span className={`text-2xl font-bold ${signalConfig.color}`}>
+                  {personalized.personalizedScore}
+                </span>
+                <span className="text-sm text-gray-500">/100</span>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${signalConfig.bgColor} ${signalConfig.color} font-bold border ${signalConfig.borderColor}`}>
+                  {signalConfig.label}
+                </span>
+              </div>
+              <p className="text-sm text-gray-400">{personalized.interpretation}</p>
+            </div>
+          </div>
+        );
+      })()}
+      {!isConfigured && (
+        <div className="mt-3 text-xs text-gray-500">
+          歯車アイコンからプロフィールを設定すると、パーソナライズされたリスク評価が表示されます
+        </div>
+      )}
     </div>
   );
 }

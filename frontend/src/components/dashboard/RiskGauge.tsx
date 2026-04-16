@@ -1,5 +1,7 @@
 import { riskLevelConfig, categoryLabels } from '../../lib/riskColors';
 import type { RiskAssessment } from '../../services/api';
+import { useUserProfile } from '../../contexts/UserProfileContext';
+import { calculateCategoryImpact } from '../../lib/personalizedRisk';
 
 interface Props {
   risk: RiskAssessment;
@@ -8,7 +10,19 @@ interface Props {
 export function RiskGauge({ risk }: Props) {
   const config = riskLevelConfig[risk.level] || riskLevelConfig.moderate;
   const label = categoryLabels[risk.category] || risk.category;
-  const factors: string[] = typeof risk.factorsJa === 'string' ? JSON.parse(risk.factorsJa || '[]') : risk.factorsJa || [];
+  const factors: string[] = (() => {
+    if (Array.isArray(risk.factorsJa)) return risk.factorsJa;
+    try {
+      const parsed = JSON.parse(risk.factorsJa || '[]');
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  })();
+  const { profile, isConfigured } = useUserProfile();
+  const impact = isConfigured && profile
+    ? calculateCategoryImpact(risk.category, risk.score, profile.allocation)
+    : null;
 
   return (
     <div className={`rounded-lg border ${config.borderColor} ${config.bgColor} p-4`}>
@@ -31,6 +45,17 @@ export function RiskGauge({ risk }: Props) {
           </div>
         ))}
       </div>
+      {impact && (
+        <div className="mt-3 pt-2 border-t border-gray-700/50">
+          <span className={`text-xs px-2 py-0.5 rounded-full ${
+            impact.impactLevel === 'high' ? 'bg-red-900/30 text-red-400' :
+            impact.impactLevel === 'medium' ? 'bg-yellow-900/30 text-yellow-400' :
+            'bg-green-900/30 text-green-400'
+          }`}>
+            あなたへの影響: {impact.impactLevel === 'high' ? '高' : impact.impactLevel === 'medium' ? '中' : '低'}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
