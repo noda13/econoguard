@@ -26,7 +26,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8901;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Econoguard server running on port ${PORT}`);
   startScheduler();

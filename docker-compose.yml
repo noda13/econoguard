@@ -7,7 +7,7 @@ services:
     environment:
       DATABASE_URL: file:./dev.db
       NODE_ENV: development
-      PORT: 8000
+      PORT: 8901
       TZ: Asia/Tokyo
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
@@ -18,7 +18,7 @@ services:
       OPENEXCHANGERATES_APP_ID: ${OPENEXCHANGERATES_APP_ID:-}
       PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING: 1
     ports:
-      - "8000:8000"
+      - "8901:8901"
     volumes:
       - ./backend/src:/app/src
       - ./backend/prisma:/app/prisma
@@ -30,13 +30,13 @@ services:
       dockerfile: Dockerfile
     container_name: econoguard-frontend
     ports:
-      - "3000:3000"
+      - "3901:3901"
     depends_on:
       - backend
     volumes:
       - ./frontend/src:/app/src
     environment:
-      VITE_API_URL: http://backend:8000
+      VITE_API_URL: http://backend:8901
 
 volumes:
   backend_data:

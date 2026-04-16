@@ -78,7 +78,7 @@ cp .env.example .env
 # .env を編集して API キーを設定（GROQ_API_KEY 等）
 
 docker compose up -d
-# http://localhost:3000 でアクセス
+# http://localhost:3901 でアクセス
 ```
 
 ### 4. ローカル開発（pnpm）

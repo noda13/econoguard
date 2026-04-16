@@ -10,6 +10,6 @@ RUN pnpm install --no-frozen-lockfile
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3901
 
 CMD ["pnpm", "run", "dev"]
