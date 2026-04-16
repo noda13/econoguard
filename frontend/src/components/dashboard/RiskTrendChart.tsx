@@ -3,6 +3,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { fetchRiskHistory } from '../../services/api';
 import { categoryLabels } from '../../lib/riskColors';
 import { LoadingSpinner } from '../common/LoadingSpinner';
+import { useUserProfile } from '../../contexts/UserProfileContext';
+import { getPersonalizedThresholds } from '../../lib/personalizedRisk';
 
 const CATEGORY_COLORS: Record<string, string> = {
   currency_finance: '#f87171',
@@ -19,6 +21,9 @@ interface ChartDataPoint {
 }
 
 export function RiskTrendChart() {
+  const { profile, isConfigured } = useUserProfile();
+  const thresholds = isConfigured && profile ? getPersonalizedThresholds(profile) : null;
+
   const q1 = useQuery({ queryKey: ['riskHistory', 'currency_finance'], queryFn: () => fetchRiskHistory('currency_finance', 30) });
   const q2 = useQuery({ queryKey: ['riskHistory', 'geopolitics_supply_chain'], queryFn: () => fetchRiskHistory('geopolitics_supply_chain', 30) });
   const q3 = useQuery({ queryKey: ['riskHistory', 'technology'], queryFn: () => fetchRiskHistory('technology', 30) });
@@ -34,10 +39,12 @@ export function RiskTrendChart() {
     const cat = CATEGORIES[i];
     const data = results[i].data || [];
     for (const item of data) {
-      const dateStr = new Date(item.assessedAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' });
-      const point = dataMap.get(dateStr) || { date: dateStr };
+      const d = new Date(item.assessedAt);
+      const isoDate = d.toISOString().slice(0, 10);
+      const displayDate = d.toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' });
+      const point = dataMap.get(isoDate) || { date: displayDate };
       point[cat] = item.score;
-      dataMap.set(dateStr, point);
+      dataMap.set(isoDate, point);
     }
   }
 
@@ -70,6 +77,24 @@ export function RiskTrendChart() {
             />
             <ReferenceLine y={60} stroke="#ef4444" strokeDasharray="3 3" strokeOpacity={0.5} />
             <ReferenceLine y={40} stroke="#eab308" strokeDasharray="3 3" strokeOpacity={0.3} />
+            {thresholds && (
+              <>
+                <ReferenceLine
+                  y={thresholds.alert}
+                  stroke="#f472b6"
+                  strokeDasharray="6 3"
+                  strokeOpacity={0.6}
+                  label={{ value: 'あなたの警戒', position: 'right', fill: '#f472b6', fontSize: 10 }}
+                />
+                <ReferenceLine
+                  y={thresholds.warning}
+                  stroke="#c084fc"
+                  strokeDasharray="6 3"
+                  strokeOpacity={0.4}
+                  label={{ value: 'あなたの注意', position: 'right', fill: '#c084fc', fontSize: 10 }}
+                />
+              </>
+            )}
             {CATEGORIES.map((cat) => (
               <Line
                 key={cat}

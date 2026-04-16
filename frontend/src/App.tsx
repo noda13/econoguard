@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { DashboardPage } from './pages/DashboardPage';
+import { UserProfileProvider } from './contexts/UserProfileContext';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,7 +14,9 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <DashboardPage />
+      <UserProfileProvider>
+        <DashboardPage />
+      </UserProfileProvider>
     </QueryClientProvider>
   );
 }
