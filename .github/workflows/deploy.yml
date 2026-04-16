@@ -29,7 +29,7 @@ jobs:
           version: 10
 
       - name: Install
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts
 
       - name: Build
         run: cd frontend && pnpm run build
