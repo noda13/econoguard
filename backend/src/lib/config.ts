@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const config = {
-  port: parseInt(process.env.PORT || '8000', 10),
+  port: parseInt(process.env.PORT || '8901', 10),
   nodeEnv: process.env.NODE_ENV || 'development',
   // LLM providers
   geminiApiKey: process.env.GEMINI_API_KEY || '',
