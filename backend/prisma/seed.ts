@@ -76,7 +76,7 @@ async function main() {
       originalUrl: 'https://example.com/fed-pause',
       publishedAt: new Date('2026-04-12T06:00:00Z'),
       summaryJa: 'FRBはインフレ率が目標を上回る中、利下げを急がない姿勢を改めて示した。パウエル議長は経済データに基づく慎重なアプローチを強調。',
-      relevanceScore: 0.9,
+      relevanceScore: 90,
       riskCategories: JSON.stringify(['currency_finance', 'social_policy']),
     },
     {
@@ -86,7 +86,7 @@ async function main() {
       originalUrl: 'https://example.com/boj-rate',
       publishedAt: new Date('2026-04-12T03:00:00Z'),
       summaryJa: '日本銀行の植田総裁は、経済・物価情勢が見通しに沿って推移すれば追加利上げを検討する考えを示した。市場では年内の利上げ観測が強まっている。',
-      relevanceScore: 0.95,
+      relevanceScore: 95,
       riskCategories: JSON.stringify(['currency_finance']),
     },
     {
@@ -96,7 +96,7 @@ async function main() {
       originalUrl: 'https://example.com/tariff-war',
       publishedAt: new Date('2026-04-11T18:00:00Z'),
       summaryJa: '米中間の関税引き上げ合戦が激化し、グローバルサプライチェーンに混乱が広がっている。半導体、レアアース、農産物の貿易に大きな影響。',
-      relevanceScore: 0.92,
+      relevanceScore: 92,
       riskCategories: JSON.stringify(['geopolitics_supply_chain', 'technology']),
     },
     {
@@ -106,7 +106,7 @@ async function main() {
       originalUrl: 'https://example.com/imf-debt',
       publishedAt: new Date('2026-04-11T12:00:00Z'),
       summaryJa: 'IMFは新興国の債務脆弱性が拡大していると警告。高金利環境の長期化により、複数の新興国で債務持続可能性に懸念が高まっている。',
-      relevanceScore: 0.85,
+      relevanceScore: 85,
       riskCategories: JSON.stringify(['currency_finance', 'social_policy']),
     },
     {
@@ -116,7 +116,7 @@ async function main() {
       originalUrl: 'https://example.com/gold-record',
       publishedAt: new Date('2026-04-11T08:00:00Z'),
       summaryJa: '金価格が史上最高値を更新。地政学的リスクの高まりとドル安を背景に、安全資産への逃避が加速している。',
-      relevanceScore: 0.88,
+      relevanceScore: 88,
       riskCategories: JSON.stringify(['currency_finance', 'geopolitics_supply_chain']),
     },
   ];
