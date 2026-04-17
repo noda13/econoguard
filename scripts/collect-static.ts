@@ -64,21 +64,23 @@ function scoreToLevel(s: number): string {
 
 // --- News ---
 const RSS_SOURCES = [
-  // 日本語ソース
-  { url: 'https://www.nhk.or.jp/rss/news/cat5.xml', source: 'nhk' },
-  { url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
-  { url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
-  { url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtcGhHZ0pLVUNnQVAB', source: 'google_biz' },
-  // 海外メディア
-  { url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
+  // 速報・一次情報
+  { url: 'https://www.reutersagency.com/feed/?best-topics=business-finance', source: 'reuters' },
   { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
+  // 市場・投資動向
+  { url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', source: 'cnbc' },
   { url: 'https://feeds.content.dowjones.io/public/rss/mw_topstories', source: 'marketwatch' },
+  // 米国コア経済
+  { url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml', source: 'wsj' },
+  // 欧州+グローバル視点
   { url: 'https://www.ft.com/rss/home', source: 'ft' },
-  // 中央銀行・政府機関
+  { url: 'https://www.economist.com/finance-and-economics/rss.xml', source: 'economist' },
+  // 中央銀行（一次ソース）
   { url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'fed' },
   { url: 'https://www.ecb.europa.eu/rss/press.html', source: 'ecb' },
-  // 金融特化メディア
-  { url: 'https://feeds.feedburner.com/zerohedge/feed', source: 'zerohedge' },
+  { url: 'https://www.boj.or.jp/rss/whatsnew.xml', source: 'boj' },
+  // 日本政策
+  { url: 'https://assets.wor.jp/rss/rdf/nikkei/news.rdf', source: 'nikkei' },
 ];
 
 async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
@@ -86,21 +88,28 @@ async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
   const ids = new Set(existing.map(a => a.id));
   const fresh: NewsArticle[] = [];
 
-  for (const src of RSS_SOURCES) {
-    try {
+  const results = await Promise.allSettled(
+    RSS_SOURCES.map(async (src) => {
       const feed = await parser.parseURL(src.url);
+      const items: NewsArticle[] = [];
       for (const item of feed.items || []) {
         if (!item.title || !item.link) continue;
         const id = genId(item.link, item.title);
         if (ids.has(id)) continue;
-        fresh.push({
+        items.push({
           id, source: src.source, originalTitle: item.title, originalUrl: item.link,
           publishedAt: item.pubDate ? new Date(item.pubDate).toISOString() : new Date().toISOString(),
           summaryJa: '', relevanceScore: 0, riskCategories: [],
         });
       }
       console.log(`  ${src.source}: ${feed.items?.length || 0} items`);
-    } catch (e) { console.error(`  ${src.source}: failed -`, e instanceof Error ? e.message : e); }
+      return items;
+    }),
+  );
+
+  for (const r of results) {
+    if (r.status === 'fulfilled') fresh.push(...r.value);
+    else console.error(`  RSS failed:`, r.reason instanceof Error ? r.reason.message : r.reason);
   }
 
   const all = [...fresh, ...existing];
@@ -288,7 +297,7 @@ async function summarize(articles: NewsArticle[]) {
       }
       console.log(`  Batch ${Math.floor(i / 10) + 1} done (${results.length} summarized)`);
     } catch (e) { console.error('  Summarize failed:', e instanceof Error ? e.message : e); }
-    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, 500));
+    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, 30000));
   }
 }
 
