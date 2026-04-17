@@ -79,6 +79,12 @@ cp .env.example .env
 
 docker compose up -d
 # http://localhost:3901 でアクセス
+
+# 初回・設定変更後はイメージ再ビルド
+docker compose up -d --build
+
+# 手動でデータ収集を実行（初回起動時はデータが空のため必須）
+curl -X POST http://localhost:8901/api/admin/collect
 ```
 
 ### 4. ローカル開発（pnpm）
@@ -208,6 +214,17 @@ LLMで4カテゴリのリスクスコア算出（0-100）
     ↓
 JSON保存 → git commit → GitHub Pages自動デプロイ
 ```
+
+### ローカル（Docker）での収集
+
+ローカルバックエンドでは、サーバー起動後に自動スケジューラが有効化される。
+
+| タイミング | 方式 |
+|---|---|
+| 7:00 / 19:00（JST） | 自動（node-cron） |
+| 任意 | 手動: `curl -X POST http://localhost:8901/api/admin/collect` |
+
+> **注意**: サーバー起動直後はデータが空のため、手動で収集を実行する必要がある。
 
 ---
 

@@ -258,14 +258,19 @@ async function summarize(articles: NewsArticle[]) {
   const todo = articles.filter(a => !a.summaryJa);
   if (!todo.length) return;
 
-  const SYS = `あなたは経済ニュースアナリストです。与えられたニュース記事を分析し、JSON形式で応答してください。
+  const SYS = `あなたはグローバル経済リスクアナリストです。与えられたニュース記事を分析し、JSON形式で応答してください。
 
 各記事について:
-- summaryJa: 日本語で2-3文の簡潔な要約（経済的インパクトを中心に）
-- relevanceScore: 世界経済リスクとの関連度（0.0-1.0）
+- summaryJa: 日本語で2-3文の簡潔な要約（マクロ経済・金融市場への影響を中心に）
+- relevanceScore: グローバル経済リスクとの関連度（0-100の整数）。以下の基準で厳格に評価:
+  - 70-100: マクロ経済に直接影響（金融政策変更、通貨危機、貿易摩擦、地政学的衝突、主要指標の大幅変動）
+  - 40-69: 間接的だが無視できない影響（業界全体の規制変更、主要企業の業績が市場に波及）
+  - 10-29: 影響が限定的またはローカル（個別企業人事、地方ニュース、小規模イベント）
+  - 0-9: 経済リスクと無関係
 - riskCategories: 関連するカテゴリの配列。選択肢: "currency_finance", "geopolitics_supply_chain", "technology", "social_policy"
+  relevanceScoreが30未満の記事は空配列[]にしてください。
 
-応答は必ず以下のJSON形式: {"results":[{"index":0,"summaryJa":"...","relevanceScore":0.8,"riskCategories":["currency_finance"]}]}`;
+応答は必ず以下のJSON形式: {"results":[{"index":0,"summaryJa":"...","relevanceScore":80,"riskCategories":["currency_finance"]}]}`;
 
   for (let i = 0; i < Math.min(todo.length, 50); i += 10) {
     const batch = todo.slice(i, i + 10);
@@ -355,7 +360,10 @@ async function main() {
     breakdown: risks.map(r => ({ category: r.category, score: r.score, weight: weights[r.category] || 0.25 })),
   };
 
-  writeJson('news.json', news);
+  const filteredNews = news
+    .filter(a => !a.summaryJa || a.relevanceScore >= 30)
+    .slice(0, 200);
+  writeJson('news.json', filteredNews);
   writeJson('indicators.json', indicators);
   writeJson('risks.json', risks);
   writeJson('composite-risk.json', composite);
