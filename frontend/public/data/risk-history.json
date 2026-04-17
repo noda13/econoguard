@@ -1,1 +1,57 @@
-{}
+{
+  "currency_finance": [
+    {
+      "category": "currency_finance",
+      "score": 70,
+      "level": "high",
+      "summaryJa": "原油価格の変動、金価格の変動、為替市場の動きなどが経済の不安定性を反映している。金融政策の変更や企業の不正会計問題も市場に波及する可能性がある。",
+      "factorsJa": [
+        "原油価格の変動",
+        "金価格の変動",
+        "為替市場の動き",
+        "金融政策の変更",
+        "企業の不正会計問題"
+      ],
+      "assessedAt": "2026-04-17T03:54:28.662Z"
+    }
+  ],
+  "geopolitics_supply_chain": [
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 65,
+      "level": "high",
+      "summaryJa": "地政学的緊張は世界経済に大きな影響を与える可能性がある。中東情勢のショックやキューバ大統領の米国の軍事攻撃への警告などが要因となっている。",
+      "factorsJa": [
+        "中東情勢のショック",
+        "キューバ大統領の米国の軍事攻撃への警告",
+        "G7財務相と中銀総裁の中東での平和の必要性についての一致"
+      ],
+      "assessedAt": "2026-04-17T03:54:28.662Z"
+    }
+  ],
+  "technology": [
+    {
+      "category": "technology",
+      "score": 40,
+      "level": "moderate",
+      "summaryJa": "生成AIによる肖像や声の無断使用についての法制度の整理や仮想通貨の実用化が進展している。技術の進展は経済に影響を与える可能性がある。",
+      "factorsJa": [
+        "生成AIによる肖像や声の無断使用",
+        "仮想通貨の実用化"
+      ],
+      "assessedAt": "2026-04-17T03:54:28.662Z"
+    }
+  ],
+  "social_policy": [
+    {
+      "category": "social_policy",
+      "score": 20,
+      "level": "low",
+      "summaryJa": "社会政策に関連するニュースは見られない。経済に直接的な影響は見られない。",
+      "factorsJa": [
+        "なし"
+      ],
+      "assessedAt": "2026-04-17T03:54:28.662Z"
+    }
+  ]
+}
