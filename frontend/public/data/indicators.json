@@ -2,37 +2,37 @@
   {
     "code": "BTC",
     "name": "ビットコイン",
-    "value": 76783,
-    "previousValue": 74746,
+    "value": 77267,
+    "previousValue": 76783,
     "unit": "USD",
     "source": "coingecko",
-    "recordedAt": "2026-04-17T13:48:49.048Z"
+    "recordedAt": "2026-04-18T03:21:04.723Z"
   },
   {
     "code": "ETH",
     "name": "イーサリアム",
-    "value": 2414.1,
-    "previousValue": 2328.4,
+    "value": 2418.96,
+    "previousValue": 2414.1,
     "unit": "USD",
     "source": "coingecko",
-    "recordedAt": "2026-04-17T13:48:49.048Z"
+    "recordedAt": "2026-04-18T03:21:04.723Z"
   },
   {
     "code": "GOLD",
     "name": "金価格",
-    "value": 4841.84,
-    "previousValue": 4775.69,
+    "value": 4816.4,
+    "previousValue": 4841.84,
     "unit": "USD/oz",
     "source": "coingecko",
-    "recordedAt": "2026-04-17T13:48:49.048Z"
+    "recordedAt": "2026-04-18T03:21:04.723Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 158.23,
-    "previousValue": 159.4,
+    "value": 158.68,
+    "previousValue": 158.23,
     "unit": "円",
     "source": "coingecko",
-    "recordedAt": "2026-04-17T13:48:49.048Z"
+    "recordedAt": "2026-04-18T03:21:04.723Z"
   }
 ]
