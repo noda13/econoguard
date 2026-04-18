@@ -1,5 +1,203 @@
 [
   {
+    "id": "412dcfb179539312",
+    "source": "nikkei",
+    "originalTitle": "長野県で強い揺れの地震相次ぐ　震度5強と震度5弱、津波の心配なし",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUD181D70Y6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "長野県で強い地震が発生し、震度5強と震度5弱を観測した。津波の心配はない。地震による被害状況の把握が進む。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "6788ae174f2ce160",
+    "source": "nikkei",
+    "originalTitle": "長野県で震度5強、政府が官邸連絡室　首相が被害状況の把握など指示",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA1818J0Y6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "長野県で震度5強の地震が発生し、政府が官邸連絡室を設置。首相が被害状況の把握などを指示した。地震による被害状況の把握が進む。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "9c58ff3c964927dc",
+    "source": "nikkei",
+    "originalTitle": "長野県で震度5強の地震　推定マグニチュード5.0、津波の心配なし",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUD1813K0Y6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "長野県で震度5強の地震が発生し、推定マグニチュードは5.0。津波の心配はない。地震による被害状況の把握が進む。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "7b7dc91b05fc387a",
+    "source": "nikkei",
+    "originalTitle": "経団連・韓国経済団体、東京でセミナー初開催へ　中東対応など議論",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM16AKO0W6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "経団連と韓国経済団体が東京でセミナーを開催する予定。中東対応などを議論する。国際経済関係のニュースであり、間接的な影響がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "ef40b5931c2a6758",
+    "source": "nikkei",
+    "originalTitle": "自民党の小林鷹之政調会長、ホルムズ海峡の開放「予断許さない状況」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA180Z00Y6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "自民党の小林鷹之政調会長がホルムズ海峡の開放について「予断許さない状況」と述べた。地政学的なニュースであり、間接的な影響がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "cee24f8530bb90e0",
+    "source": "nikkei",
+    "originalTitle": "中国・ロシア、イランにレーダー供与を模索　米国分析",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB180Z50Y6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "中国とロシアがイランにレーダーを供与することを模索していると米国分析ではある。地政学的なニュースであり、間接的な影響がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "050910f6c6ebe10e",
+    "source": "nikkei",
+    "originalTitle": "日豪が「もがみ」型護衛艦の契約完了　三菱重工設計、安保協力を拡大",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA164DL0W6A410C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "日豪は「もがみ」型護衛艦の契約を完了し、安保協力を拡大します。地政学的影響が見られます。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "08bddd4f5ddcdd55",
+    "source": "nikkei",
+    "originalTitle": "すかいらーく、資さんうどん店舗4倍400店　割安店にガストなど衣替え",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC021ZQ0S6A300C2000000/",
+    "publishedAt": "2026-04-18T07:21:36.477Z",
+    "summaryJa": "すかいらーくが資さんうどん店舗を4倍に増やします。業界全体への影響が見られます。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "046d3c6462a0d722",
+    "source": "bloomberg",
+    "originalTitle": "Lufthansa’s 100th Birthday Bash Leaves Little Cause for Cheers",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/lufthansa-s-100th-birthday-bash-leaves-little-cause-for-cheers",
+    "publishedAt": "2026-04-18T06:00:00.000Z",
+    "summaryJa": "ルフトハンザの100周年記念イベントが開催されたが、経営状況の悪化により祝賀ムードはなかった。航空業界のニュースであり、経済リスクとの関連性はある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "54382d67512727a6",
+    "source": "bloomberg",
+    "originalTitle": "Bangladesh Continues Talks with IMF on Key Reforms Tied to Loan",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/bangladesh-continues-talks-with-imf-on-key-reforms-tied-to-loan",
+    "publishedAt": "2026-04-18T05:46:30.000Z",
+    "summaryJa": "バングラデシュがIMFと改革に関する交渉を続けている。IMFの融資が経済改革に大きく影響するため、経済リスクとの関連性は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "49acfdf255114add",
+    "source": "bloomberg",
+    "originalTitle": "Greek, Indian Tankers U-Turn Before Hormuz Amid Reopening Doubt",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/greek-indian-tankers-u-turn-before-hormuz-amid-reopening-doubt",
+    "publishedAt": "2026-04-18T05:12:54.000Z",
+    "summaryJa": "ホルムズ海峡でギリシャとインドのタンカーがUターンした。海上輸送の不安定さが高まり、経済リスクとの関連性は高い。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "50b22ec3d9c5b140",
+    "source": "bloomberg",
+    "originalTitle": "Blaze Erupts at Russia’s Baltic Port After Ukraine Drone Attack",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/russia-said-fire-broke-out-at-baltic-port-after-drone-attack",
+    "publishedAt": "2026-04-18T05:06:20.000Z",
+    "summaryJa": "ロシアのバルチック港でウクライナのドローン攻撃により火災が発生した。地政学的緊張が高まり、経済リスクとの関連性は高い。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "af460affbac9acc0",
+    "source": "bloomberg",
+    "originalTitle": "UK Bears Scars to Economy, Trump Ties Even as War Risks Subside",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/uk-bears-scars-to-economy-trump-ties-even-as-war-risks-subside",
+    "publishedAt": "2026-04-18T05:00:00.000Z",
+    "summaryJa": "イギリス経済がトランプ政権との関係や戦争リスクの影響を受けている。経済指標や地政学的要因が経済リスクに大きく影響している。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "a79aaabdd4abe28e",
+    "source": "ft",
+    "originalTitle": "Why higher pay hasn’t made young adults feel richer",
+    "originalUrl": "https://www.ft.com/content/b61f60a3-d4d7-46d9-aa6f-dd78dffe71f5",
+    "publishedAt": "2026-04-18T04:00:48.000Z",
+    "summaryJa": "若者の賃金が上昇しているにも関わらず、富の感覚が高まらないことが指摘されている。経済指標や社会問題が経済リスクに影響を与える可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "social_policy"
+    ]
+  },
+  {
+    "id": "5079c176089e2f99",
+    "source": "ft",
+    "originalTitle": "The return of Londonophobia",
+    "originalUrl": "https://www.ft.com/content/ba3b3ed8-4f6f-486e-aa8c-fbec8a87ffd6",
+    "publishedAt": "2026-04-18T04:00:40.000Z",
+    "summaryJa": "ロンドンに対する恐怖心が再び高まっていることが指摘されている。社会問題や地政学的要因が経済リスクに影響を与える可能性がある。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "c422e8e2dbeb59d3",
+    "source": "ft",
+    "originalTitle": "The coming global food crisis",
+    "originalUrl": "https://www.ft.com/content/36343e24-b06f-434d-a7e5-6046e7bcf3df",
+    "publishedAt": "2026-04-18T04:00:25.000Z",
+    "summaryJa": "世界的な食糧危機が近づいており、食料生産と供給に大きな影響を与える可能性がある。食料価格の高騰や食料不足が起こる可能性があり、世界経済に大きな影響を及ぼす。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f943f83fb23a5773",
+    "source": "ft",
+    "originalTitle": "Turkey promotes ‘Middle Corridor’ as Strait of Hormuz alternative",
+    "originalUrl": "https://www.ft.com/content/a1ea2038-b4d7-4d94-bd02-bfb65d730f45",
+    "publishedAt": "2026-04-18T04:00:04.000Z",
+    "summaryJa": "トルコは、ホルムズ海峡の代替ルートとして『ミドル・コリドー』を推進している。地政学的観点から見ると、貿易ルートの多様化が進む可能性があり、グローバル経済に影響を及ぼす。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
     "id": "c00a4b91f0d65df9",
     "source": "nikkei",
     "originalTitle": "時限的停戦だけなら原油輸送は正常化せず、サウジ財務相が認識",
@@ -297,64 +495,16 @@
     ]
   },
   {
-    "id": "fd22db5117e8596a",
-    "source": "marketwatch",
-    "originalTitle": "Meta reportedly eyes more layoffs, targeting 10% of staff",
-    "originalUrl": "https://www.marketwatch.com/story/meta-reportedly-eyes-more-layoffs-targeting-10-of-staff-c93503b9?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-17T21:56:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a5846b2df3ea4489",
-    "source": "bloomberg",
-    "originalTitle": "KKR-Backed Emergency Services Firm GMR Files for US IPO",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/kkr-backed-emergency-services-firm-gmr-files-for-us-ipo",
-    "publishedAt": "2026-04-17T21:47:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3365ff194057dae8",
-    "source": "marketwatch",
-    "originalTitle": "Nvidia rival Cerebras is taking another swing at an IPO",
-    "originalUrl": "https://www.marketwatch.com/story/nvidia-rival-cerebras-is-taking-another-swing-at-an-ipo-057f4deb?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-17T21:42:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7dad4daeb8cfb809",
-    "source": "bloomberg",
-    "originalTitle": "Live Nation Inks $742 Million of Private Debt Tied to Venues",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/live-nation-inks-742-million-of-private-debt-tied-to-venues",
-    "publishedAt": "2026-04-17T21:28:14.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "eb338c4900dcaea4",
-    "source": "bloomberg",
-    "originalTitle": "Blackstone-Backed Ad Tech Firm Liftoff Mobile Refiles for US IPO",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/blackstone-backed-ad-tech-firm-liftoff-mobile-refiles-for-us-ipo",
-    "publishedAt": "2026-04-17T21:10:46.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
     "id": "25944482ed54a957",
     "source": "ft",
     "originalTitle": "Months-old start-up Recursive raises $500mn for self-teaching AI",
     "originalUrl": "https://www.ft.com/content/a92bf04b-bbac-400f-9554-5b1c70957ad4",
     "publishedAt": "2026-04-17T21:10:31.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "新興企業Recursiveが500万ドルの資金調達を実施し、自己学習AIの開発を進める。テクノロジー業界の動向に影響を及ぼす可能性がある。",
+    "relevanceScore": 30,
+    "riskCategories": [
+      "technology"
+    ]
   },
   {
     "id": "d4ca7c692d1f35ae",
@@ -362,9 +512,24 @@
     "originalTitle": "IMF, World Bank Navigate Economic Fallout From Iran War",
     "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/imf-world-bank-navigate-economic-fallout-from-iran-war-video",
     "publishedAt": "2026-04-17T21:08:53.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "IMFと世界銀行がイラン戦争の経済的影響に対処する。地政学的リスクと経済への影響が懸念される。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "3ae23e1378a6712f",
+    "source": "ft",
+    "originalTitle": "Oil falls as US and Iran declare Strait of Hormuz open to shipping",
+    "originalUrl": "https://www.ft.com/content/bb35fb5a-0df2-427c-8da0-5b55a0cdd97e",
+    "publishedAt": "2026-04-17T20:54:57.000Z",
+    "summaryJa": "米国とイランがホルムズ海峡の通航を宣言し、油価が下落した。エネルギー市場と地政学的リスクに影響を及ぼす。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "f98da0c50c3e0451",
@@ -372,9 +537,11 @@
     "originalTitle": "Oil slumps as US and Iran declare Strait of Hormuz open to shipping",
     "originalUrl": "https://www.ft.com/content/bb35fb5a-0df2-427c-8da0-5b55a0cdd97e",
     "publishedAt": "2026-04-17T20:54:57.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "米国とイランがホルムズ海峡の通航を宣言し、油価が下落した。エネルギー市場と地政学的リスクに影響を及ぼす。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "0cb186cadd1f32e2",
@@ -597,6 +764,16 @@
     "riskCategories": []
   },
   {
+    "id": "cd8464c7ef5b5936",
+    "source": "ft",
+    "originalTitle": "Organised crime suspect Daniel Kinahan arrested in Dubai",
+    "originalUrl": "https://www.ft.com/content/50bbc96c-3db4-4d3f-a623-e7ab80dc7480",
+    "publishedAt": "2026-04-17T18:38:08.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "ddb5297961cbdfb7",
     "source": "cnbc",
     "originalTitle": "Kevin Warsh wants to lead a scandal-ridden Fed. His wealth is a complication",
@@ -612,6 +789,16 @@
     "originalTitle": "Investors look through the turmoil ",
     "originalUrl": "https://www.ft.com/content/a3a5296d-23fa-4014-9f8a-9305b1d68406",
     "publishedAt": "2026-04-17T17:00:06.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7f7cc8a6134a4f43",
+    "source": "cnbc",
+    "originalTitle": "Why the stock market is hitting records despite Iran war",
+    "originalUrl": "https://www.cnbc.com/2026/04/16/stocks-record-highs-iran-war.html",
+    "publishedAt": "2026-04-17T16:35:26.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -1207,6 +1394,16 @@
     "riskCategories": []
   },
   {
+    "id": "2a993a9352f35a37",
+    "source": "cnbc",
+    "originalTitle": "Senate overturns Boundary Waters protections, a boon for Chilean mining company",
+    "originalUrl": "https://www.cnbc.com/2026/04/16/minnesota-boundary-waters-mining-congress.html",
+    "publishedAt": "2026-04-17T11:53:54.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "653edaa0f326da04",
     "source": "bloomberg",
     "originalTitle": "Trump Hopeful of Iran Peace Deal & New Crisis for UK PM Starmer | The Pulse 04/17/2026",
@@ -1671,246 +1868,6 @@
     "summaryJa": "日経平均先物が反落し、5万9380円で始まった。市場の動きは、投資家のリスク回避姿勢を反映している。",
     "relevanceScore": 60,
     "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "b7c31f5a6fced946",
-    "source": "nikkei",
-    "originalTitle": "最高値更新の日経平均、海外勢が狙う｢次の10兆円クラブ｣　予備軍は26社",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1689JTW6A410C2000000/",
-    "publishedAt": "2026-04-17T03:51:45.816Z",
-    "summaryJa": "日経平均が最高値を更新し、海外の投資家が注目する日本の企業が増加している。予備軍は26社ある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "0e01a8eaa6173bee",
-    "source": "nikkei",
-    "originalTitle": "Netflixの1〜3月純利益8割増、WBCも会員増に寄与　創業者は退任",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN1609Q0W6A410C2000000/",
-    "publishedAt": "2026-04-17T03:51:45.816Z",
-    "summaryJa": "Netflixの1〜3月の純利益が8割増加し、WBCも会員増に寄与した。創業者は退任する。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "1bfc56423e24978a",
-    "source": "nikkei",
-    "originalTitle": "米ナスダック総合、17年ぶり12連騰　「SaaS」買いに透ける楽観論",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN16DBE0W6A410C2000000/",
-    "publishedAt": "2026-04-17T03:51:45.816Z",
-    "summaryJa": "米ナスダック総合が17年ぶり12連騰し、SaaSの買いが楽観論を生み出している。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance",
-      "technology"
-    ]
-  },
-  {
-    "id": "9729d97944f0b38a",
-    "source": "nikkei",
-    "originalTitle": "キオクシア株、チャートに陽のカラカサ　調整の懸念後退に市場安堵",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL166XCTW6A410C2000000/",
-    "publishedAt": "2026-04-17T03:51:45.816Z",
-    "summaryJa": "キオクシア株が調整の懸念後退に市場安堵している。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance",
-      "technology"
-    ]
-  },
-  {
-    "id": "b71c86e0b0e576fc",
-    "source": "nikkei",
-    "originalTitle": "日経平均、米原油先物の高止まりが重荷に（先読み株式相場）",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1704N0X10C26A4000000/",
-    "publishedAt": "2026-04-17T03:51:45.816Z",
-    "summaryJa": "日経平均が米原油先物の高止まりの影響を受けている。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance",
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "33eecd6ab4531d89",
-    "source": "ft",
-    "originalTitle": "Israel-Lebanon ceasefire takes effect ",
-    "originalUrl": "https://www.ft.com/content/cdb6aaee-3cec-4456-8106-5c9279d02392",
-    "publishedAt": "2026-04-17T03:22:14.000Z",
-    "summaryJa": "イスラエルとレバノンの停戦が発効しました。停戦は地域の安定に貢献する可能性がありますが、地政学的緊張が継続しているため、注意が必要です。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "23121c96be7f0110",
-    "source": "bloomberg",
-    "originalTitle": "Foreign Trading of Chinese Bonds via Hong Kong Hits Record High",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/foreign-trading-of-chinese-bonds-via-hong-kong-hits-record-high",
-    "publishedAt": "2026-04-17T03:18:48.000Z",
-    "summaryJa": "香港を通じた中国国債の外国取引が過去最高を記録しました。中国の金融市場への関心が高まっていることを示しています。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "fe03687789840d92",
-    "source": "bloomberg",
-    "originalTitle": "China to Commission Seven Nuclear Reactors in 2026, CCTV Says",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/china-to-commission-seven-nuclear-reactors-in-2026-cctv-says",
-    "publishedAt": "2026-04-17T03:14:12.000Z",
-    "summaryJa": "中国が2026年に7つの原子力発電所を運転開始する予定です。エネルギー需要と供給のバランスに影響を与える可能性があります。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "b652f09dc6f71ce3",
-    "source": "bloomberg",
-    "originalTitle": "London Metals Index at Record High on Aluminum ‘Black Hole’ Fear",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/london-metals-index-at-record-high-on-aluminum-black-hole-fear",
-    "publishedAt": "2026-04-17T02:58:22.000Z",
-    "summaryJa": "ロンドン金属指数がアルミニウム需要の増加により過去最高を記録しました。金属市場の動向が世界経済に与える影響に注目が必要です。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "b10a8b802a879ef1",
-    "source": "bloomberg",
-    "originalTitle": "What’s Next for Manycore After Blockbuster HK Debut",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/what-s-next-for-manycore-after-blockbuster-hk-debut-video",
-    "publishedAt": "2026-04-17T02:52:03.000Z",
-    "summaryJa": "Manycoreの香港デビューが話題となっています。テクノロジー企業の成長がアジアの金融市場に与える影響に注目が必要です。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "c7fcbbb1e67d237d",
-    "source": "bloomberg",
-    "originalTitle": "Indian Stocks Risk Deeper Underperformance as Tech-Led North Asia Draws Funds",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-04-17/indian-stocks-underperformance-versus-tech-heavy-asia-peers-is-likely-to-extend",
-    "publishedAt": "2026-04-17T02:48:23.000Z",
-    "summaryJa": "インドの株式市場が北アジアのテクノロジー株に比べて低調な可能性があります。アジアの金融市場の動向が世界経済に与える影響に注目が必要です。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "73965830a39dfa98",
-    "source": "bloomberg",
-    "originalTitle": "OCBC Is Said to Emerge as Lead Bidder for HSBC Indonesia Assets",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/ocbc-is-said-to-emerge-as-lead-bidder-for-hsbc-indonesia-assets",
-    "publishedAt": "2026-04-17T02:47:56.000Z",
-    "summaryJa": "OCBCがHSBCインドネシア資産の買収の最有力候補となっています。アジアの金融市場の動向が地域経済に与える影響に注目が必要です。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "0edd8931410bd369",
-    "source": "bloomberg",
-    "originalTitle": "Investors Should 'Look Under the Hood' of Markets: IG International",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/investors-should-look-under-the-hood-of-markets-ig-video",
-    "publishedAt": "2026-04-17T02:47:52.000Z",
-    "summaryJa": "投資家は市場の動向を注意深く観察する必要があります。市場のトレンドが世界経済に与える影響に注目が必要です。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "63292e054029ac70",
-    "source": "bloomberg",
-    "originalTitle": "Australia’s Treasurer Flags Inflation Risk Before Budget",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/australia-s-treasurer-flags-inflation-risk-before-budget-video",
-    "publishedAt": "2026-04-17T02:40:45.000Z",
-    "summaryJa": "オーストラリアの財務大臣は、予算発表前にインフレリスクを警告した。オーストラリア経済への影響が懸念される。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "672c5d878e76aef8",
-    "source": "cnbc",
-    "originalTitle": "Netflix stock sinks after streamer reiterates guidance, says Reed Hastings to exit board",
-    "originalUrl": "https://www.cnbc.com/2026/04/16/netflix-nflx-earnings-q1-2026.html",
-    "publishedAt": "2026-04-17T02:22:51.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cabed08c842a889b",
-    "source": "bloomberg",
-    "originalTitle": "Credit Growth to Lift India Bank Profits Despite Likely FX Losses",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/credit-growth-to-lift-india-bank-profits-despite-likely-fx-losses",
-    "publishedAt": "2026-04-17T02:07:57.000Z",
-    "summaryJa": "インドの銀行の利益は信用の拡大によって増加する見込みだが、為替損失も予想される。インドの金融市場への影響が見られる。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "b7fa081727dbd37d",
-    "source": "bloomberg",
-    "originalTitle": "Pemex Undersea Pipeline Found to Cause Gulf Oil Spill",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/pemex-undersea-pipeline-found-to-cause-gulf-oil-spill",
-    "publishedAt": "2026-04-17T02:01:58.000Z",
-    "summaryJa": "ペメックスの海底パイプラインがメキシコ湾の石油流出の原因と判明した。環境への影響が懸念される。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "7060a1d4467142da",
-    "source": "cnbc",
-    "originalTitle": "Asia markets open lower as fragile Middle East ceasefire tempers sentiment",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/asia-markets-today-nikkei225-hang-seng-sensex-asx-ceasefire-oil.html",
-    "publishedAt": "2026-04-17T01:56:44.000Z",
-    "summaryJa": "アジア市場が下落した。中東の停戦が脆いと見られており、投資家の姿勢が慎重になっている。地政学的不安が金融市場に影響を与える。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "e6b49a707edb1913",
-    "source": "ft",
-    "originalTitle": "Trump administration urges US oil bosses to increase drilling",
-    "originalUrl": "https://www.ft.com/content/0f41cbd9-58e5-4f0c-b975-3e6b919f1431",
-    "publishedAt": "2026-04-17T01:38:19.000Z",
-    "summaryJa": "トランプ政権が米国の石油業界にボアリングの増加を促した。エネルギー政策と経済への影響が見られる。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "7cb850df067fe7c1",
-    "source": "cnbc",
-    "originalTitle": "IMF, World Bank say they are resuming dealings with Venezuela",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/imf-world-bank-say-they-are-resuming-dealings-with-venezuela.html",
-    "publishedAt": "2026-04-17T01:36:58.000Z",
-    "summaryJa": "IMFと世界銀行がベネズエラとの取引を再開する。ベネズエラの経済状況と国際関係に影響が見られる。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain",
       "currency_finance"
     ]
   }
