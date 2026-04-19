@@ -1,5 +1,221 @@
 [
   {
+    "id": "422ca082d02dd3ea",
+    "source": "nikkei",
+    "originalTitle": "イランがホルムズ海峡再封鎖、接近なら標的に　「トランプ氏信用できず」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR1836Q0Y6A410C2000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "イランはホルムズ海峡の再封鎖を示唆し、トランプ米政権の信頼性に疑問を投げかけている。イランの姿勢は地政学的緊張を高める可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "3aebae2fe2100bca",
+    "source": "nikkei",
+    "originalTitle": "トランプ米政権、イランに｢新合意案｣提示か　戦闘終結の交渉山場に",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN190230Z10C26A4000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "トランプ米政権はイランに新合意案を提示する可能性がある。交渉の行方は地政学的緊張に影響を与える。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "4648647daff40394",
+    "source": "nikkei",
+    "originalTitle": "退職金20年で3割目減り､物価高に勝てず　人材定着へ給付引き上げ課題",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB073570X00C26A4000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "退職金の減少と物価高との関係についての記事です。労働市場や給与への影響はあり、間接的に経済リスクに関連しています。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "social_policy"
+    ]
+  },
+  {
+    "id": "80090544aeaa9464",
+    "source": "nikkei",
+    "originalTitle": "オタク輝かすAI　飛び出す｢YOASOBI｣、テックが変えるエンタメ",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF1633F0W6A410C2000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "AIがエンターテイメント業界に与える影響についての記事です。テクノロジーとエンターテイメントの融合は経済に間接的な影響を及ぼします。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "27dae6e77534bdca",
+    "source": "nikkei",
+    "originalTitle": "AI時代のFRB議長、「グリーンスパン再来」はあるか",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB172FG0X10C26A4000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "AI時代におけるFRB議長の役割についての記事です。金融政策や経済への影響はあり、経済リスクに関連しています。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "3fbec797dd77f262",
+    "source": "nikkei",
+    "originalTitle": "円相場160円台再び視野、日銀の利上げ観測後退",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB151H20V10C26A4000000/",
+    "publishedAt": "2026-04-19T03:40:03.221Z",
+    "summaryJa": "円相場が160円台に戻る可能性と日銀の利上げ観測についての記事です。為替市場や金融政策への影響はあり、経済リスクに関連しています。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "4f8292ad25fe3975",
+    "source": "nikkei",
+    "originalTitle": "北朝鮮が弾道ミサイルを複数発射　防衛省発表、EEZ外に落下と推定",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA190290Z10C26A4000000/",
+    "publishedAt": "2026-04-19T03:40:03.220Z",
+    "summaryJa": "北朝鮮が複数の弾道ミサイルを発射し、日本のEEZ外に落下したと推定される。地政学的緊張が高まり、地域の安定に影響を及ぼす可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "6ecd26ecf13e41f6",
+    "source": "nikkei",
+    "originalTitle": "「中国がグリーンランドで軍事活動増加」トランプ氏主張の虚実",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD175JG0X10C26A3000000/",
+    "publishedAt": "2026-04-19T03:40:03.220Z",
+    "summaryJa": "トランプ氏が中国のグリーンランドにおける軍事活動の増加を主張したが、その真実性について疑問視されている。地政学的緊張に関連するが、具体的な経済への影響は不明。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "0b6843b6b46a062e",
+    "source": "bloomberg",
+    "originalTitle": "Australia’s Victoria State Extends Public Transport Benefits",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-19/australia-s-victoria-state-extends-public-transport-benefits",
+    "publishedAt": "2026-04-19T00:30:56.000Z",
+    "summaryJa": "オーストラリアのビクトリア州が公共交通機関の利益を拡大。地域の社会政策に関する話題であり、経済リスクへの影響は間接的だが、無視できない。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "social_policy"
+    ]
+  },
+  {
+    "id": "d3ab89b7bfa63b53",
+    "source": "marketwatch",
+    "originalTitle": "New York City is floating a $500 million second-home tax — and it would hurt industries that support thousands of jobs",
+    "originalUrl": "https://www.marketwatch.com/story/mayor-mamdanis-500-million-war-on-the-rich-will-force-new-york-citys-top-taxpayers-to-florida-e179b49a?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T22:42:00.000Z",
+    "summaryJa": "ニューヨーク市は、5億ドルの第二住居税を検討している。この税は、数千人の雇用を支える業界に悪影響を及ぼす可能性がある。税制変更により、不動産市場や関連産業に影響が及ぶ可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "social_policy"
+    ]
+  },
+  {
+    "id": "c675dde598a6ded3",
+    "source": "cnbc",
+    "originalTitle": "No escape: U.S.-Iran war, $4 gas, have taken all the fun out of consumer spending",
+    "originalUrl": "https://www.cnbc.com/2026/04/18/iran-war-gas-prices-consumer-spending-economy.html",
+    "publishedAt": "2026-04-18T21:42:07.000Z",
+    "summaryJa": "米伊戦争やガソリン価格高騰により、消費者支出が減少している。消費者は景気後退への懸念から支出を控えている。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "3519d347a3714608",
+    "source": "marketwatch",
+    "originalTitle": "New Social Security proposal would cap payments for wealthy people now — and many more later on",
+    "originalUrl": "https://www.marketwatch.com/story/new-social-security-proposal-would-cap-payments-for-wealthy-people-now-and-many-more-later-on-20c926cf?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T20:29:00.000Z",
+    "summaryJa": "新しい社会保障提案では、富裕層への支払いを制限する。将来、より多くの人々に影響が及ぶ可能性がある。社会保障制度の変更により、経済に影響が及ぶ可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "social_policy"
+    ]
+  },
+  {
+    "id": "3571087f4b442aeb",
+    "source": "bloomberg",
+    "originalTitle": "War Revives Stagflation Dangers for Global Economy",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/war-revives-stagflation-dangers-for-global-economy",
+    "publishedAt": "2026-04-18T20:00:00.000Z",
+    "summaryJa": "戦争により、世界経済がスタグフレーションに陥る危険性が高まっている。スタグフレーションにより、経済成長が停滞し、インフレ率が上昇する可能性がある。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "3610cc5f382769f4",
+    "source": "marketwatch",
+    "originalTitle": "Private credit not only won’t spark a financial crisis — it may be more stable than your bank",
+    "originalUrl": "https://www.marketwatch.com/story/private-credit-is-actually-built-to-survive-the-ghosts-of-the-great-financial-crisis-6eaa35d6?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T19:46:00.000Z",
+    "summaryJa": "プライベート・クレジットは金融危機を引き起こさない。実際、銀行よりも安定している可能性がある。プライベート・クレジットの安定性は、金融市場に影響を及ぼす。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "62634bbae70f73c8",
+    "source": "marketwatch",
+    "originalTitle": "This is the defense sector’s fastest grower — and a $20 billion trade most investors are missing",
+    "originalUrl": "https://www.marketwatch.com/story/the-20-billion-drone-killer-trade-most-investors-are-missing-7fff2293?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T19:44:00.000Z",
+    "summaryJa": "国防産業の最速成長分野は、投資家が見過ごしている20億ドルの取引機会である。国防産業の成長は、経済に影響を及ぼす可能性がある。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "f91fb0d4b710ff49",
+    "source": "marketwatch",
+    "originalTitle": "Big Tech’s giant headache: billions in AI capital spending and investors demanding quick results",
+    "originalUrl": "https://www.marketwatch.com/story/big-techs-giant-headache-billions-in-ai-capital-spending-means-investors-demand-results-451fd572?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T19:43:00.000Z",
+    "summaryJa": "テクノロジー企業の大規模なAI投資が進む中、投資家は早期の成果を求めています。この動向は、テクノロジー業界の成長と収益性に影響を及ぼす可能性があります。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "ace6e3388ff3d2e9",
+    "source": "marketwatch",
+    "originalTitle": "This ‘hidden’ price of oil is going to hit your electric bill next",
+    "originalUrl": "https://www.marketwatch.com/story/this-hidden-oil-price-is-ripping-the-hull-out-of-the-global-economy-89ff8e54?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T19:16:00.000Z",
+    "summaryJa": "原油価格の変動が電気料金に影響を及ぼす可能性があり、消費者と企業のコストに影響を与える可能性があります。この動向は、エネルギー価格の変動とインフレ率に影響を及ぼす可能性があります。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "41cce7aea120dd7a",
+    "source": "marketwatch",
+    "originalTitle": "These stocks and ETFs can beat the ‘sell in May’ slump — and dodge the 2026 midterm blues",
+    "originalUrl": "https://www.marketwatch.com/story/these-stocks-and-etfs-can-beat-the-sell-in-may-slump-and-dodge-the-2026-midterm-blues-6295b0c2?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-18T19:14:00.000Z",
+    "summaryJa": "投資家は、5月の株式市場の下落と2026年の中間選挙の影響を最小限に抑えるための戦略を模索しています。特定の銘柄とETFが、この動向に対する対策として注目されています。",
+    "relevanceScore": 30,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
     "id": "528bb9e799387014",
     "source": "nikkei",
     "originalTitle": "未上場株軸の投信、政府が新制度検討　個人のスタートアップ投資促す",
@@ -80,6 +296,19 @@
     "relevanceScore": 90,
     "riskCategories": [
       "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "9c7c4d5952c58219",
+    "source": "bloomberg",
+    "originalTitle": "Traders Ready to Put War Behind Them Dial Up Risk",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-18/traders-ready-to-put-war-behind-them-dial-up-risk-credit-weekly",
+    "publishedAt": "2026-04-18T19:00:00.000Z",
+    "summaryJa": "トレーダーは、戦争の影響を乗り越えてリスクを高める姿勢を見せています。これは、金融市場のリスク回避姿勢の緩和と、投資家のリスクテイクの増加を示唆しています。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
     ]
   },
   {
@@ -199,9 +428,12 @@
     "originalTitle": "Iran war, $4 gas, took all the fun out of the U.S. consumer economy. There's only so much time to bring it back",
     "originalUrl": "https://www.cnbc.com/2026/04/18/iran-war-gas-prices-consumer-spending-economy.html",
     "publishedAt": "2026-04-18T14:08:53.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "イラン戦争や高騰するガス価格が、米国の消費者経済に影響を及ぼしています。経済の回復が遅れると、消費者と企業の景気に悪影響が及ぶ可能性があります。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
   },
   {
     "id": "9ea8b44ff94a9433",
@@ -1398,6 +1630,16 @@
     "riskCategories": []
   },
   {
+    "id": "f9aee9e19b3d38bd",
+    "source": "cnbc",
+    "originalTitle": "Apple's iPhone shipments in China surge 20% in first quarter, data shows",
+    "originalUrl": "https://www.cnbc.com/2026/04/17/apples-iphone-shipments-in-china-surge-20percent-in-first-quarter-data-shows.html",
+    "publishedAt": "2026-04-17T16:54:03.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "7f7cc8a6134a4f43",
     "source": "cnbc",
     "originalTitle": "Why the stock market is hitting records despite Iran war",
@@ -1423,6 +1665,16 @@
     "originalTitle": "Netflix was long 'a builder not a buyer.' Is that era over?",
     "originalUrl": "https://www.cnbc.com/2026/04/17/netflix-mergers-m-a-strategy.html",
     "publishedAt": "2026-04-17T15:39:55.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a81c026bb53a0867",
+    "source": "cnbc",
+    "originalTitle": "Bessent says to adjust your paycheck withholding — but mistakes could trigger a tax bill, experts caution",
+    "originalUrl": "https://www.cnbc.com/2026/04/17/tax-withholding-2026.html",
+    "publishedAt": "2026-04-17T15:01:15.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -1622,207 +1874,6 @@
     "originalTitle": "LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals",
     "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/empty-lng-tankers-attempt-hormuz-crossing-into-persian-gulf",
     "publishedAt": "2026-04-17T13:45:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "657b78e529b65cc0",
-    "source": "bloomberg",
-    "originalTitle": "LNG Ships Move Toward Hormuz After Iran Says Strait Is Open",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/empty-lng-tankers-attempt-hormuz-crossing-into-persian-gulf",
-    "publishedAt": "2026-04-17T13:45:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0b26d4221d944e4b",
-    "source": "bloomberg",
-    "originalTitle": "Empty LNG Tankers Attempt Hormuz Crossing Into Persian Gulf",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/empty-lng-tankers-attempt-hormuz-crossing-into-persian-gulf",
-    "publishedAt": "2026-04-17T13:45:06.000Z",
-    "summaryJa": "空のLNGタンカーがホルムズ海峡を通過してペルシャ湾に入ろうとしている。ホルムズ海峡の通航状況は世界のエネルギー市場に影響を与える。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "6f9381f187e54bc1",
-    "source": "bloomberg",
-    "originalTitle": "Stocks Rally as Oil Plunges on Reopening of Hormuz Strait",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/stocks-rally-as-oil-plunges-on-reopening-of-hormuz-strait",
-    "publishedAt": "2026-04-17T13:44:13.000Z",
-    "summaryJa": "ホルムズ海峡の再開により、株式市場は上昇し、原油価格は下落した。世界のエネルギー市場と金融市場に影響を及ぼす。",
-    "relevanceScore": 85,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "0ee8f991f15a0104",
-    "source": "cnbc",
-    "originalTitle": "Oil prices tumble more than 10% as Iran declares Strait of Hormuz open, easing supply fears ",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/oil-prices-wti-brent-israel-lebanon-ceasefire-trump.html",
-    "publishedAt": "2026-04-17T13:42:46.000Z",
-    "summaryJa": "イランがホルムズ海峡を開通させたことで、原油価格は10%以上下落し、供給への懸念が緩和した。世界のエネルギー市場と金融市場に影響を及ぼす。",
-    "relevanceScore": 85,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "ceb510da7753841c",
-    "source": "bloomberg",
-    "originalTitle": "US Natural Gas Futures Waver on Plunging Oil Price, Lower Output",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/us-natural-gas-futures-waver-on-plunging-oil-price-lower-output",
-    "publishedAt": "2026-04-17T13:42:27.000Z",
-    "summaryJa": "アメリカの天然ガス先物価格は原油価格の下落と生産量の減少により変動した。エネルギー市場の動向が金融市場に影響を与える。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "93aa38a5900d0358",
-    "source": "cnbc",
-    "originalTitle": "The market this week completed one of its fastest turnarounds in at least 36 years",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/stocks-just-completed-one-of-their-fastest-reversals-in-at-least-36-years.html",
-    "publishedAt": "2026-04-17T13:35:02.000Z",
-    "summaryJa": "市場は36年間で最も速い回復を遂げた。金融市場の動向が経済に影響を及ぼす。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "bdb48f5e82c4e0d0",
-    "source": "marketwatch",
-    "originalTitle": "These two sectors have been boosted by AI hopes. Why investors should buy one, and trim exposure to the other.",
-    "originalUrl": "https://www.marketwatch.com/story/these-two-sectors-have-been-boosted-by-ai-hopes-why-investors-should-buy-one-and-trim-exposure-to-the-other-55f7a34a?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-17T13:31:00.000Z",
-    "summaryJa": "AI関連の期待で二つのセクターが上昇した。投資家はどちらか一方に注目すべきである。金融市場の動向が経済に影響を及ぼす。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "technology",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "3b1dfdf2b6d8cc7f",
-    "source": "cnbc",
-    "originalTitle": "Jim Cramer's top 10 things to watch in the stock market Friday",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html",
-    "publishedAt": "2026-04-17T13:30:29.000Z",
-    "summaryJa": "CNBCのジム・クレイマーは、金曜日の株式市場で注目すべきトップ10のポイントを紹介しています。市場の動向を分析し、投資家に情報を提供しています。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "0e7dfc191189d7e4",
-    "source": "bloomberg",
-    "originalTitle": "Brokers Flock to Paradise of Sun, Sand and ‘Unlimited’ Leverage",
-    "originalUrl": "https://www.bloomberg.com/news/features/2026-04-17/seychelles-broker-boom-driven-by-high-leverage-low-taxes",
-    "publishedAt": "2026-04-17T13:30:06.000Z",
-    "summaryJa": "ブルームバーグは、ブローカーが「無制限」のレバレッジを提供するパラダイスに集まっていることを報道しています。金融市場の規制緩和が市場に与える影響について言及しています。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "e9d2632dcf542509",
-    "source": "cnbc",
-    "originalTitle": "House Dem Sam Liccardo probes suspicious oil trades during Iran war",
-    "originalUrl": "https://www.cnbc.com/2026/04/17/house-dem-probe-iran-war-trades-suspicious.html",
-    "publishedAt": "2026-04-17T13:30:01.000Z",
-    "summaryJa": "CNBCは、イラン戦争中に疑わしい石油取引について、民主党のサム・リッカルド議員が調査を開始したことを報道しています。地政学的緊張が金融市場に与える影響について言及しています。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "f2b3dfb05e35471c",
-    "source": "bloomberg",
-    "originalTitle": "Iran Says Strait of Hormuz Is Completely Open for Commercial Ships",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/iran-says-strait-of-hormuz-is-open-for-commercial-ships-video",
-    "publishedAt": "2026-04-17T13:29:52.000Z",
-    "summaryJa": "ブルームバーグは、イランがホルムズ海峡を商業船舶に完全に開放したことを報道しています。地政学的緊張の緩和が金融市場に与える影響について言及しています。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "aabd1b0bdcfd1886",
-    "source": "bloomberg",
-    "originalTitle": "Oil and Gas Prices Plunge After Iran Says Hormuz Strait Is Open",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/iran-says-hormuz-strait-completely-open-video",
-    "publishedAt": "2026-04-17T13:24:52.000Z",
-    "summaryJa": "ブルームバーグは、イランがホルムズ海峡を完全に開放したことにより、石油とガスの価格が急落したことを報道しています。地政学的緊張の緩和が金融市場に与える影響について言及しています。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "a0c492d622be3906",
-    "source": "bloomberg",
-    "originalTitle": "Iran Says Hormuz Strait Now Completely Open for Commercial Ships",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-17/iran-says-hormuz-strait-now-completely-open-video",
-    "publishedAt": "2026-04-17T13:20:09.000Z",
-    "summaryJa": "ブルームバーグは、イランがホルムズ海峡を商業船舶に完全に開放したことを再度報道しています。地政学的緊張の緩和が金融市場に与える影響について言及しています。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "8d040d42ba4964b4",
-    "source": "marketwatch",
-    "originalTitle": "U.S. oil prices drop below $83 a barrel after Iran declares Strait of Hormuz ‘completely open’ during cease-fire",
-    "originalUrl": "https://www.marketwatch.com/story/oil-prices-dropping-after-trump-says-iran-war-should-end-pretty-soon-da53676a?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-17T13:20:00.000Z",
-    "summaryJa": "マーケットウォッチは、イランがホルムズ海峡を完全に開放したことにより、米国の石油価格が1バレル83ドル以下に下落したことを報道しています。地政学的緊張の緩和が金融市場に与える影響について言及しています。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "6e6844309a7f3d76",
-    "source": "bloomberg",
-    "originalTitle": "Dollar Wipes Out Iran War Gain as Tehran Says Hormuz Is Open",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/dollar-wipes-out-iran-war-gains-as-tehran-says-hormuz-is-open",
-    "publishedAt": "2026-04-17T13:16:12.000Z",
-    "summaryJa": "ブルームバーグは、イランがホルムズ海峡を完全に開放したことにより、米ドルがイラン戦争による上昇を失ったことを報道しています。地政学的緊張の緩和が為替市場に与える影響について言及しています。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance",
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "db743a898afab53a",
-    "source": "bloomberg",
-    "originalTitle": "ECB’s Lagarde Says Risks to Inflation Outlook Tilted to Upside",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-17/ecb-s-lagarde-says-risks-to-inflation-outlook-tilted-to-upside",
-    "publishedAt": "2026-04-17T13:16:11.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f881a8e75f5d321c",
-    "source": "bloomberg",
-    "originalTitle": "Trump Says US Blockade Remains After Iran Opens Hormuz",
-    "originalUrl": "https://www.bloomberg.com/news/live-blog/2026-04-17/iran-war-latest",
-    "publishedAt": "2026-04-17T13:16:00.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
