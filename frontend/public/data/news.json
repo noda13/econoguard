@@ -1,5 +1,744 @@
 [
   {
+    "id": "7215f7bd73c43774",
+    "source": "nikkei",
+    "originalTitle": "自民議連、ドローン国内生産へ提言「スタートアップから政府調達を」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA229FT0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "自民党の議員連盟は、ドローンの国内生産を推進するため、スタートアップ企業からの政府調達を提言した。国内産業の育成と政府調達の拡大が期待される。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "e2aff27caf107334",
+    "source": "nikkei",
+    "originalTitle": "Google、「推論特化」のAI半導体　NVIDIA対抗でクラウド提供",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN224HB0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "Googleは、AI半導体の提供を開始し、NVIDIAに対抗する。クラウドサービスを通じてAI技術の普及が進む可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": []
+  },
+  {
+    "id": "6796bf033699ace2",
+    "source": "nikkei",
+    "originalTitle": "日印で「AI対話」初開催　スタートアップが覚書、政府が展開後押し",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA227FZ0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "日本とインドは、AI分野でのスタートアップの協力を目的とした「AI対話」を初開催した。両国間の経済協力と技術革新が進む可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": []
+  },
+  {
+    "id": "dab95074dfd31e0f",
+    "source": "nikkei",
+    "originalTitle": "静岡県、産業団地のデータベースを公開　県外企業誘致を強化",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCC14A5Z0U6A410C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "静岡県は、産業団地のデータベースを公開し、県外企業の誘致を強化する。地域経済の活性化と企業立地の促進が期待される。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "9d9801c6ee7a1a08",
+    "source": "nikkei",
+    "originalTitle": "トランプ氏、イラン停戦の延長期間は「3〜5日」　米報道",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD22AZ40S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "トランプ氏は、イランとの停戦の延長期間を「3〜5日」と述べた。地政学的緊張の緩和と国際関係への影響が注目される。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "d87a44635e049ec1",
+    "source": "nikkei",
+    "originalTitle": "NT倍率最高、AIけん引　銀行株と自動車株は出遅れ",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB224BO0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "NT倍率が最高となり、AI関連株がけん引役を果たした。銀行株と自動車株は出遅れた。市場の動向とセクター別の投資家の動向が注目される。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "32416298206f476a",
+    "source": "nikkei",
+    "originalTitle": "銀行の投融資規制緩和、企業の成長投資後押し　金融戦略の骨子案",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB21BYP0R20C26A4000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "銀行の投融資規制が緩和され、企業の成長投資が後押しされる見込みです。金融戦略の骨子案が出されました。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "9b3f4c05aa5f5c41",
+    "source": "nikkei",
+    "originalTitle": "ICC、脱退でも管轄権失わず　ドゥテルテ前大統領の訴え却下",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR21CGW0R20C26A4000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "ICCは、フィリピンの前大統領ドゥテルテの訴えを却下し、管轄権を維持しました。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "26da7a54f097dd20",
+    "source": "nikkei",
+    "originalTitle": "ウクライナ、東部の「ドニーランド」呼称提案　トランプ氏にちなみ",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB229K80S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "ウクライナは、東部の「ドニーランド」呼称を提案しました。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "dbdc409c80898a9e",
+    "source": "nikkei",
+    "originalTitle": "三菱ケミカルG、英国の樹脂新工場稼働を延期　約300億円減損計上",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC2297X0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "三菱ケミカルGは、英国の樹脂新工場の稼働を延期し、約300億円の減損計上をしました。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "09c340baac22aee1",
+    "source": "nikkei",
+    "originalTitle": "コーン油卸値、4〜6月2%上昇　原油高と生産減が影響",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB0826G0Y6A400C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "コーン油の卸値は、4〜6月に2%上昇する見込みです。原油高と生産減が影響しています。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "3f94614110cd7e52",
+    "source": "nikkei",
+    "originalTitle": "米欧住宅株が低迷、中東混乱でローン金利上昇",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB2130U0R20C26A4000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "米欧住宅株が低迷しており、中東の混乱によりローン金利が上昇している。金融市場への影響が見られ、リスク要因として注目される。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "b71fed07f26d8319",
+    "source": "nikkei",
+    "originalTitle": "NZドル、対円で2カ月半ぶり高水準　中銀タカ派姿勢で",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB224BQ0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "NZドルは対円で2カ月半ぶり高水準となった。中銀のタカ派姿勢が要因となっている。為替市場への影響が見られ、リスク要因として注目される。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "46b805e59b777851",
+    "source": "nikkei",
+    "originalTitle": "SNS年齢制限、日本も議論　海外では一律規制の動きも線引き難しく",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA222F20S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "SNS年齢制限について日本でも議論が行われている。海外では一律規制の動きも見られるが、線引きは難しく、社会政策への影響が見られる。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "97a0d31407128d0b",
+    "source": "nikkei",
+    "originalTitle": "原油「80ドル超に高止まり」　米イラン交渉長期化、供給減の影響累積",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB221ZP0S6A420C2000000/",
+    "publishedAt": "2026-04-22T14:01:50.688Z",
+    "summaryJa": "原油価格は「80ドル超」で高止まりしており、米イラン交渉の長期化や供給減の影響が累積している。エネルギー市場への影響が見られ、リスク要因として注目される。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "0e267257fca50151",
+    "source": "cnbc",
+    "originalTitle": "Boeing CEO says 'all systems are go' to increase 737 production as company narrows loss",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/boeing-ba-q1-2026-earnings.html",
+    "publishedAt": "2026-04-22T14:00:31.000Z",
+    "summaryJa": "ボーイングのCEOは、会社が損失を削減したことを受けて、737の生産量を増やすことを目指している。ボーイングの生産計画は、航空業界の回復と関連している。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "065bfcefe889f42e",
+    "source": "marketwatch",
+    "originalTitle": "Increasing market risk is driving demand for ‘hedge’ trades, and CME is loving it",
+    "originalUrl": "https://www.marketwatch.com/story/increasing-market-risk-is-the-new-normal-on-wall-street-and-cme-is-loving-it-5930ed2c?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T13:56:00.000Z",
+    "summaryJa": "市場リスクの増加により、ヘッジ取引の需要が高まっている。CMEはこの需要の増加から利益を得ている。市場リスクの増加は金融市場に影響を及ぼす。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "bea37cf7d378f81d",
+    "source": "bloomberg",
+    "originalTitle": "GE Vernova Shares Climb on Strong Orders, Power Demand Boom",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/ge-vernova-shares-climb-on-strong-orders-power-demand-boom",
+    "publishedAt": "2026-04-22T13:52:52.000Z",
+    "summaryJa": "GE Vernovaの株価が強い注文と電力需要のブームにより上昇した。企業の業績は経済に影響を及ぼすが、この記事では直接的なマクロ経済への影響は示されていない。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "a273371218e9893e",
+    "source": "bloomberg",
+    "originalTitle": "India to Purchase Fertilizer at Nearly Double Pre-War Price",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/india-to-purchase-fertilizer-at-nearly-double-pre-war-price",
+    "publishedAt": "2026-04-22T13:48:43.000Z",
+    "summaryJa": "インドが戦前の価格のほぼ2倍で肥料を購入する。肥料価格の変動は食糧生産と経済に影響を及ぼす可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f3a411ab45e18e90",
+    "source": "marketwatch",
+    "originalTitle": "These investments promise high yield with bond-like safety. But what looks too good to be true often is.",
+    "originalUrl": "https://www.marketwatch.com/story/when-dentists-start-getting-cold-calls-about-private-credit-you-know-the-fad-has-peaked-67f1ef78?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T13:46:00.000Z",
+    "summaryJa": "高収益を約束する投資商品についての警告。投資商品のリスクは金融市場に影響を及ぼす可能性があるが、この記事では具体的な経済リスクへの影響は示されていない。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "b950ecc698c653f3",
+    "source": "cnbc",
+    "originalTitle": "Iran says it has seized two ships in Strait of Hormuz after U.S. extends ceasefire",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/strait-of-hormuz-ships-attacked-iran-war.html",
+    "publishedAt": "2026-04-22T13:45:16.000Z",
+    "summaryJa": "イランはホルムズ海峡で2隻の船を拿捕したと発表しました。これはアメリカが停戦を延長した後の出来事です。この出来事は地政学的緊張を高める可能性があり、グローバル経済に影響を及ぼす可能性があります。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "07f764dc1fcbd9f0",
+    "source": "bloomberg",
+    "originalTitle": "Junk Bond Investors Are Squeezing Companies for Better Terms",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/junk-bond-investors-are-squeezing-companies-for-better-terms",
+    "publishedAt": "2026-04-22T13:42:47.000Z",
+    "summaryJa": "ジャンクボンド投資家は企業からより良い条件を要求しています。これは企業の財務状況に影響を及ぼす可能性がありますが、直接的なマクロ経済への影響は限定的です。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "d3f5ba6e2a28175a",
+    "source": "bloomberg",
+    "originalTitle": "BofA Sees Resilient Consumers Despite Higher Gas Prices",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-22/bofa-sees-resilient-consumers-despite-higher-gas-prices-video",
+    "publishedAt": "2026-04-22T13:34:57.000Z",
+    "summaryJa": "ボファは高騰するガス価格にもかかわらず、消費者は堅実であると見ています。これは消費者市場の動向を示唆していますが、直接的なマクロ経済への影響は限定的です。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "e76aa43df5f99a74",
+    "source": "ft",
+    "originalTitle": "Russia to suspend Kazakh oil flows through key pipeline supplying Berlin",
+    "originalUrl": "https://www.ft.com/content/3738ba48-b4e2-493d-96b1-0a80b4e2c4b8",
+    "publishedAt": "2026-04-22T13:23:28.000Z",
+    "summaryJa": "ロシアはカザフスタンからの原油の流れをベルリンへの重要なパイプライン経由で停止すると発表しました。これは地政学的緊張を高める可能性があり、グローバル経済に影響を及ぼす可能性があります。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "cf5b509e9f2fc9a0",
+    "source": "ft",
+    "originalTitle": "France and Germany extend deadline to try to save joint fighter jet ",
+    "originalUrl": "https://www.ft.com/content/24527ce2-87f8-426f-9d2a-e65c195b6fae",
+    "publishedAt": "2026-04-22T13:22:59.000Z",
+    "summaryJa": "フランスとドイツは共同の戦闘機プロジェクトを救うために期限を延長しました。これは地政学的な動向を示唆していますが、直接的なマクロ経済への影響は限定的です。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "da4faff97db6aa6a",
+    "source": "marketwatch",
+    "originalTitle": "I’m planning to retire at 60. Should I sell my house, rent and invest the $500,000?",
+    "originalUrl": "https://www.marketwatch.com/story/im-planning-to-retire-at-60-should-i-sell-my-house-and-invest-the-500-000-2b504dd9?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T13:22:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "29c62bac716c7a34",
+    "source": "cnbc",
+    "originalTitle": "Google unveils chips for AI training and inference in latest shot at Nvidia",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/google-launches-training-and-inference-tpus-in-latest-shot-at-nvidia.html",
+    "publishedAt": "2026-04-22T13:18:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9deba4cf3474cacd",
+    "source": "bloomberg",
+    "originalTitle": "US Can Sustain Blockade Indefinitely, Esper Says",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-22/us-can-sustain-blockade-indefinitely-esper-says-video",
+    "publishedAt": "2026-04-22T13:18:06.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "62810a13e6a6e41e",
+    "source": "cnbc",
+    "originalTitle": "Tech is cheap ahead of a big week of earnings. What it means for the stock market",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/tech-is-cheap-ahead-of-a-big-earnings-week-what-it-means-for-the-market.html",
+    "publishedAt": "2026-04-22T13:16:51.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "16137ce8bb939e51",
+    "source": "cnbc",
+    "originalTitle": "Best Buy names Jason Bonfig as new CEO, replacing Corie Barry in late October",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/best-buy-jason-bonfig-ceo-corie-barry.html",
+    "publishedAt": "2026-04-22T13:16:36.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a1f40bca7769143c",
+    "source": "bloomberg",
+    "originalTitle": "Nuclear Energy Key for Italy National Security, Minister Says",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/nuclear-energy-key-for-italy-national-security-minister-says",
+    "publishedAt": "2026-04-22T13:12:03.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "fd20b531e9ad2d1e",
+    "source": "cnbc",
+    "originalTitle": "Jim Cramer's top 10 things to watch in the stock market Wednesday",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/jim-cramers-top-10-things-to-watch-in-the-stock-market-wednesday.html",
+    "publishedAt": "2026-04-22T13:04:55.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "10dbafc0d9867832",
+    "source": "bloomberg",
+    "originalTitle": "Iran Menaces Hormuz and Tests US Blockade",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-22/iran-menaces-hormuz-and-tests-us-blockade-video",
+    "publishedAt": "2026-04-22T13:04:30.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2e923e5a92911f5b",
+    "source": "bloomberg",
+    "originalTitle": "ECB’s Lane Says Still Can’t Determine Extent of War Shock",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/ecb-s-lane-says-still-can-t-determine-extent-of-shock-from-war",
+    "publishedAt": "2026-04-22T12:57:23.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e61050e5b2f0806d",
+    "source": "bloomberg",
+    "originalTitle": "Ray-Ban Heir Steps Up Talks on €10 Billion Buyout of Siblings",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/ray-ban-heir-steps-up-talks-on-10-billion-buyout-of-siblings",
+    "publishedAt": "2026-04-22T12:57:04.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "54e93fd949013fa0",
+    "source": "bloomberg",
+    "originalTitle": "Wall Street Group Urges SEC to Lift Private Asset Trading Ban",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/wall-street-group-urges-sec-to-lift-private-asset-trading-ban",
+    "publishedAt": "2026-04-22T12:56:49.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "eb36c20c6a486433",
+    "source": "cnbc",
+    "originalTitle": "Tim Cook is exceptional at this leadership skill. I saw it when I interviewed at Apple 16 years ago—and still think about it today",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/tim-cook-is-exceptional-at-this-leadership-skilli-saw-it-when-i-interviewed-at-apple.html",
+    "publishedAt": "2026-04-22T12:55:32.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e5846faa2f25eb8d",
+    "source": "marketwatch",
+    "originalTitle": "My 20-year-old daughter quit her job. What should she do with her 401(k)?",
+    "originalUrl": "https://www.marketwatch.com/story/my-20-year-old-daughter-quit-her-job-what-should-she-do-with-her-401-k-d7ab7fc9?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T12:52:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "461de9b87c59d95c",
+    "source": "bloomberg",
+    "originalTitle": "India’s Rate Setters Decided to Wait and Watch Conflict Impact",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/india-s-rate-setters-decided-to-wait-and-watch-conflict-impact",
+    "publishedAt": "2026-04-22T12:50:29.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4b4835ada8e806ba",
+    "source": "bloomberg",
+    "originalTitle": "What's Happening In Iran War? Trump Extends Truce with Talks In Limbo | The Pulse 4/22",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-22/the-pulse-4-22-2026-video",
+    "publishedAt": "2026-04-22T12:49:36.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "aede8b366e8523d8",
+    "source": "bloomberg",
+    "originalTitle": "Loonie’s Weakening Ties to Oil Prices Amplifies Bets Against It",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/loonie-s-weakening-ties-to-oil-prices-amplifies-bets-against-it",
+    "publishedAt": "2026-04-22T12:46:37.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "39275b9aab48b6ae",
+    "source": "cnbc",
+    "originalTitle": "United Airlines slashes 2026 forecast as fuel costs surge, but demand remains strong",
+    "originalUrl": "https://www.cnbc.com/2026/04/21/united-airlines-ual-q1-2026-earnings.html",
+    "publishedAt": "2026-04-22T12:33:44.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9068c0ae101c3c78",
+    "source": "bloomberg",
+    "originalTitle": "Vietnam, South Korea Ink Deals on Security, Nuclear Power",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/vietnam-south-korea-ink-deals-on-security-nuclear-power-plants",
+    "publishedAt": "2026-04-22T12:33:43.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "169270c881cc4250",
+    "source": "bloomberg",
+    "originalTitle": "France Sticks to 2029 Deficit Goal as It Trims Growth Forecasts",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/france-sticks-to-2029-deficit-goal-as-it-trims-growth-forecasts",
+    "publishedAt": "2026-04-22T12:33:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ed394c1d2d135b7a",
+    "source": "cnbc",
+    "originalTitle": "Here are Wednesday's biggest analyst calls: Nvidia, Apple, Tesla, Alphabet, Cava, Netflix, Airbnb, Viking & more",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/wednesday-top-stocks-in-analyst-calls-include-nvidia-apple-tesla-cava.html",
+    "publishedAt": "2026-04-22T12:28:51.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "305b33b27f73be82",
+    "source": "cnbc",
+    "originalTitle": "Mortgage rates sink again, and homebuyers jump back in",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/mortgage-rates-sink-again-and-home-buyers-jump-back-in.html",
+    "publishedAt": "2026-04-22T12:26:33.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "51842eceafac7953",
+    "source": "cnbc",
+    "originalTitle": "Gen Z college students are looking for scholarships on TikTok. There's a better way, experts say",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/gen-z-students-scholarships-tiktok.html",
+    "publishedAt": "2026-04-22T12:15:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "823ba102e4874763",
+    "source": "cnbc",
+    "originalTitle": "Retail traders can now get long OpenAI as Robinhood's venture fund takes a stake",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/retail-traders-can-now-get-long-openai-as-robinhoods-venture-fund-takes-a-stake.html",
+    "publishedAt": "2026-04-22T12:13:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "89872789297a9ab0",
+    "source": "ft",
+    "originalTitle": "Boeing regains delivery lead over Airbus as revenues jump",
+    "originalUrl": "https://www.ft.com/content/6f818cb4-e8f3-4e7e-b081-5d7bca66d114",
+    "publishedAt": "2026-04-22T12:11:54.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "fe061ac07a65bb9c",
+    "source": "marketwatch",
+    "originalTitle": "‘This is unbelievable’: My adviser made $300,000 trading options. Now I’m being killed by taxes. Do I fire him?",
+    "originalUrl": "https://www.marketwatch.com/story/this-is-unbelievable-my-adviser-made-300-000-trading-options-now-im-being-killed-by-taxes-do-i-complain-e30873b7?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T12:11:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "05d6b5267c24465b",
+    "source": "marketwatch",
+    "originalTitle": "Google debuts two custom chips in latest bid to challenge Nvidia’s dominance",
+    "originalUrl": "https://www.marketwatch.com/story/google-debuts-two-new-custom-chips-in-latest-bid-to-challenge-nvidias-dominance-147cc8d0?mod=mw_rss_topstories",
+    "publishedAt": "2026-04-22T12:07:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4ab2f49c14ced75e",
+    "source": "bloomberg",
+    "originalTitle": "US Stocks Advance on Trump Truce Extension and Earnings",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/us-futures-advance-as-president-trump-extends-truce-with-iran",
+    "publishedAt": "2026-04-22T12:02:59.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "25557986831d8909",
+    "source": "bloomberg",
+    "originalTitle": "Google Cloud Debuts New AI Chips, Tools for Building Agents",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/google-cloud-releases-new-tpu-chip-lineup-in-bid-to-speed-up-ai",
+    "publishedAt": "2026-04-22T12:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "221a0fbf4e9a8049",
+    "source": "ft",
+    "originalTitle": "The military man trying to save US-Iran peace talks",
+    "originalUrl": "https://www.ft.com/content/eb2215d1-df7f-41fb-b23b-a0bdb2f970bd",
+    "publishedAt": "2026-04-22T11:58:31.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "175bbb11036d34da",
+    "source": "cnbc",
+    "originalTitle": "Why the confusion around the Iran situation could get worse. How to profit anyway",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/power-insider-why-the-confusion-around-the-iran-situation-could-get-worse-how-to-profit-anyway.html",
+    "publishedAt": "2026-04-22T11:57:37.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "90aebb012e5f217a",
+    "source": "bloomberg",
+    "originalTitle": "Coffee Climbs on Iran Conflict Concerns and Tight Stockpiles",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/coffee-climbs-on-iran-conflict-concerns-and-brazil-weather-risk",
+    "publishedAt": "2026-04-22T11:43:12.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9a37acf36c3f80a0",
+    "source": "bloomberg",
+    "originalTitle": "ECB Officials Say April Is Too Early to Decide on Rate Hikes",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/ecb-s-stournaras-says-central-bank-should-wait-on-rate-hike",
+    "publishedAt": "2026-04-22T11:40:57.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "37f7f079454ca09f",
+    "source": "cnbc",
+    "originalTitle": "U.S. stocks have underperformed global rivals this year — 3 reasons why fortunes could reverse",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/us-stocks-outperform-global-rivals-this-year-2026-markets.html",
+    "publishedAt": "2026-04-22T11:35:52.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "65879fbbeb39402f",
+    "source": "ft",
+    "originalTitle": "Britain’s desperate need for Keir Badenoch",
+    "originalUrl": "https://www.ft.com/content/8868aa94-64a1-4196-ac7f-090ce4cf5561",
+    "publishedAt": "2026-04-22T11:34:47.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "309623e5899caa38",
+    "source": "bloomberg",
+    "originalTitle": "Boeing Narrows Cash Burn in First Quarter as Deliveries Rise",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/boeing-narrows-cash-burn-in-first-quarter-as-jet-deliveries-rise",
+    "publishedAt": "2026-04-22T11:30:29.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ef40f0c78cad9b7b",
+    "source": "bloomberg",
+    "originalTitle": "Wall Street’s Bullish Stocks View Contrasts With Consumer Gloom",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/wall-street-s-bullish-stocks-view-contrasts-with-consumer-gloom",
+    "publishedAt": "2026-04-22T11:28:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e3dda454a1d33cb5",
+    "source": "bloomberg",
+    "originalTitle": "Rogers’ Earnings Matches Estimates as Sports Assets Drive Media Growth",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/rogers-matches-estimates-as-sports-assets-drive-media-growth",
+    "publishedAt": "2026-04-22T11:16:46.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "580e6818315fc1fa",
+    "source": "cnbc",
+    "originalTitle": "Airbnb is in the middle of a big overhaul. Wells Fargo says it's time to buy the stock",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/airbnb-is-in-the-middle-of-a-big-overhaul-wells-fargo-says-its-time-to-buy-the-stock.html",
+    "publishedAt": "2026-04-22T11:02:10.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8bcf38b55eda67c6",
+    "source": "cnbc",
+    "originalTitle": "Palantir inks $300 million deal with USDA to safeguard food supply",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/palantir-inks-300-million-deal-with-usda-to-safeguard-food-supply.html",
+    "publishedAt": "2026-04-22T11:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "49a1cb72331739fb",
+    "source": "cnbc",
+    "originalTitle": "Warren presses Trump administration for answers on evacuation of Americans amid Iran war",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/warren-trump-iran-war-evacuations.html",
+    "publishedAt": "2026-04-22T11:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b379c2f4ff353a54",
+    "source": "cnbc",
+    "originalTitle": "AT&T adds more wireless subscribers than expected as bundling pays off",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/att-adds-more-wireless-subscribers-than-expected-as-bundling-pays-off.html",
+    "publishedAt": "2026-04-22T10:34:21.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0c41bbf21a3510c4",
+    "source": "ecb",
+    "originalTitle": " Frank Elderson: Interview with NRC ",
+    "originalUrl": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260422~0201121d60.en.html",
+    "publishedAt": "2026-04-22T10:30:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4dc3751c36a52669",
+    "source": "ft",
+    "originalTitle": "Dollar gives up bulk of war gains as traders abandon bullish bets",
+    "originalUrl": "https://www.ft.com/content/22018f09-2edf-4e40-b9d4-1255c20dbc90",
+    "publishedAt": "2026-04-22T10:29:35.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1fa2645023b1e690",
+    "source": "ft",
+    "originalTitle": "Germany to take on ‘more responsibility’ for Europe’s defence",
+    "originalUrl": "https://www.ft.com/content/826c0570-b254-467a-8bba-e124e927c732",
+    "publishedAt": "2026-04-22T10:24:32.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2ab53be1f77d5e6e",
+    "source": "cnbc",
+    "originalTitle": "Lawmakers seek to override state data privacy laws with new bill",
+    "originalUrl": "https://www.cnbc.com/2026/04/22/data-privacy-bill-congress-states.html",
+    "publishedAt": "2026-04-22T09:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c01ee7d1807a16b4",
+    "source": "bloomberg",
+    "originalTitle": "Australian Gas Exporter Santos Streamlines Firm to Cut Costs",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-22/australian-gas-exporter-santos-streamlines-business-to-cut-costs",
+    "publishedAt": "2026-04-22T08:46:24.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "29ea6734b06192a6",
     "source": "nikkei",
     "originalTitle": "中国の車・ネット企業、核融合に参入　政府の5カ年計画に呼応",
@@ -649,6 +1388,16 @@
     "riskCategories": []
   },
   {
+    "id": "1a3f9ecd6a30a27f",
+    "source": "ft",
+    "originalTitle": "Iran says it has seized two container ships in Strait of Hormuz",
+    "originalUrl": "https://www.ft.com/content/da5f559c-f340-4091-95ca-dd930627f292",
+    "publishedAt": "2026-04-22T03:17:26.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "74760a942795d05e",
     "source": "ft",
     "originalTitle": "Iran attacks container ship after Trump extends ceasefire ",
@@ -829,11 +1578,31 @@
     "riskCategories": []
   },
   {
+    "id": "05c7caa02f7806e0",
+    "source": "bloomberg",
+    "originalTitle": "Stocks Rise After Solid Earnings, Brent Hits $100: Markets Wrap",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/stock-market-today-dow-s-p-live-updates",
+    "publishedAt": "2026-04-21T22:13:53.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "12e2fc6b7154858d",
     "source": "bloomberg",
     "originalTitle": "Stocks Rise on Big Earnings Day as War Talks Stall: Markets Wrap",
     "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/stock-market-today-dow-s-p-live-updates",
     "publishedAt": "2026-04-21T22:13:53.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "32ec41c039709f9d",
+    "source": "cnbc",
+    "originalTitle": "Trump administration discussing currency swap line with United Arab Emirates",
+    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-iran-war-white-house-uae-currency-swap-line.html",
+    "publishedAt": "2026-04-21T22:09:55.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -859,11 +1628,31 @@
     "riskCategories": []
   },
   {
+    "id": "2f25d4f86e3dc50a",
+    "source": "bloomberg",
+    "originalTitle": "Oil Rises on Elusive Peace Deal Outlook, Iran Gunboat Attacks",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/latest-oil-market-news-and-analysis-for-april-22",
+    "publishedAt": "2026-04-21T22:01:13.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "fb7ebeb0462e9ef8",
     "source": "marketwatch",
     "originalTitle": "Bonds could lag stocks for the rest of 2026, according to this contrarian signal",
     "originalUrl": "https://www.marketwatch.com/story/bonds-could-lag-stocks-for-the-rest-of-2026-according-to-this-contrarian-signal-6b6c55de?mod=mw_rss_topstories",
     "publishedAt": "2026-04-21T21:56:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bdc6fd1545564e83",
+    "source": "bloomberg",
+    "originalTitle": "Optiver Taps Ex-Citadel Securities Trader to for Options Expansion",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/optiver-taps-former-citadel-trader-for-options-expansion",
+    "publishedAt": "2026-04-21T21:54:20.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -1086,962 +1875,5 @@
       "currency_finance",
       "geopolitics_supply_chain"
     ]
-  },
-  {
-    "id": "e0b17dca7f2a3d10",
-    "source": "nikkei",
-    "originalTitle": "ロンドン外為21日　ユーロ、対ドルで下落　円相場は159円台前半",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL21BN20R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "ロンドンの外為市場では、ユーロが対ドルで下落した。円相場は159円台前半で推移している。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "8b4ecd9d162c1781",
-    "source": "nikkei",
-    "originalTitle": "3月の米小売売上高、3年ぶり伸び率も上げ底か　燃料高と税還付が影響",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN21BQ60R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "3月の米小売売上高は3年ぶりに伸び率が上がった。燃料高と税還付が影響している。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "e870f33e9458958b",
-    "source": "nikkei",
-    "originalTitle": "FRB独立性｢大統領の発信に脅かされず｣　ウォーシュ氏が公聴会で強調",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN210H00R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "FRBのウォーシュ氏は公聴会で、独立性を強調した。大統領の発信に脅かされないと述べた。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "49f868f7076d1f02",
-    "source": "nikkei",
-    "originalTitle": "フィリピンのマルコス大統領を国賓招待へ　政府が調整、5月下旬",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA21C7J0R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "フィリピンのマルコス大統領を国賓として招待する計画が進んでいる。政府が調整を進めている。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "0b274d01ccc5fa0f",
-    "source": "nikkei",
-    "originalTitle": "三菱UFJ大澤正和新頭取、デジタルバンク「銀行本体より高金利検討」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB1319A0T10C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "三菱UFJの新頭取がデジタルバンクの高金利化を検討しています。金融政策の変化は金融市場に影響を及ぼす可能性があります。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "974fc53c5983b367",
-    "source": "nikkei",
-    "originalTitle": "CATL、6分でフル充電の新型EV電池　BYDの「9分」に対抗",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM21BOQ0R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "CATLが6分でフル充電の新型EV電池を開発しました。電気自動車技術の進歩は自動車業界に影響を及ぼす可能性があります。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "6915bd21d25af71f",
-    "source": "nikkei",
-    "originalTitle": "医療機器のアボット、検体の自動搬送システム　血液や尿など",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC219920R20C26A4000000/",
-    "publishedAt": "2026-04-21T19:23:19.187Z",
-    "summaryJa": "医療機器のアボットが検体の自動搬送システムを開発しました。医療技術の進歩は医療業界に影響を及ぼす可能性があります。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "ee6224e9c13c8aa9",
-    "source": "cnbc",
-    "originalTitle": "White House discussing currency swap line with United Arab Emirates",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-iran-war-white-house-uae-currency-swap-line.html",
-    "publishedAt": "2026-04-21T19:19:10.000Z",
-    "summaryJa": "ホワイトハウスはアラブ首長国連邦との通貨スワップラインを検討している。通貨スワップラインは、両国間の金融安定を促進するものである。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "da7ff66e01feed88",
-    "source": "cnbc",
-    "originalTitle": "Vance trip to Pakistan for Iran talks is on hold, NYT reports",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-vance-iran-war-pakistan.html",
-    "publishedAt": "2026-04-21T19:13:38.000Z",
-    "summaryJa": "イランとの交渉のためパキスタンを訪問予定だったヴェンス氏の旅行が延期された。地政学的緊張が高まる可能性がある。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "a3d413cece0bc5f1",
-    "source": "economist",
-    "originalTitle": "\n        The stablecoin market has got too stable\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/04/21/the-stablecoin-market-has-got-too-stable",
-    "publishedAt": "2026-04-21T19:10:20.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "975d35becf469f2c",
-    "source": "ft",
-    "originalTitle": "Trump expects ‘great deal’ as Iran labels US blockade of ports an ‘act of war’",
-    "originalUrl": "https://www.ft.com/content/18c234e2-019a-448d-bf17-35bb2c146add",
-    "publishedAt": "2026-04-21T19:06:03.000Z",
-    "summaryJa": "トランプ氏はイランとの交渉で「素晴らしい合意」を期待しているが、イランは米国の港湾封鎖を「宣戦布告」と見なしている。地政学的緊張が高まる可能性がある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "053cc0adb49ba030",
-    "source": "ft",
-    "originalTitle": "Elite law firm Sullivan & Cromwell admits to AI ‘hallucinations’",
-    "originalUrl": "https://www.ft.com/content/657d86df-5e0d-4d03-bf0c-cb768a58e758",
-    "publishedAt": "2026-04-21T19:01:32.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7c50e1fe799fa800",
-    "source": "bloomberg",
-    "originalTitle": "Warsh Says Fed ‘Must Stay in Its Lane’",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/warsh-says-fed-must-stay-in-its-lane-video",
-    "publishedAt": "2026-04-21T19:00:16.000Z",
-    "summaryJa": "ウォッシュ氏は連邦準備制度（Fed）が「自分の役割を守るべき」と述べた。金融政策に関連する発言であり、経済に影響を及ぼす可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "6c6a7451c598d88b",
-    "source": "cnbc",
-    "originalTitle": "Stocks fall as oil jumps on fear Iran negotiations breaking down: Live updates",
-    "originalUrl": "https://www.cnbc.com/2026/04/20/stock-market-today-live-updates.html",
-    "publishedAt": "2026-04-21T18:55:40.000Z",
-    "summaryJa": "イランとの交渉が崩壊する可能性があるため、石油価格が上昇し、株価が下落した。地政学的緊張が高まり、金融市場に影響を及ぼしている。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "1e1e6dc7f1bedc5a",
-    "source": "cnbc",
-    "originalTitle": "Marvell stands to gain from boosted Amazon-Anthropic partnership",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/marvell-stands-to-gain-from-boosted-amazon-anthropic-partnership.html",
-    "publishedAt": "2026-04-21T18:47:59.000Z",
-    "summaryJa": "マーベルはアマゾンとアンソロピックの提携強化により利益を得る可能性がある。マーベルはAI関連の技術で重要な役割を果たしているため、この提携は同社の業績にプラスの影響を与える可能性がある。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "d25fdc64121f6765",
-    "source": "bloomberg",
-    "originalTitle": "Paraguay Leaves Key Rate at 5.5% on Stable Inflation Outlook",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/paraguay-leaves-key-rate-at-5-5-amid-stable-inflation-outlook",
-    "publishedAt": "2026-04-21T18:36:12.000Z",
-    "summaryJa": "パラグアイの中央銀行は、安定したインフレ見通しを背景に、政策金利を5.5%に据え置いた。インフレ率の低さは経済の安定を示唆している。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "a38b03470107033f",
-    "source": "bloomberg",
-    "originalTitle": "Vance Trip to Pakistan for Talks With Iran Is On Hold, NYT Reports",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/vance-trip-to-pakistan-is-on-hold-nyt-reports-video",
-    "publishedAt": "2026-04-21T18:33:59.000Z",
-    "summaryJa": "イランとの交渉のためパキスタンを訪問する予定だったバンス国務長官の訪問が延期された。地政学的な緊張は国際関係に影響を及ぼす可能性がある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "3e159e3228b8434b",
-    "source": "cnbc",
-    "originalTitle": "Amazon launches GLP-1 weight loss program, promising 'fast, convenient' access",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/amazon-glp-1-weight-loss-program.html",
-    "publishedAt": "2026-04-21T18:27:58.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "868b2f5fff62c7f4",
-    "source": "cnbc",
-    "originalTitle": "Trump says Anthropic is shaping up and a deal is 'possible' for Department of Defense use",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-anthropic-department-defense-deal.html",
-    "publishedAt": "2026-04-21T18:25:59.000Z",
-    "summaryJa": "トランプはアンソロピックが国防省での使用のために「可能な」契約を結ぶ可能性があると述べた。同社のAI技術は国防分野で重要な役割を果たす可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "8217788effde7a7d",
-    "source": "cnbc",
-    "originalTitle": "Alaska Air pulls forecast as Iran-linked fuel surge hits margins",
-    "originalUrl": "https://www.cnbc.com/2026/04/20/alaska-air-pulls-2026-profit-forecast-amid-fuel-costs-related-uncertainty.html",
-    "publishedAt": "2026-04-21T18:24:11.000Z",
-    "summaryJa": "アラスカ航空は、イラン関連の燃料費の上昇により予測を撤回した。燃料費の上昇は航空会社の収益に悪影響を及ぼす可能性がある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "f059b87cfb132126",
-    "source": "bloomberg",
-    "originalTitle": "Here comes the food price inflation",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-04-21/here-comes-the-food-price-inflation",
-    "publishedAt": "2026-04-21T18:19:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e08af64904217e44",
-    "source": "cnbc",
-    "originalTitle": "Buy these ‘income darlings’ to boost your portfolio, says Jefferies",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/buy-these-income-darlings-to-boost-your-portfolio-says-jefferies.html",
-    "publishedAt": "2026-04-21T18:14:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f999149c0e9f60d6",
-    "source": "bloomberg",
-    "originalTitle": "Senator Tillis Floats Off-Ramp to Move Warsh’s Fed Nomination Forward",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/tillis-floats-off-ramp-to-move-warsh-nomination-forward-video",
-    "publishedAt": "2026-04-21T18:14:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "108b0a25398b8d03",
-    "source": "marketwatch",
-    "originalTitle": "This is what Apple investors need to know about what’s next for the company and its new CEO",
-    "originalUrl": "https://www.marketwatch.com/story/this-is-what-apple-investors-need-to-know-about-whats-next-for-the-company-and-its-new-ceo-9997df15?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T18:14:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "772463a9c3b75077",
-    "source": "bloomberg",
-    "originalTitle": "Warsh Pledges Independence But Dodges Questions on Rates",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/warsh-pledges-independence-but-dodges-questions-on-rates-video-mo8xs4wh",
-    "publishedAt": "2026-04-21T18:07:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b771ea4ad40d283e",
-    "source": "bloomberg",
-    "originalTitle": "Deutsche Telekom Weighs Full Combination With T-Mobile",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/deutsche-telekom-weighs-full-combination-with-t-mobile",
-    "publishedAt": "2026-04-21T18:03:04.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "15ca6178c3a25497",
-    "source": "marketwatch",
-    "originalTitle": "Health insurers raise questions about Medicare program that will offer GLP-1s to seniors for $50",
-    "originalUrl": "https://www.marketwatch.com/story/health-insurers-raise-questions-about-medicare-program-that-will-offer-glp-1s-to-seniors-for-50-4efaca72?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T17:54:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d7c53ec2e5a7852f",
-    "source": "cnbc",
-    "originalTitle": "New Apple CEO John Ternus doubted himself when he started: 'I wasn't sure I belonged'",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/john-ternus-apple-ceo.html",
-    "publishedAt": "2026-04-21T17:43:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d864d10e47582c8f",
-    "source": "cnbc",
-    "originalTitle": "Kevin Warsh hearing takeaways: Trump Fed chair nominee defends finances, says president never demanded rate cuts",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/kevin-warsh-fed-confirmation-hearing-trump-live-updates.html",
-    "publishedAt": "2026-04-21T17:34:05.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1a6ed2042cb6dfe3",
-    "source": "cnbc",
-    "originalTitle": "Tim Cook turned Apple into a $4 trillion juggernaut by not trying to be Steve Jobs",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/tim-cook-apple-steve-jobs-legacy.html",
-    "publishedAt": "2026-04-21T17:29:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "99f679a4f0cfebd1",
-    "source": "cnbc",
-    "originalTitle": "Senate Republicans unveil immigration funding framework as DHS shutdown drags on",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/senate-republicans-immigration-dhs-shutdown-ice.html",
-    "publishedAt": "2026-04-21T17:28:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c07b68f3928ffc5c",
-    "source": "marketwatch",
-    "originalTitle": "I will retire in my early 50s. I have $3.2 million — only $200,000 is in a traditional IRA. Have I beaten the IRS?",
-    "originalUrl": "https://www.marketwatch.com/story/i-will-retire-in-my-early-50s-i-have-3-2-million-only-200-000-is-in-a-traditional-ira-have-i-beaten-the-irs-3ab5df98?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T17:26:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0dbb99dfa1fa0481",
-    "source": "ft",
-    "originalTitle": "Iranian tankers bypass US blockade",
-    "originalUrl": "https://www.ft.com/content/21dff2c7-1e27-4f74-81d8-31dcdbe9188e",
-    "publishedAt": "2026-04-21T17:21:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "34b85c78b2a7133f",
-    "source": "cnbc",
-    "originalTitle": "What a looming jet fuel shortage could mean for summer travel",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/what-a-looming-jet-fuel-shortage-could-mean-for-summer-travel.html",
-    "publishedAt": "2026-04-21T17:18:03.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "740aa1d73a5805f4",
-    "source": "cnbc",
-    "originalTitle": "UPS and FedEx have begun filing for some tariff refunds",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/ups-fedex-tariff-refunds-ieepa.html",
-    "publishedAt": "2026-04-21T17:17:17.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "074f2f1b2ef776e4",
-    "source": "bloomberg",
-    "originalTitle": "Sen. Tillis Calls for End to Powell Probe During Warsh Hearing",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/tillis-calls-for-end-to-powell-probe-amid-warsh-hearing-video",
-    "publishedAt": "2026-04-21T17:15:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ef24efee34e469f0",
-    "source": "cnbc",
-    "originalTitle": "Michael and Susan Dell to donate $750 million to UT Austin to fund new medical campus",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/michael-susan-dell-ut-austin-donation-medical-campus.html",
-    "publishedAt": "2026-04-21T17:15:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f4189b52dada58b5",
-    "source": "marketwatch",
-    "originalTitle": "Here’s what will really matter to Tesla investors when the company reports earnings",
-    "originalUrl": "https://www.marketwatch.com/story/heres-what-will-really-matter-to-tesla-investors-when-it-reports-earnings-ba621f85?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T17:14:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b13b562883284ee8",
-    "source": "bloomberg",
-    "originalTitle": "Tim Cook's Exit, Warsh Faces Congress | Open Interest 4/21/2026",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/open-interest-4-21-2026-video",
-    "publishedAt": "2026-04-21T17:13:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "43943decd9120e40",
-    "source": "ft",
-    "originalTitle": "Britain’s prime minister is in power without purpose",
-    "originalUrl": "https://www.ft.com/content/e5445535-f87e-46bb-bb28-25bdb71f1b39",
-    "publishedAt": "2026-04-21T17:02:09.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a7ae49eee76eeed0",
-    "source": "marketwatch",
-    "originalTitle": "From Allbirds to AI, the meme-stock frenzy is warning you to own this quality ‘antimeme’ portfolio instead",
-    "originalUrl": "https://www.marketwatch.com/story/from-allbirds-to-ai-the-meme-stock-frenzy-is-warning-you-to-own-this-quality-antimeme-portfolio-instead-6714bb16?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T16:58:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "af5ae27e94c0065c",
-    "source": "bloomberg",
-    "originalTitle": "Here Are the Key Takeaways From Kevin Warsh’s Fed Confirmation Hearing",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/kevin-warsh-s-fed-confirmation-hearing-key-takeaways-on-interest-rates-policy",
-    "publishedAt": "2026-04-21T16:52:26.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d703fd6429bf41b2",
-    "source": "marketwatch",
-    "originalTitle": "Halliburton’s outlook backs one analyst’s view to buy oil-service stocks now",
-    "originalUrl": "https://www.marketwatch.com/story/halliburtons-earnings-take-a-hit-from-the-iran-conflict-but-they-still-top-forecasts-acca3198?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T16:51:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0fbcf22cf15cde0e",
-    "source": "bloomberg",
-    "originalTitle": "Citadel Securities Takes On Banks With Push for Big Stock Trades",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/ken-griffin-s-citadel-securities-takes-on-wall-street-in-equity-trading-push",
-    "publishedAt": "2026-04-21T16:50:45.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "066737185343aa62",
-    "source": "marketwatch",
-    "originalTitle": "The Dow Jones Transportation Average is on a historic tear. Here are 6 charts you need to see.",
-    "originalUrl": "https://www.marketwatch.com/story/the-dow-jones-transportation-average-is-on-a-historic-tear-here-are-6-charts-you-need-to-see-ec2b91aa?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T16:45:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b6a7649a58394e63",
-    "source": "ft",
-    "originalTitle": "Senators grill Warsh on independence from Trump and personal wealth",
-    "originalUrl": "https://www.ft.com/content/6d006c95-2934-4340-82b0-05b18ec161e0",
-    "publishedAt": "2026-04-21T16:41:16.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "37d24af6df3482a0",
-    "source": "bloomberg",
-    "originalTitle": "US Says It Boarded Oil Tanker, First During Iranian Blockade",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/us-says-it-boarded-oil-tanker-first-during-iranian-blockade",
-    "publishedAt": "2026-04-21T16:08:28.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6ebc7a603d0cb052",
-    "source": "bloomberg",
-    "originalTitle": "Mercuria Was Able to Get Ships Out Through Hormuz, CEO Says",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/mercuria-was-able-to-get-ships-out-through-hormuz-ceo-says",
-    "publishedAt": "2026-04-21T16:08:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5e20f5833f3f6168",
-    "source": "bloomberg",
-    "originalTitle": "Wall Street’s Crypto Ambitions Dealt a Setback by Latest Hack",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/wall-street-s-crypto-ambitions-dealt-a-setback-by-latest-hack",
-    "publishedAt": "2026-04-21T16:03:05.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "32949e71da9b9ea8",
-    "source": "bloomberg",
-    "originalTitle": "Tax-the-Rich Boosts Appeal of Bonds That Give Shelter to Wealthy",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/tax-the-rich-boosts-appeal-of-bonds-that-give-shelter-to-wealthy",
-    "publishedAt": "2026-04-21T16:00:25.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e1cca1cd508df8c1",
-    "source": "cnbc",
-    "originalTitle": "Microsoft cuts Game Pass subscription prices after new Xbox CEO promises to 'recommit' to gamers",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/microsoft-game-pass-ultimate-subscription-price-cut.html",
-    "publishedAt": "2026-04-21T16:00:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ffc4a30db766d434",
-    "source": "cnbc",
-    "originalTitle": "A timeline of how the Iran war shook oil prices — and what comes next ",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/oil-price-iran-war-middle-east.html",
-    "publishedAt": "2026-04-21T15:46:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "563937155536bdcd",
-    "source": "bloomberg",
-    "originalTitle": "Crisis y sanciones de Trump limitan las opciones a cubanos que quieren salir de la isla",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-04-21/crisis-y-sanciones-de-trump-limitan-las-opciones-a-cubanos-que-quieren-salir-de-la-isla",
-    "publishedAt": "2026-04-21T15:19:19.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e3d38c58a080f7ad",
-    "source": "ft",
-    "originalTitle": "Apple’s smooth CEO swap is the ultimate corporate status symbol",
-    "originalUrl": "https://www.ft.com/content/12902e63-6414-4906-884a-6d259b6c9dc6",
-    "publishedAt": "2026-04-21T15:10:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "831616291d3b5f13",
-    "source": "cnbc",
-    "originalTitle": "Trump says 'maybe' government should help struggling Spirit Airlines",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-spirit-airlines.html",
-    "publishedAt": "2026-04-21T14:53:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2040e843d28763a5",
-    "source": "cnbc",
-    "originalTitle": "U.S. judge blocks Trump administration actions stymieing wind, solar projects",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/us-judge-blocks-trump-administration-actions-stymieing-wind-solar-projects.html",
-    "publishedAt": "2026-04-21T14:36:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "39b29d205c5c5cd6",
-    "source": "cnbc",
-    "originalTitle": "Trump says 'I'll remember' companies that don’t seek tariff refunds",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-says-hell-remember-companies-that-dont-seek-tariff-refund.html",
-    "publishedAt": "2026-04-21T14:34:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "96b1b32f0a4ccb97",
-    "source": "bloomberg",
-    "originalTitle": "US Natural Gas Extends Gains on Global Oil, Gas Price Increase",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/us-natural-gas-ticks-down-on-mild-weather-growing-surplus",
-    "publishedAt": "2026-04-21T14:14:52.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0b0cda77e0946555",
-    "source": "nikkei",
-    "originalTitle": "成長投資に複数年度の「新たな投資枠」、経産省も提起へ",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA219J20R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "経産省は成長投資に重点を置く複数年度の新たな投資枠を提起する予定。成長投資の促進を通じて経済成長を支えることを目指す。",
-    "relevanceScore": 60,
-    "riskCategories": []
-  },
-  {
-    "id": "4cb50ba3d0d69dd1",
-    "source": "nikkei",
-    "originalTitle": "信用買い残、増加額20年ぶり大きさ　個人投資家の先高観根強く",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB216IC0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "信用買い残高が増加し、個人投資家の先高観が根強い。市場の動向に影響を及ぼす可能性がある。",
-    "relevanceScore": 50,
-    "riskCategories": []
-  },
-  {
-    "id": "fda948b9c6ffa0c6",
-    "source": "nikkei",
-    "originalTitle": "VW、30年までに中国で新エネ車50車種　現地勢と組み開発期間短縮",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM21AIN0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "VWは中国で新エネ車50車種を30年までに開発する計画。現地企業との協力により開発期間を短縮する。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "4716cd27c28faffa",
-    "source": "nikkei",
-    "originalTitle": "ロシア・北朝鮮の国境で自動車橋が連結　全長5キロ、夏に開通",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR219790R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "ロシアと北朝鮮の国境に自動車橋が連結され、夏に開通予定。地政学的な影響が懸念される。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "1ccdc9f84d370e94",
-    "source": "nikkei",
-    "originalTitle": "企業の会計不正「再発防止を」、ニデックなど念頭　自民党の提言原案",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB17CQM0X10C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "自民党は企業の会計不正の再発防止を提言する。会計基準の強化が期待される。",
-    "relevanceScore": 50,
-    "riskCategories": []
-  },
-  {
-    "id": "ffbb0519b50d2c20",
-    "source": "nikkei",
-    "originalTitle": "韓国SKオン、日本法人開設へ　EVやデータセンター向け電池を拡販",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGM21AT50R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "韓国SKオンは日本法人を開設し、EVやデータセンター向け電池を拡販する。技術革新が進む可能性がある。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "0e89e8eabd2d5f92",
-    "source": "nikkei",
-    "originalTitle": "富士フイルム､北米の全電力を実質再エネ化　CO2排出1割削減",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC219WP0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "富士フイルムは北米の全電力を実質再エネ化し、CO2排出を1割削減する。環境への影響が期待される。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "5d7ab005e46a79a7",
-    "source": "nikkei",
-    "originalTitle": "高市首相「平和国家としての歩み堅持」　5類型撤廃受け",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA219VZ0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "高市首相は、5類型の撤廃を受けて、平和国家としての歩みを堅持することを強調した。日本の政治情勢と国際関係に影響が及ぶ可能性がある。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "f8442c4dbbc47de0",
-    "source": "nikkei",
-    "originalTitle": "ノジマ野島社長「社会に訴える商品生み出す」　日立の家電事業を買収",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC218570R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "ノジマの野島社長は、日立の家電事業を買収し、社会に訴える商品を生み出すことを目指している。家電業界への影響が予想される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "b7fb529ffba91dcb",
-    "source": "nikkei",
-    "originalTitle": "ブランドに合わせた回答するAI　博報堂が導入支援",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC217GP0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "博報堂は、ブランドに合わせた回答するAIを導入支援している。マーケティングとテクノロジーに影響が及ぶ可能性がある。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "2ac08d529c6e3df6",
-    "source": "nikkei",
-    "originalTitle": "プーチン氏支持率がウクライナ侵略後最低に　政府系調査、通信規制影響",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR17C6H0X10C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "プーチン氏の支持率がウクライナ侵略後最低に下がった。ロシアの政治情勢と国際関係に影響が及ぶ可能性がある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "2f8cffe5b6fa2d4a",
-    "source": "nikkei",
-    "originalTitle": "台湾・頼清徳氏、エスワティニ訪問をとりやめ　「中国が圧力」と非難",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB21AUE0R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "頼清徳氏は、エスワティニ訪問をとりやめ、中国が圧力をかけたと非難した。台湾と中国の関係に影響が及ぶ可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "59d36c949621698d",
-    "source": "nikkei",
-    "originalTitle": "スイスフラン、対円で最高値　有事のドル買い巻き戻しで",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB217A90R20C26A4000000/",
-    "publishedAt": "2026-04-21T14:02:12.110Z",
-    "summaryJa": "スイスフランは、対円で最高値となった。有事のドル買い巻き戻しが要因である。為替市場に影響が及ぶ。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "437e0dee3aca06b9",
-    "source": "cnbc",
-    "originalTitle": "Trump says he'll 'remember' companies that don't seek tariff refund",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-says-hell-remember-companies-that-dont-seek-tariff-refund.html",
-    "publishedAt": "2026-04-21T13:58:22.000Z",
-    "summaryJa": "トランプ大統領は、関税返還を申請しない企業には対応措置を取ることを示唆した。マクロ経済への影響はあるものの、直接的な金融政策変更ではないため、関連度はやや低い。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "9cc3957f091aaa4a",
-    "source": "bloomberg",
-    "originalTitle": "Treasuries Weaken Before Warsh Testifies for Fed Chair Role",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/treasuries-weaken-before-warsh-testifies-for-fed-chair-role",
-    "publishedAt": "2026-04-21T13:57:28.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f4bea2bbc7a24125",
-    "source": "cnbc",
-    "originalTitle": "Dow rises 200 points as Trump predicts a deal with Iran before ceasefire expires: Live updates",
-    "originalUrl": "https://www.cnbc.com/2026/04/20/stock-market-today-live-updates.html",
-    "publishedAt": "2026-04-21T13:56:05.000Z",
-    "summaryJa": "イランとの合意が近いと予測したトランプ大統領の発言を受けて、ダウ平均株価は200ポイント上昇した。地政学的緊張の緩和が金融市場に与える影響は大きい。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "08f95c4f29f1d01e",
-    "source": "cnbc",
-    "originalTitle": "Trump surprised by stock market comeback amid Iran conflict, thought Dow would be down 20%",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-surprised-by-stock-market-comeback-amid-iran-conflict-thought-dow-would-be-down-20percent.html",
-    "publishedAt": "2026-04-21T13:55:22.000Z",
-    "summaryJa": "トランプ大統領は、イラン紛争の最中に株式市場が予想よりも回復したことに驚いたと述べた。直接的な経済政策変更ではないが、金融市場への認識が示唆される。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "224cc1530cef0efa",
-    "source": "cnbc",
-    "originalTitle": "Kevin Warsh arrives on Capitol Hill for Fed confirmation hearing: Live updates",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/kevin-warsh-fed-confirmation-hearing-trump-live-updates.html",
-    "publishedAt": "2026-04-21T13:52:37.000Z",
-    "summaryJa": "ケビン・ウォッシュが連邦準備制度理事会の公聴会に出席した。金融政策人事の動きは重要である。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "5822ac1e43b4d05b",
-    "source": "marketwatch",
-    "originalTitle": "ChatGPT is so 2025 — these 3 sectors are the real AI gold mines for 2026",
-    "originalUrl": "https://www.marketwatch.com/story/the-chatbot-era-is-over-these-3-sectors-are-the-real-ai-gold-mines-for-2026-002372c7?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T13:50:00.000Z",
-    "summaryJa": "ChatGPTの次のAIブームは2026年に期待される3つのセクターについて論じられている。技術革新の動向は経済成長に影響を与える可能性がある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "63655fbba9611246",
-    "source": "bloomberg",
-    "originalTitle": "BMO, Teck, TC Energy CEOs to Advise Carney on US Strategy on New Panel",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/bmo-teck-tc-energy-ceos-to-advise-carney-on-us-strategy-on-new-panel",
-    "publishedAt": "2026-04-21T13:49:07.000Z",
-    "summaryJa": "カーニー氏の新パネルにBMO、Teck、TC EnergyのCEOが参加する。企業間の協力や戦略的アドバイスは経済活動に一定の影響を与える。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "df481acb9903e248",
-    "source": "bloomberg",
-    "originalTitle": "German Pension VBL Shifts €7 Billion Housing Portfolio Into Fund",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/german-pension-vbl-shifts-7-billion-housing-portfolio-into-fund",
-    "publishedAt": "2026-04-21T13:45:25.000Z",
-    "summaryJa": "ドイツの年金基金VBLが700億ユーロの住宅ポートフォリオをファンドに移行した。資産運用の変化は金融市場に影響を及ぼす。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "11f65e7789551915",
-    "source": "cnbc",
-    "originalTitle": "Why the timing of Apple's CEO change could mean a good earnings report is around the corner",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/why-the-timing-of-apples-ceo-change-could-mean-a-good-earnings-report-is-around-the-corner.html",
-    "publishedAt": "2026-04-21T13:41:04.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "fd48969ffaca875e",
-    "source": "cnbc",
-    "originalTitle": "Oil prices little changed as Trump expects Iran deal but prepared to resume war if talks fail",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/oil-price-iran-war-strait-hormuz-tanker-ceasefire-peace-talks.html",
-    "publishedAt": "2026-04-21T13:37:07.000Z",
-    "summaryJa": "原油価格は変動が小さかったが、トランプ大統領がイランとの合意を期待しながらも交渉が失敗した場合の戦争再開に備えているとCNBCが報じています。地政学的緊張がエネルギー市場に与える影響は重要です。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "1cdcef70ce6b0bdf",
-    "source": "bloomberg",
-    "originalTitle": "Billionaire Fredriksen’s Firm Faces $1 Billion Claim After Failed Fraud Trial",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/billionaire-fredriksen-s-firm-faces-1-billion-claim-after-failed-fraud-trial",
-    "publishedAt": "2026-04-21T13:35:52.000Z",
-    "summaryJa": "億万長者フレドリクセンの会社が失敗した詐欺裁判の結果、10億ドルの請求を受けることになったとBloombergが報じています。企業の法的問題は財務に影響を及ぼす可能性がありますが、この記事の経済リスクへの影響は中程度です。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "a299a2e1e8dfa294",
-    "source": "bloomberg",
-    "originalTitle": "Core Scientific’s $3.3 Billion Deal Fuels AI Junk-Bond Wave",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/core-scientific-adds-to-ai-junk-bond-wave-with-3-3-billion-deal",
-    "publishedAt": "2026-04-21T13:32:09.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c37ad60a68b15967",
-    "source": "bloomberg",
-    "originalTitle": "Core Scientific Adds to AI Junk-Bond Wave With $3.3 Billion Deal",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-04-21/core-scientific-adds-to-ai-junk-bond-wave-with-3-3-billion-deal",
-    "publishedAt": "2026-04-21T13:32:09.000Z",
-    "summaryJa": "Core Scientificが33億ドルのAI関連ジャンクボンドを発行する計画についてBloombergが報じています。AI技術の進展と金融市場への影響は注目すべきです。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "technology",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "17aa60d874e3b9cf",
-    "source": "ft",
-    "originalTitle": "CATL claims 6-minute charge and 1,500km range for new electric vehicle batteries",
-    "originalUrl": "https://www.ft.com/content/1773de37-2595-4d9f-9536-dbe03ff1f8d3",
-    "publishedAt": "2026-04-21T13:32:04.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ad4746de9526ffc7",
-    "source": "cnbc",
-    "originalTitle": "Trump tells CNBC he expects U.S. to make ‘great deal’ with Iran",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/trump-iran-war-ceasefire-peace-talks.html",
-    "publishedAt": "2026-04-21T13:31:01.000Z",
-    "summaryJa": "トランプ前大統領がCNBCのインタビューでイランとの「素晴らしい合意」が期待できると述べました。地政学的緊張と貿易関係の変化はグローバル経済に大きな影響を与える可能性があります。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "4cf060ba369ca133",
-    "source": "marketwatch",
-    "originalTitle": "Retail sales jump to a 3-year high due to surging gas prices, but consumers also aren’t showing any quit",
-    "originalUrl": "https://www.marketwatch.com/story/retail-sales-jump-to-3-year-high-but-its-due-to-high-gas-prices-0dbfc66b?mod=mw_rss_topstories",
-    "publishedAt": "2026-04-21T13:21:00.000Z",
-    "summaryJa": "小売り販売が3年ぶりに高水準に達したとMarketWatchが報じています。ガス価格の高騰が要因の1つですが、消費者は購買意欲を維持しているようです。消費動向はマクロ経済の重要な指標です。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "58f0bd06c6c0c459",
-    "source": "cnbc",
-    "originalTitle": "Brits fled to Dubai for low taxes — now war is making some rethink the deal",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/uk-uae-iran-war-dubai-expat-appeal-middle-east.html",
-    "publishedAt": "2026-04-21T13:14:57.000Z",
-    "summaryJa": "低い税率を求めてドバイに移住したイギリス人たちが、戦争の影響で移住の是非を再考しているというCNBCの報道です。地政学的状況が個人の経済的決定に与える影響は注目すべきです。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "f4f2f3dba274fb76",
-    "source": "cnbc",
-    "originalTitle": "JPMorgan raises S&P 500 target as Mythos model bolsters AI trade",
-    "originalUrl": "https://www.cnbc.com/2026/04/21/jpmorgan-raises-sp-500-target-as-mythos-model-bolsters-ai-trade.html",
-    "publishedAt": "2026-04-21T13:14:44.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
   }
 ]
