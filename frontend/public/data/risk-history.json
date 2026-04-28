@@ -393,6 +393,18 @@
         "日銀の金融政策"
       ],
       "assessedAt": "2026-04-28T08:39:49.317Z"
+    },
+    {
+      "category": "currency_finance",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "金融市場の好調さが企業業績にプラスの影響を与えているが、ドル円の変動やビットコインの値下がりなど、金融の不安定さも見られる。",
+      "factorsJa": [
+        "金融市場の好調さ",
+        "ドル円の変動",
+        "ビットコインの値下がり"
+      ],
+      "assessedAt": "2026-04-28T14:36:36.491Z"
     }
   ],
   "geopolitics_supply_chain": [
@@ -783,6 +795,18 @@
         "貿易への影響"
       ],
       "assessedAt": "2026-04-28T08:39:49.317Z"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 92,
+      "level": "critical",
+      "summaryJa": "中東情勢の緊迫化や地政学的リスクが高まっているが、各国首脳の協力関係を深める動きも見られる。",
+      "factorsJa": [
+        "中東情勢の緊迫化",
+        "地政学的リスク",
+        "各国首脳の協力関係"
+      ],
+      "assessedAt": "2026-04-28T14:36:36.491Z"
     }
   ],
   "technology": [
@@ -1167,6 +1191,18 @@
         "就業市場への影響"
       ],
       "assessedAt": "2026-04-28T08:39:49.317Z"
+    },
+    {
+      "category": "technology",
+      "score": 90,
+      "level": "critical",
+      "summaryJa": "技術革新が企業の競争力にプラスの影響を与えているが、特定の企業や業界への依存度が高まっている。",
+      "factorsJa": [
+        "技術革新",
+        "企業の競争力",
+        "特定の企業や業界への依存度"
+      ],
+      "assessedAt": "2026-04-28T14:36:36.491Z"
     }
   ],
   "social_policy": [
@@ -1550,6 +1586,18 @@
         "社会政策への影響"
       ],
       "assessedAt": "2026-04-28T08:39:49.317Z"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "インフレを受けての値上げ検討や投資の前倒しが行われているが、地域経済への影響は限定的である。",
+      "factorsJa": [
+        "インフレ",
+        "値上げ検討",
+        "投資の前倒し"
+      ],
+      "assessedAt": "2026-04-28T14:36:36.491Z"
     }
   ]
 }
