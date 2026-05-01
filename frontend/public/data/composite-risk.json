@@ -4,22 +4,22 @@
   "breakdown": [
     {
       "category": "currency_finance",
-      "score": 72,
+      "score": 70,
       "weight": 0.3
     },
     {
       "category": "geopolitics_supply_chain",
-      "score": 96,
+      "score": 95,
       "weight": 0.3
     },
     {
       "category": "technology",
-      "score": 78,
+      "score": 79,
       "weight": 0.2
     },
     {
       "category": "social_policy",
-      "score": 80,
+      "score": 82,
       "weight": 0.2
     }
   ]
