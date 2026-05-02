@@ -1,5 +1,520 @@
 [
   {
+    "id": "f87c6382fb79c65c",
+    "source": "nikkei",
+    "originalTitle": "米スピリット航空が全便停止、政府救済まとまらず　燃料価格高騰受け",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN021W90S6A500C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.855Z",
+    "summaryJa": "米スピリット航空が全便停止し、政府の救済策がまとまらない状況です。燃料価格高騰の影響が見られます。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "1c136cc68b115da8",
+    "source": "nikkei",
+    "originalTitle": "元北海道教育大教授が釈放　中国、スパイ容疑で懲役6年",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB0222G0S6A500C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.855Z",
+    "summaryJa": "元北海道教育大学教授が中国でスパイ容疑により懲役6年を宣告されました。地政学的な影響が見られます。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "31a8f36b0f0fa578",
+    "source": "nikkei",
+    "originalTitle": "「インド太平洋」の供給網整備　経済安保を強化、首相が新外交方針",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA301DV0Q6A430C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.855Z",
+    "summaryJa": "日本政府が「インド太平洋」の供給網整備を強化する新外交方針を発表しました。経済安保を強化する狙いがあります。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "80199d5f442ac069",
+    "source": "nikkei",
+    "originalTitle": "日本郵船、アフリカ10カ国に物流網　環インド洋の荷動き増に先手",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC038MZ0T00C26A3000000/",
+    "publishedAt": "2026-05-02T13:38:44.855Z",
+    "summaryJa": "日本郵船がアフリカ10カ国に物流網を拡大する計画。環インド洋地域の荷物の動き増加を見込んでいる。国際物流市場への影響が期待される。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "d2a41c20549402e3",
+    "source": "nikkei",
+    "originalTitle": "ETF発行時間延長へ、個人投資家売買しやすく　運用会社ルール変更",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB08CSW0Y6A400C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.855Z",
+    "summaryJa": "ETFの発行時間が延長され、個人投資家が売買しやすくなる見通し。金融市場への影響が期待される。",
+    "relevanceScore": 50,
+    "riskCategories": []
+  },
+  {
+    "id": "c86d8312aa8baae7",
+    "source": "nikkei",
+    "originalTitle": "ドイツ国防相「防衛力強化のきっかけ」　駐留米軍の削減で",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB022A00S6A500C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.854Z",
+    "summaryJa": "ドイツ国防相が駐留米軍の削減をきっかけに防衛力を強化する意向を表明。地政学的緊張が高まり、経済への影響が懸念される。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "2fc032e0b7a8c61e",
+    "source": "nikkei",
+    "originalTitle": "高市早苗首相の演説要旨　新外交方針を表明",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA0222Y0S6A500C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.854Z",
+    "summaryJa": "高市首相は新外交方針を表明し、国際協力と安定を強調した。マクロ経済への影響はあるが、直接的なリスクは限定的である。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "74fdea70a10fa292",
+    "source": "nikkei",
+    "originalTitle": "同志国と「法の支配」維持、実務協力で「力の時代」対処　新外交方針",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA010Z10R00C26A5000000/",
+    "publishedAt": "2026-05-02T13:38:44.854Z",
+    "summaryJa": "日本政府は新外交方針を発表し、同志国との協力と法の支配の維持を強調した。地政学的影響はあるが、経済リスクへの直接的な影響はある程度ある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "ae2f91f69fe85a92",
+    "source": "nikkei",
+    "originalTitle": "日ベトナムで原油・重要鉱物の調達協力　首脳が合意、中東情勢に対応",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA010YJ0R00C26A5000000/",
+    "publishedAt": "2026-05-02T13:38:44.854Z",
+    "summaryJa": "日本とベトナムは、原油と重要鉱物の調達協力で合意した。エネルギー安定と資源調達への影響はある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f102dd35e706c8da",
+    "source": "nikkei",
+    "originalTitle": "ガザ停戦の監視機関を閉鎖か　トランプ政権、イラン攻撃で関心低下",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR021X10S6A500C2000000/",
+    "publishedAt": "2026-05-02T13:38:44.854Z",
+    "summaryJa": "ガザ停戦の監視機関が閉鎖される可能性が浮上した。地政学的緊張はあるが、直接的な経済リスクへの影響はある程度ある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f0d6a219f56f0089",
+    "source": "cnbc",
+    "originalTitle": "Berkshire annual meeting live: Buffett successor Greg Abel takes the stage in Omaha",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html",
+    "publishedAt": "2026-05-02T13:36:05.000Z",
+    "summaryJa": "バークシャー・ハサウェイの年次総会で、ウォーレン・バフェットの後継者とされるグレッグ・アベルが登壇しました。バフェットの後継者に関する話題が市場に注目されています。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "7c7022f04fbd85cc",
+    "source": "marketwatch",
+    "originalTitle": "Google is now a glorified venture-capital fund thanks to its SpaceX and Anthropic stakes",
+    "originalUrl": "https://www.marketwatch.com/story/google-is-now-a-glorified-venture-capital-fund-thanks-to-its-spacex-and-anthropic-stakes-b13f3d56?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T13:31:00.000Z",
+    "summaryJa": "グーグルのスペースXやアンソロジックへの出資により、ベンチャーキャピタル・ファンドのような性質を持つようになったと指摘されています。テクノロジー業界への影響が見られます。",
+    "relevanceScore": 30,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "68456c8f6f1dc8d6",
+    "source": "cnbc",
+    "originalTitle": "2026 Berkshire Hathaway Annual Shareholder Meeting HP",
+    "originalUrl": "https://www.cnbc.com/search/?query=2026%20Berkshire%20Hathaway%20Annual%20Shareholder%20Meeting%20HP",
+    "publishedAt": "2026-05-02T13:24:27.000Z",
+    "summaryJa": "バークシャー・ハサウェイの2026年株主総会が開催されました。株主総会の内容が市場に注目されています。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "ec2a7c4c52790cb9",
+    "source": "cnbc",
+    "originalTitle": "The U.S.-Iran war is coming for your credit score and mortgage application ",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/us-iran-war-credit-score-loans-mortgage-rates.html",
+    "publishedAt": "2026-05-02T13:17:18.000Z",
+    "summaryJa": "米イラン間の緊張が高まり、信用スコアや住宅ローンへの影響が懸念されています。地政学的リスクが金融市場に及ぼす影響が注目されています。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "ad1f2b2708a06451",
+    "source": "bloomberg",
+    "originalTitle": "Hungary Warns of Drought Hit to Agriculture From April Dry Spell",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/hungary-warns-of-drought-hit-to-agriculture-from-april-dry-spell",
+    "publishedAt": "2026-05-02T13:10:44.000Z",
+    "summaryJa": "ハンガリーでは4月の乾燥が農業に影響を及ぼす可能性が指摘されています。気候変動が農業生産に与える影響が注目されています。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "9e55c8413d97d7b9",
+    "source": "bloomberg",
+    "originalTitle": "Corporate America Earnings Beat Back Wall Street’s Wall of Worry",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/corporate-america-earnings-beat-back-wall-street-s-wall-of-worry",
+    "publishedAt": "2026-05-02T13:00:00.000Z",
+    "summaryJa": "アメリカの企業は予想に反して好調な業績を上げています。企業の業績が金融市場に及ぼす影響が見られます。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "2751fbc34e1a1234",
+    "source": "marketwatch",
+    "originalTitle": "Meet the unsinkable U.S. economy — oil prices are surging, Iran tensions are rising, but it won’t crack",
+    "originalUrl": "https://www.marketwatch.com/story/meet-the-unsinkable-u-s-economy-oil-prices-are-surging-iran-tensions-are-rising-but-it-wont-crack-ee27477f?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T13:00:00.000Z",
+    "summaryJa": "アメリカ経済は、原油価格の高騰やイランとの緊張にもかかわらず、堅実な状態が続いています。経済の強さが注目されています。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "274d1e5f968847d2",
+    "source": "marketwatch",
+    "originalTitle": "EV drivers are taking a victory lap — right past the gas stations selling $4-a-gallon fuel",
+    "originalUrl": "https://www.marketwatch.com/story/ev-drivers-are-taking-a-victory-lap-right-past-the-gas-stations-selling-4-a-gallon-fuel-6931f634?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T13:00:00.000Z",
+    "summaryJa": "電気自動車（EV）ドライバーの増加により、ガソリンスタンドでの4ドル/ガロンの高燃料価格に対する影響が見られる。EVの普及は石油需要の減少につながり、ガソリン価格に影響を与える可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "f096297fc3091e02",
+    "source": "bloomberg",
+    "originalTitle": "Berkshire Hathaway Posts $11.35 Billion Earning",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-02/berkshire-hathaway-posts-11-35-billion-earning-video",
+    "publishedAt": "2026-05-02T12:46:49.000Z",
+    "summaryJa": "バークシャー・ハサウェイの収益が1135億ドルに達した。バークシャー・ハサウェイの業績は、ウォーレン・バフェットの投資戦略と世界経済の動向を反映している。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "02430cacbfc8969f",
+    "source": "ft",
+    "originalTitle": "Berkshire cash pile climbs to $380bn as stock sales streak hits 14th quarter ",
+    "originalUrl": "https://www.ft.com/content/6701283e-6b4f-415d-8be2-bae35d74fe74",
+    "publishedAt": "2026-05-02T12:39:44.000Z",
+    "summaryJa": "バークシャー・ハサウェイの現金保有額が3800億ドルに上昇した。バークシャー・ハサウェイの現金保有額の増加は、投資機会の拡大と金融市場の安定性に貢献する可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "e3f25f2b5cd32104",
+    "source": "bloomberg",
+    "originalTitle": "Iran Juggles Oil Cuts and Storage Strain to Resist US Blockade",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/iran-juggles-oil-cuts-and-storage-strain-to-resist-us-blockade",
+    "publishedAt": "2026-05-02T12:33:41.000Z",
+    "summaryJa": "イランは、米国の経済制裁に対抗するために、石油生産の削減と貯蔵能力の拡大を図っている。イランの石油政策は、世界的な石油需給バランスと油価に影響を与える可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f7deb05cdbc86b1e",
+    "source": "marketwatch",
+    "originalTitle": "America’s biggest oil companies are making less money than before the Iran war",
+    "originalUrl": "https://www.marketwatch.com/story/americas-biggest-oil-companies-are-making-less-money-than-before-the-iran-war-bff3b455?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T12:30:00.000Z",
+    "summaryJa": "アメリカの大手石油会社の収益が、イラン戦争前の水準を下回っている。石油会社の収益の減少は、世界的な石油需給バランスと油価の変化に影響を与える可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "aa3d7654b7cb66e7",
+    "source": "bloomberg",
+    "originalTitle": "Spirit Airlines Shuts Operations After White House Bailout Collapse",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-02/spirit-airlines-shuts-operations-after-bailout-collapse-video",
+    "publishedAt": "2026-05-02T12:09:50.000Z",
+    "summaryJa": "スピリット航空が運航を停止した。航空会社の運航停止は、航空業界の競争環境と消費者の選択肢に影響を与える可能性がある。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "2faf93a877250ec1",
+    "source": "bloomberg",
+    "originalTitle": "Berkshire Hathaway’s Cash Pile Surges to Record $397 Billion",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/berkshire-hathaway-s-cash-pile-surges-to-record-397-billion",
+    "publishedAt": "2026-05-02T12:09:18.000Z",
+    "summaryJa": "バークシャー・ハサウェイの現金保有額が3970億ドルに上昇した。バークシャー・ハサウェイの現金保有額の増加は、投資機会の拡大と金融市場の安定性に貢献する可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "7c54cd50f0c146f3",
+    "source": "bloomberg",
+    "originalTitle": "What Kevin Warsh Means for the Future of the Fed",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-02/what-kevin-warsh-means-for-the-future-of-the-fed-video",
+    "publishedAt": "2026-05-02T12:03:13.000Z",
+    "summaryJa": "ケビン・ウォーシュのFRB参加が、米国の金融政策に影響を与える可能性がある。ウォーシュの参加は、金融政策の方向性と世界経済の動向に影響を与える可能性がある。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "8faf8e0114c27bd8",
+    "source": "cnbc",
+    "originalTitle": "JPMorgan's best stock ideas heading into May",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/jpmorgans-best-stock-ideas-heading-into-may.html",
+    "publishedAt": "2026-05-02T12:01:24.000Z",
+    "summaryJa": "JPモルガンの5月に向けた株式投資アイデアが発表された。JPモルガンの投資アイデアは、金融市場の動向と投資家の選択肢に影響を与える可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "5c0426be1202d510",
+    "source": "bloomberg",
+    "originalTitle": "New Rules for India Shadow Banks May Put Tata Sons IPO on Radar",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/new-rules-for-india-shadow-banks-may-put-tata-sons-ipo-on-radar",
+    "publishedAt": "2026-05-02T12:01:05.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a06d65a4f226ee6e",
+    "source": "bloomberg",
+    "originalTitle": "Reinvention at the Fed and in Las Vegas",
+    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-05-02/reinvention-at-the-fed-and-in-las-vegas-wall-street-week",
+    "publishedAt": "2026-05-02T12:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0c2f8ae00f187d8c",
+    "source": "cnbc",
+    "originalTitle": "Musk testimony dominated first week Musk v. Altman. 'You can't just steal a charity'",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html",
+    "publishedAt": "2026-05-02T12:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b87bb1c65e296ee4",
+    "source": "cnbc",
+    "originalTitle": "Weight loss and hair loss: The growing hair treatment market from GLP-1s",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/hair-loss-glp-1s.html",
+    "publishedAt": "2026-05-02T12:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "46dab56f23c21438",
+    "source": "cnbc",
+    "originalTitle": "These stocks reporting next week have earnings momentum on their side",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/these-stocks-reporting-next-week-have-earnings-momentum-on-their-side.html",
+    "publishedAt": "2026-05-02T11:58:20.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7a54e5eb8cc17d54",
+    "source": "cnbc",
+    "originalTitle": "Spirit Airlines shut down. Here's what travelers need to know if they have tickets",
+    "originalUrl": "https://www.cnbc.com/2026/05/01/spirit-airlines-flights-shut-down.html",
+    "publishedAt": "2026-05-02T11:57:32.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "084f0cd7c52fe091",
+    "source": "bloomberg",
+    "originalTitle": "Oil Tanker Pricing Feud Embroils a Centuries-Old London Market",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/oil-tanker-pricing-feud-embroils-a-centuries-old-london-market",
+    "publishedAt": "2026-05-02T11:32:30.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "de5cf0c3a860c64e",
+    "source": "marketwatch",
+    "originalTitle": "Japan just put a ‘Band-Aid’ on the yen. Why high oil prices could soon rip it off.",
+    "originalUrl": "https://www.marketwatch.com/story/japan-just-put-a-band-aid-on-the-yen-why-high-oil-prices-could-soon-rip-it-off-21374282?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T11:30:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3b5ebd269ae1fd3c",
+    "source": "marketwatch",
+    "originalTitle": "‘We’re all worried the honey pot will run dry’: Does the U.S. government borrow from my Social Security to fund federal programs?",
+    "originalUrl": "https://www.marketwatch.com/story/were-worried-the-honey-pot-will-run-dry-does-the-trump-administration-use-my-social-security-to-fund-federal-programs-1cd01b8f?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T11:30:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "64d1f108c13fc15e",
+    "source": "bloomberg",
+    "originalTitle": "OPEC+ Agrees in Principle on Small Output Hike, Reuters Reports",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/opec-agrees-in-principle-on-small-output-hike-reuters-reports",
+    "publishedAt": "2026-05-02T11:28:17.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1d8dc4931eec1490",
+    "source": "marketwatch",
+    "originalTitle": "‘We are old school’: I’ve been married for 40 years. Should I have kept my money separate?",
+    "originalUrl": "https://www.marketwatch.com/story/we-are-old-school-ive-been-married-for-40-years-should-i-have-kept-my-money-separate-d4bef3c2?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T11:18:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a450b34b4ced3dec",
+    "source": "cnbc",
+    "originalTitle": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+    "originalUrl": "https://www.cnbc.com/2026/05/01/spirit-airlines-trump-bailout.html",
+    "publishedAt": "2026-05-02T11:10:51.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4426a131cd13e59a",
+    "source": "ft",
+    "originalTitle": "US should ‘finish the job’ if Iran does not yield, says Lindsey Graham",
+    "originalUrl": "https://www.ft.com/content/359e5fdd-b56f-46cb-b3fd-70b367f3e2ef",
+    "publishedAt": "2026-05-02T11:00:08.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "cb3c50605513c24f",
+    "source": "bloomberg",
+    "originalTitle": "World’s Largest Container Carrier Plans Route Avoiding Hormuz",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/world-s-largest-container-carrier-plans-route-avoiding-hormuz",
+    "publishedAt": "2026-05-02T10:55:34.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a276f94a19413bdd",
+    "source": "marketwatch",
+    "originalTitle": "‘There is an imbalance of power’: My husband has cancer. Why must we wait two hours for a 10-minute CT scan?",
+    "originalUrl": "https://www.marketwatch.com/story/there-is-an-imbalance-of-power-my-husband-has-cancer-why-must-we-wait-two-hours-for-a-10-minute-ct-scan-143816e9?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-02T10:30:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7fa8017ccc4eabb8",
+    "source": "cnbc",
+    "originalTitle": "Gas prices are high right now. Use these 6 tools to save on fuel",
+    "originalUrl": "https://www.cnbc.com/select/best-tools-for-saving-money-on-gas/",
+    "publishedAt": "2026-05-02T10:03:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a242ef43f1272b07",
+    "source": "cnbc",
+    "originalTitle": "Germany urges stronger European defense after U.S. reduces troops",
+    "originalUrl": "https://www.cnbc.com/2026/05/02/germany-urges-stronger-european-defense-after-us-reduces-troops.html",
+    "publishedAt": "2026-05-02T09:30:49.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "56b8fa0c346c4088",
+    "source": "bloomberg",
+    "originalTitle": "Finland Must Continue to Consolidate Public Finances, Rehn Says",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/finland-must-continue-to-consolidate-public-finances-rehn-says",
+    "publishedAt": "2026-05-02T08:43:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "090446f1200e03cb",
+    "source": "bloomberg",
+    "originalTitle": "India's Woes Bigger Than Any One Political Figure, Amitav Ghosh Says",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-02/india-s-woes-bigger-than-one-figure-amitav-ghosh-says-video",
+    "publishedAt": "2026-05-02T08:07:13.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "dedeb899bee415c8",
+    "source": "bloomberg",
+    "originalTitle": "Inside the Booming Market for Dinosaur Fossils",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-02/how-the-rich-buy-and-sell-dinosaur-fossils",
+    "publishedAt": "2026-05-02T08:00:18.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "81df12b75b392c2e",
+    "source": "bloomberg",
+    "originalTitle": "Odd Lots: Inside a Booming Market for Dinosaur Fossils (Podcast)",
+    "originalUrl": "https://www.bloomberg.com/news/audio/2026-05-02/odd-lots-inside-a-booming-market-for-dinosaur-fossils-podcast",
+    "publishedAt": "2026-05-02T08:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "eb9da7bda0e10c85",
     "source": "nikkei",
     "originalTitle": "マリ軍政打倒へ、過激派が国民に蜂起要求　イスラム法導入も",
@@ -178,6 +693,16 @@
     "riskCategories": [
       "geopolitics_supply_chain"
     ]
+  },
+  {
+    "id": "0e0174274492c0da",
+    "source": "ft",
+    "originalTitle": "The physical world strikes back",
+    "originalUrl": "https://www.ft.com/content/ee833531-4554-40d1-834f-659aeadb0ba6",
+    "publishedAt": "2026-05-02T04:03:06.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
   },
   {
     "id": "a832265efa368039",
@@ -457,6 +982,16 @@
     ]
   },
   {
+    "id": "7fbe7230ae8ac550",
+    "source": "cnbc",
+    "originalTitle": "Bard College President Leon Botstein retiring after Jeffrey Epstein ties detailed",
+    "originalUrl": "https://www.cnbc.com/2026/05/01/epstein-bard-college-president-leon-botstein-retire.html",
+    "publishedAt": "2026-05-02T03:12:04.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "7705f35709385f28",
     "source": "marketwatch",
     "originalTitle": "Apple just gave a clue that a big AI acquisition may be in the cards",
@@ -630,6 +1165,16 @@
     ]
   },
   {
+    "id": "2580eec00d77dddb",
+    "source": "bloomberg",
+    "originalTitle": "Lancôme Global Brand President on Tapping into Longevity",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-01/lancome-global-brand-president-on-tapping-into-longevity-video",
+    "publishedAt": "2026-05-01T21:39:19.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "8f4ad2352457b9c6",
     "source": "cnbc",
     "originalTitle": "Cautious optimism: Berkshire investors weigh future under new CEO Greg Abel",
@@ -654,6 +1199,16 @@
     ]
   },
   {
+    "id": "b06b47a6b4e29b37",
+    "source": "bloomberg",
+    "originalTitle": "Archroma Reaches Final Terms on Much Delayed Loan Extension",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/archroma-reaches-final-terms-on-much-delayed-loan-extension",
+    "publishedAt": "2026-05-01T21:30:13.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "28bf13b470fe5d44",
     "source": "ft",
     "originalTitle": "US warns Europe of delays to arms shipments as Iran war drains stockpiles",
@@ -664,6 +1219,26 @@
     "riskCategories": [
       "geopolitics_supply_chain"
     ]
+  },
+  {
+    "id": "d99187d83ccac175",
+    "source": "bloomberg",
+    "originalTitle": "Pershing Square IPO Investors Post Gain After Free Shares",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/pershing-square-ipo-investors-post-gain-after-free-shares",
+    "publishedAt": "2026-05-01T21:22:09.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "64bef7418cea047f",
+    "source": "bloomberg",
+    "originalTitle": "LA’s Television City Studio Lot Faces Sale Forced by Lenders",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/deutsche-bank-forcing-hackman-to-shed-la-area-tv-and-movie-lots",
+    "publishedAt": "2026-05-01T21:13:59.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
   },
   {
     "id": "896949a778760744",
@@ -1392,569 +1967,5 @@
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
-  },
-  {
-    "id": "2d3c426e7a6108a0",
-    "source": "marketwatch",
-    "originalTitle": "Roblox had a child-safety problem. Now it has a revenue problem.",
-    "originalUrl": "https://www.marketwatch.com/story/roblox-had-a-child-safety-problem-now-it-has-a-revenue-problem-9fe08478?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-01T17:24:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "16f43a1623e9dc40",
-    "source": "cnbc",
-    "originalTitle": "Apple proves once again it is the ultimate cash machine. How to trade the stock from here",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/apple-proves-once-again-it-is-the-ultimate-cash-machine-how-to-trade-the-stock-from-here.html",
-    "publishedAt": "2026-05-01T17:22:30.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4157a159999100da",
-    "source": "cnbc",
-    "originalTitle": "Roku is one of the big earnings winners of the day. Two major analysts see more to go",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/roku-one-of-big-friday-earnings-winners-two-analysts-see-more-to-go.html",
-    "publishedAt": "2026-05-01T17:17:03.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5a3147818f6a4b10",
-    "source": "bloomberg",
-    "originalTitle": "Exxon CEO Feels ‘Positive’ on Venezuela After Earlier Criticism",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/exxon-ceo-feels-positive-on-venezuela-after-earlier-criticism",
-    "publishedAt": "2026-05-01T17:12:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f0ab213e53d644d0",
-    "source": "cnbc",
-    "originalTitle": "Why you won't find Kentucky Derby bets on prediction platforms",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/kentucky-derby-prediction-platforms.html",
-    "publishedAt": "2026-05-01T17:11:45.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bf8d53a640e40fb0",
-    "source": "bloomberg",
-    "originalTitle": "War Rebound Sends Muni Bonds to Best April Since 2014",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/rebound-from-war-swoon-fuels-best-april-for-munis-since-2014",
-    "publishedAt": "2026-05-01T17:02:54.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3df07a3a02672c17",
-    "source": "bloomberg",
-    "originalTitle": "Trump Says Iran Wants a Deal, But He’s ‘Not Satisfied’",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-01/trump-says-iran-wants-a-deal-but-he-s-not-satisfied-video",
-    "publishedAt": "2026-05-01T17:00:21.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5ea36ade06623e2e",
-    "source": "ft",
-    "originalTitle": "What will Trump’s war on Iran mean for global trade?",
-    "originalUrl": "https://www.ft.com/content/c8af039b-fb0a-409e-a7e7-a1b5b7b5f6b9",
-    "publishedAt": "2026-05-01T16:57:35.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3c7ce88245d72620",
-    "source": "bloomberg",
-    "originalTitle": "Psychiatry Drugmaker Seaport Rises 10% After Trading Debut",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/drugmaker-seaport-climbs-17-after-255-million-upsized-us-ipo",
-    "publishedAt": "2026-05-01T16:43:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4056524d5c808040",
-    "source": "bloomberg",
-    "originalTitle": "Drugmaker Seaport Climbs 17% After $255 Million Upsized US IPO",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/drugmaker-seaport-climbs-17-after-255-million-upsized-us-ipo",
-    "publishedAt": "2026-05-01T16:43:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "48ef855a4946aa92",
-    "source": "marketwatch",
-    "originalTitle": "Trump to talk up his push to lower costs, as analysts see bruising midterms for GOP due to economic worries",
-    "originalUrl": "https://www.marketwatch.com/story/trump-to-talk-up-his-push-to-lower-costs-as-analysts-see-bruising-midterms-for-gop-due-to-economic-worries-66086c74?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-01T16:37:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "73c8f72484fd80e6",
-    "source": "cnbc",
-    "originalTitle": "Apple stages sharpest rally in 9 months as execs cite iPhone, Mac demand in boosting guidance",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/apple-stock-rallies-on-q2-earnings-and-q3-guidance.html",
-    "publishedAt": "2026-05-01T16:35:56.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3007137e5946f752",
-    "source": "bloomberg",
-    "originalTitle": "World’s Fourth Largest Gold Miner’s IPO Is Said to Be Paused",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/world-s-fourth-largest-gold-miner-s-ipo-is-said-to-be-paused",
-    "publishedAt": "2026-05-01T16:33:26.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "08a5002a1716a42c",
-    "source": "bloomberg",
-    "originalTitle": "How the Internet Has Changed in Just the Last Week",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-05-01/how-the-internet-has-changed-in-just-the-last-week",
-    "publishedAt": "2026-05-01T16:26:44.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d26c0c94265b293a",
-    "source": "cnbc",
-    "originalTitle": "Roblox shares plummet 18% as child safety measures weigh on bookings",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/roblox-rblx-stock-child-safety-earnings.html",
-    "publishedAt": "2026-05-01T16:23:09.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c0516e4e4341f613",
-    "source": "marketwatch",
-    "originalTitle": "Here’s how much Tesla paid Elon Musk last year",
-    "originalUrl": "https://www.marketwatch.com/story/heres-how-much-tesla-paid-elon-musk-last-year-9e46828a?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-01T16:18:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6bd32e479d9bb811",
-    "source": "ft",
-    "originalTitle": "MBZ, the Emirati sheikh who shook up the Gulf",
-    "originalUrl": "https://www.ft.com/content/e6476f57-2b15-4f99-92f4-ab88156eae64",
-    "publishedAt": "2026-05-01T16:08:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d37c69c7af778e14",
-    "source": "ft",
-    "originalTitle": "Exxon and Chevron defy Trump pressure to boost oil production",
-    "originalUrl": "https://www.ft.com/content/2a028e5e-1108-42b0-9733-43a8523d3226",
-    "publishedAt": "2026-05-01T16:06:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0b7f3a8a93088ee5",
-    "source": "ft",
-    "originalTitle": "Oil market 1 month from crunch point as global reserves dwindle",
-    "originalUrl": "https://www.ft.com/content/b26ba4ce-4324-4ea9-926d-caf036f20832",
-    "publishedAt": "2026-05-01T15:52:58.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c90be883a4b3de39",
-    "source": "ft",
-    "originalTitle": "Oil market one month from crunch point as global stockpiles dwindle",
-    "originalUrl": "https://www.ft.com/content/b26ba4ce-4324-4ea9-926d-caf036f20832",
-    "publishedAt": "2026-05-01T15:52:58.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b1f02bc4aac4c664",
-    "source": "cnbc",
-    "originalTitle": "No need to wait for the TrumpIRA to start saving for retirement: 3 tools to tap right now",
-    "originalUrl": "https://www.cnbc.com/select/trumpira-news-tools-to-start-saving-for-retirement/",
-    "publishedAt": "2026-05-01T15:48:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d8eaa6b0ab80aae7",
-    "source": "cnbc",
-    "originalTitle": "A major shift could soon happen in the Mag 7",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/a-major-mag-7-shift-with-alphabets-market-cap-set-to-pass-nvidias.html",
-    "publishedAt": "2026-05-01T15:35:47.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9d0a88bea7149f01",
-    "source": "cnbc",
-    "originalTitle": "Alphabet is winning the AI revolution. Here's how Mike Khouw is trading it",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/alphabet-is-winning-the-ai-revolution-heres-how-mike-khouw-is-trading-it.html",
-    "publishedAt": "2026-05-01T15:33:37.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "78b4c8a22ce12dc1",
-    "source": "bloomberg",
-    "originalTitle": "Boat Demand Defies High Gas Prices",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-01/boat-demand-defies-high-gas-prices",
-    "publishedAt": "2026-05-01T15:17:27.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e5498f401d92adb6",
-    "source": "cnbc",
-    "originalTitle": "UK exports to U.S. plunge by 25% after Trump's 'liberation day' tariffs blitz ",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/uk-exports-us-fall-25-trump-tariffs-liberation-day.html",
-    "publishedAt": "2026-05-01T15:11:44.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "823074f45ba93878",
-    "source": "bloomberg",
-    "originalTitle": "BP Reviews UK North Sea Assets as New CEO Eyes Disposals",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/bp-reviews-uk-north-sea-assets-as-new-ceo-eyes-disposals",
-    "publishedAt": "2026-05-01T15:06:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3a1d61664f07044a",
-    "source": "cnbc",
-    "originalTitle": "Elon Musk billionaires bill supporters draw progressive challengers in Delaware",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/elon-musk-billionaire-bill-elections-progressive-challengers-delaware.html",
-    "publishedAt": "2026-05-01T15:03:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ed94bd77ecb05241",
-    "source": "fed",
-    "originalTitle": "Agencies issue host state loan-to-deposit ratios",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260501a.htm",
-    "publishedAt": "2026-05-01T15:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f9d93a6bd952ac02",
-    "source": "cnbc",
-    "originalTitle": "Lutnick gets grilling on Nvidia chip sales to China in letter from Sen. Chris Coons",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/nvidia-chips-jensen-huang-h200-lutnick-chris-coons.html",
-    "publishedAt": "2026-05-01T14:08:32.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "551b775496f73d77",
-    "source": "bloomberg",
-    "originalTitle": "SEC Semiannual Reporting Proposal Clears White House Review",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/sec-semiannual-reporting-proposal-clears-white-house-review",
-    "publishedAt": "2026-05-01T14:06:10.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "806a373c66b2b312",
-    "source": "bloomberg",
-    "originalTitle": "Versant’s SportsEngine to Sell to Genstar’s PlayMetrics",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/versant-s-sportsengine-said-to-sell-to-genstar-s-playmetrics",
-    "publishedAt": "2026-05-01T14:05:08.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "87d9a9035d135d9e",
-    "source": "bloomberg",
-    "originalTitle": "US Natural Gas Futures Rally to Three-Week High on Output Cuts",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/us-natural-gas-futures-extend-gains-on-lower-production-lng-dip",
-    "publishedAt": "2026-05-01T13:25:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f556ee977295f652",
-    "source": "ft",
-    "originalTitle": "Pentagon signs new military AI deals with Nvidia, Microsoft and Amazon",
-    "originalUrl": "https://www.ft.com/content/23d98dfa-dfe7-4a88-bae1-6d66900d74ca",
-    "publishedAt": "2026-05-01T13:19:27.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "71650f007ac54f71",
-    "source": "cnbc",
-    "originalTitle": "Pentagon tech chief says Anthropic is still blacklisted, but Mythos is a separate issue",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/pentagon-anthropic-blacklist-mythos-michael.html",
-    "publishedAt": "2026-05-01T12:51:08.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "09bd0533ace7addc",
-    "source": "bloomberg",
-    "originalTitle": "Shopify Analyst Who Saw Selloff Coming Says Too Soon to Buy",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/shopify-analyst-who-saw-selloff-coming-says-it-s-too-soon-to-buy",
-    "publishedAt": "2026-05-01T11:15:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1f94fc6e73cb199b",
-    "source": "cnbc",
-    "originalTitle": "Berkshire shares struggle into annual meeting. Can Abel rekindle enthusiasm without Buffett center stage?",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html",
-    "publishedAt": "2026-05-01T11:12:47.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "54486fe83ffb8523",
-    "source": "cnbc",
-    "originalTitle": "Inside the Fed: Powell vows he won't be a 'shadow chair,' but a Warsh clash will be tough to avoid",
-    "originalUrl": "https://www.cnbc.com/2026/04/30/inside-the-fed-powell-and-warsh-set-to-clash.html",
-    "publishedAt": "2026-05-01T11:12:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "db35340be8646627",
-    "source": "cnbc",
-    "originalTitle": "Apollo Sports Capital and Tom Dundon make landmark $225 million investment in pickleball",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/apollo-sports-capital-tom-dundon-pickleball-investment.html",
-    "publishedAt": "2026-05-01T11:00:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1375acfaa6d2db92",
-    "source": "cnbc",
-    "originalTitle": "Trump scraps Scotch whisky tariffs ‘in honor’ of King Charles",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/donald-trump-king-charles-queen-camilla-state-visit-scotch-whisky-tariffs.html",
-    "publishedAt": "2026-05-01T10:44:37.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3b0c82eba3e543a4",
-    "source": "bloomberg",
-    "originalTitle": "Exxon, Chevron Beat Profit Estimates on War-Driven Oil Rally",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/chevron-blows-away-estimates-on-war-driven-surge-in-oil-prices",
-    "publishedAt": "2026-05-01T10:15:19.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "acedf121fe625814",
-    "source": "bloomberg",
-    "originalTitle": "Emerging Assets Climb on Iran’s New Proposal in Thin Trading",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-01/emerging-markets-eke-out-gains-in-thin-volume-holiday-trading",
-    "publishedAt": "2026-05-01T09:59:27.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "88eabddbb5603980",
-    "source": "cnbc",
-    "originalTitle": "Engine trouble ahead? How the Strait of Hormuz standoff threatens luxury auto giants",
-    "originalUrl": "https://www.cnbc.com/2026/05/01/strait-of-hormuz-base-oils-luxury-autos.html",
-    "publishedAt": "2026-05-01T09:19:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2d9e03c6995061ff",
-    "source": "nikkei",
-    "originalTitle": "高市首相、中東危機下の資源外交　ベトナム・豪州訪問へ出発",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA300AK0Q6A430C2000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "高市首相は、中東危機を受けて資源外交を強化するため、ベトナムと豪州を訪問する。地政学的緊張が高まる中、資源の安定供給確保が重要となる。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "ff41549ed4a36fc4",
-    "source": "nikkei",
-    "originalTitle": "DRAM汎用品の急騰一服、3月は横ばい　供給側の関心は次世代品に",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB244890U6A320C2000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "DRAM汎用品の価格が急騰していたが、一服した。3月は価格が横ばいとなり、供給側の関心は次世代品に移りつつある。半導体市場の動向が注目される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "dc215b5309f9fff7",
-    "source": "nikkei",
-    "originalTitle": "日産の賭け・凍るBYD・合弁新時代　北京モーターショーまとめ読み",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC014680R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "日産とBYDの合弁事業が新時代に入る。電気自動車市場での競争が激化する中、両社の戦略が注目される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "c2870fb813c2a1a0",
-    "source": "nikkei",
-    "originalTitle": "原油先物、欧米価格差が拡大　ECBの利上げ観測を後押し",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL306LOTQ6A430C2000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "原油先物の価格が欧米で差が拡大した。ECBの利上げ観測が後押しとなり、金融市場への影響が注目される。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "5a4e1e501fbbe83d",
-    "source": "nikkei",
-    "originalTitle": "パナソニックHD株価、26年ぶり上場来高値　構造改革を評価",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF3079K0Q6A430C2000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "パナソニックHDの株価が26年ぶりの上場来高値となった。構造改革が評価されたことが要因とみられる。企業の業績が市場に与える影響はあるが、マクロ経済への直接的な影響は限定的である。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "2950688ea553ddb1",
-    "source": "nikkei",
-    "originalTitle": "東証14時　日経平均は膠着　380円高、住友商は急伸",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL014HH0R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "東証の14時時点で日経平均は380円高で推移していた。住友商は急伸した。金融市場の動向はマクロ経済に影響を与える可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "ed16d1213cfe5f11",
-    "source": "nikkei",
-    "originalTitle": "外為14時　円相場、157円台前半で膠着",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL014CK0R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "外為市場の14時時点で円相場は157円台前半で推移していた。為替市場の動向はマクロ経済に影響を与える可能性がある。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "753ef6305264b579",
-    "source": "nikkei",
-    "originalTitle": "三菱商事の純利益37%増　27年3月期、エネルギーが好調",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOTG274EW0X20C26A4000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "三菱商事の27年3月期の純利益は37%増加した。エネルギー部門の好調が主な要因であった。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "188a0a93c9502d0e",
-    "source": "nikkei",
-    "originalTitle": "三井物産、29年3月期に純利益1.1兆円に　中東平常化「9月めど前提」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC011TS0R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "三井物産の29年3月期の純利益は1.1兆円に達する見通し。中東情勢の平常化が前提である。",
-    "relevanceScore": 50,
-    "riskCategories": []
-  },
-  {
-    "id": "290839ee4914a33a",
-    "source": "nikkei",
-    "originalTitle": "住友商事株価が一時15%高　27年3月期純利益が予想以上",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL013RA0R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "住友商事の株価が一時15%上昇した。27年3月期の純利益が予想を上回ったことが要因である。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "d52ded666079801e",
-    "source": "nikkei",
-    "originalTitle": "JR東日本株価が一時11.7%高　27年3月期増収増益や還元強化",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL0123V0R00C26A5000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "JR東日本の株価が一時11.7%上昇した。27年3月期の増収増益と還元強化が要因である。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "a1b7d7634ff3e66d",
-    "source": "nikkei",
-    "originalTitle": "住友商事、自社株買い800億円と株式4分割　株価は一時16%高",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOTG277KI0X20C26A4000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "住友商事が自社株買いを800億円実施し、株式4分割を発表した。株価が一時16%上昇した。",
-    "relevanceScore": 40,
-    "riskCategories": []
-  },
-  {
-    "id": "dad2fa5636e7bee6",
-    "source": "nikkei",
-    "originalTitle": "官製「値下げ」でゆがむ物価　原油高でインフレ加速の米欧に逆行",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA304U00Q6A430C2000000/",
-    "publishedAt": "2026-05-01T08:22:33.004Z",
-    "summaryJa": "官製の「値下げ」により物価がゆがむ可能性がある。原油高でインフレ加速している米欧とは逆の動きである。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance"
-    ]
   }
 ]
