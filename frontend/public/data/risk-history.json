@@ -672,6 +672,18 @@
         "長期金利の低下"
       ],
       "assessedAt": "2026-05-07T08:48:08.457Z"
+    },
+    {
+      "category": "currency_finance",
+      "score": 70,
+      "level": "high",
+      "summaryJa": "ドル円が上昇し、ビットコインやイーサリアムの価格が下落している。金融市場はやや不安定である。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "ビットコインやイーサリアムの価格下落",
+        "欧州の株式市場の下落"
+      ],
+      "assessedAt": "2026-05-07T19:52:48.740Z"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1338,6 +1350,18 @@
         "地政学的動向"
       ],
       "assessedAt": "2026-05-07T08:48:08.457Z"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "米イラン衝突の影響で客数が減少している。政治的な影響が見られ、供給網にも影響が及んでいる。",
+      "factorsJa": [
+        "米イラン衝突",
+        "客数の減少",
+        "ベラルーシの国際大会参加制限"
+      ],
+      "assessedAt": "2026-05-07T19:52:48.740Z"
     }
   ],
   "technology": [
@@ -1993,6 +2017,18 @@
         "AI半導体増産"
       ],
       "assessedAt": "2026-05-07T08:48:08.457Z"
+    },
+    {
+      "category": "technology",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "AIサーバーの開発が進められている。AI主権で需要が高まり、NVIDIAとの協議が行われている。",
+      "factorsJa": [
+        "AIサーバーの開発",
+        "AI主権の需要",
+        "NVIDIAとの協議"
+      ],
+      "assessedAt": "2026-05-07T19:52:48.740Z"
     }
   ],
   "social_policy": [
@@ -2651,6 +2687,18 @@
         "収賄疑惑"
       ],
       "assessedAt": "2026-05-07T08:48:08.457Z"
+    },
+    {
+      "category": "social_policy",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "独身税が導入され、出生率の回復が期待されている。政策の効果と課題が注目される。",
+      "factorsJa": [
+        "独身税の導入",
+        "出生率の回復",
+        "政策の効果と課題"
+      ],
+      "assessedAt": "2026-05-07T19:52:48.740Z"
     }
   ]
 }
