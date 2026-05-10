@@ -1,5 +1,87 @@
 [
   {
+    "id": "2d2e67cabae90e4b",
+    "source": "nikkei",
+    "originalTitle": "テスラ、米工場で高級EV2車種の生産終了　ヒト型ロボットに転換",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN100F10Q6A510C2000000/",
+    "publishedAt": "2026-05-10T08:19:29.690Z",
+    "summaryJa": "テスラは米工場で高級EVの2車種の生産を終了し、ヒト型ロボットの生産に転換する。テスラの生産戦略の転換は自動車業界に影響を与える可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "8c88909cc968ef74",
+    "source": "nikkei",
+    "originalTitle": "首脳会談を左右する表情分析、米はCIAが総力　所作は言葉より雄弁",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD292FT0Z20C26A4000000/",
+    "publishedAt": "2026-05-10T08:19:29.690Z",
+    "summaryJa": "表情分析が首脳会談を左右することがある。米国はCIAが総力を尽くしている。地政学的な影響が見られる可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f3bd59cdca32396f",
+    "source": "bloomberg",
+    "originalTitle": "US Awaits Iran Reply as Aramco Says Hormuz Opening No Quick Fix",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-10/us-awaits-iran-reply-as-aramco-says-hormuz-opening-no-quick-fix",
+    "publishedAt": "2026-05-10T07:52:46.000Z",
+    "summaryJa": "イランがホルムズ海峡の開放について回答を出すことを米国が待っています。アラムコは海峡の開放が早期に実現する可能性は低いと述べています。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "0a52d4ac8e2526ff",
+    "source": "ft",
+    "originalTitle": "Saudi Aramco reports higher profits despite Iran war",
+    "originalUrl": "https://www.ft.com/content/19c03559-1ed6-49bd-b2c1-98961d768f83",
+    "publishedAt": "2026-05-10T06:24:54.000Z",
+    "summaryJa": "サウジアラムコの利益が増加したことが報告されました。イランとの戦争の影響を受けましたが、原油価格の高騰が好影響を与えました。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "dc6af2cb8adf2c6e",
+    "source": "ft",
+    "originalTitle": "OpenAI trial lays bare rivalries behind start-up’s $852bn rise",
+    "originalUrl": "https://www.ft.com/content/c68bd831-434d-486c-86df-54d0369391ef",
+    "publishedAt": "2026-05-10T06:00:38.000Z",
+    "summaryJa": "OpenAIの裁判で、スタートアップの8520億ドルの評価の背景にあるライバル関係が明らかになりました。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "0271f5bddeeca363",
+    "source": "bloomberg",
+    "originalTitle": "Aramco CEO Warns of Long Oil Market Disruption as Profit Jumps",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-10/aramco-profit-climbs-as-war-driven-oil-rise-offsets-export-hit",
+    "publishedAt": "2026-05-10T05:11:41.000Z",
+    "summaryJa": "アラムコのCEOは、長期的な石油市場の混乱を警告した。同社の利益は増加した。石油市場の混乱は、エネルギー価格に影響を及ぼす可能性があり、グローバル経済に波及効果をもたらす可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "6208d3b3168a9170",
+    "source": "bloomberg",
+    "originalTitle": "Qatar Sends First LNG Shipment Through Hormuz Since War Started",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-10/qatar-sends-first-lng-shipment-through-hormuz-since-war-started",
+    "publishedAt": "2026-05-10T04:23:34.000Z",
+    "summaryJa": "カタールは、ホルムズ海峡を通じて初のLNG輸送を行った。カタールとイランの関係が改善する可能性があり、地域の安定に貢献する可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
     "id": "cbdb6fc1ca44bef7",
     "source": "nikkei",
     "originalTitle": "「ODAに民間マネー」道半ば、法改正1年でも1件　金融専門家乏しく",
@@ -120,6 +202,53 @@
     ]
   },
   {
+    "id": "737bc25c8385563b",
+    "source": "ft",
+    "originalTitle": "More than half of US voters disapprove of Trump’s handling of economy — FT poll",
+    "originalUrl": "https://www.ft.com/content/d08de75e-4a62-4475-9754-7f6d186f7eeb",
+    "publishedAt": "2026-05-10T04:01:01.000Z",
+    "summaryJa": "米国の有権者の半数以上が、トランプの大統領としての経済政策に反対している。米国の経済政策に影響を及ぼす可能性があり、グローバル経済にも波及効果をもたらす可能性がある。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "473173399df3aa50",
+    "source": "ft",
+    "originalTitle": "Germany in fresh push to buy Tomahawks after Trump row",
+    "originalUrl": "https://www.ft.com/content/c64f6c88-36f8-4721-a201-4cd77992fa90",
+    "publishedAt": "2026-05-10T04:00:13.000Z",
+    "summaryJa": "ドイツはトマホークミサイルの購入を再開しようとしている。ドイツと米国の関係が改善する可能性があり、地域の安定に貢献する可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "46961aa70a631a67",
+    "source": "ft",
+    "originalTitle": "America’s right and left have perfected each other’s tricks",
+    "originalUrl": "https://www.ft.com/content/94373104-6f15-47d9-b23d-0bcee2885eb3",
+    "publishedAt": "2026-05-10T04:00:04.000Z",
+    "summaryJa": "米国の右派と左派は、互いの戦術を学習している。米国の政治情勢に影響を及ぼす可能性があり、社会的不安に波及効果をもたらす可能性がある。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "f973f60f325c77ad",
+    "source": "bloomberg",
+    "originalTitle": "Anwar to Outline Malaysia Oil Supply Continuity Plan: Bernama",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-10/anwar-to-outline-malaysia-oil-supply-continuity-plan-bernama",
+    "publishedAt": "2026-05-10T03:49:20.000Z",
+    "summaryJa": "マレーシアは、石油供給の連続性計画を発表する予定である。マレーシアのエネルギー政策に影響を及ぼす可能性があり、地域の安定に貢献する可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
     "id": "9aa31c66dc6a7e09",
     "source": "bloomberg",
     "originalTitle": "New Russian-Flagged LNG Tanker Appears to Load US-Sanctioned Gas",
@@ -130,6 +259,18 @@
     "riskCategories": [
       "geopolitics_supply_chain",
       "currency_finance"
+    ]
+  },
+  {
+    "id": "d95d8d5deebfbb0a",
+    "source": "marketwatch",
+    "originalTitle": "The most prestigious role in AI has no job description",
+    "originalUrl": "https://www.marketwatch.com/story/the-most-prestigious-job-in-ai-has-no-description-d517601f?mod=mw_rss_topstories",
+    "publishedAt": "2026-05-10T01:32:00.000Z",
+    "summaryJa": "AIの分野では、最も権威のある役職が、職務内容を明確に定義していない。AIの発展に影響を及ぼす可能性があり、技術革新に波及効果をもたらす可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "technology"
     ]
   },
   {
@@ -305,53 +446,13 @@
     ]
   },
   {
-    "id": "eb08acd57ac28e75",
-    "source": "marketwatch",
-    "originalTitle": "Get ready to work for 60 years — as living to 100 becomes the new norm",
-    "originalUrl": "https://www.marketwatch.com/story/get-ready-to-work-for-60-years-as-living-to-100-becomes-the-new-norm-c8aa64d3?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-09T19:09:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "aa2043d13098b608",
-    "source": "bloomberg",
-    "originalTitle": "Bloomberg This Weekend 5/9/2026",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-09/bloomberg-this-weekend-5-9-2026-video",
-    "publishedAt": "2026-05-09T17:35:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b06b44d5446f1249",
-    "source": "bloomberg",
-    "originalTitle": "Rachel Entrekin Shatters 250-Mile Course Record",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-09/rachel-entrekin-shatters-250-mile-course-record-video",
-    "publishedAt": "2026-05-09T17:19:32.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d3100405c7bd7081",
-    "source": "bloomberg",
-    "originalTitle": "Health Officials Downplay Pandemic Risk From Cruise Hantavirus Outbreak",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-09/health-officials-downplay-risk-from-hantavirus-outbreak-video",
-    "publishedAt": "2026-05-09T17:09:07.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
     "id": "381e6f3d1e631f28",
     "source": "bloomberg",
     "originalTitle": "China Summit Stays on Track Despite Iran Concerns",
     "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-09/china-summit-stays-on-track-despite-iran-concerns-video",
     "publishedAt": "2026-05-09T16:56:17.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
+    "summaryJa": "イラン情勢に関わらず、中国でのサミットは予定通り開催される見通し。地政学的リスクへの影響はあるが、直接的な経済への影響は限定的。",
+    "relevanceScore": 40,
     "riskCategories": []
   },
   {
@@ -360,9 +461,11 @@
     "originalTitle": "\"China is Just Watching\": Ro Khanna on Why the Iran Conflict is a Gift to Beijing",
     "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-09/ro-khanna-on-why-the-iran-conflict-is-a-gift-to-beijing-video",
     "publishedAt": "2026-05-09T16:45:17.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "イラン紛争は中国に有利に働くと考えられる。地政学的リスクと経済への影響が懸念される。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "a01fcd267a49244e",
@@ -370,19 +473,11 @@
     "originalTitle": "Nvidia embraces role of AI investor, pushing past $40 billion in equity bets this year",
     "originalUrl": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
     "publishedAt": "2026-05-09T16:41:22.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ff492f2f93bb76fc",
-    "source": "cnbc",
-    "originalTitle": "There's little chance of a hantavirus global outbreak. What the latest odds say",
-    "originalUrl": "https://www.cnbc.com/2026/05/09/hantavirus-outbreak-little-chance-says-kalshi.html",
-    "publishedAt": "2026-05-09T16:41:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "NvidiaがAIへの投資を拡大し、400億ドルを超える出資を行った。技術と金融の融合が進む。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "technology"
+    ]
   },
   {
     "id": "206cccfd6f29ce43",
@@ -1718,186 +1813,6 @@
     "originalTitle": "LNG carriers test Iran blockade in Strait of Hormuz",
     "originalUrl": "https://www.ft.com/content/ee5b1b48-3e10-47ad-bde0-b7a8c384ba0d",
     "publishedAt": "2026-05-08T17:59:13.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5603d9cc6667dbee",
-    "source": "bloomberg",
-    "originalTitle": "Milken Crowd Hates the Phrase ‘Semi-Liquid’ After Retail Exodus",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-05-08/what-semi-liquid-really-means-gundlach-milken-crowd-turn-on-private-credit",
-    "publishedAt": "2026-05-08T17:56:12.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b94b11e15a9d2ee5",
-    "source": "bloomberg",
-    "originalTitle": "German Banks Look to Offload Troubled Loan on LA Office Tower",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/german-banks-look-to-offload-troubled-loan-on-la-office-tower",
-    "publishedAt": "2026-05-08T17:56:10.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "443cda9018af5e52",
-    "source": "marketwatch",
-    "originalTitle": "My mother regrets paying Social Security. She says she should have invested her contributions. I disagree. Who’s right?",
-    "originalUrl": "https://www.marketwatch.com/story/americans-are-not-great-at-managing-money-social-security-and-medicare-saved-my-father-from-financial-ruin-am-i-wrong-878bd7a2?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-08T17:55:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d0617f225f17b424",
-    "source": "bloomberg",
-    "originalTitle": "Cuba Faces ‘Devastating’ Ripple Effects From US Hit to Mining",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/cuba-faces-devastating-ripple-effects-from-us-hit-to-mining",
-    "publishedAt": "2026-05-08T17:52:25.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2394ca38f901a5be",
-    "source": "bloomberg",
-    "originalTitle": "Pentagon Begins Releasing Wave of Files on UFOs",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-08/pentagon-begins-releasing-wave-of-files-on-ufos-video",
-    "publishedAt": "2026-05-08T17:44:41.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "83d7893311f7ba0a",
-    "source": "marketwatch",
-    "originalTitle": "There are no hantavirus treatments. The deadly cruise-ship outbreak is a ‘wake-up call’ to develop some.",
-    "originalUrl": "https://www.marketwatch.com/story/there-are-no-hantavirus-treatments-the-deadly-cruise-ship-outbreak-is-a-wake-up-call-to-develop-some-43cb4359?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-08T17:43:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c8d00fc6c0b70ab9",
-    "source": "ft",
-    "originalTitle": "The new politics may be more like the old politics than we assume",
-    "originalUrl": "https://www.ft.com/content/e2db027f-79c2-4043-ad26-4648a76d286b",
-    "publishedAt": "2026-05-08T17:42:58.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "688b5b90fbd59b93",
-    "source": "marketwatch",
-    "originalTitle": "I’m giving $10,000 to my stepchildren. My wife warned me against gifts of equal value for my nephews. Is that fair?",
-    "originalUrl": "https://www.marketwatch.com/story/im-giving-10-000-to-my-stepchildren-my-wife-warned-me-against-gifts-of-equal-value-for-my-nephews-is-that-fair-9d7d2724?mod=mw_rss_topstories",
-    "publishedAt": "2026-05-08T17:30:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e8bee29a46b53e44",
-    "source": "bloomberg",
-    "originalTitle": "Apollo, Blackstone Weigh $35 Billion Financing for Broadcom",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/apollo-blackstone-weigh-35-billion-financing-for-broadcom",
-    "publishedAt": "2026-05-08T17:22:37.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c3f581f46b23f378",
-    "source": "cnbc",
-    "originalTitle": "Stock pullbacks can be an opportunity to make your money back and then some. Here's how",
-    "originalUrl": "https://www.cnbc.com/2026/05/08/stock-pullbacks-can-be-an-opportunity-to-make-your-money-back-and-then-some-heres-how.html",
-    "publishedAt": "2026-05-08T17:18:55.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7a8c94505c07130b",
-    "source": "ft",
-    "originalTitle": "US Democrats handed midterm election blow by Virginia court",
-    "originalUrl": "https://www.ft.com/content/e5b481a1-c506-43b5-8669-f31a8254a829",
-    "publishedAt": "2026-05-08T16:55:30.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9bd367a2fe134a37",
-    "source": "bloomberg",
-    "originalTitle": "Ghana’s Credit Rating Upgraded by Fitch on Improved Finances",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/ghana-s-credit-rating-upgraded-by-fitch-on-improved-finances",
-    "publishedAt": "2026-05-08T16:55:23.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3235515e68ea51d9",
-    "source": "cnbc",
-    "originalTitle": "Virginia Supreme Court strikes down redistricting push in blow to Democrats",
-    "originalUrl": "https://www.cnbc.com/2026/05/08/virginia-redistricting-decision-supreme-court.html",
-    "publishedAt": "2026-05-08T16:55:04.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "86622839e0e6fa78",
-    "source": "bloomberg",
-    "originalTitle": "Jobs Surge As AI Stocks Wobble | Open Interest 5/8/2026",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-08/open-interest-5-8-2026-video",
-    "publishedAt": "2026-05-08T16:49:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "866f06d3d7758d93",
-    "source": "bloomberg",
-    "originalTitle": "Market Leadership Still in Tech: Hermann",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-05-08/market-leadership-still-in-tech-hermann-video",
-    "publishedAt": "2026-05-08T16:48:54.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3c5405a106da3094",
-    "source": "bloomberg",
-    "originalTitle": "Venezuela’s Faulty Power Grid Risks Derailing Economic Comeback",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/venezuela-s-faulty-power-grid-risks-derailing-economic-comeback",
-    "publishedAt": "2026-05-08T16:39:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "fa2ebc609b7b15e2",
-    "source": "cnbc",
-    "originalTitle": "Anthropic's Mythos set off a cybersecurity 'hysteria.' Experts say the threat was already here",
-    "originalUrl": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html",
-    "publishedAt": "2026-05-08T16:39:16.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "82e1ad18a85ae03d",
-    "source": "bloomberg",
-    "originalTitle": "Bradesco BBI Sees Brazil IPO Rebound After Compass Debut",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-05-08/bradesco-bbi-sees-brazil-ipo-rebound-after-compass-debut",
-    "publishedAt": "2026-05-08T16:38:25.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
