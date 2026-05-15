@@ -26,3 +26,10 @@ export const categoryLabels: Record<RiskCategory, string> = {
   technology: 'テクノロジーリスク',
   social_policy: '社会・政策リスク',
 };
+
+export const RISK_WEIGHTS: Record<string, number> = {
+  currency_finance: 0.3,
+  geopolitics_supply_chain: 0.3,
+  technology: 0.2,
+  social_policy: 0.2,
+};

@@ -51,15 +51,16 @@ function generateSourceId(url: string, title: string): string {
 async function fetchRSS(): Promise<RawArticle[]> {
   const articles: RawArticle[] = [];
 
-  for (const rssSource of RSS_SOURCES) {
-    try {
+  const results = await Promise.allSettled(
+    RSS_SOURCES.map(async (rssSource) => {
       console.log(`Fetching RSS: ${rssSource.name}...`);
       const feed = await parser.parseURL(rssSource.url);
+      const items: RawArticle[] = [];
 
       for (const item of feed.items || []) {
         if (!item.title || !item.link) continue;
 
-        articles.push({
+        items.push({
           sourceId: generateSourceId(item.link, item.title),
           source: rssSource.source,
           originalTitle: item.title,
@@ -70,10 +71,18 @@ async function fetchRSS(): Promise<RawArticle[]> {
       }
 
       console.log(`  -> ${feed.items?.length || 0} articles from ${rssSource.name}`);
-    } catch (error) {
-      console.error(`Failed to fetch RSS from ${rssSource.name}:`, error instanceof Error ? error.message : error);
+      return items;
+    }),
+  );
+
+  results.forEach((result, i) => {
+    if (result.status === 'fulfilled') {
+      articles.push(...result.value);
+    } else {
+      const reason = result.reason instanceof Error ? result.reason.message : result.reason;
+      console.error(`Failed to fetch RSS from ${RSS_SOURCES[i].name}: ${reason}`);
     }
-  }
+  });
 
   return articles;
 }

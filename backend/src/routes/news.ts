@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import prisma from '../lib/prisma.js';
 
-const router = Router();
+const router: Router = Router();
 
 // GET /api/news - Get latest news articles
 router.get('/', async (req, res) => {
