@@ -59,8 +59,21 @@ function genId(url: string, title: string): string {
 }
 
 function scoreToLevel(s: number): string {
-  if (s <= 20) return 'low'; if (s <= 40) return 'moderate'; if (s <= 60) return 'elevated'; if (s <= 80) return 'high'; return 'critical';
+  if (s <= 20) return 'low';
+  if (s <= 40) return 'moderate';
+  if (s <= 60) return 'elevated';
+  if (s <= 80) return 'high';
+  return 'critical';
 }
+
+const RISK_WEIGHTS: Record<string, number> = {
+  currency_finance: 0.3,
+  geopolitics_supply_chain: 0.3,
+  technology: 0.2,
+  social_policy: 0.2,
+};
+
+const BATCH_DELAY_MS = 30_000;
 
 // --- News ---
 const RSS_SOURCES = [
@@ -297,7 +310,7 @@ async function summarize(articles: NewsArticle[]) {
       }
       console.log(`  Batch ${Math.floor(i / 10) + 1} done (${results.length} summarized)`);
     } catch (e) { console.error('  Summarize failed:', e instanceof Error ? e.message : e); }
-    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, 30000));
+    if (i + 10 < todo.length) await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
   }
 }
 
@@ -362,11 +375,10 @@ async function main() {
     console.log('No LLM API key set (GROQ_API_KEY or GEMINI_API_KEY), skipping\n');
   }
 
-  const weights: Record<string, number> = { currency_finance: 0.3, geopolitics_supply_chain: 0.3, technology: 0.2, social_policy: 0.2 };
-  const compositeScore = Math.round(risks.reduce((s, r) => s + r.score * (weights[r.category] || 0.25), 0));
+  const compositeScore = Math.round(risks.reduce((s, r) => s + r.score * (RISK_WEIGHTS[r.category] || 0.25), 0));
   const composite: CompositeRisk = {
     compositeScore, level: scoreToLevel(compositeScore),
-    breakdown: risks.map(r => ({ category: r.category, score: r.score, weight: weights[r.category] || 0.25 })),
+    breakdown: risks.map(r => ({ category: r.category, score: r.score, weight: RISK_WEIGHTS[r.category] || 0.25 })),
   };
 
   const filteredNews = news

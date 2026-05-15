@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Detect if running in static mode (GitHub Pages)
-const isStatic = import.meta.env.VITE_STATIC_DATA === 'true' || !import.meta.env.DEV;
+const isStatic = import.meta.env.VITE_STATIC_DATA === 'true';
 
 const api = axios.create({
   baseURL: '/api',

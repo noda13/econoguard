@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import prisma from '../lib/prisma.js';
 
-const router = Router();
+const router: Router = Router();
 
 // GET /api/indicators - Get latest value of each indicator
 router.get('/', async (_req, res) => {

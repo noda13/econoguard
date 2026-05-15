@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import prisma from '../lib/prisma.js';
+import { scoreToLevel, RISK_WEIGHTS } from '../schemas/api.js';
 
-const router = Router();
+const router: Router = Router();
 
 // GET /api/risks - Get latest risk assessments for all categories
 router.get('/', async (_req, res) => {
@@ -22,12 +23,6 @@ router.get('/', async (_req, res) => {
 // GET /api/risks/composite - Get composite (weighted average) risk index
 router.get('/composite', async (_req, res) => {
   const categories = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
-  const weights: Record<string, number> = {
-    currency_finance: 0.3,
-    geopolitics_supply_chain: 0.3,
-    technology: 0.2,
-    social_policy: 0.2,
-  };
 
   const latestRisks = await Promise.all(
     categories.map((category) =>
@@ -45,14 +40,10 @@ router.get('/composite', async (_req, res) => {
   }
 
   const compositeScore = Math.round(
-    validRisks.reduce((sum, risk) => sum + (risk!.score * (weights[risk!.category] || 0.25)), 0)
+    validRisks.reduce((sum, risk) => sum + (risk!.score * (RISK_WEIGHTS[risk!.category] || 0.25)), 0)
   );
 
-  const level = compositeScore <= 20 ? 'low'
-    : compositeScore <= 40 ? 'moderate'
-    : compositeScore <= 60 ? 'elevated'
-    : compositeScore <= 80 ? 'high'
-    : 'critical';
+  const level = scoreToLevel(compositeScore);
 
   res.json({
     compositeScore,
@@ -60,7 +51,7 @@ router.get('/composite', async (_req, res) => {
     breakdown: validRisks.map((r) => ({
       category: r!.category,
       score: r!.score,
-      weight: weights[r!.category] || 0.25,
+      weight: RISK_WEIGHTS[r!.category] || 0.25,
     })),
   });
 });
