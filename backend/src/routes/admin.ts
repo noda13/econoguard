@@ -1,12 +1,17 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { runCollection } from '../services/collector.js';
+import { runCollection, CollectionInProgressError } from '../services/collector.js';
 import prisma from '../lib/prisma.js';
 
 const router: Router = Router();
 
 function adminAuth(req: Request, res: Response, next: NextFunction): void {
   const secret = process.env.ADMIN_SECRET;
-  if (secret && req.headers['x-admin-key'] !== secret) {
+  if (!secret) {
+    console.warn('[Admin] ADMIN_SECRET not set — admin routes are unprotected');
+    next();
+    return;
+  }
+  if (req.headers['x-admin-key'] !== secret) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }
@@ -44,7 +49,7 @@ router.post('/collect', async (_req, res) => {
       result,
     });
   } catch (error) {
-    if (error instanceof Error && error.message === 'Collection already in progress') {
+    if (error instanceof CollectionInProgressError) {
       res.status(409).json({ error: 'Collection already in progress' });
       return;
     }

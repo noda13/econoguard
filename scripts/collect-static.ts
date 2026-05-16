@@ -58,6 +58,7 @@ function genId(url: string, title: string): string {
   return crypto.createHash('sha256').update(`${url}:${title}`).digest('hex').slice(0, 16);
 }
 
+// Keep in sync with backend/src/schemas/api.ts
 function scoreToLevel(s: number): string {
   if (s <= 20) return 'low';
   if (s <= 40) return 'moderate';
@@ -66,6 +67,7 @@ function scoreToLevel(s: number): string {
   return 'critical';
 }
 
+// Keep in sync with backend/src/schemas/api.ts (RISK_WEIGHTS)
 const RISK_WEIGHTS: Record<string, number> = {
   currency_finance: 0.3,
   geopolitics_supply_chain: 0.3,
