@@ -1,5 +1,5 @@
 import cron from 'node-cron';
-import { runCollection } from '../services/collector.js';
+import { runCollection, CollectionInProgressError } from '../services/collector.js';
 
 async function scheduledCollection() {
   try {
@@ -7,7 +7,7 @@ async function scheduledCollection() {
     await runCollection();
     console.log('[Scheduler] Scheduled collection completed');
   } catch (error) {
-    if (error instanceof Error && error.message === 'Collection already in progress') {
+    if (error instanceof CollectionInProgressError) {
       console.log('[Scheduler] Collection already running, skipping');
       return;
     }

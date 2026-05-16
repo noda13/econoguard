@@ -5,6 +5,13 @@ import { summarizeUnsummarized } from './summarizer.js';
 import { assessRisks } from './riskAssessor.js';
 import { getSessionTokenUsage, resetSessionTokenUsage, ensureProviderReady } from './llm.js';
 
+export class CollectionInProgressError extends Error {
+  constructor() {
+    super('Collection already in progress');
+    this.name = 'CollectionInProgressError';
+  }
+}
+
 interface CollectionResult {
   news: { collected: number; skipped: number };
   indicators: { collected: number; failed: number };
@@ -14,13 +21,9 @@ interface CollectionResult {
 
 let _isRunning = false;
 
-export function isCollectionRunning(): boolean {
-  return _isRunning;
-}
-
 export async function runCollection(): Promise<CollectionResult> {
   if (_isRunning) {
-    throw new Error('Collection already in progress');
+    throw new CollectionInProgressError();
   }
   _isRunning = true;
   try {
