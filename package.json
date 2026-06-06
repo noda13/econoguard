@@ -12,7 +12,8 @@
   "devDependencies": {
     "tsx": "^4.19.2",
     "rss-parser": "^3.13.0",
-    "@google/generative-ai": "^0.24.0"
+    "@google/generative-ai": "^0.24.0",
+    "zod": "^3.24.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
