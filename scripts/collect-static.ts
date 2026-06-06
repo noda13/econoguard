@@ -39,12 +39,16 @@ interface RiskAssessment {
   summaryJa: string;
   factorsJa: string[];
   assessedAt: string;
+  delta?: number;           // Score change vs previous run (positive = higher risk)
+  changeReasonJa?: string;  // 1-sentence Japanese explanation of score change
+  sourceNewsIds?: string[]; // Up to 3 news article IDs that drove the score
 }
 
 interface CompositeRisk {
   compositeScore: number;
   level: string;
   breakdown: Array<{ category: string; score: number; weight: number }>;
+  delta?: number; // Change in composite score vs previous run
 }
 
 // --- Helpers ---
@@ -118,28 +122,66 @@ async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
 }
 
 // --- Indicators ---
-async function fetchPrice(ids: string): Promise<Record<string, Record<string, number>> | null> {
+const ASSETS = [
+  { code: 'DJIA',   name: 'NYダウ',         symbol: '^DJI',     unit: 'pt' },
+  { code: 'SPX',    name: 'S&P500',         symbol: '^GSPC',    unit: 'pt' },
+  { code: 'TOPIX',  name: 'TOPIX(ETF)',     symbol: '1306.T',   unit: '円' },
+  { code: 'USDJPY', name: 'ドル円',         symbol: 'USDJPY=X', unit: '円' },
+  { code: 'VIX',    name: '恐怖指数(VIX)',  symbol: '^VIX',     unit: 'pt' },
+  { code: 'UST10Y', name: '米10年債利回り', symbol: '^TNX',     unit: '%' },
+  { code: 'UST3M',  name: '米3ヶ月債利回り', symbol: '^IRX',   unit: '%' },
+  { code: 'WTI',    name: '原油(WTI)',       symbol: 'CL=F',    unit: 'USD' },
+  { code: 'GOLD',   name: '金',             symbol: 'GC=F',     unit: 'USD' },
+  { code: 'HYG',    name: 'HY社債ETF',      symbol: 'HYG',     unit: 'USD' },
+] as const;
+
+interface YahooQuote { price: number; prevClose: number | null }
+
+async function fetchYahoo(symbol: string): Promise<YahooQuote | null> {
   try {
-    const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd,jpy`, { headers: { 'User-Agent': 'Econoguard/1.0' }, signal: AbortSignal.timeout(10000) });
-    return r.ok ? await r.json() as Record<string, Record<string, number>> : null;
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=5d`;
+    const r = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Econoguard/1.0)' },
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!r.ok) return null;
+    const data = await r.json() as { chart?: { result?: Array<{ meta?: { regularMarketPrice?: number; chartPreviousClose?: number } }> } };
+    const meta = data.chart?.result?.[0]?.meta;
+    if (typeof meta?.regularMarketPrice !== 'number') return null;
+    return { price: meta.regularMarketPrice, prevClose: meta.chartPreviousClose ?? null };
   } catch { return null; }
 }
 
 async function collectIndicators(prev: EconomicIndicator[]): Promise<EconomicIndicator[]> {
   const pMap = new Map(prev.map(i => [i.code, i]));
   const now = new Date().toISOString();
-  const result: EconomicIndicator[] = [];
 
-  const prices = await fetchPrice('bitcoin,ethereum,tether-gold,tether');
-  if (prices) {
-    if (prices.bitcoin?.usd) result.push({ code: 'BTC', name: 'ビットコイン', value: prices.bitcoin.usd, previousValue: pMap.get('BTC')?.value ?? null, unit: 'USD', source: 'coingecko', recordedAt: now });
-    if (prices.ethereum?.usd) result.push({ code: 'ETH', name: 'イーサリアム', value: prices.ethereum.usd, previousValue: pMap.get('ETH')?.value ?? null, unit: 'USD', source: 'coingecko', recordedAt: now });
-    if (prices['tether-gold']?.usd) result.push({ code: 'GOLD', name: '金価格', value: prices['tether-gold'].usd, previousValue: pMap.get('GOLD')?.value ?? null, unit: 'USD/oz', source: 'coingecko', recordedAt: now });
-    if (prices.tether?.jpy) result.push({ code: 'USDJPY', name: 'ドル円', value: prices.tether.jpy, previousValue: pMap.get('USDJPY')?.value ?? null, unit: '円', source: 'coingecko', recordedAt: now });
-  }
+  const entries = await Promise.all(
+    ASSETS.map(async (asset) => {
+      const q = await fetchYahoo(asset.symbol);
+      if (q) {
+        return {
+          code: asset.code,
+          name: asset.name,
+          value: q.price,
+          previousValue: q.prevClose ?? pMap.get(asset.code)?.value ?? null,
+          unit: asset.unit,
+          source: 'yahoo',
+          recordedAt: now,
+        } satisfies EconomicIndicator;
+      }
+      // Yahoo fetch failed — carry forward previous value so the indicator doesn't vanish
+      const fallback = pMap.get(asset.code);
+      if (fallback) {
+        console.warn(`  fetchYahoo(${asset.symbol}) failed; using cached value`);
+        return { ...fallback, recordedAt: now };
+      }
+      console.warn(`  fetchYahoo(${asset.symbol}) failed; no cached value`);
+      return null;
+    }),
+  );
 
-  for (const p of prev) { if (!result.some(r => r.code === p.code)) result.push(p); }
-  return result;
+  return entries.filter((e): e is EconomicIndicator => e !== null);
 }
 
 // --- LLM Provider ---
@@ -322,7 +364,60 @@ async function summarize(articles: NewsArticle[]) {
   }
 }
 
+// --- Quantitative risk signal (deterministic, indicator-based) ---
+// Returns a 0-100 score for categories where we can compute it from indicators.
+// Returns null for categories we cannot quantify deterministically.
+const LLM_WEIGHT = 0.7; // LLM score weight in the blended final score
+
+function computeQuantSignal(category: string, indicators: EconomicIndicator[]): number | null {
+  const get = (code: string) => indicators.find(i => i.code === code);
+
+  if (category === 'currency_finance') {
+    const vix = get('VIX');
+    const t10y = get('UST10Y');
+    const t3m = get('UST3M');
+    let signal = 0;
+    let count = 0;
+    // VIX: 0→0, 20→25, 30→50, 40→75, 60→100
+    if (vix) {
+      signal += Math.min(100, Math.round((vix.value / 60) * 100));
+      count++;
+    }
+    // Inverted yield curve: (UST10Y - UST3M) negative = stress
+    if (t10y && t3m) {
+      const spread = t10y.value - t3m.value;
+      // spread 0 → 0, -0.5 → 30, -2 → 80, -3 → 100
+      const invertScore = spread < 0 ? Math.min(100, Math.round(Math.abs(spread) / 3 * 100)) : 0;
+      signal += invertScore;
+      count++;
+    }
+    return count > 0 ? Math.round(signal / count) : null;
+  }
+
+  if (category === 'geopolitics_supply_chain') {
+    const wti = get('WTI');
+    const gold = get('GOLD');
+    let signal = 0;
+    let count = 0;
+    // Sudden spike in WTI or GOLD (>3% daily change = stress)
+    const spike = (ind: EconomicIndicator) => {
+      if (!ind.previousValue) return 0;
+      const pct = Math.abs((ind.value - ind.previousValue) / ind.previousValue) * 100;
+      return Math.min(100, Math.round(pct / 10 * 100)); // 10% spike → 100
+    };
+    if (wti) { signal += spike(wti); count++; }
+    if (gold) { signal += spike(gold); count++; }
+    return count > 0 ? Math.round(signal / count) : null;
+  }
+
+  // technology and social_policy: hard to quantify deterministically
+  return null;
+}
+
 async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev: RiskAssessment[]): Promise<RiskAssessment[]> {
+  const prevMap = new Map(prev.map(r => [r.category, r.score]));
+  const newsIdSet = new Set(news.map(a => a.id));
+
   const SYS = `あなたはグローバル経済リスクアナリストです。提供データに基づき、4カテゴリのリスクを0-100で評価してください。
 
 カテゴリ: currency_finance(通貨・金融), geopolitics_supply_chain(地政学・供給網), technology(テクノロジー), social_policy(社会・政策)
@@ -330,12 +425,14 @@ async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev
 スコア基準: 0-20:低, 21-40:中程度, 41-60:やや高い, 61-80:高い, 81-100:危機的
 
 応答は必ず以下のJSON形式:
-{"assessments":[{"category":"currency_finance","score":65,"summary":"日本語2-3文の概要","factors":["寄与因子1","寄与因子2","寄与因子3"]}]}
+{"assessments":[{"category":"currency_finance","score":65,"summary":"日本語2-3文の概要","factors":["寄与因子1","寄与因子2","寄与因子3"],"changeReasonJa":"前回比での変化理由を1文で","sourceNewsIds":["id1","id2"]}]}
 
-4カテゴリ全て含めてください。`;
+4カテゴリ全て含めてください。sourceNewsIdsはニュースリストの[id:xxx]から最大3件選んでください。`;
 
   let ctx = '## 最新ニュース\n';
-  for (const a of news.filter(a => a.summaryJa).slice(0, 20)) ctx += `- [${a.source}] ${a.summaryJa}\n`;
+  for (const a of news.filter(a => a.summaryJa).slice(0, 20)) {
+    ctx += `- [id:${a.id}] [${a.source}] ${a.summaryJa}\n`;
+  }
   ctx += '\n## 経済指標\n';
   for (const i of indicators) ctx += `- ${i.name}: ${i.value}${i.unit}${i.previousValue ? ` (前回:${i.previousValue})` : ''}\n`;
   if (prev.length) { ctx += '\n## 前回スコア\n'; for (const r of prev) ctx += `- ${r.category}: ${r.score}\n`; }
@@ -350,6 +447,8 @@ async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev
     score: z.number().int().min(0).max(100),
     summary: z.string(),
     factors: z.array(z.string()),
+    changeReasonJa: z.string().optional(),
+    sourceNewsIds: z.array(z.string()).optional(),
   });
   const responseSchema = z.object({ assessments: z.array(z.unknown()) });
 
@@ -364,13 +463,32 @@ async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev
       continue;
     }
     const a = result.data;
+    const llmScore = Math.round(Math.min(100, Math.max(0, a.score)));
+
+    // Blend with quantitative signal if available
+    const quantSignal = computeQuantSignal(a.category, indicators);
+    const finalScore = quantSignal !== null
+      ? Math.round(LLM_WEIGHT * llmScore + (1 - LLM_WEIGHT) * quantSignal)
+      : llmScore;
+
+    // Compute delta vs previous score
+    const prevScore = prevMap.get(a.category);
+    const delta = prevScore !== undefined ? finalScore - prevScore : undefined;
+
+    // Validate sourceNewsIds — only keep IDs that exist in the actual news set
+    const rawIds = a.sourceNewsIds ?? [];
+    const sourceNewsIds = rawIds.filter(id => newsIdSet.has(id)).slice(0, 3);
+
     validated.push({
       category: a.category,
-      score: Math.round(Math.min(100, Math.max(0, a.score))),
-      level: scoreToLevel(a.score),
+      score: finalScore,
+      level: scoreToLevel(finalScore),
       summaryJa: a.summary,
       factorsJa: a.factors,
       assessedAt: now,
+      ...(delta !== undefined && { delta }),
+      ...(a.changeReasonJa && { changeReasonJa: a.changeReasonJa }),
+      ...(sourceNewsIds.length > 0 && { sourceNewsIds }),
     });
   }
 
@@ -429,9 +547,11 @@ async function main() {
   const compositeScore = totalWeight > 0
     ? Math.round(knownRisks.reduce((s, r) => s + r.score * (RISK_WEIGHTS[r.category as RiskCategory] / totalWeight), 0))
     : 0;
+  const prevCompositeScore = readJson<CompositeRisk>('composite-risk.json', { compositeScore: 0, level: 'low', breakdown: [] }).compositeScore;
   const composite: CompositeRisk = {
     compositeScore, level: scoreToLevel(compositeScore),
     breakdown: knownRisks.map(r => ({ category: r.category, score: r.score, weight: RISK_WEIGHTS[r.category as RiskCategory] })),
+    delta: prevCompositeScore > 0 ? compositeScore - prevCompositeScore : undefined,
   };
 
   // Keep articles that scored >= 30, AND any not-yet-summarized articles (summaryJa empty)
@@ -445,6 +565,15 @@ async function main() {
   writeJson('composite-risk.json', composite);
   writeJson('risk-history.json', riskHistory);
   writeJson('meta.json', { lastUpdated: new Date().toISOString() });
+
+  // Write upcoming events (next 30 days)
+  const { ECONOMIC_EVENTS } = await import('./economic-events.js');
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const futureLimit = new Date();
+  futureLimit.setDate(futureLimit.getDate() + 30);
+  const futureLimitStr = futureLimit.toISOString().slice(0, 10);
+  const upcomingEvents = ECONOMIC_EVENTS.filter(e => e.date >= todayStr && e.date <= futureLimitStr);
+  writeJson('events.json', upcomingEvents);
 
   console.log('\n=== Saved to frontend/public/data/ ===');
 }

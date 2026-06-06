@@ -7,6 +7,7 @@ import { RiskTrendChart } from '../components/dashboard/RiskTrendChart';
 import { IndicatorPanel } from '../components/dashboard/IndicatorPanel';
 import { NewsFeed } from '../components/dashboard/NewsFeed';
 import { PortfolioImpactPanel } from '../components/dashboard/PortfolioImpactPanel';
+import { EventCalendar } from '../components/dashboard/EventCalendar';
 import { fetchRisks } from '../services/api';
 
 export function DashboardPage() {
@@ -31,6 +32,7 @@ export function DashboardPage() {
       <PortfolioImpactPanel />
       <RiskTrendChart />
       <IndicatorPanel />
+      <EventCalendar />
       <NewsFeed />
     </DashboardLayout>
   );
