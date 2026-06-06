@@ -1,5 +1,91 @@
 [
   {
+    "id": "06513ba54bad4e7b",
+    "source": "nikkei",
+    "originalTitle": "ウクライナ、ギリシャ沖に無人艇進入で謝罪",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB0626S0W6A600C2000000/",
+    "publishedAt": "2026-06-06T14:59:57.843Z",
+    "summaryJa": "ウクライナがギリシャ沖に無人艇を進入させて謝罪した。地政学的緊張に関連するが、経済への直接的な影響はまだない。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "2c5deb98ac300043",
+    "source": "nikkei",
+    "originalTitle": "北朝鮮、昨年横転の駆逐艦が航海試験　金正恩氏「海軍は核抑止の一翼」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCB062FP0W6A600C2000000/",
+    "publishedAt": "2026-06-06T14:59:57.842Z",
+    "summaryJa": "北朝鮮の軍事動向についての記事です。地政学的リスクに関連しています。金正恩氏の発言が地域の安定に影響を及ぼす可能性があります。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "8640c33ea21381db",
+    "source": "nikkei",
+    "originalTitle": "航空業界団体の総会、ブラジルで開幕　中東情勢影響など議論",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC03DHO0T00C26A6000000/",
+    "publishedAt": "2026-06-06T14:59:57.842Z",
+    "summaryJa": "ブラジルで開催された航空業界団体の総会では、中東情勢の影響などが議論された。世界的な航空業界に影響を及ぼす可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "6622183c37e2d5af",
+    "source": "marketwatch",
+    "originalTitle": "The Fed can’t protect consumers from supply shocks and price gouging — but Congress can",
+    "originalUrl": "https://www.marketwatch.com/story/the-2-types-of-inflation-the-fed-cant-control-and-how-congress-must-protect-your-wallet-7ac2079a?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-06T14:40:00.000Z",
+    "summaryJa": "連邦準備制度（Fed）は、供給ショックや価格操作から消費者を守ることができないが、議会はそれをできる。Fedの政策では、インフレーションを抑えることが優先されるが、供給ショックや価格操作に対する対策は議会の役割である。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance",
+      "social_policy"
+    ]
+  },
+  {
+    "id": "9d126696ad0844f0",
+    "source": "bloomberg",
+    "originalTitle": "How Bolivia's Plans to Tap Mineral Riches Are Being Tested by Mass Unrest",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-06/why-protests-are-threatening-bolivia-s-investment-push-video",
+    "publishedAt": "2026-06-06T14:03:40.000Z",
+    "summaryJa": "ボリビアは鉱物資源の開発を進めているが、社会不安が発生している。地政学的影響と鉱物資源への影響が懸念される。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "6a0c2f8e1de43541",
+    "source": "marketwatch",
+    "originalTitle": "The U.S. stock market is facing historic downside risk — these 10 low-volatility stocks can protect your portfolio",
+    "originalUrl": "https://www.marketwatch.com/story/the-u-s-stock-market-is-facing-historic-downside-risk-these-10-low-volatility-stocks-can-protect-your-portfolio-088a2189?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-06T14:01:00.000Z",
+    "summaryJa": "米国株式市場は歴史的な下落リスクに直面しているが、低ボラティリティの株式をポートフォリオに組み込むことでリスクを軽減できる。米国株式市場の動向はグローバル経済に大きな影響を及ぼす。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "48519dcdd0bb3e3c",
+    "source": "cnbc",
+    "originalTitle": "U.S. strikes Iranian sites after Iran launches drones, in latest Gulf flare-up",
+    "originalUrl": "https://www.cnbc.com/2026/06/06/us-attacks-iranian-sites-after-iran-launches-drones-in-latest-gulf-flare-up.html",
+    "publishedAt": "2026-06-06T13:45:42.000Z",
+    "summaryJa": "米国とイランの間で軍事的緊張が高まっている。地政学的影響とエネルギー価格への影響が懸念される。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
     "id": "3ccd5725d8e37bbd",
     "source": "nikkei",
     "originalTitle": "企業の不動産売却18年ぶり高水準　味の素は本社、資産圧縮で効率経営",
@@ -39,6 +125,18 @@
     "publishedAt": "2026-06-06T13:41:05.459Z",
     "summaryJa": "金融庁は、誤算による金利上昇で解約トラブルが相次いでいる「仕組み預金」について、見直しを検討しています。この動きは、日本の金融市場に影響を及ぼす可能性があります。",
     "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "26280aadc805303e",
+    "source": "marketwatch",
+    "originalTitle": "The blowout jobs report is bad news for stocks — but it shouldn’t force the Fed’s hand on interest rates",
+    "originalUrl": "https://www.marketwatch.com/story/the-blowout-jobs-report-is-bad-news-for-stocks-but-it-shouldnt-force-the-feds-hand-on-interest-rates-66eaa2b9?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-06T13:40:00.000Z",
+    "summaryJa": "米国での雇用報告書は好調だったが、株式市場への影響は悪いと見られている。ただし、連邦準備制度（Fed）は利率を変更する必要はないと考えられている。",
+    "relevanceScore": 70,
     "riskCategories": [
       "currency_finance"
     ]
@@ -217,29 +315,11 @@
     "originalTitle": "Trump relaunches tariffs war after court struck down levies",
     "originalUrl": "https://www.ft.com/content/7e5cfed4-dd91-435d-914a-677f97822724",
     "publishedAt": "2026-06-06T12:00:04.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "642f7a050508bbd1",
-    "source": "bloomberg",
-    "originalTitle": "Publishers Adapt to AI, Space Race Centers on Satellites",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-06-06/people-inc-adapts-to-ai-us-china-space-race-centers-on-satellites",
-    "publishedAt": "2026-06-06T12:00:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cbf1bfb03ccfecec",
-    "source": "cnbc",
-    "originalTitle": "Inside the Obama-era Iran nuclear deal that Trump withdrew from",
-    "originalUrl": "https://www.cnbc.com/2026/06/06/trump-iran-jcpoa-nuclear-deal-obama.html",
-    "publishedAt": "2026-06-06T12:00:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "トランプ政権が関税戦争を再開したことが報じられています。これは貿易摩擦を悪化させる可能性があるため、マクロ経済に影響を及ぼす可能性があります。",
+    "relevanceScore": 85,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "179d31f8291ef0e6",
@@ -247,9 +327,11 @@
     "originalTitle": "America’s crude inventories are getting perilously low. But that’s not the full story.",
     "originalUrl": "https://www.marketwatch.com/story/americas-crude-inventories-are-getting-perilously-low-but-thats-not-the-full-story-c3104976?mod=mw_rss_topstories",
     "publishedAt": "2026-06-06T12:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "アメリカの原油在庫が減少していることが報告されています。これはエネルギー価格や経済に影響を及ぼす可能性があります。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "4bff0afff42d0236",
@@ -257,18 +339,8 @@
     "originalTitle": "Apple’s WWDC will be a make-or-break moment for the company’s fledgling AI strategy",
     "originalUrl": "https://www.marketwatch.com/story/apples-wwdc-will-be-a-make-or-break-moment-for-the-companys-fledgling-ai-strategy-42086cc1?mod=mw_rss_topstories",
     "publishedAt": "2026-06-06T11:30:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "53e794006747d936",
-    "source": "marketwatch",
-    "originalTitle": "‘No one wears bling’: What does it say about America if people are afraid to wear their jewelry?",
-    "originalUrl": "https://www.marketwatch.com/story/no-one-seems-to-wear-their-bling-is-it-safe-to-show-off-your-expensive-jewelry-a807bc55?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-06T11:14:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
+    "summaryJa": "アップルのWWDCがAI戦略の重要な瞬間になる可能性について論じられています。技術革新は業界に影響を及ぼす可能性がありますが、直接的な経済リスクへの影響は限定的です。",
+    "relevanceScore": 30,
     "riskCategories": []
   },
   {
@@ -277,9 +349,11 @@
     "originalTitle": "U.S. attacks Iranian sites after Iran launches drones, in latest Gulf flare-up",
     "originalUrl": "https://www.cnbc.com/2026/06/06/us-attacks-iranian-sites-after-iran-launches-drones-in-latest-gulf-flare-up.html",
     "publishedAt": "2026-06-06T11:09:52.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
+    "summaryJa": "アメリカとイランの軍事的緊張が高まっていることが報じられています。これは地政学的な不安定さを悪化させ、経済に影響を及ぼす可能性があります。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
   },
   {
     "id": "d9743c12892f2005",
@@ -807,6 +881,16 @@
     "originalTitle": "コール市場残高（5月）",
     "originalUrl": "http://www.boj.or.jp/statistics/market/short/call/call.xlsx",
     "publishedAt": "2026-06-05T06:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "59d01ce63e4a6132",
+    "source": "boj",
+    "originalTitle": "消費活動指数",
+    "originalUrl": "http://www.boj.or.jp/research/research_data/cai/index.htm",
+    "publishedAt": "2026-06-05T05:00:00.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
@@ -1587,126 +1671,6 @@
     "originalTitle": "Federal Reserve Board issues enforcement action with former employee of Commerce Bank",
     "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260521a.htm",
     "publishedAt": "2026-05-21T15:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cd2205b2bb02e53d",
-    "source": "economist",
-    "originalTitle": "\n        How should economists treat morality?\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/05/21/how-should-economists-treat-morality",
-    "publishedAt": "2026-05-21T09:27:37.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d962f8a3cc5f1a41",
-    "source": "economist",
-    "originalTitle": "\n        The other China shock\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/05/21/the-other-china-shock",
-    "publishedAt": "2026-05-21T09:25:53.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "eef4eba7de6aa7bf",
-    "source": "economist",
-    "originalTitle": "\n        The insurers on the hook for war in Iran\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/05/21/the-insurers-on-the-hook-for-war-in-iran",
-    "publishedAt": "2026-05-21T09:19:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8562c91205a8e1d7",
-    "source": "boj",
-    "originalTitle": "「債券市場参加者会合」（第24回）金融市場局説明資料",
-    "originalUrl": "http://www.boj.or.jp/paym/bond/mbond_list/mbond260521.pdf",
-    "publishedAt": "2026-05-21T06:40:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "dc1c46190c10cfb2",
-    "source": "boj",
-    "originalTitle": "（日銀レビュー）生命保険会社の国際比較：ビジネスモデルの変化に伴う金融安定上の論点",
-    "originalUrl": "http://www.boj.or.jp/research/wps_rev/rev_2026/rev26j07.htm",
-    "publishedAt": "2026-05-21T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "af38d93287dc0e1d",
-    "source": "fed",
-    "originalTitle": "Federal Reserve Board requests public comment on a proposal to establish a \"payment account,\" which legally eligible financial institutions could use for the specific purpose of clearing and settling their payments",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/other20260520a.htm",
-    "publishedAt": "2026-05-20T20:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "424906f45e49f7d2",
-    "source": "economist",
-    "originalTitle": "\n        Economics lessons from Home Depot\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/05/20/economics-lessons-from-home-depot",
-    "publishedAt": "2026-05-20T18:14:46.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6d90aa455d2fd700",
-    "source": "fed",
-    "originalTitle": "Minutes of the Federal Open Market Committee, April 28-29, 2026",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260520a.htm",
-    "publishedAt": "2026-05-20T18:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1e38da64c581bee2",
-    "source": "boj",
-    "originalTitle": "債券市場サーベイ（2026年5月調査）",
-    "originalUrl": "http://www.boj.or.jp/paym/bond/bond_list/bond2605.pdf",
-    "publishedAt": "2026-05-20T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5777939d259a0d8b",
-    "source": "boj",
-    "originalTitle": "第22回決済システムフォーラムの議事の概要",
-    "originalUrl": "http://www.boj.or.jp/paym/outline/pay_forum/pfo260520a.htm",
-    "publishedAt": "2026-05-20T06:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "058c6358cfa685f8",
-    "source": "boj",
-    "originalTitle": "分析データ「実質輸出入の動向」の見直しについて",
-    "originalUrl": "http://www.boj.or.jp/research/research_data/reri/reri260520a.htm",
-    "publishedAt": "2026-05-20T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "68f48114aee9e2ab",
-    "source": "boj",
-    "originalTitle": "基準外国為替相場及び裁定外国為替相場（6月分）",
-    "originalUrl": "http://www.boj.or.jp/about/services/tame/tame_rate/kijun/kiju2606.htm",
-    "publishedAt": "2026-05-20T00:00:00.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
