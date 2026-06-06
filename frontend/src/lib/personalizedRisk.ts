@@ -295,27 +295,56 @@ export function getIndicatorRelevance(
       if (foreignExposure > 20) return 'medium';
       return 'low';
 
+    case 'DJIA':
+    case 'SPX':
+      if (allocation.developed_equity > 30 || totalEquity > 60) return 'high';
+      if (totalEquity > 30) return 'medium';
+      return 'low';
+
+    case 'TOPIX':
+      if (allocation.domestic_equity > 30) return 'high';
+      if (allocation.domestic_equity > 10) return 'medium';
+      return 'low';
+
     case 'VIX':
       if (totalEquity > 60) return 'high';
       if (totalEquity > 30) return 'medium';
       return 'low';
 
-    case 'GOLD':
-      return 'medium';
-
     case 'US10Y':
+    case 'UST10Y':
       if (allocation.developed_bond > 20) return 'high';
       if (totalEquity > 50) return 'medium';
+      return 'low';
+
+    case 'UST3M':
+      // Short-term rates affect cash-heavy portfolios and variable rate exposure
+      if (allocation.cash > 20 || allocation.domestic_bond > 20) return 'high';
+      if (allocation.developed_bond > 10) return 'medium';
+      return 'low';
+
+    case 'WTI':
+      // Oil affects emerging market economies and inflation broadly
+      if (allocation.emerging_equity > 15 || allocation.emerging_bond > 10) return 'high';
+      if (foreignExposure > 40) return 'medium';
+      return 'low';
+
+    case 'GOLD':
+      // Gold is a safe haven — relevant when equity exposure is high OR when the user already holds commodities
+      if (totalEquity > 70) return 'high';
+      if (totalEquity > 40) return 'medium';
+      return 'low';
+
+    case 'HYG':
+      // High-yield bond ETF — relevant for credit risk, especially with high equity or EM exposure
+      if (allocation.developed_equity > 30 || allocation.emerging_equity > 10) return 'high';
+      if (totalEquity > 30) return 'medium';
       return 'low';
 
     case 'US_CPI':
     case 'US_FFR':
       if (foreignExposure > 50) return 'high';
       if (foreignExposure > 20) return 'medium';
-      return 'low';
-
-    case 'BTC':
-    case 'ETH':
       return 'low';
 
     default:

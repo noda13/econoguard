@@ -1,5 +1,7 @@
+import { useQuery } from '@tanstack/react-query';
 import { riskLevelConfig, categoryLabels } from '../../lib/riskColors';
-import type { RiskAssessment } from '../../services/api';
+import { fetchNews } from '../../services/api';
+import type { RiskAssessment, NewsArticle } from '../../services/api';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import { calculateCategoryImpact } from '../../lib/personalizedRisk';
 
@@ -16,6 +18,23 @@ export function RiskGauge({ risk }: Props) {
     ? calculateCategoryImpact(risk.category, risk.score, profile.allocation)
     : null;
 
+  const { data: allNews } = useQuery({ queryKey: ['news'], queryFn: fetchNews });
+
+  // Resolve source news articles from IDs
+  const sourceNews: NewsArticle[] = (risk.sourceNewsIds ?? [])
+    .map(id => allNews?.find(a => a.id === id))
+    .filter((a): a is NewsArticle => a !== undefined);
+
+  // Delta badge
+  const delta = risk.delta;
+  const deltaEl = delta !== undefined ? (
+    <span className={`text-xs font-mono ml-2 ${
+      delta > 0 ? 'text-red-400' : delta < 0 ? 'text-green-400' : 'text-gray-500'
+    }`}>
+      {delta > 0 ? `↑+${delta}` : delta < 0 ? `↓${delta}` : '→0'}
+    </span>
+  ) : null;
+
   return (
     <div className={`rounded-lg border ${config.borderColor} ${config.bgColor} p-4`}>
       <div className="flex items-center justify-between mb-2">
@@ -24,12 +43,16 @@ export function RiskGauge({ risk }: Props) {
           {config.label}
         </span>
       </div>
-      <div className={`text-3xl font-bold ${config.color} mb-2`}>
+      <div className={`text-3xl font-bold ${config.color} mb-2 flex items-baseline`}>
         {risk.score}
         <span className="text-sm text-gray-500 ml-1">/100</span>
+        {deltaEl}
       </div>
-      <p className="text-sm text-gray-400 mb-3 line-clamp-2">{risk.summaryJa}</p>
-      <div className="space-y-1">
+      <p className="text-sm text-gray-400 mb-2 line-clamp-2">{risk.summaryJa}</p>
+      {risk.changeReasonJa && (
+        <p className="text-xs text-gray-500 italic mb-2">{risk.changeReasonJa}</p>
+      )}
+      <div className="space-y-1 mb-2">
         {factors.slice(0, 3).map((factor, i) => (
           <div key={`${i}-${factor}`} className="text-xs text-gray-500 flex items-start gap-1">
             <span className="mt-0.5">•</span>
@@ -37,6 +60,25 @@ export function RiskGauge({ risk }: Props) {
           </div>
         ))}
       </div>
+      {sourceNews.length > 0 && (
+        <div className="mt-2 pt-2 border-t border-gray-700/30">
+          <p className="text-xs text-gray-600 mb-1">根拠ニュース</p>
+          <div className="space-y-1">
+            {sourceNews.map(article => (
+              <a
+                key={article.id}
+                href={article.originalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-xs text-blue-500 hover:text-blue-400 truncate"
+                title={article.originalTitle}
+              >
+                {article.originalTitle.slice(0, 60)}{article.originalTitle.length > 60 ? '…' : ''}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
       {impact && (
         <div className="mt-3 pt-2 border-t border-gray-700/50">
           <span className={`text-xs px-2 py-0.5 rounded-full ${

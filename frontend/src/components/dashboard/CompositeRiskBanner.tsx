@@ -32,6 +32,13 @@ export function CompositeRiskBanner() {
             <span className={`text-sm px-3 py-1 rounded-full ${config.bgColor} ${config.color} font-bold border ${config.borderColor}`}>
               {config.label}
             </span>
+            {data.delta !== undefined && (
+              <span className={`text-sm font-mono ${
+                data.delta > 0 ? 'text-red-400' : data.delta < 0 ? 'text-green-400' : 'text-gray-500'
+              }`}>
+                {data.delta > 0 ? `↑+${data.delta}` : data.delta < 0 ? `↓${data.delta}` : '→0'}
+              </span>
+            )}
           </div>
         </div>
         <div className="hidden md:flex gap-4">
