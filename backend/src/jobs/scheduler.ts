@@ -1,17 +1,30 @@
 import cron from 'node-cron';
-import { runCollection } from '../services/collector.js';
+import { runCollection, CollectionInProgressError } from '../services/collector.js';
+
+// Module-level guard: a secondary safety net in case runCollection's internal lock
+// ever fails to clear (e.g. unhandled rejection before unlock).  The primary
+// overlap protection is delegated to runCollection via CollectionInProgressError.
+let isRunning = false;
 
 async function scheduledCollection() {
+  if (isRunning) {
+    console.log('[Scheduler] Collection already running (module guard), skipping');
+    return;
+  }
+  isRunning = true;
   try {
     console.log(`[Scheduler] Starting scheduled collection at ${new Date().toISOString()}`);
     await runCollection();
     console.log('[Scheduler] Scheduled collection completed');
   } catch (error) {
-    if (error instanceof Error && error.message === 'Collection already in progress') {
-      console.log('[Scheduler] Collection already running, skipping');
+    if (error instanceof CollectionInProgressError) {
+      // runCollection's own lock fired — this is expected, not an error.
+      console.log('[Scheduler] Collection already running (runCollection lock), skipping');
       return;
     }
     console.error('[Scheduler] Collection failed:', error instanceof Error ? error.message : error);
+  } finally {
+    isRunning = false;
   }
 }
 

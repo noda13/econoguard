@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchCompositeRisk, fetchRisks } from '../../services/api';
 import { riskLevelConfig } from '../../lib/riskColors';
-import { useUserProfile } from '../../contexts/UserProfileContext';
 import { usePersonalizedRisk } from '../../hooks/usePersonalizedRisk';
 import { ACTION_SIGNAL_CONFIG } from '../../lib/actionSignals';
 

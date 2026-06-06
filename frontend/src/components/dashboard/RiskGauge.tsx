@@ -10,15 +10,7 @@ interface Props {
 export function RiskGauge({ risk }: Props) {
   const config = riskLevelConfig[risk.level] || riskLevelConfig.moderate;
   const label = categoryLabels[risk.category] || risk.category;
-  const factors: string[] = (() => {
-    if (Array.isArray(risk.factorsJa)) return risk.factorsJa;
-    try {
-      const parsed = JSON.parse(risk.factorsJa || '[]');
-      return Array.isArray(parsed) ? parsed : [];
-    } catch {
-      return [];
-    }
-  })();
+  const factors: string[] = Array.isArray(risk.factorsJa) ? risk.factorsJa : [];
   const { profile, isConfigured } = useUserProfile();
   const impact = isConfigured && profile
     ? calculateCategoryImpact(risk.category, risk.score, profile.allocation)
@@ -39,7 +31,7 @@ export function RiskGauge({ risk }: Props) {
       <p className="text-sm text-gray-400 mb-3 line-clamp-2">{risk.summaryJa}</p>
       <div className="space-y-1">
         {factors.slice(0, 3).map((factor, i) => (
-          <div key={i} className="text-xs text-gray-500 flex items-start gap-1">
+          <div key={`${i}-${factor}`} className="text-xs text-gray-500 flex items-start gap-1">
             <span className="mt-0.5">•</span>
             <span>{factor}</span>
           </div>

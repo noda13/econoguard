@@ -5,6 +5,13 @@ import { summarizeUnsummarized } from './summarizer.js';
 import { assessRisks } from './riskAssessor.js';
 import { getSessionTokenUsage, resetSessionTokenUsage, ensureProviderReady } from './llm.js';
 
+export class CollectionInProgressError extends Error {
+  constructor() {
+    super('Collection already in progress');
+    this.name = 'CollectionInProgressError';
+  }
+}
+
 interface CollectionResult {
   news: { collected: number; skipped: number };
   indicators: { collected: number; failed: number };
@@ -12,15 +19,17 @@ interface CollectionResult {
   riskAssessment: { assessed: boolean };
 }
 
+// [Fix #6] KNOWN LIMITATION: _isRunning is an in-process boolean lock.
+// It prevents concurrent collections within a single Node.js process but does NOT protect
+// against multiple instances running simultaneously (e.g. horizontally-scaled deployments,
+// process restarts mid-run, or serverless re-invocations).
+// If multi-instance deployments are needed in future, replace this with a distributed lock
+// (e.g. a DB-backed advisory lock or a Redis SETNX lock).
 let _isRunning = false;
-
-export function isCollectionRunning(): boolean {
-  return _isRunning;
-}
 
 export async function runCollection(): Promise<CollectionResult> {
   if (_isRunning) {
-    throw new Error('Collection already in progress');
+    throw new CollectionInProgressError();
   }
   _isRunning = true;
   try {

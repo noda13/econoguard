@@ -72,8 +72,8 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   }
 
   function handleSave() {
+    if (Number.isNaN(age)) return;
     const clampedAge = Math.max(20, Math.min(80, age));
-    if (isNaN(clampedAge)) return;
     if (allocationTotal(allocation) !== 100) return;
     setProfile({ age: clampedAge, sensitivity, allocation });
     onClose();
@@ -123,7 +123,10 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
                 min={20}
                 max={80}
                 value={age}
-                onChange={(e) => setAge(Number(e.target.value))}
+                onChange={(e) => {
+                const n = Number(e.target.value);
+                if (!Number.isNaN(n)) setAge(n);
+              }}
                 className="w-24 px-3 py-1.5 rounded-md bg-gray-700 border border-gray-600 text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
