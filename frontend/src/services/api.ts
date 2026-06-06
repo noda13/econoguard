@@ -48,6 +48,9 @@ export interface RiskAssessment {
   factorsJa: string[];
   assessedAt: string;
   createdAt?: string;
+  delta?: number;
+  changeReasonJa?: string;
+  sourceNewsIds?: string[];
 }
 
 // ---------------------------------------------------------------------------
@@ -93,6 +96,7 @@ export interface CompositeRisk {
     score: number;
     weight: number;
   }>;
+  delta?: number;
 }
 
 // --- Static JSON fetchers ---
@@ -153,4 +157,19 @@ export const fetchCompositeRisk = async (): Promise<CompositeRisk> => {
   }
   const { data } = await api.get('/risks/composite');
   return data;
+};
+
+export interface EconomicEvent {
+  date: string;        // ISO date string (YYYY-MM-DD)
+  titleJa: string;     // Japanese title e.g. "FOMC政策金利発表"
+  region: 'US' | 'JP' | 'EU' | 'GLOBAL';
+  importance: 'high' | 'medium';
+}
+
+export const fetchEvents = async (): Promise<EconomicEvent[]> => {
+  if (isStatic) {
+    return fetchStaticJson<EconomicEvent[]>('events.json', []);
+  }
+  // Backend mode not implemented yet — return empty
+  return [];
 };
