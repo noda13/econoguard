@@ -147,14 +147,30 @@ export async function collectIndicators(): Promise<{ collected: number; failed: 
   // Truncate to the hour for recordedAt to avoid unique constraint issues on rapid re-runs
   now.setMinutes(0, 0, 0);
 
+  // [Fix #5] Fetch all external indicators in parallel for efficiency.
+  // Promise.allSettled preserves per-indicator error isolation.
+  console.log('Fetching all indicators in parallel...');
+  const fetchResults = await Promise.allSettled(
+    indicators.map(async (indicator) => {
+      console.log(`Fetching indicator: ${indicator.code}...`);
+      const value = await indicator.fetch();
+      return { indicator, value };
+    }),
+  );
+
   let collected = 0;
   let failed = 0;
 
-  for (const indicator of indicators) {
-    try {
-      console.log(`Fetching indicator: ${indicator.code}...`);
-      const value = await indicator.fetch();
+  for (const result of fetchResults) {
+    if (result.status === 'rejected') {
+      console.error(`Failed to fetch indicator:`, result.reason instanceof Error ? result.reason.message : result.reason);
+      failed++;
+      continue;
+    }
 
+    const { indicator, value } = result.value;
+
+    try {
       if (value === null) {
         console.log(`  -> ${indicator.code}: no data`);
         failed++;

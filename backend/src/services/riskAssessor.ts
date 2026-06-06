@@ -1,6 +1,7 @@
+import { z } from 'zod';
 import prisma from '../lib/prisma.js';
 import { callLLM, isConfigured } from './llm.js';
-import { scoreToLevel } from '../schemas/api.js';
+import { scoreToLevel, riskCategorySchema } from '../schemas/api.js';
 
 const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリストです。提供されたニュース要約と経済指標データに基づき、以下の4つのリスクカテゴリについて評価を行ってください。
 
@@ -50,14 +51,16 @@ const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリスト
   ]
 }`;
 
-interface RiskAssessmentInput {
-  assessments: Array<{
-    category: string;
-    score: number;
-    summary: string;
-    factors: string[];
-  }>;
-}
+const riskAssessmentInputSchema = z.object({
+  assessments: z.array(
+    z.object({
+      category: riskCategorySchema,
+      score: z.number().min(0).max(100),
+      summary: z.string(),
+      factors: z.array(z.string()),
+    })
+  ),
+});
 
 async function buildContext(): Promise<string> {
   // Get recent summarized news
@@ -101,8 +104,14 @@ async function buildContext(): Promise<string> {
   // Build context string
   let context = '## 最新ニュース要約\n\n';
   for (const article of recentNews) {
-    const cats = JSON.parse(article.riskCategories || '[]');
-    context += `- [${article.source}] ${article.summaryJa} (カテゴリ: ${cats.join(', ')})\n`;
+    let cats: unknown;
+    try {
+      cats = JSON.parse(article.riskCategories || '[]');
+    } catch {
+      cats = [];
+    }
+    const catList = Array.isArray(cats) ? (cats as string[]).join(', ') : '';
+    context += `- [${article.source}] ${article.summaryJa} (カテゴリ: ${catList})\n`;
   }
 
   context += '\n## 経済指標\n\n';
@@ -142,16 +151,31 @@ export async function assessRisks(): Promise<{ assessed: boolean }> {
     jsonStr = jsonStr.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
   }
 
-  const result: RiskAssessmentInput = JSON.parse(jsonStr);
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(jsonStr);
+  } catch (err) {
+    console.error('Failed to parse LLM JSON response:', err instanceof Error ? err.message : err);
+    return { assessed: false };
+  }
+
+  const validation = riskAssessmentInputSchema.safeParse(parsed);
+  if (!validation.success) {
+    console.error('LLM response failed schema validation:', validation.error.message);
+    return { assessed: false };
+  }
+
+  const result = validation.data;
   const now = new Date();
 
   for (const assessment of result.assessments) {
-    const level = scoreToLevel(assessment.score);
+    const clampedScore = Math.round(Math.max(0, Math.min(100, assessment.score)));
+    const level = scoreToLevel(clampedScore);
 
     await prisma.riskAssessment.create({
       data: {
         category: assessment.category,
-        score: assessment.score,
+        score: clampedScore,
         level,
         summaryJa: assessment.summary,
         factorsJa: JSON.stringify(assessment.factors),
@@ -159,7 +183,7 @@ export async function assessRisks(): Promise<{ assessed: boolean }> {
       },
     });
 
-    console.log(`  ${assessment.category}: ${assessment.score}/100 (${level})`);
+    console.log(`  ${assessment.category}: ${clampedScore}/100 (${level})`);
   }
 
   console.log('Risk assessment complete');

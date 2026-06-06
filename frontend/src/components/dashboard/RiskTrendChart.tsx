@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { fetchRiskHistory } from '../../services/api';
@@ -32,23 +33,26 @@ export function RiskTrendChart() {
   const results = [q1, q2, q3, q4];
   const isLoading = results.some((r) => r.isLoading);
 
-  if (isLoading) return <LoadingSpinner />;
-
-  const dataMap = new Map<string, ChartDataPoint>();
-  for (let i = 0; i < CATEGORIES.length; i++) {
-    const cat = CATEGORIES[i];
-    const data = results[i].data || [];
-    for (const item of data) {
-      const d = new Date(item.assessedAt);
-      const isoDate = d.toISOString().slice(0, 10);
-      const displayDate = d.toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' });
-      const point = dataMap.get(isoDate) || { date: displayDate };
-      point[cat] = item.score;
-      dataMap.set(isoDate, point);
+  const chartData = useMemo(() => {
+    const dataMap = new Map<string, ChartDataPoint>();
+    for (let i = 0; i < CATEGORIES.length; i++) {
+      const cat = CATEGORIES[i];
+      const data = results[i].data || [];
+      for (const item of data) {
+        const d = new Date(item.assessedAt);
+        const isoDate = d.toISOString().slice(0, 10);
+        const displayDate = d.toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' });
+        const point = dataMap.get(isoDate) || { date: displayDate };
+        point[cat] = item.score;
+        dataMap.set(isoDate, point);
+      }
     }
-  }
+    return Array.from(dataMap.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([, v]) => v);
+  }, [q1.data, q2.data, q3.data, q4.data]);
 
-  const chartData = Array.from(dataMap.values());
+  if (isLoading) return <LoadingSpinner />;
 
   if (chartData.length === 0) {
     return (

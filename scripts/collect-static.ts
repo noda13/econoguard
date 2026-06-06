@@ -3,6 +3,8 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Parser from 'rss-parser';
 import crypto from 'crypto';
+import { z } from 'zod';
+import { RISK_WEIGHTS, scoreToLevel, type RiskCategory } from '../backend/src/schemas/riskConstants.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = resolve(__dirname, '../frontend/public/data');
@@ -57,23 +59,6 @@ function writeJson(filename: string, data: unknown) {
 function genId(url: string, title: string): string {
   return crypto.createHash('sha256').update(`${url}:${title}`).digest('hex').slice(0, 16);
 }
-
-// Keep in sync with backend/src/schemas/api.ts
-function scoreToLevel(s: number): string {
-  if (s <= 20) return 'low';
-  if (s <= 40) return 'moderate';
-  if (s <= 60) return 'elevated';
-  if (s <= 80) return 'high';
-  return 'critical';
-}
-
-// Keep in sync with backend/src/schemas/api.ts (RISK_WEIGHTS)
-const RISK_WEIGHTS: Record<string, number> = {
-  currency_finance: 0.3,
-  geopolitics_supply_chain: 0.3,
-  technology: 0.2,
-  social_policy: 0.2,
-};
 
 const BATCH_DELAY_MS = 30_000;
 
@@ -251,8 +236,10 @@ async function callOpenAICompatible(system: string, user: string, config: LLMCon
     }),
   });
   if (!res.ok) throw new Error(`${config.provider} ${res.status}: ${await res.text()}`);
-  const data = await res.json() as { choices: Array<{ message: { content: string } }> };
-  return data.choices[0].message.content;
+  const data = await res.json() as { choices?: Array<{ message?: { content?: string } }> };
+  const content = data.choices?.[0]?.message?.content;
+  if (!content) throw new Error(`${config.provider} returned empty or malformed response (no choices[0].message.content)`);
+  return content;
 }
 
 async function callGemini(system: string, user: string, key: string): Promise<string> {
@@ -301,16 +288,35 @@ async function summarize(articles: NewsArticle[]) {
     const msg = batch.map((a, j) => `[${j}] ${a.source}: ${a.originalTitle}`).join('\n');
     try {
       const raw = await callLLM(SYS, msg);
-      const parsed = parseJson(raw) as { results: Array<{ index: number; summaryJa: string; relevanceScore: number; riskCategories: string[] }> };
-      const results = parsed.results || [];
-      for (const r of results) {
+      const parsed = parseJson(raw);
+
+      // Validate each result item; skip malformed entries rather than trusting LLM output shape.
+      const summaryItemSchema = z.object({
+        index: z.number().int().min(0),
+        summaryJa: z.string(),
+        relevanceScore: z.number().int().min(0).max(100),
+        riskCategories: z.array(z.enum(['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'])),
+      });
+      const summaryResponseSchema = z.object({ results: z.array(z.unknown()) });
+      const { results: rawItems } = summaryResponseSchema.parse(parsed);
+
+      let accepted = 0;
+      for (const item of rawItems) {
+        const res = summaryItemSchema.safeParse(item);
+        if (!res.success) {
+          console.warn('[summarize] Dropping invalid result entry:', res.error.issues);
+          continue;
+        }
+        const r = res.data;
         if (batch[r.index]) {
           batch[r.index].summaryJa = r.summaryJa;
-          batch[r.index].relevanceScore = r.relevanceScore;
+          // Clamp defensively even though schema already bounds it
+          batch[r.index].relevanceScore = Math.min(100, Math.max(0, r.relevanceScore));
           batch[r.index].riskCategories = r.riskCategories;
+          accepted++;
         }
       }
-      console.log(`  Batch ${Math.floor(i / 10) + 1} done (${results.length} summarized)`);
+      console.log(`  Batch ${Math.floor(i / 10) + 1} done (${accepted} summarized)`);
     } catch (e) { console.error('  Summarize failed:', e instanceof Error ? e.message : e); }
     if (i + 10 < todo.length) await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
   }
@@ -335,9 +341,49 @@ async function assess(news: NewsArticle[], indicators: EconomicIndicator[], prev
   if (prev.length) { ctx += '\n## 前回スコア\n'; for (const r of prev) ctx += `- ${r.category}: ${r.score}\n`; }
 
   const raw = await callLLM(SYS, ctx);
-  const res = parseJson(raw) as { assessments: Array<{ category: string; score: number; summary: string; factors: string[] }> };
+  const parsed = parseJson(raw);
+
+  // Validate each assessment entry; drop unknown categories and clamp scores.
+  const KNOWN_CATEGORIES: RiskCategory[] = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
+  const assessmentSchema = z.object({
+    category: z.enum(['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy']),
+    score: z.number().int().min(0).max(100),
+    summary: z.string(),
+    factors: z.array(z.string()),
+  });
+  const responseSchema = z.object({ assessments: z.array(z.unknown()) });
+
+  const { assessments: rawItems } = responseSchema.parse(parsed);
   const now = new Date().toISOString();
-  return res.assessments.map(a => ({ category: a.category, score: a.score, level: scoreToLevel(a.score), summaryJa: a.summary, factorsJa: a.factors, assessedAt: now }));
+  const validated: RiskAssessment[] = [];
+
+  for (const item of rawItems) {
+    const result = assessmentSchema.safeParse(item);
+    if (!result.success) {
+      console.warn('[assess] Dropping invalid assessment entry:', result.error.issues);
+      continue;
+    }
+    const a = result.data;
+    validated.push({
+      category: a.category,
+      score: Math.round(Math.min(100, Math.max(0, a.score))),
+      level: scoreToLevel(a.score),
+      summaryJa: a.summary,
+      factorsJa: a.factors,
+      assessedAt: now,
+    });
+  }
+
+  if (validated.length === 0) throw new Error('LLM assessment returned no valid entries');
+
+  // Warn if any expected categories are missing
+  for (const cat of KNOWN_CATEGORIES) {
+    if (!validated.some(v => v.category === cat)) {
+      console.warn(`[assess] Missing expected category in LLM response: ${cat}`);
+    }
+  }
+
+  return validated;
 }
 
 // --- Main ---
@@ -377,12 +423,19 @@ async function main() {
     console.log('No LLM API key set (GROQ_API_KEY or GEMINI_API_KEY), skipping\n');
   }
 
-  const compositeScore = Math.round(risks.reduce((s, r) => s + r.score * (RISK_WEIGHTS[r.category] || 0.25), 0));
+  // Compute composite: only use known-category entries; renormalize weights to sum to 1.
+  const knownRisks = risks.filter(r => r.category in RISK_WEIGHTS);
+  const totalWeight = knownRisks.reduce((s, r) => s + RISK_WEIGHTS[r.category as RiskCategory], 0);
+  const compositeScore = totalWeight > 0
+    ? Math.round(knownRisks.reduce((s, r) => s + r.score * (RISK_WEIGHTS[r.category as RiskCategory] / totalWeight), 0))
+    : 0;
   const composite: CompositeRisk = {
     compositeScore, level: scoreToLevel(compositeScore),
-    breakdown: risks.map(r => ({ category: r.category, score: r.score, weight: RISK_WEIGHTS[r.category] || 0.25 })),
+    breakdown: knownRisks.map(r => ({ category: r.category, score: r.score, weight: RISK_WEIGHTS[r.category as RiskCategory] })),
   };
 
+  // Keep articles that scored >= 30, AND any not-yet-summarized articles (summaryJa empty)
+  // so they aren't dropped before the next LLM run has a chance to score them.
   const filteredNews = news
     .filter(a => !a.summaryJa || a.relevanceScore >= 30)
     .slice(0, 200);

@@ -93,8 +93,18 @@ export function calculatePersonalizedScore(
 // 4. Category → asset-class impact mapping
 // ---------------------------------------------------------------------------
 
+/**
+ * The four known risk categories produced by the backend.
+ * Add new values here if the backend adds categories.
+ */
+export type RiskCategory =
+  | 'currency_finance'
+  | 'geopolitics_supply_chain'
+  | 'technology'
+  | 'social_policy';
+
 const CATEGORY_IMPACT_MAP: Record<
-  string,
+  RiskCategory,
   { high: (keyof AssetAllocation)[]; medium: (keyof AssetAllocation)[]; low: (keyof AssetAllocation)[] }
 > = {
   currency_finance: {
@@ -126,44 +136,70 @@ const CATEGORY_IMPACT_MAP: Record<
 /**
  * Given a risk category and the user's allocation, returns how strongly that
  * category affects the portfolio.
+ *
+ * affectedPct weighting: high assets × 1.0 + medium assets × 0.5.
+ * This reflects the practical exposure gradient — high-impact asset classes
+ * carry full weight; medium-impact classes are partially relevant.
+ * Low-impact classes are excluded from the percentage to keep the number
+ * conservative (do not inflate perceived exposure).
+ *
+ * impactLevel determination: combines affectedPct with the category's own
+ * risk score so that a high-score category is more likely to be surfaced as
+ * "high" impact, and a low-score category can be downgraded to "low" even
+ * when portfolio exposure is moderate.
+ *   - affectedPct thresholds: ≥40 → high base, ≥15 → medium base, else low base
+ *   - score factor: score ≥ 70 upgrades one level; score < 30 downgrades one level
  */
 export function calculateCategoryImpact(
   category: string,
-  _score: number,
+  score: number,
   allocation: AssetAllocation,
 ): CategoryImpact {
-  const mapping = CATEGORY_IMPACT_MAP[category];
+  const mapping = CATEGORY_IMPACT_MAP[category as RiskCategory];
 
-  // If the category is unknown, return a neutral low-impact result
+  // If the category is unknown, warn in dev and return a neutral low-impact result
   if (!mapping) {
+    if (import.meta.env.DEV) {
+      console.warn(`[calculateCategoryImpact] Unknown risk category: "${category}". Add it to CATEGORY_IMPACT_MAP.`);
+    }
     return {
       category,
       impactLevel: 'low',
       affectedPct: 0,
-      description: '該当カテゴリの影響は限定的です。現在のポートフォリオへの影響は限定的',
+      description: '該当カテゴリの影響は限定的です。現在のポートフォリオへの影響は限定的です。',
     };
   }
 
-  // Sum the allocation percentages for "high" impact asset classes
-  const affectedPct = Math.round(
-    mapping.high.reduce((sum, key) => sum + allocation[key], 0),
-  );
+  // Weighted sum: high × 1.0 + medium × 0.5
+  // This reflects realistic exposure — medium-sensitivity assets contribute
+  // half their allocation to the "affected" pool.
+  const highSum = mapping.high.reduce((sum, key) => sum + allocation[key], 0);
+  const mediumSum = mapping.medium.reduce((sum, key) => sum + allocation[key], 0);
+  const affectedPct = Math.round(highSum + mediumSum * 0.5);
 
-  // Determine overall impact level from the affected percentage
-  const impactLevel: 'high' | 'medium' | 'low' =
-    affectedPct >= 40 ? 'high' : affectedPct >= 15 ? 'medium' : 'low';
+  // Base impact level from portfolio exposure percentage
+  let baseLevel: 0 | 1 | 2 = affectedPct >= 40 ? 2 : affectedPct >= 15 ? 1 : 0;
+  //   2 = high, 1 = medium, 0 = low
+
+  // Adjust one step up/down based on the category's actual risk score
+  // (score is 0–100; ≥70 upgrades, <30 downgrades)
+  if (score >= 70 && baseLevel < 2) baseLevel = (baseLevel + 1) as 0 | 1 | 2;
+  if (score < 30 && baseLevel > 0) baseLevel = (baseLevel - 1) as 0 | 1 | 2;
+
+  const levelLabels: ['low', 'medium', 'high'] = ['low', 'medium', 'high'];
+  const impactLevel: 'high' | 'medium' | 'low' = levelLabels[baseLevel];
 
   // Build the Japanese description
-  const lowSuffix = impactLevel === 'low' ? '。現在のポートフォリオへの影響は限定的' : '';
+  const lowSuffix = impactLevel === 'low' ? '。現在のポートフォリオへの影響は限定的です。' : '';
 
-  const descriptionMap: Record<string, string> = {
+  const descriptionMap: Record<RiskCategory, string> = {
     currency_finance: `ドル建て資産(${affectedPct}%)に直接影響。円高進行時の為替差損リスク${lowSuffix}`,
     geopolitics_supply_chain: `新興国資産(${affectedPct}%)への地政学リスク。供給網の混乱が懸念${lowSuffix}`,
     technology: `先進国株式(${affectedPct}%)のテック比率に注意。規制・半導体リスク${lowSuffix}`,
     social_policy: `国内資産(${affectedPct}%)に政策変更の影響。金利動向に注意${lowSuffix}`,
   };
 
-  const description = descriptionMap[category] ?? `リスクカテゴリ(${affectedPct}%)への影響${lowSuffix}`;
+  const description = descriptionMap[category as RiskCategory] ?? `リスクカテゴリ(${affectedPct}%)への影響${lowSuffix}`;
 
   return { category, impactLevel, affectedPct, description };
 }

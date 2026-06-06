@@ -1,5 +1,7 @@
+import { z } from 'zod';
 import prisma from '../lib/prisma.js';
 import { callLLM, isConfigured } from './llm.js';
+import { riskCategorySchema } from '../schemas/api.js';
 
 const BATCH_SIZE = 10;
 
@@ -30,16 +32,18 @@ const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリスト
   ...
 ]`;
 
-interface SummaryResult {
-  index: number;
-  summaryJa: string;
-  relevanceScore: number;
-  riskCategories: string[];
-}
+const summaryResultSchema = z.array(
+  z.object({
+    index: z.number().int(),
+    summaryJa: z.string(),
+    relevanceScore: z.number(),
+    riskCategories: z.array(riskCategorySchema),
+  })
+);
 
-async function summarizeBatch(articles: { id: number; originalTitle: string; source: string; rawContent?: string }[]): Promise<number> {
+async function summarizeBatch(articles: { id: number; originalTitle: string; source: string }[]): Promise<number> {
   const userMessage = articles
-    .map((a, i) => `[${i}] Source: ${a.source}\nTitle: ${a.originalTitle}${a.rawContent ? `\nContent: ${a.rawContent.slice(0, 300)}` : ''}`)
+    .map((a, i) => `[${i}] Source: ${a.source}\nTitle: ${a.originalTitle}`)
     .join('\n\n');
 
   try {
@@ -53,17 +57,34 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
       jsonStr = jsonStr.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
     }
 
-    const results: SummaryResult[] = JSON.parse(jsonStr);
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(jsonStr);
+    } catch (parseErr) {
+      console.error('Failed to parse LLM JSON response:', parseErr instanceof Error ? parseErr.message : parseErr);
+      return 0;
+    }
 
-    for (const result of results) {
+    const validation = summaryResultSchema.safeParse(parsed);
+    if (!validation.success) {
+      console.error('LLM response failed schema validation:', validation.error.message);
+      return 0;
+    }
+
+    for (const result of validation.data) {
       const article = articles[result.index];
       if (!article) continue;
+
+      const rawScore = result.relevanceScore;
+      const relevanceScore = Number.isFinite(rawScore)
+        ? Math.round(Math.max(0, Math.min(100, rawScore)))
+        : 0;
 
       await prisma.newsArticle.update({
         where: { id: article.id },
         data: {
           summaryJa: result.summaryJa,
-          relevanceScore: Math.round(Math.max(0, Math.min(100, result.relevanceScore))),
+          relevanceScore,
           riskCategories: JSON.stringify(result.riskCategories),
         },
       });
@@ -76,10 +97,10 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
   }
 }
 
-export async function summarizeUnsummarized(): Promise<{ summarized: number; totalTokens: number }> {
+export async function summarizeUnsummarized(): Promise<{ summarized: number }> {
   if (!isConfigured()) {
     console.log('No LLM provider configured, skipping summarization');
-    return { summarized: 0, totalTokens: 0 };
+    return { summarized: 0 };
   }
 
   // Find articles without summaries
@@ -87,11 +108,12 @@ export async function summarizeUnsummarized(): Promise<{ summarized: number; tot
     where: { summaryJa: '' },
     orderBy: { publishedAt: 'desc' },
     take: 50, // Process max 50 articles per run
+    select: { id: true, originalTitle: true, source: true },
   });
 
   if (unsummarized.length === 0) {
     console.log('No articles to summarize');
-    return { summarized: 0, totalTokens: 0 };
+    return { summarized: 0 };
   }
 
   console.log(`Summarizing ${unsummarized.length} articles in batches of ${BATCH_SIZE}...`);
@@ -110,5 +132,5 @@ export async function summarizeUnsummarized(): Promise<{ summarized: number; tot
   }
 
   console.log(`Summarization complete: ${summarized} articles processed`);
-  return { summarized, totalTokens: 0 }; // Token tracking is in claude.ts session
+  return { summarized };
 }

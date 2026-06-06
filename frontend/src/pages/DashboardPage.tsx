@@ -10,7 +10,7 @@ import { PortfolioImpactPanel } from '../components/dashboard/PortfolioImpactPan
 import { fetchRisks } from '../services/api';
 
 export function DashboardPage() {
-  const { data: risks } = useQuery({ queryKey: ['risks'], queryFn: fetchRisks });
+  const { data: risks, isError: isRisksError } = useQuery({ queryKey: ['risks'], queryFn: fetchRisks });
 
   const lastUpdated = useMemo(() => {
     if (!risks?.length) return undefined;
@@ -21,6 +21,11 @@ export function DashboardPage() {
 
   return (
     <DashboardLayout lastUpdated={lastUpdated}>
+      {isRisksError && (
+        <div className="rounded-lg border border-red-700 bg-red-900/30 px-4 py-3 text-sm text-red-300">
+          リスクデータの取得に失敗しました。しばらくしてからページを再読み込みしてください。
+        </div>
+      )}
       <CompositeRiskBanner />
       <RiskOverview />
       <PortfolioImpactPanel />
