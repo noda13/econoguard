@@ -9,9 +9,13 @@ export function formatDate(dateStr: string): string {
 }
 
 export function formatChange(current: number, previous: number | null): { text: string; isPositive: boolean } | null {
-  if (previous === null) return null;
+  // Guard: null or zero previous makes percent change undefined/infinite
+  if (previous === null || previous === 0) return null;
   const diff = current - previous;
-  const pct = ((diff / previous) * 100).toFixed(2);
+  const ratio = (diff / previous) * 100;
+  // Extra safety: reject non-finite results (e.g. subnormal floats)
+  if (!Number.isFinite(ratio)) return null;
+  const pct = ratio.toFixed(2);
   return {
     text: `${diff > 0 ? '+' : ''}${pct}%`,
     isPositive: diff > 0,

@@ -1,4 +1,4 @@
-import type { AssetAllocation } from './types/profile';
+import type { AssetAllocation, UserProfile } from './types/profile';
 
 export interface ProfilePreset {
   id: string;
@@ -99,10 +99,16 @@ export const PROFILE_PRESETS: ProfilePreset[] = [
   },
 ];
 
-export const DEFAULT_PROFILE = {
+// Reference the intended preset by id so this stays correct even if
+// the PROFILE_PRESETS array is reordered. Falls back to the first preset
+// if 'all_country' is ever removed.
+const _defaultPreset =
+  PROFILE_PRESETS.find((p) => p.id === 'all_country') ?? PROFILE_PRESETS[0];
+
+export const DEFAULT_PROFILE: UserProfile = {
   age: 40,
-  sensitivity: 'standard' as const,
-  allocation: PROFILE_PRESETS[0].allocation,
+  sensitivity: 'standard',
+  allocation: _defaultPreset.allocation,
 };
 
 export const ASSET_CLASS_LABELS: Record<keyof AssetAllocation, string> = {

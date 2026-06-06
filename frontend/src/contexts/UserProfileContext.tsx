@@ -37,6 +37,10 @@ function isValidProfile(obj: unknown): obj is UserProfile {
     if (typeof alloc[key] !== 'number' || alloc[key] < 0 || alloc[key] > 100) return false;
   }
 
+  // Reject allocations that don't sum to ~100 (tolerance ±1 for rounding)
+  const sum = ALLOCATION_KEYS.reduce((acc, key) => acc + (alloc[key] as number), 0);
+  if (Math.abs(sum - 100) > 1) return false;
+
   return true;
 }
 

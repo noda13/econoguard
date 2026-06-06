@@ -19,6 +19,12 @@ interface CollectionResult {
   riskAssessment: { assessed: boolean };
 }
 
+// [Fix #6] KNOWN LIMITATION: _isRunning is an in-process boolean lock.
+// It prevents concurrent collections within a single Node.js process but does NOT protect
+// against multiple instances running simultaneously (e.g. horizontally-scaled deployments,
+// process restarts mid-run, or serverless re-invocations).
+// If multi-instance deployments are needed in future, replace this with a distributed lock
+// (e.g. a DB-backed advisory lock or a Redis SETNX lock).
 let _isRunning = false;
 
 export async function runCollection(): Promise<CollectionResult> {

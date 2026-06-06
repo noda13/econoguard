@@ -10,6 +10,8 @@ const parser = new Parser({
   },
 });
 
+// [Fix #4] SECURITY: RSSHUB_URL must point to a trusted, allowlisted host only.
+// Allowing arbitrary user-supplied URLs here would be an SSRF vector.
 const RSSHUB = process.env.RSSHUB_URL || 'https://rsshub.app';
 
 const RSS_SOURCES = [
@@ -57,7 +59,9 @@ async function fetchRSS(): Promise<RawArticle[]> {
       const feed = await parser.parseURL(rssSource.url);
       const items: RawArticle[] = [];
 
-      for (const item of feed.items || []) {
+      // [Fix #4] Cap items per feed to avoid OOM on unexpectedly large feeds.
+      const MAX_ITEMS_PER_FEED = 50;
+      for (const item of (feed.items || []).slice(0, MAX_ITEMS_PER_FEED)) {
         if (!item.title || !item.link) continue;
 
         items.push({
@@ -170,7 +174,7 @@ export async function collectNews(): Promise<{ collected: number; skipped: numbe
       });
       collected++;
     } catch (error) {
-      // Unique constraint violation = already exists, that's fine
+      console.error('Failed to save article:', error instanceof Error ? error.message : error);
       skipped++;
     }
   }
