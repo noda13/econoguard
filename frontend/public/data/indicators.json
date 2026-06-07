@@ -6,7 +6,7 @@
     "previousValue": 51032.46,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "SPX",
@@ -15,7 +15,7 @@
     "previousValue": 7580.06,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "TOPIX",
@@ -24,7 +24,7 @@
     "previousValue": 417.5,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "USDJPY",
@@ -33,7 +33,7 @@
     "previousValue": 159.353,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "VIX",
@@ -42,7 +42,7 @@
     "previousValue": 16.05,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "UST10Y",
@@ -51,7 +51,7 @@
     "previousValue": 4.475,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "UST3M",
@@ -60,25 +60,25 @@
     "previousValue": 3.62,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "WTI",
     "name": "原油(WTI)",
     "value": 90.54,
-    "previousValue": 92.16,
+    "previousValue": 93.76,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "GOLD",
     "name": "金",
     "value": 4365.3,
-    "previousValue": 4475.2,
+    "previousValue": 4489.1,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   },
   {
     "code": "HYG",
@@ -87,6 +87,6 @@
     "previousValue": 80.31,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:59:58.707Z"
+    "recordedAt": "2026-06-07T04:14:04.852Z"
   }
 ]

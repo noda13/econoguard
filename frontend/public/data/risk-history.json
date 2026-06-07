@@ -846,6 +846,20 @@
       "assessedAt": "2026-06-06T15:02:41.529Z",
       "delta": -17,
       "changeReasonJa": "ドル円の急上昇と金融市場の不安定性の増大"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、NYダウとS&P500が下落している。恐怖指数(VIX)が上昇し、米10年債利回りも上昇している。金融市場の不安定さが増している。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "NYダウとS&P500の下落",
+        "恐怖指数(VIX)の上昇"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -12,
+      "changeReasonJa": "ドル円の変動と株式市場の下落により、金融市場の不安定さが増したため"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1683,6 +1697,20 @@
       "assessedAt": "2026-06-06T15:02:41.529Z",
       "delta": -18,
       "changeReasonJa": "北朝鮮の軍事動向とウクライナの無人艇進入による地政学的緊張の増大"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 60,
+      "level": "elevated",
+      "summaryJa": "習近平氏と金正恩氏の会談が予定されており、地政学的緊張が高まっている。核問題やトランプ氏との関係が重なる思惑がある。",
+      "factorsJa": [
+        "習近平氏と金正恩氏の会談",
+        "核問題",
+        "トランプ氏との関係"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -10,
+      "changeReasonJa": "地政学的緊張が高まったため"
     }
   ],
   "technology": [
@@ -2504,6 +2532,19 @@
       "assessedAt": "2026-06-06T15:02:41.529Z",
       "delta": -5,
       "changeReasonJa": "テクノロジー関連の重大なリスク要因の不存在"
+    },
+    {
+      "category": "technology",
+      "score": 68,
+      "level": "high",
+      "summaryJa": "スペースXのIPOが間近にあり、マスク氏が描く宇宙×AIの未来が注目されている。テクノロジーと経済の融合が進んでいる。",
+      "factorsJa": [
+        "スペースXのIPO",
+        "マスク氏の宇宙×AIの未来"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -2,
+      "changeReasonJa": "テクノロジーと経済の融合が進んだため"
     }
   ],
   "social_policy": [
@@ -3331,6 +3372,19 @@
       "assessedAt": "2026-06-06T15:02:41.529Z",
       "delta": 3,
       "changeReasonJa": "政治資金問題と国旗損壊罪法案への疑問による社会政策の不確実性の増大"
+    },
+    {
+      "category": "social_policy",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "アメリカで高校での金融教育の義務化が広がり、職業選択などに良い影響が期待される。地方財政への影響が懸念されている。",
+      "factorsJa": [
+        "アメリカでの金融教育の義務化",
+        "地方財政への影響"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": 3,
+      "changeReasonJa": "金融教育の進展と地方財政への懸念が高まったため"
     }
   ]
 }
