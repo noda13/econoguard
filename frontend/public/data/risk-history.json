@@ -874,6 +874,20 @@
       "assessedAt": "2026-06-08T04:21:19.896Z",
       "delta": 0,
       "changeReasonJa": "ドル円の上昇と日経平均の下落が要因でスコアが上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、為替市場の動向がマクロ経済に直接的な影響を及ぼしている。金融市場への影響も見られ、HY社債ETFが下落している。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "金融市場への影響",
+        "HY社債ETFの下落"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": -1,
+      "changeReasonJa": "ドル円の上昇と金融市場への影響が要因となってスコアが上昇した"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1739,6 +1753,20 @@
       "assessedAt": "2026-06-08T04:21:19.896Z",
       "delta": -4,
       "changeReasonJa": "地政学的緊張の高まりが要因でスコアが上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 54,
+      "level": "elevated",
+      "summaryJa": "中東情勢の不透明さや米中対立の懸念により、地政学的要因がグローバル経済に直接的な影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "中東情勢の不透明さ",
+        "米中対立の懸念",
+        "地政学的要因"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": -2,
+      "changeReasonJa": "中東情勢の不透明さや米中対立の懸念が要因となってスコアが上昇した"
     }
   ],
   "technology": [
@@ -2587,6 +2615,20 @@
       "assessedAt": "2026-06-08T04:21:19.896Z",
       "delta": 4,
       "changeReasonJa": "AI技術の進化が要因でスコアが上昇した"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "AIの浪費により、社員1人当たり月1000万円の損失が発生する可能性がある。技術関連のニュースは業界全体に波及効果をもたらす可能性がある。",
+      "factorsJa": [
+        "AIの浪費",
+        "技術関連のニュース",
+        "業界全体への波及効果"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": 3,
+      "changeReasonJa": "AIの浪費と技術関連のニュースが要因となってスコアが上昇した"
     }
   ],
   "social_policy": [
@@ -3441,6 +3483,20 @@
       "assessedAt": "2026-06-08T04:21:19.896Z",
       "delta": 2,
       "changeReasonJa": "社会的な問題への意識の高まりが要因でスコアが上昇した"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "政府は「こども実行計画」を発表し、安全なSNS環境を確保するための法改正を視野に入れている。社会政策への影響が見られ、経済への影響も懸念される。",
+      "factorsJa": [
+        "こども実行計画",
+        "安全なSNS環境",
+        "法改正"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": 2,
+      "changeReasonJa": "政府のこども実行計画と安全なSNS環境の確保が要因となってスコアが上昇した"
     }
   ]
 }
