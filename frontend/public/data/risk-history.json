@@ -888,6 +888,20 @@
       "assessedAt": "2026-06-09T03:52:42.086Z",
       "delta": -1,
       "changeReasonJa": "ドル円の上昇と金融市場への影響が要因となってスコアが上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、米ハイテク株の安値と中東の情勢悪化が要因となっている。原油と金の価格が変動した。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "米ハイテク株の安値",
+        "中東の情勢悪化"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": 1,
+      "changeReasonJa": "ドル円の上昇と中東の情勢悪化が要因となっている"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1767,6 +1781,20 @@
       "assessedAt": "2026-06-09T03:52:42.086Z",
       "delta": -2,
       "changeReasonJa": "中東情勢の不透明さや米中対立の懸念が要因となってスコアが上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 48,
+      "level": "elevated",
+      "summaryJa": "マレーシア首相はアジアの未来を語り、国際秩序における開放性の重要性を強調した。アジア経済の将来に影響が見られる。",
+      "factorsJa": [
+        "マレーシア首相の発言",
+        "アジア経済の将来",
+        "中東の情勢悪化"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -6,
+      "changeReasonJa": "マレーシア首相の発言と中東の情勢悪化が要因となっている"
     }
   ],
   "technology": [
@@ -2629,6 +2657,20 @@
       "assessedAt": "2026-06-09T03:52:42.086Z",
       "delta": 3,
       "changeReasonJa": "AIの浪費と技術関連のニュースが要因となってスコアが上昇した"
+    },
+    {
+      "category": "technology",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "Appleの新しいSiriの投入が、欧州と中国での規制により遅れている。テクノロジー企業のグローバル展開に課題が見られる。",
+      "factorsJa": [
+        "Appleの新しいSiriの投入",
+        "欧州と中国での規制",
+        "テクノロジー企業のグローバル展開"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -3,
+      "changeReasonJa": "Appleの新しいSiriの投入が遅れていることが要因となっている"
     }
   ],
   "social_policy": [
@@ -3497,6 +3539,20 @@
       "assessedAt": "2026-06-09T03:52:42.086Z",
       "delta": 2,
       "changeReasonJa": "政府のこども実行計画と安全なSNS環境の確保が要因となってスコアが上昇した"
+    },
+    {
+      "category": "social_policy",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "経済安保で重要な海外事業について、国がリスクを肩代わりする改正法が成立した。経済安全保障政策が強化される。",
+      "factorsJa": [
+        "経済安保",
+        "海外事業",
+        "国がリスクを肩代わりする改正法"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -2,
+      "changeReasonJa": "経済安保で重要な海外事業について、国がリスクを肩代わりする改正法が成立したことが要因となっている"
     }
   ]
 }

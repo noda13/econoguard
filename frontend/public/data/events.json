@@ -16,5 +16,11 @@
     "titleJa": "FOMC政策金利発表",
     "region": "US",
     "importance": "high"
+  },
+  {
+    "date": "2026-07-10",
+    "titleJa": "米雇用統計(非農業部門雇用者数)発表",
+    "region": "US",
+    "importance": "high"
   }
 ]
