@@ -1,6 +1,6 @@
 {
-  "compositeScore": 60,
-  "level": "elevated",
+  "compositeScore": 62,
+  "level": "high",
   "breakdown": [
     {
       "category": "currency_finance",
@@ -14,14 +14,14 @@
     },
     {
       "category": "technology",
-      "score": 72,
+      "score": 75,
       "weight": 0.2
     },
     {
       "category": "social_policy",
-      "score": 80,
+      "score": 85,
       "weight": 0.2
     }
   ],
-  "delta": -3
+  "delta": 2
 }
