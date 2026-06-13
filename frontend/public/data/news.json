@@ -1,5 +1,976 @@
 [
   {
+    "id": "41fe27e7d4916b4f",
+    "source": "nikkei",
+    "originalTitle": "アンソロピック、米政府指示でミュトス級AI提供停止　日本含む",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN130K40T10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "アンソロピックが米政府の指示でミュトス級AIの提供を停止した。日本を含む複数の国に影響が及ぶ。技術と経済の関連性から、リスクスコアは高い。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "727d4f89d657adb5",
+    "source": "nikkei",
+    "originalTitle": "インドネシア大統領「護衛艦導入の協議進展を」　小泉防衛相と会談",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA121E00S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "インドネシア大統領が日本の小泉防衛相と会談し、護衛艦導入の協議進展を発表した。地政学的な影響が予想される。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "5cd1a7f0c9bc8b70",
+    "source": "nikkei",
+    "originalTitle": "高市首相が欧州に向け出発へ　英伊・G7サミット、中東情勢を協議",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA11CRB0R10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "高市首相が欧州に向けて出発し、英伊・G7サミットで中東情勢を協議する。国際関係と経済の安定に影響が及ぶ。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "70d3da9f5b1a0aa5",
+    "source": "nikkei",
+    "originalTitle": "株式の「大公開時代」号砲　スペースX上場、始まるバブルマネー争奪戦",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB118I40R10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "スペースXが上場し、「大公開時代」が始まった。バブルマネー争奪戦が始まる。金融市場に大きな影響が予想される。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "e717a16d8ce33a3a",
+    "source": "nikkei",
+    "originalTitle": "米司法省、パラマウントのワーナー買収承認",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN1302N0T10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "米司法省は、パラマウントのワーナー買収を承認しました。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "595ce1410fc5481b",
+    "source": "nikkei",
+    "originalTitle": "プーチン氏、スターリンク遮断に対処と主張　「国産衛星網が解決」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR12CKD0S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "ロシアのプーチン大統領は、スターリンクの遮断に対処するために、国産衛星網の構築を主張しています。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "technology"
+    ]
+  },
+  {
+    "id": "2319064e951fd51f",
+    "source": "nikkei",
+    "originalTitle": "NY円相場、反落　1ドル=160円15〜25銭　日米株高で売り優勢",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL12CQB0S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "NY円相場が反落し、1ドル=160円15〜25銭となった。日米株高で売り優勢となった。為替市場の変動はマクロ経済に直接影響するため、経済リスクへの関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "8901ca1b61e9d086",
+    "source": "nikkei",
+    "originalTitle": "日経平均先物、大取の夜間取引で上昇　1320円高の6万7440円",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL12C9W0S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "日経平均先物が大取の夜間取引で上昇し、1320円高の6万7440円となった。株式市場の動向はマクロ経済に直接影響するため、経済リスクへの関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "c76aa7e1493ba6a8",
+    "source": "nikkei",
+    "originalTitle": "NY債券、長期債反落　10年債利回り4.48%　持ち高調整の売り",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL12CQ90S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "NY債券の長期債が反落し、10年債利回りは4.48%となった。債券市場の変動はマクロ経済に直接影響するため、経済リスクへの関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "2b48362b92410f09",
+    "source": "nikkei",
+    "originalTitle": "スペースX上場、ミスターIPOが気にする数字",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL12C9S0S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "スペースXの上場に関する記事では、ミスターIPOが気にする数字が紹介されている。スペースXの上場はテクノロジー業界に影響を与える可能性があるが、マクロ経済への直接的な影響は限定的である。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "c7b7e69cc6c1b00e",
+    "source": "nikkei",
+    "originalTitle": "シカゴ日本株先物概況・12日　日経平均先物は880円高の6万7270円",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL12C9T0S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "シカゴ日本株先物の概況では、日経平均先物が880円高の6万7270円となった。株式市場の動向はマクロ経済に直接影響するため、経済リスクへの関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "65d6d46b93d63d55",
+    "source": "nikkei",
+    "originalTitle": "スタバ「日米落差」が生む皮肉　変質した米本社、日本事業売却を検討",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOCD119QH0R10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "スタバの日米落差が生む皮肉についての記事では、変質した米本社が日本事業売却を検討していることが紹介されている。企業の動向はマクロ経済に間接的に影響する可能性があるが、直接的な影響は限定的である。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f8613e2828919f9d",
+    "source": "nikkei",
+    "originalTitle": "スペースX、上場後の株価に「下振れリスク」　米識者に聞く",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN12C100S6A610C2000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "スペースXの上場後の株価に「下振れリスク」があることが米識者に聞くことでわかった。スペースXの上場はテクノロジー業界に影響を与える可能性があるが、マクロ経済への直接的な影響は限定的である。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "2d878ab37b31041a",
+    "source": "nikkei",
+    "originalTitle": "NYダウは続伸し353ドル高　中東合意に期待、スペースX上場も支え",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1301N0T10C26A6000000/",
+    "publishedAt": "2026-06-13T04:04:58.910Z",
+    "summaryJa": "NYダウが続伸し353ドル高となった。中東合意に期待、スペースX上場も支えとなった。株式市場の動向はマクロ経済に直接影響するため、経済リスクへの関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "b7fbb4271fd17a50",
+    "source": "bloomberg",
+    "originalTitle": "China Rebukes US Over ‘Military’ Labeling of Its Top Firms",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-13/china-rebukes-us-over-military-labeling-of-its-top-firms",
+    "publishedAt": "2026-06-13T02:31:09.000Z",
+    "summaryJa": "中国は、アメリカが中国の主要企業を『軍事』とラベル付けしたことについて非難した。米中間の経済摩擦が高まる可能性がある。貿易関係への影響が懸念されるため、関連度は高い。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain",
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "43b61aebd6053e27",
+    "source": "marketwatch",
+    "originalTitle": "There’s a 68% chance the stock market ends the year higher. Why the headlines shouldn’t disrupt your portfolio.",
+    "originalUrl": "https://www.marketwatch.com/story/theres-a-68-chance-the-stock-market-ends-the-year-higher-why-the-headlines-shouldnt-disrupt-your-portfolio-3d78cfae?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T22:58:00.000Z",
+    "summaryJa": "今年末に株式市場が上昇する確率は68%です。ポートフォリオへの影響は限定的です。市場の動向に左右されず、投資戦略を堅持することが重要です。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "fcc63e4e01e5ba57",
+    "source": "cnbc",
+    "originalTitle": "Paramount-WBD merger wins approval from DOJ",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/paramount-wbd-merger-approval-doj.html",
+    "publishedAt": "2026-06-12T22:54:06.000Z",
+    "summaryJa": "ParamountとWBDの合併が米国司法省から承認されました。この合併はメディア業界に大きな影響を及ぼす可能性があります。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "e2d5492b1939dd20",
+    "source": "bloomberg",
+    "originalTitle": "CFTC Considers Blocking CME’s 24/7 Oil Contract Bid",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/cftc-considers-blocking-cme-s-24-7-oil-contract-bid",
+    "publishedAt": "2026-06-12T22:51:46.000Z",
+    "summaryJa": "CFTCはCMEの24時間取引の原油契約申請を却下することを検討しています。この決定は金融市場に影響を及ぼす可能性があります。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "62dfd78c374c2566",
+    "source": "marketwatch",
+    "originalTitle": "‘This is not a flash in the pan’: Why value stocks are beating growth by such a wide margin",
+    "originalUrl": "https://www.marketwatch.com/story/this-is-not-a-flash-in-the-pan-why-value-stocks-are-beating-growth-by-such-a-wide-margin-b2bddccc?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T22:50:00.000Z",
+    "summaryJa": "バリュー株が成長株を大きく上回る理由について分析しています。投資家の戦略に影響を及ぼす可能性があります。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "4930718eea1f41ef",
+    "source": "bloomberg",
+    "originalTitle": "What to Know About SpaceX’s Record-Breaking IPO",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/what-to-know-about-spacex-s-record-breaking-ipo",
+    "publishedAt": "2026-06-12T22:16:11.000Z",
+    "summaryJa": "スペースXのIPOが記録的な成功を収めました。宇宙産業への投資と市場の楽観主義が高まっています。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "9bfde832691fe8a4",
+    "source": "bloomberg",
+    "originalTitle": "SpaceX IPO Sparks Surge in Space Industry Investment and Market Optimism",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/spacex-ipo-sparks-surge-in-space-industry-investment-video",
+    "publishedAt": "2026-06-12T22:13:13.000Z",
+    "summaryJa": "スペースXのIPOが宇宙産業への投資と市場の楽観主義を高めています。テクノロジー業界に大きな影響を及ぼす可能性があります。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "1eeef4f3c56fc332",
+    "source": "cnbc",
+    "originalTitle": "New SpaceX millionaires are reinventing the business of managing large wealth ",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-millionaires-wealth-management.html",
+    "publishedAt": "2026-06-12T21:56:52.000Z",
+    "summaryJa": "スペースXのIPOによって新たな富裕層が生まれています。富裕層の資産管理ビジネスに変化が起こりつつあります。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "572002131a2308c2",
+    "source": "ft",
+    "originalTitle": "Paramount’s $111bn takeover of Warner Bros wins US antitrust approval",
+    "originalUrl": "https://www.ft.com/content/fd52360a-20f7-4000-851f-2d2421e17fb7",
+    "publishedAt": "2026-06-12T21:53:31.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "268be3b10f015528",
+    "source": "cnbc",
+    "originalTitle": "Small investors scrambled to get in on the SpaceX IPO, even as some believe the valuation is 'stupid'",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/small-investors-scrambled-to-get-in-on-the-spacex-ipo-even-as-some-believe-the-valuation-is-stupid.html",
+    "publishedAt": "2026-06-12T21:48:59.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c29564ad82f56443",
+    "source": "marketwatch",
+    "originalTitle": "FIFA World Cup prize money: What each USMNT player stands to earn",
+    "originalUrl": "https://www.marketwatch.com/story/fifa-world-cup-prize-money-what-each-usmnt-player-stands-to-earn-332f8a96?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T21:44:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e81c57e49c9e85fb",
+    "source": "cnbc",
+    "originalTitle": "Social Security COLA for 2027 may jump to 4.7%, one estimate finds. This chart shows prices driving the increase",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/social-security-cola-2027-inflation-estimate.html",
+    "publishedAt": "2026-06-12T21:18:06.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "d33db0e1795a618a",
+    "source": "bloomberg",
+    "originalTitle": "NYC Comptroller Raises Concerns Over SpaceX Index Inclusion and Governance Structure",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/nyc-comptroller-s-concerns-over-spacex-index-inclusion-video",
+    "publishedAt": "2026-06-12T21:15:50.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4d63692b2cb86bcc",
+    "source": "cnbc",
+    "originalTitle": "Top House Republican’s family investment poised to benefit from SpaceX IPO",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/lisa-mcclain-spacex-ipo-xai-investment-congress.html",
+    "publishedAt": "2026-06-12T21:15:28.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "45a32d6bb40bfc57",
+    "source": "bloomberg",
+    "originalTitle": "Riding Global Tailwinds: Masters in Business with Jean Eric Salata",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/masters-in-business-with-jean-eric-salata-video",
+    "publishedAt": "2026-06-12T21:15:13.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "cce60752ef9cdbc2",
+    "source": "bloomberg",
+    "originalTitle": "Knicks Win Triggered Record Loss for Susquehanna Sports Traders",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/knicks-win-triggered-record-loss-for-susquehanna-sports-traders",
+    "publishedAt": "2026-06-12T21:13:42.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "21e505ffe7559832",
+    "source": "cnbc",
+    "originalTitle": "Call Kevin Warsh the Fed 'chairman'",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/fed-kevin-warsh-chairman-title.html",
+    "publishedAt": "2026-06-12T21:11:46.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8440d8fa42bf7829",
+    "source": "ft",
+    "originalTitle": "SpaceX’s surge on debut makes Musk world’s first trillionaire",
+    "originalUrl": "https://www.ft.com/content/16387550-4d13-4d2d-b487-c4f6f4a5e9c8",
+    "publishedAt": "2026-06-12T21:09:31.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "5afaa0ae855dc270",
+    "source": "bloomberg",
+    "originalTitle": "Look Ahead: Retail Sales, FMOC, NBA Finals",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/look-ahead-retail-sales-fmoc-nba-finals-video",
+    "publishedAt": "2026-06-12T21:04:57.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "dc478e73405c478e",
+    "source": "marketwatch",
+    "originalTitle": "I’m 55 and earn $100,000. Should I take a $2,900 monthly pension — or $2,200 with 3% annual hikes?",
+    "originalUrl": "https://www.marketwatch.com/story/im-55-and-earn-100-000-should-i-take-a-2-900-monthly-pension-or-2-200-with-3-annual-hikes-c02dc525?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T21:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "30daf6fe70d74976",
+    "source": "bloomberg",
+    "originalTitle": "Ice Cube: Ready To Take BIG3 to the Next Level",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/ice-cube-ready-to-take-big3-to-the-next-level-video",
+    "publishedAt": "2026-06-12T20:55:24.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0ad78f9457520597",
+    "source": "bloomberg",
+    "originalTitle": "Chevron CEO Wirth on Energy Market Volatility",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/chevron-ceo-wirth-on-energy-market-volatility-video",
+    "publishedAt": "2026-06-12T20:51:33.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "be5359f9a522776d",
+    "source": "bloomberg",
+    "originalTitle": "Energy Market Leaders on Navigating Risk",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/energy-market-leaders-on-navigating-risk-video",
+    "publishedAt": "2026-06-12T20:49:04.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "d8bcf540159b349d",
+    "source": "bloomberg",
+    "originalTitle": "BloombergNEF Global Energy Market Outlook",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/bloombergnef-global-energy-market-outlook-video",
+    "publishedAt": "2026-06-12T20:46:45.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "219a756b330e257e",
+    "source": "bloomberg",
+    "originalTitle": "US Energy Secretary Wright on America's Energy Strategy ",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/us-energy-secretary-wright-on-america-s-energy-strategy-video",
+    "publishedAt": "2026-06-12T20:45:10.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "99223f1dfc568d31",
+    "source": "cnbc",
+    "originalTitle": "SpaceX 'proxies' plunge as real deal arrives: Here's where traders are buying the dip",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-proxies-crash-as-real-deal-arrives-heres-where-traders-are-buying-the-dip.html",
+    "publishedAt": "2026-06-12T20:43:50.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9e8b48717b26ab70",
+    "source": "marketwatch",
+    "originalTitle": "How to decide whether a major splurge — like spending thousands on Knicks or World Cup tickets — is worth it",
+    "originalUrl": "https://www.marketwatch.com/story/how-to-decide-whether-a-major-splurge-like-spending-thousands-on-knicks-or-world-cup-tickets-is-worth-it-8fb46c18?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T20:35:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "65c52bd6292fbda3",
+    "source": "bloomberg",
+    "originalTitle": "Matt Holt Said to Near $12 Billion Deal for Ensemble Health",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/matt-holt-said-to-near-12-billion-deal-for-ensemble-health",
+    "publishedAt": "2026-06-12T20:34:14.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "39272869f7b02de4",
+    "source": "cnbc",
+    "originalTitle": "SpaceX market cap tops $2 trillion after shares of Elon Musk's rocket company gain 19% on debut",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html",
+    "publishedAt": "2026-06-12T20:33:52.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c01ed54c8a0b79cc",
+    "source": "bloomberg",
+    "originalTitle": "SpaceX, Tesla Merger A 'Forgone Conclusion,' Says Ross Gerber",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/spacex-tesla-merger-a-forgone-conclusion-says-gerber-video",
+    "publishedAt": "2026-06-12T20:33:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "da1c2a0b3d1c74f0",
+    "source": "marketwatch",
+    "originalTitle": "‘I feel like he may be taking advantage of us’: Our adviser pushes annuities after we already said no. Do we fire him?",
+    "originalUrl": "https://www.marketwatch.com/story/our-financial-adviser-keeps-pushing-annuities-even-after-we-said-no-should-we-fire-him-19188c98?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T20:30:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0e2e82c8ba89fbbe",
+    "source": "bloomberg",
+    "originalTitle": "All Eyes on SpaceX | Closing Bell",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/all-eyes-on-spacex-closing-bell-video",
+    "publishedAt": "2026-06-12T20:25:49.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b94bef2b6f5749ee",
+    "source": "bloomberg",
+    "originalTitle": "‘Manic Impulsiveness’ Drives SpaceX-Fueled Retail Risk Complex",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/spacex-mania-powers-new-retail-risk-complex-beyond-wall-street",
+    "publishedAt": "2026-06-12T20:25:05.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "63ffb54bf5852c93",
+    "source": "bloomberg",
+    "originalTitle": "Bloomberg Money 6/12/2026",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/bloomberg-money-6-12-2026-video",
+    "publishedAt": "2026-06-12T20:25:03.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "381be4a7dc1915a5",
+    "source": "cnbc",
+    "originalTitle": "Trump administration: Iran deal signing likely in coming days, but not '100%' certain",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/iran-deal-trump-pakistan-sharif.html",
+    "publishedAt": "2026-06-12T20:21:14.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "5feafd8c4ec23512",
+    "source": "cnbc",
+    "originalTitle": "What comes next for SpaceX after the IPO will be in focus for investors. Here's what's ahead",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/stock-market-next-week-outlook-for-june-15-19-2026.html",
+    "publishedAt": "2026-06-12T20:20:11.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e249378ccd70cdab",
+    "source": "marketwatch",
+    "originalTitle": "Is it too late to buy SpaceX’s stock? Here’s how Tesla’s did after one day — and five years.",
+    "originalUrl": "https://www.marketwatch.com/story/is-it-too-late-to-buy-spacexs-stock-heres-how-teslas-did-after-one-day-and-five-years-9c7564d3?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T20:06:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "04f1254beb031b2b",
+    "source": "marketwatch",
+    "originalTitle": "‘It seems too good to be true’: At a steak-dinner retirement seminar, the guy said annuities can outperform the market. Is that true?",
+    "originalUrl": "https://www.marketwatch.com/story/it-seems-too-good-to-be-true-at-a-steak-dinner-retirement-seminar-the-guy-said-annuities-can-outperform-the-market-is-that-true-33e11b0a?mod=mw_rss_topstories",
+    "publishedAt": "2026-06-12T19:56:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "38883632a8460260",
+    "source": "cnbc",
+    "originalTitle": "U.S. crude oil falls below $85 as U.S. and Iran near a deal to reopen Hormuz",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html",
+    "publishedAt": "2026-06-12T19:42:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "6048048a5d027b6b",
+    "source": "bloomberg",
+    "originalTitle": "SpaceX IPO Whips Musk Fans Into Frenzy",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-12/spacex-ipo-whips-musk-fans-into-frenzy-video",
+    "publishedAt": "2026-06-12T19:24:08.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "61a61a1dbe345c1c",
+    "source": "ft",
+    "originalTitle": "US-Iran peace deal text agreed, says Pakistan’s PM",
+    "originalUrl": "https://www.ft.com/content/b91fc27b-8e50-48c1-b9e6-0c93aea19b76",
+    "publishedAt": "2026-06-12T19:02:56.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1b5d2cc8088a867a",
+    "source": "cnbc",
+    "originalTitle": "Goldman nets a big payday for SpaceX IPO. Plus, what drove our winners and losers this week",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/goldman-nets-a-big-payday-for-spacex-ipo-plus-what-drove-our-winners-and-losers-this-week.html",
+    "publishedAt": "2026-06-12T18:52:10.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "86bc2f7f83c22567",
+    "source": "cnbc",
+    "originalTitle": "Bitcoin's latest plunge revives the debate over owning it—and whether it's just 'crypto being crypto'",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/bitcoins-price-drop-is-forcing-investors-to-revisit-why-they-own-it.html",
+    "publishedAt": "2026-06-12T18:01:55.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8ecdfbff97fdfa39",
+    "source": "cnbc",
+    "originalTitle": "SpaceX COO Shotwell says Tesla tie-up ‘might make Elon’s life a little easier’",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-coo-shotwell-tesla-deal-makes-elons-life-a-little-easier.html",
+    "publishedAt": "2026-06-12T17:57:56.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4087320782e35736",
+    "source": "cnbc",
+    "originalTitle": "How to get SpaceX stock — without buying the IPO",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/how-to-buy-spacex-stock-without-buying-the-ipo.html",
+    "publishedAt": "2026-06-12T17:46:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0f580e8e08dc0252",
+    "source": "ft",
+    "originalTitle": "SpaceX’s IPO is a display of Musk’s dominance",
+    "originalUrl": "https://www.ft.com/content/71372647-bf7f-448a-bb4c-a2d278020e33",
+    "publishedAt": "2026-06-12T17:40:55.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0195854e1329404e",
+    "source": "cnbc",
+    "originalTitle": "As investors flock to SpaceX, one trader eyes a sleepy 'stealth' play",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/as-investors-flock-to-spacex-one-trader-eyes-a-sleepy-stealth-play.html",
+    "publishedAt": "2026-06-12T17:33:56.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "98be7a73adfa42da",
+    "source": "cnbc",
+    "originalTitle": "SpaceX hit with sell rating by CFRA shortly after IPO",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-hit-with-sell-rating-by-cfra-shortly-after-ipo.html",
+    "publishedAt": "2026-06-12T17:21:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1dcd270c1513f833",
+    "source": "cnbc",
+    "originalTitle": "SpaceX’s Gwynne Shotwell had IPO doubts for years, now she has a message for investors",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-coo-gwynne-shotwell-spcx-ipo.html",
+    "publishedAt": "2026-06-12T17:20:24.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "385819ec8bd5896a",
+    "source": "cnbc",
+    "originalTitle": "Former star U.S. bond manager Kenneth Leech pleads guilty to obstructing 'cherry-picking' probe",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/kenneth-leech-pleads-guilty-to-obstructing-cherry-picking-probe.html",
+    "publishedAt": "2026-06-12T17:10:18.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "f251f7cce515b559",
+    "source": "cnbc",
+    "originalTitle": "Judge blocks DOJ 'anti-weaponization' fund for longer, wants guarantee it’s dead",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/trump-doj-fund-preliminary-injunction-blanche-bessent.html",
+    "publishedAt": "2026-06-12T17:01:13.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "29af566c27e75665",
+    "source": "cnbc",
+    "originalTitle": "Appeals court upholds FTX co-founder Sam Bankman-Fried's fraud conviction",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/appeals-court-upholds-ftx-cofounder-sam-bankman-fried-conviction.html",
+    "publishedAt": "2026-06-12T16:03:49.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2b83657d10720859",
+    "source": "cnbc",
+    "originalTitle": "The S&P 500 already made a big call on SpaceX stock and index fund investors need to know it",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/spacex-ipo-sp-500-index-funds-investors.html",
+    "publishedAt": "2026-06-12T15:59:09.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "18deefcf6aee88b0",
+    "source": "bloomberg",
+    "originalTitle": "Space Stocks Tumble as Investors Race Toward Musk’s IPO",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/rival-space-stocks-tumble-as-investors-race-toward-musk-s-ipo",
+    "publishedAt": "2026-06-12T15:40:47.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "96214a01b149304d",
+    "source": "cnbc",
+    "originalTitle": "Options volume in space stocks boomed as investors look for any way 'to get long SpaceX'",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/space-stocks-jump-with-huge-demand-as-investors-clamor-for-any-way-to-get-long-spacex.html",
+    "publishedAt": "2026-06-12T15:18:50.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "6f72587ea91ddd7b",
+    "source": "ft",
+    "originalTitle": "SpaceX is cheap on a price-to-cosmos ratio",
+    "originalUrl": "https://www.ft.com/content/60fcbe6c-e074-4cd9-9816-cdae8112862f",
+    "publishedAt": "2026-06-12T14:24:29.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1d498e8b9842ea9e",
+    "source": "bloomberg",
+    "originalTitle": "From London to Sydney, Traders Ready to Watch SpaceX’s Debut",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/from-sydney-to-london-traders-ready-to-watch-spacex-s-debut",
+    "publishedAt": "2026-06-12T13:01:16.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9f5a3f280cf6fbc0",
+    "source": "ecb",
+    "originalTitle": " Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+    "originalUrl": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc260612~12de4776f6.en.html",
+    "publishedAt": "2026-06-12T13:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a187095f86b6f8bc",
+    "source": "bloomberg",
+    "originalTitle": "S&amp;P 500 Climbs as SpaceX Gains, Hopes Build for Iran Peace Deal",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/us-futures-rally-with-all-eyes-on-spacex-iran-war-peace-hopes",
+    "publishedAt": "2026-06-12T11:37:49.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0462085b20779c73",
+    "source": "bloomberg",
+    "originalTitle": "Tether’s Brief Flip of Ether in Value Gives Crypto a Reality Check",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/tether-usdt-stablecoin-briefly-overtakes-ethereum-eth-in-market-value",
+    "publishedAt": "2026-06-12T11:05:07.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0d5d28d9d6a127f7",
+    "source": "cnbc",
+    "originalTitle": "IPO investing: What are IPO stocks and the best brokers for IPO access?",
+    "originalUrl": "https://www.cnbc.com/select/ipo-investing-and-best-brokers/",
+    "publishedAt": "2026-06-12T11:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c7aeedf200cea9c6",
+    "source": "cnbc",
+    "originalTitle": "For Warsh as Fed chair, silence may be the point",
+    "originalUrl": "https://www.cnbc.com/2026/06/12/warsh-fed-chair-interest-rates.html",
+    "publishedAt": "2026-06-12T10:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7ae466917b9315f5",
+    "source": "ft",
+    "originalTitle": "Whither SpaceX? Who knows",
+    "originalUrl": "https://www.ft.com/content/4299cb27-4d46-479c-916d-1297ac291114",
+    "publishedAt": "2026-06-12T09:10:43.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ae04f337bea47bc6",
+    "source": "bloomberg",
+    "originalTitle": "SpaceX Shares Close 19% Higher After Historic $75 Billion IPO",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-12/spacex-ipo-spcx-prepares-for-debut-after-75-billion-ipo-smashes-record",
+    "publishedAt": "2026-06-12T09:00:21.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "74903de17b0690c2",
+    "source": "ecb",
+    "originalTitle": " EU structural financial indicators: end of 2025",
+    "originalUrl": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260612~ab34769159.en.html",
+    "publishedAt": "2026-06-12T08:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "9281df59e5dbfce7",
+    "source": "boj",
+    "originalTitle": "日本銀行が保有する国債の銘柄別残高",
+    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/mei/release/2026/mei260610.xlsx",
+    "publishedAt": "2026-06-12T08:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "0b18f63ff315664b",
+    "source": "ft",
+    "originalTitle": "The Iranian missile cities the US could not destroy",
+    "originalUrl": "https://www.ft.com/content/94d9c8d4-c38d-4414-bb47-53e9f1288a21",
+    "publishedAt": "2026-06-12T04:22:43.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "835107c3c3c08823",
+    "source": "ft",
+    "originalTitle": "The great bond and equity conundrum",
+    "originalUrl": "https://www.ft.com/content/4389caaa-b87a-4d4c-82a1-db161d3265d3",
+    "publishedAt": "2026-06-12T04:00:22.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "d88bc14bd9ac7081",
+    "source": "boj",
+    "originalTitle": "営業毎旬報告（6月10日現在）",
+    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/acmai/release/2026/ac260610.htm",
+    "publishedAt": "2026-06-12T01:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "35ad85922b04c915",
+    "source": "cnbc",
+    "originalTitle": "Pirro's losses in Fed investigation should stay on the books, judge rules",
+    "originalUrl": "https://www.cnbc.com/2026/06/11/pirro-fed-jerome-powell.html",
+    "publishedAt": "2026-06-12T00:19:38.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "d2daa16a6fcbcf12",
+    "source": "bloomberg",
+    "originalTitle": "Oil Hits Lowest Since Early March on Potential Hormuz Reopening",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-11/latest-oil-market-news-and-analysis-for-june-12",
+    "publishedAt": "2026-06-11T22:04:43.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "819edd746495afd6",
+    "source": "bloomberg",
+    "originalTitle": "Stocks Climb on US-Iran Optimism as SpaceX Debuts: Markets Wrap",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-11/asian-stocks-to-gain-as-trump-signals-us-iran-deal-markets-wrap",
+    "publishedAt": "2026-06-11T22:03:20.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "23c2b66505f0c93a",
+    "source": "fed",
+    "originalTitle": "Federal Reserve Board announces final rule that establishes data standards for certain information collections",
+    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm",
+    "publishedAt": "2026-06-11T15:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b5632fdbb852384f",
+    "source": "ecb",
+    "originalTitle": " Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
+    "originalUrl": "https://www.ecb.europa.eu//press/press_conference/monetary-policy-statement/2026/html/ecb.is260611~372040d313.en.html",
+    "publishedAt": "2026-06-11T13:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "48cfd2fd99bc1fd2",
+    "source": "ecb",
+    "originalTitle": " Monetary policy decisions",
+    "originalUrl": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html",
+    "publishedAt": "2026-06-11T12:15:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8ce28a180f0a3bde",
+    "source": "economist",
+    "originalTitle": "\n        How big are China’s emerging industries?\n      ",
+    "originalUrl": "https://www.economist.com/finance-and-economics/2026/06/11/how-big-are-chinas-emerging-industries",
+    "publishedAt": "2026-06-11T10:31:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "08f2efa12123307d",
+    "source": "economist",
+    "originalTitle": "\n        Stears wants to be Africa’s Bloomberg terminal \n      ",
+    "originalUrl": "https://www.economist.com/finance-and-economics/2026/06/11/stears-wants-to-be-africas-bloomberg-terminal",
+    "publishedAt": "2026-06-11T09:31:29.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "c83bad66032f185b",
+    "source": "economist",
+    "originalTitle": "\n        The world’s strategic oil reserves are running out fast\n      ",
+    "originalUrl": "https://www.economist.com/finance-and-economics/2026/06/11/the-worlds-strategic-oil-reserves-are-running-out-fast",
+    "publishedAt": "2026-06-11T09:29:58.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bdf7e07f969c4a4f",
+    "source": "economist",
+    "originalTitle": "\n        How to share AI riches\n      ",
+    "originalUrl": "https://www.economist.com/finance-and-economics/2026/06/11/how-to-share-ai-riches",
+    "publishedAt": "2026-06-11T09:29:25.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "1ccf15e53159fba2",
     "source": "nikkei",
     "originalTitle": "中国上場銀行の9割、利ざや縮小｢警戒域｣に　不良債権処理の原資圧迫",
@@ -844,1061 +1815,6 @@
     "originalTitle": "Google and Meta denied new trial in youth social media addiction case",
     "originalUrl": "https://www.cnbc.com/2026/06/10/google-and-meta-denied-new-trial-in-youth-social-media-addiction-case.html",
     "publishedAt": "2026-06-10T18:25:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d28e5dba6e173bf2",
-    "source": "cnbc",
-    "originalTitle": "As gold's tumble continues, traders bet the pain may last for two more years",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/as-golds-tumble-continues-traders-bet-the-pain-may-last-for-two-more-years.html",
-    "publishedAt": "2026-06-10T18:23:22.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bb9eaad24bed74dd",
-    "source": "cnbc",
-    "originalTitle": "Wall Street needs a crash course in the token economy ahead of AI IPOs. SpaceX offers a preview",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/wall-street-needs-crash-course-in-tokens-ahead-openai-anthropic-ipos.html",
-    "publishedAt": "2026-06-10T18:17:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c4dd911fdc3b4989",
-    "source": "cnbc",
-    "originalTitle": "Commercial real estate saw record lending competition in April, according to JLL",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/jll-commercial-real-estate-record-lending-competition-april.html",
-    "publishedAt": "2026-06-10T17:33:43.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7dcfbc721bbeed21",
-    "source": "ft",
-    "originalTitle": "Trump’s pick to lead statistics agency disputes president’s faked data claims",
-    "originalUrl": "https://www.ft.com/content/061539b5-b848-442d-bdcf-8d31f2cb2116",
-    "publishedAt": "2026-06-10T17:26:41.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2556346713e2274a",
-    "source": "cnbc",
-    "originalTitle": "Volatility surge has trader eyeing one 'stable' stock",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/volatility-surge-has-trader-eyeing-one-stable-stock.html",
-    "publishedAt": "2026-06-10T17:25:43.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "394e5de42f8971c9",
-    "source": "cnbc",
-    "originalTitle": "Sen. Warren calls on SEC to delay SpaceX IPO, flagging concerns about valuation and governance",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/spacex-elizabeth-warren-elon-musk-sec-ipo.html",
-    "publishedAt": "2026-06-10T16:52:57.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4166fda16341ca7f",
-    "source": "bloomberg",
-    "originalTitle": "Ashley’s Frasers Seeks to Buy Rest of Boss for $2.3 Billion",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/ashley-s-frasers-offers-to-buy-hugo-boss-in-3-1-billion-deal",
-    "publishedAt": "2026-06-10T16:45:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d4d109ee93118ecc",
-    "source": "ecb",
-    "originalTitle": " Frank Elderson: Interview with Het Financieele Dagblad",
-    "originalUrl": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260610~439aa97519.en.html",
-    "publishedAt": "2026-06-10T14:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a878263c9550f535",
-    "source": "ft",
-    "originalTitle": "US inflation jumped to 4.2% in May amid Middle East energy shock",
-    "originalUrl": "https://www.ft.com/content/f27a9e1b-891f-41b5-b78c-6bc729b1cfd4",
-    "publishedAt": "2026-06-10T12:31:11.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "40de9b95346329ad",
-    "source": "ft",
-    "originalTitle": "What happened to the great rebirth of American manufacturing? ",
-    "originalUrl": "https://www.ft.com/content/e7a3d4e0-1b83-4dd5-9988-4df3d11bc71a",
-    "publishedAt": "2026-06-10T11:00:07.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ba4001ce996c6622",
-    "source": "boj",
-    "originalTitle": "フェイルの発生状況（5月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/set/bffail/sjgb2605.pdf",
-    "publishedAt": "2026-06-10T07:30:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "22fcd01a4181d0f0",
-    "source": "nikkei",
-    "originalTitle": "マレーシア首相、国際秩序「開放性を堅持」　アジアの未来開幕",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFC100LS0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "マレーシア首相は、アジアの未来を語り、国際秩序における開放性の重要性を強調した。アジアの統合と経済成長への期待が高まっている。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "78c25eb79e3832ee",
-    "source": "nikkei",
-    "originalTitle": "Apple、鬼門の欧州・中国　規制が壁で新「Siri」投入に遅れ",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN09C1W0Z00C26A6000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "Appleの新しいSiriの投入が、欧州と中国での規制により遅れている。テクノロジー企業のグローバル展開に課題が見られる。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "57aa9cf505baf906",
-    "source": "nikkei",
-    "originalTitle": "公募投信残高が過去最高の352兆円　5月末、国内外の株高受け",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB042D40U6A600C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "公募投信の残高が過去最高の352兆円に達した。国内外の株高を受けて投資家の資産が増加している。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "57a9739e59ecef37",
-    "source": "nikkei",
-    "originalTitle": "タイ副首相「アジアの統合、強固な経済の基盤に」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUF100BS0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "タイ副首相は、アジアの統合の重要性を強調し、強固な経済基盤の必要性を訴えた。アジア経済の将来に影響が見られる。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "93deec26e25150d9",
-    "source": "nikkei",
-    "originalTitle": "商品11時30分　原油が上げ幅拡大　NY原油一時90ドル　金は下げ拡大",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL100LZ0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "原油と金の価格が変動した。エネルギーと金属市場の動向が注目される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "3d342ff3b847b0c5",
-    "source": "nikkei",
-    "originalTitle": "26年株主総会、経営に踏み込むアクティビスト　「役員選解任」大幅増",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL080B5TY6A600C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "株主総会で役員選解任の動きが増えている。企業統治とアクティビストの役割が注目される。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "1a3dde82b653c78a",
-    "source": "nikkei",
-    "originalTitle": "経済安保で重要な海外事業、国がリスクを肩代わり　改正法が成立",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA092GU0Z00C26A6000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "経済安保で重要な海外事業について、国がリスクを肩代わりする改正法が成立した。経済安全保障政策が強化される。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "d09ca469019052d3",
-    "source": "nikkei",
-    "originalTitle": "東証前引け　日経平均反落　735円安　米ハイテク株安と中東悪化懸念で",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL101PW0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "東証の日経平均が反落した。米ハイテク株の安値と中東の情勢悪化が要因となっている。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance",
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "a4befd979e9a008c",
-    "source": "nikkei",
-    "originalTitle": "新興株前引け　グロース250が続落　中東情勢の不透明感が重荷",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1026L0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "新興株市場ではグロース株が下落し、不確実性が広がっている。中東情勢の悪化が投資家のリスク回避姿勢を強めていることが要因のひとつとみられる。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "9f17e5fb33a1bac0",
-    "source": "nikkei",
-    "originalTitle": "日経平均前引け　反落　735円安の6万4681円",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL101PF0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "日経平均株価は反落し、735円安の6万4681円で引けた。世界経済の減速懸念や中東情勢の不透明さが投資家の警戒感を高めている。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "7f4ec3a77ea02624",
-    "source": "nikkei",
-    "originalTitle": "国内金2万4100円台　年初来安値、中東情勢の悪化で",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB101K20Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "国内金価格が年初来で安値となった。中東情勢の悪化により、投資家が安全資産として金に注目していることが要因のひとつとみられる。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "geopolitics_supply_chain",
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "83d4a315de1c48b3",
-    "source": "nikkei",
-    "originalTitle": "三菱UFJFGが上場来高値更新　日銀利上げ観測が支え",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL100ZU0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "三菱UFJフィナンシャル・グループの株価が上場来高値を更新した。日本銀行の利上げ観測が金融株に支えとなった。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "3cc027592338dff5",
-    "source": "nikkei",
-    "originalTitle": "ソフトバンクGの株価急落　傘下の英アームが下落、金利高にも警戒感",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1010G0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "ソフトバンクGの株価が急落した。傘下の英アームの下落や金利高への警戒感が要因となっている。金融市場への影響が懸念されるが、直接的なマクロ経済への影響は限定的である。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "beed1907a6a96e39",
-    "source": "nikkei",
-    "originalTitle": "INPEX株価が続落　原油価格の上昇鈍く「買い入りづらい」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL100QJ0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "INPEXの株価が続落した。原油価格の上昇が鈍いことが要因となっている。エネルギー価格の変化が経済に影響を与える可能性があるが、直接的なマクロ経済への影響は限定的である。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "b663e3597f2889f6",
-    "source": "nikkei",
-    "originalTitle": "債券11時　長期金利、2.690%に上昇　30年債入札は「無難」か",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL1018M0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "日本の長期金利が上昇し、2.690%となった。債券市場への影響が懸念される。金融市場への影響がマクロ経済に波及する可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "5444107691f7bca1",
-    "source": "nikkei",
-    "originalTitle": "ホルムズ海峡危機で「半年以内に事業継続限界」4割　製造業を調査",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUC100TF0Q6A610C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "ホルムズ海峡危機が深刻化し、事業継続に影響を与える可能性がある。地政学的緊張が貿易やエネルギー価格に影響を与える可能性がある。マクロ経済への直接的な影響が懸念される。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "59b1256e29401d80",
-    "source": "nikkei",
-    "originalTitle": "肉用の子牛価格、3割急騰で最高値圏　消費低迷で「和牛つくれない」",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB225QW0S6A520C2000000/",
-    "publishedAt": "2026-06-10T04:00:47.492Z",
-    "summaryJa": "肉用の子牛価格が急騰し、最高値圏となった。消費低迷が要因となっている。食料品価格の変化が消費者物価指数に影響を与える可能性があるが、直接的なマクロ経済への影響は限定的である。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "7387cf6bf42509c3",
-    "source": "cnbc",
-    "originalTitle": "China May wholesale inflation hits near 4-year high on Iran war-led higher input costs, AI boom   ",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/china-cpi-ppi-inflation-may-consumer-prices-producer-oil-iran-war-ai-tech-.html",
-    "publishedAt": "2026-06-10T04:00:17.000Z",
-    "summaryJa": "中国の5月の卸売物価上昇率は、イラン情勢による原材料費高騰やAIブームの影響で約4年ぶりの高水準に達した。中国のインフレ圧力が高まっていることが示唆される。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance",
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "4992d7246aa94552",
-    "source": "bloomberg",
-    "originalTitle": "Paul Chan on Hong Kong’s Market Outlook",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/paul-chan-on-hong-kong-s-market-outlook-video",
-    "publishedAt": "2026-06-10T03:43:43.000Z",
-    "summaryJa": "香港の金融当局者が市場見通しについてコメントした。詳細な内容は不明だが、香港の金融市場への影響が懸念される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "52abc564c86d0256",
-    "source": "bloomberg",
-    "originalTitle": "Rupiah Risks Remain After Surprise Indonesia Rate Hike",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/rupiah-risks-remain-after-surprise-indonesia-rate-hike-video",
-    "publishedAt": "2026-06-10T03:32:25.000Z",
-    "summaryJa": "インドネシアの予想外の利上げにより、ルピアの下落リスクが残っている。アジア通貨への波及効果が懸念される。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "77e1e222f93cec4f",
-    "source": "bloomberg",
-    "originalTitle": "Hong Kong Dollar Carry Trade Appeal Dims as Funding Costs Climb",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/hong-kong-dollar-carry-trade-appeal-dims-as-funding-costs-climb",
-    "publishedAt": "2026-06-10T03:22:46.000Z",
-    "summaryJa": "香港ドルキャリー・トレードの魅力が減じている。資金調達コストの上昇が要因となっている。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "206a24bfd271c1fa",
-    "source": "bloomberg",
-    "originalTitle": "Tech Selloff an Opportunity: BlackRock's APAC Head",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/tech-selloff-an-opportunity-blackrock-s-apac-head-video",
-    "publishedAt": "2026-06-10T03:00:55.000Z",
-    "summaryJa": "ブラックロックのアジア太平洋地域責任者が、テクノロジー株の売り逃げを買い機会と見なしている。テクノロジー株への投資家の姿勢が注目される。",
-    "relevanceScore": 30,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "2ae81d8190572c09",
-    "source": "bloomberg",
-    "originalTitle": "Aluminum Falls to One-Month Low on Iran Tension, US Rate Outlook",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/aluminum-falls-to-one-month-low-on-iran-tension-us-rate-outlook",
-    "publishedAt": "2026-06-10T03:00:51.000Z",
-    "summaryJa": "イラン情勢や米国の利率見通しがアルミニウム価格に影響を与え、一カ月ぶりの安値となった。金属市場への地政学的リスクが浮き彫りとなる。",
-    "relevanceScore": 70,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "91b2567aebc506f3",
-    "source": "bloomberg",
-    "originalTitle": "China Healthcare Stocks Fall to Record Low Valuation on AI Drain",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/china-healthcare-stocks-fall-to-record-low-valuation-on-ai-drain",
-    "publishedAt": "2026-06-10T02:55:17.000Z",
-    "summaryJa": "中国のヘルスケア株がAI人材流出の影響で史上最低水準の評価となった。中国のヘルスケア業界へのAI技術の影響が懸念される。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "technology"
-    ]
-  },
-  {
-    "id": "f9581d64d35ddd1f",
-    "source": "bloomberg",
-    "originalTitle": "India Bank Shares Jump as Deposit, Yield Worries Ease",
-    "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-06-10/india-bank-shares-jump-as-rbi-details-rules-for-foreign-currency-deposits",
-    "publishedAt": "2026-06-10T02:44:44.000Z",
-    "summaryJa": "インドの銀行株が預金や金利に関する懸念が和らぐにつれて上昇した。インドの金融市場への信頼が回復しつつある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "fd55242173135288",
-    "source": "ft",
-    "originalTitle": "China factory gate prices rise at fastest rate in 4 years",
-    "originalUrl": "https://www.ft.com/content/6f6a385c-b9ac-47c2-a4d1-72e27bf2a8fc",
-    "publishedAt": "2026-06-10T02:29:31.000Z",
-    "summaryJa": "中国の工場門前価格が4年間で最も急激に上昇した。中国のインフレ圧力が高まり、世界的な物価上昇に影響を与える可能性がある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "866e32d3a4b5e166",
-    "source": "bloomberg",
-    "originalTitle": "Hong Kong Will Inspire China’s Confidence on Capital Flows, Says City’s Financial Secretary",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/hk-will-inspire-china-s-confidence-on-capital-flows-says-chan",
-    "publishedAt": "2026-06-10T02:27:47.000Z",
-    "summaryJa": "香港の金融担当官は、香港が中国の資本流入に対する自信を高めることを目指している。香港の金融市場の安定が中国の経済に影響を与える可能性がある。",
-    "relevanceScore": 60,
-    "riskCategories": [
-      "currency_finance",
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "b237aa22bf452ec2",
-    "source": "bloomberg",
-    "originalTitle": "Hong Kong's Momentum Strong: Financial Secretary Chan",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/hong-kong-s-momentum-strong-financial-secretary-chan-video",
-    "publishedAt": "2026-06-10T02:08:46.000Z",
-    "summaryJa": "香港の金融担当官は、香港の経済が強い勢いを持っているとしている。香港の経済成長が中国と世界経済に影響を与える可能性がある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "3143959cc333fb00",
-    "source": "ft",
-    "originalTitle": "US launches strikes on Iran after downing of American helicopter",
-    "originalUrl": "https://www.ft.com/content/ceb10e74-9ff1-4cf6-82e0-70161c6f1f09",
-    "publishedAt": "2026-06-10T02:08:00.000Z",
-    "summaryJa": "アメリカがイランに対して攻撃を開始した。地政学的緊張が高まり、世界的な経済に影響を与える可能性がある。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "c54a1c29bfaa625c",
-    "source": "bloomberg",
-    "originalTitle": "China’s Zinc Margins Crushed as Fees Plunge to Record Lows",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/china-s-zinc-margins-crushed-as-fees-plunge-to-record-lows",
-    "publishedAt": "2026-06-10T01:55:43.000Z",
-    "summaryJa": "中国の亜鉛生産業が低迷し、利益率が大幅に低下した。中国の金属産業が世界的な市場に影響を与える可能性がある。",
-    "relevanceScore": 40,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "ae53b7fb8ba09e7b",
-    "source": "bloomberg",
-    "originalTitle": "A $6 Billion Share Sale Wave in India Signals Deals Perking Up",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/a-6-billion-share-sale-wave-in-india-signals-deals-perking-up",
-    "publishedAt": "2026-06-10T01:39:56.000Z",
-    "summaryJa": "インドで60億ドルの株式公開が予定されている。インドの株式市場が活況を示し、世界的な投資家に影響を与える可能性がある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
-  },
-  {
-    "id": "1e7a86e2fe842862",
-    "source": "cnbc",
-    "originalTitle": "Oil choppy after U.S. completes Iran strikes following Apache helicopter attack",
-    "originalUrl": "https://www.cnbc.com/2026/06/10/oil-price-us-completes-iran-strikes-after-apache-helicopter-attack.html",
-    "publishedAt": "2026-06-10T01:39:15.000Z",
-    "summaryJa": "アメリカのイラン攻撃により、原油価格が変動した。地政学的緊張が高まり、エネルギー市場に影響を与える可能性がある。",
-    "relevanceScore": 80,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "4111227433be8a0f",
-    "source": "cnbc",
-    "originalTitle": "U.S. military launches strikes in retaliation for Iran downing helicopter",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/trump-iran-helicopter-hormuz-strait.html",
-    "publishedAt": "2026-06-10T01:39:03.000Z",
-    "summaryJa": "アメリカがイランに対して報復攻撃を開始した。地政学的緊張が高まり、世界的な経済に影響を与える可能性がある。",
-    "relevanceScore": 90,
-    "riskCategories": [
-      "geopolitics_supply_chain"
-    ]
-  },
-  {
-    "id": "65eeb403f9500ecd",
-    "source": "bloomberg",
-    "originalTitle": "Modular Power Systems Company ERock Raises $600 Million in IPO",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/modular-power-systems-company-erock-raises-600-million-in-ipo",
-    "publishedAt": "2026-06-10T01:35:08.000Z",
-    "summaryJa": "モジュラー電力システム会社のERockが6億ドルのIPOを実施した。新興企業の成長が世界的な技術市場に影響を与える可能性がある。",
-    "relevanceScore": 30,
-    "riskCategories": []
-  },
-  {
-    "id": "43dd000a05c833f1",
-    "source": "bloomberg",
-    "originalTitle": "Apotex, Backers Raise $932 Million in Canada IPO Priced at Top",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/apotex-backers-raise-932-million-in-canada-ipo-priced-at-top",
-    "publishedAt": "2026-06-10T01:23:20.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7e9aa8c3d64d435b",
-    "source": "bloomberg",
-    "originalTitle": "Korea’s Kospi Extends Losses on Chipmakers, War-Tied Jitters",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/korea-s-kospi-extends-losses-on-chipmakers-war-tied-jitters",
-    "publishedAt": "2026-06-10T01:12:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9f39733c9dbf899e",
-    "source": "bloomberg",
-    "originalTitle": "Morgan Stanley Australia CEO on Property Market Outlook ",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/morgan-stanley-australia-ceo-on-property-market-outlook-video",
-    "publishedAt": "2026-06-10T01:01:13.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ed16446dc82b1d1d",
-    "source": "boj",
-    "originalTitle": "中央銀行デジタル通貨に関する実証実験「パイロット実験」の進捗報告書（2026年6月）CBDCフォーラムにおけるこれまでの議論の総括【別冊】",
-    "originalUrl": "http://www.boj.or.jp/paym/digital/dig260610a.pdf",
-    "publishedAt": "2026-06-10T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bc4841524d4050c3",
-    "source": "boj",
-    "originalTitle": "中央銀行デジタル通貨に関する実証実験「パイロット実験」の進捗報告書（2026年6月）実験用システムの構築と検証【別冊】",
-    "originalUrl": "http://www.boj.or.jp/paym/digital/dig260610b.pdf",
-    "publishedAt": "2026-06-10T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "76bfdf7be5c1a066",
-    "source": "boj",
-    "originalTitle": "中央銀行デジタル通貨に関する実証実験「パイロット実験」の進捗報告書（2026年6月）",
-    "originalUrl": "http://www.boj.or.jp/paym/digital/dig260610c.pdf",
-    "publishedAt": "2026-06-10T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7c43c50659cedea2",
-    "source": "bloomberg",
-    "originalTitle": "Drugmaker Parabilis Raises $745 Million in US IPO, Placement",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-10/drugmaker-parabilis-raises-745-million-in-us-ipo-placement",
-    "publishedAt": "2026-06-10T00:29:35.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7cb3e15b1fd6ef76",
-    "source": "cnbc",
-    "originalTitle": "Social Security retirement trust fund may be depleted in 2032, new trustees report finds ",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/social-security-trustees-report-depletion-dates.html",
-    "publishedAt": "2026-06-10T00:14:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d23c6dd52a3fa0eb",
-    "source": "marketwatch",
-    "originalTitle": "Super Micro stock plunges as $7 billion equity raise overshadows booming backlog",
-    "originalUrl": "https://www.marketwatch.com/story/super-micro-stock-plunges-as-7-billion-equity-raise-overshadows-booming-backlog-c5df2fc8?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-10T00:12:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a897a840cef48260",
-    "source": "ft",
-    "originalTitle": "Steve Hilton advances to general election for California governor ",
-    "originalUrl": "https://www.ft.com/content/dd6f47d6-e109-408a-b4ab-e9a92a42e3ce",
-    "publishedAt": "2026-06-10T00:07:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8b9a48b4a94ba2ea",
-    "source": "cnbc",
-    "originalTitle": "Republican Steve Hilton advances to general election in race for California governor",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/republican-steve-hilton-advances-to-general-election-in-race-for-california-governor.html",
-    "publishedAt": "2026-06-10T00:07:22.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "769555bf6b31d2f3",
-    "source": "bloomberg",
-    "originalTitle": "Malaysia Minister on Fuel Subsidy, Deficit Goals",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/malaysia-minister-on-fuel-subsidy-deficit-goals-video",
-    "publishedAt": "2026-06-10T00:03:20.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3a1cf08d32dd55e7",
-    "source": "cnbc",
-    "originalTitle": "Wednesday's big stock stories: What’s likely to move the market in the next trading session",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/wednesdays-big-stock-stories-whats-likely-to-move-the-market.html",
-    "publishedAt": "2026-06-09T23:58:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5c46cd95e2307b59",
-    "source": "bloomberg",
-    "originalTitle": "Alberta to Propose ‘General Corridor’ for Pipeline to West Coast",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/alberta-to-propose-general-corridor-for-pipeline-to-west-coast",
-    "publishedAt": "2026-06-09T23:57:06.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b1811e11cc93b31f",
-    "source": "bloomberg",
-    "originalTitle": " US Launches Iran Strikes After Helicopter Is Downed",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-09/us-launches-iran-strikes-after-helicopter-is-downed-video",
-    "publishedAt": "2026-06-09T23:56:31.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "63ef3575e69c7804",
-    "source": "boj",
-    "originalTitle": "企業物価指数（5月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2605.pdf",
-    "publishedAt": "2026-06-09T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4361a906ec5b8e11",
-    "source": "boj",
-    "originalTitle": "貸出約定平均金利（4月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/dl/loan/yaku/yaku2604.pdf",
-    "publishedAt": "2026-06-09T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "171abdd28a06ab65",
-    "source": "bloomberg",
-    "originalTitle": "Gold Slumps Below $4,200 as Renewed US-Iran Clashes Test Truce",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/gold-extends-fall-as-renewed-us-iran-clashes-test-fragile-truce",
-    "publishedAt": "2026-06-09T23:27:34.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "74b081cb478a5427",
-    "source": "marketwatch",
-    "originalTitle": "This stock-market strategy has cheap exposure to AI and points to an advantage for closed-end funds",
-    "originalUrl": "https://www.marketwatch.com/story/this-investing-strategy-has-beaten-the-market-with-exposure-to-cheap-ai-stocks-5e743b12?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T23:17:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a787207479cd40f1",
-    "source": "bloomberg",
-    "originalTitle": "Cuba Poised for Biggest US Fuel Shipment Since Cold War Embargo",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/cuba-poised-for-biggest-us-fuel-shipment-since-cold-war-embargo",
-    "publishedAt": "2026-06-09T23:16:42.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5453b7465c9d06a2",
-    "source": "bloomberg",
-    "originalTitle": "ASML’s Surge to Record High Masks Lowball Valuation Versus Peers",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/asml-s-surge-to-record-high-masks-lowball-valuation-versus-peers",
-    "publishedAt": "2026-06-09T23:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "af12e4b7a69bd767",
-    "source": "cnbc",
-    "originalTitle": "Jim Cramer says tech stocks are losing the qualities that made them the leaders of the rally",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/jim-cramer-tech-stocks-losing-qualities-leaders-rally.html",
-    "publishedAt": "2026-06-09T22:30:41.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6fadcc11465628ea",
-    "source": "cnbc",
-    "originalTitle": "$70 billion immigration funding package passes in U.S. House in a win for Speaker Johnson",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/trump-ice-congress-fisa-immigration-funding.html",
-    "publishedAt": "2026-06-09T22:29:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8ba04cf00a7a0596",
-    "source": "cnbc",
-    "originalTitle": "Super Micro stock tumbles on $7 billion financing plans as company touts AI server orders",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/super-micro-stock-tumbles-on-7-billion-financing-plans.html",
-    "publishedAt": "2026-06-09T22:29:25.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2a2bd37a2401f795",
-    "source": "cnbc",
-    "originalTitle": "Trump family got about $500M from crypto venture — but investors saw steep losses",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/trump-world-liberty-financial-crypto-alt5-sigma.html",
-    "publishedAt": "2026-06-09T22:28:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "5608a7418a52c313",
-    "source": "bloomberg",
-    "originalTitle": "Bruin Capital’s George Pyne: FIFA Figures ‘Mind-Blowing'",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-09/bruin-capital-s-george-pyne-fifa-figures-mind-blowing-video",
-    "publishedAt": "2026-06-09T22:27:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a40c6c4bffdcf662",
-    "source": "bloomberg",
-    "originalTitle": "Stocks Decline Before CPI, Gold Drops on Fed Bets: Markets Wrap",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/stock-market-today-dow-s-p-live-updates",
-    "publishedAt": "2026-06-09T22:09:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7a69ace0535ee265",
-    "source": "bloomberg",
-    "originalTitle": "Oil Climbs After Fresh US Strikes on Iran Over Helicopter Attack",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/latest-oil-market-news-and-analysis-for-june-10",
-    "publishedAt": "2026-06-09T22:03:42.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "fbc3c310e8e710dc",
-    "source": "bloomberg",
-    "originalTitle": "FC Dallas Owner: Expect Dallas FIFA Games To Sell Out",
-    "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-09/fc-dallas-owner-expect-dallas-fifa-games-to-sell-out-video",
-    "publishedAt": "2026-06-09T22:03:17.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4f3c68211039bc3c",
-    "source": "marketwatch",
-    "originalTitle": "Apple’s AI could usher in a historic upgrade cycle that investors are overlooking",
-    "originalUrl": "https://www.marketwatch.com/story/apples-ai-could-usher-in-a-historic-upgrade-cycle-that-investors-are-overlooking-2b47fbb3?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T22:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "fefcc8782f86a148",
-    "source": "marketwatch",
-    "originalTitle": "Micron and other memory makers are driving a ‘supercycle’ for this corner of the chip sector",
-    "originalUrl": "https://www.marketwatch.com/story/micron-and-other-memory-makers-are-driving-a-supercycle-for-this-corner-of-the-chip-sector-398c40c5?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T21:58:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "de0139745ede5114",
-    "source": "bloomberg",
-    "originalTitle": "Brazil Rare-Earth Ambitions Clash With Strained Mining Regulator",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/brazil-rare-earth-ambitions-clash-with-strained-mining-regulator",
-    "publishedAt": "2026-06-09T21:55:46.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "127a9e74602e68c4",
-    "source": "marketwatch",
-    "originalTitle": "AST SpaceMobile’s stock experiences rocky trading as SpaceX plans to launch its satellites into orbit",
-    "originalUrl": "https://www.marketwatch.com/story/ast-spacemobiles-stock-experiences-rocky-trading-as-spacex-plans-to-launch-its-satellites-into-orbit-331b3c3b?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T21:55:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "41a9a93758a04f91",
-    "source": "cnbc",
-    "originalTitle": "As LIV Golf faces a Saudi funding cliff, CEO says to take PIF 'at their word'",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/liv-golf-ceo-pif-funding-cliff.html",
-    "publishedAt": "2026-06-09T21:52:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4c42289fcf705f43",
-    "source": "cnbc",
-    "originalTitle": "Kalshi rolls out whistleblower services, employment verification to curb insider trading ",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/kalshi-rolls-out-tighter-measures-amid-concerns-of-insider-trading-.html",
-    "publishedAt": "2026-06-09T21:35:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "45443a86362e0f8e",
-    "source": "marketwatch",
-    "originalTitle": "GM follows Ford by making a big energy bet — this time with an unconventional approach",
-    "originalUrl": "https://www.marketwatch.com/story/gm-follows-ford-by-making-a-big-energy-bet-but-heres-the-quirky-twist-eae9b5ee?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T21:20:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1f6c65e85610453d",
-    "source": "marketwatch",
-    "originalTitle": "Angst over SpaceX IPO adds to dive in tech stocks",
-    "originalUrl": "https://www.marketwatch.com/story/tech-stocks-dive-as-fridays-incoming-spacex-ipo-creates-bad-psychology-9e50510e?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T21:14:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "64cae8a9cf3891c6",
-    "source": "cnbc",
-    "originalTitle": "GM eyes new battery chemistry to grow AI data center, energy storage business",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/gm-batteries-data-centers-energy-storage-business.html",
-    "publishedAt": "2026-06-09T21:02:10.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0d06f543886597ff",
-    "source": "ft",
-    "originalTitle": "Taiwan’s opposition leader tells US and China not to use her country as ‘pawn’",
-    "originalUrl": "https://www.ft.com/content/4f667f6f-efd0-4c3f-ab49-9f0d1099a8ba",
-    "publishedAt": "2026-06-09T20:53:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "eae137532a0707d0",
-    "source": "cnbc",
-    "originalTitle": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/spacex-ipo-explained-stock-price-date.html",
-    "publishedAt": "2026-06-09T20:43:46.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "6016b5caf12157f7",
-    "source": "cnbc",
-    "originalTitle": "Apple shares slide after big Siri AI reveal",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/apple-stock-siri-ai-reaction.html",
-    "publishedAt": "2026-06-09T20:35:14.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b15887466da81e1a",
-    "source": "marketwatch",
-    "originalTitle": "A powerful inflation storm is brewing — and your portfolio isn’t ready",
-    "originalUrl": "https://www.marketwatch.com/story/an-inflation-storm-is-brewing-in-the-pacific-ocean-and-your-portfolio-isnt-ready-f200fc60?mod=mw_rss_topstories",
-    "publishedAt": "2026-06-09T20:23:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c8e9873940de2df9",
-    "source": "ft",
-    "originalTitle": "Nasdaq slips in volatile trading as 2026 high-flyers pull back",
-    "originalUrl": "https://www.ft.com/content/13d4845a-f278-489b-ab89-a2e9e6a79ede",
-    "publishedAt": "2026-06-09T20:15:48.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a9d0bada871d4f36",
-    "source": "cnbc",
-    "originalTitle": "White House border czar Tom Homan blames New York Gov. Hochul for promised ICE surge",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/tom-homan-ice-surge-new-york.html",
-    "publishedAt": "2026-06-09T20:13:40.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "59acf616f09ed426",
-    "source": "cnbc",
-    "originalTitle": "These dividend stocks have slashed their payments, Morgan Stanley says",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/these-dividend-stocks-have-slashed-their-payments-morgan-stanley-says.html",
-    "publishedAt": "2026-06-09T20:06:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "eae0aeed7914f0c0",
-    "source": "fed",
-    "originalTitle": "Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT.",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm",
-    "publishedAt": "2026-06-09T20:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cde0906d5f5930e3",
-    "source": "bloomberg",
-    "originalTitle": "Argentina’s Impsa Is in Talks to Resume Turbine Work in Venezuela",
-    "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/argentina-s-impsa-is-in-talks-to-resume-turbine-work-in-venezuela",
-    "publishedAt": "2026-06-09T19:59:36.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e74cb38463ec2e23",
-    "source": "cnbc",
-    "originalTitle": "Another jump in Boeing deliveries shows why we got into the stock and want to stay in",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/another-jump-in-boeing-deliveries-shows-why-we-got-into-the-stock-and-want-to-stay-in.html",
-    "publishedAt": "2026-06-09T19:54:21.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "213426300d28255d",
-    "source": "cnbc",
-    "originalTitle": "The May inflation numbers are due out Wednesday morning. Here's what to expect",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/the-may-inflation-numbers-are-due-out-wednesday-morning-heres-what-to-expect.html",
-    "publishedAt": "2026-06-09T19:49:59.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a5da065614b74db7",
-    "source": "economist",
-    "originalTitle": "\n        Wall Street’s undignified SpaceX mania\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/06/09/wall-streets-undignified-spacex-mania",
-    "publishedAt": "2026-06-09T19:16:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "627af506b001bf16",
-    "source": "cnbc",
-    "originalTitle": "Kalshi trading in 'perps' crosses $1 billion in volume within a week of launch",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/kalshi-perpetual-futures-trading-perps-crosses-1-billion-in-volume-within-a-week-of-launch.html",
-    "publishedAt": "2026-06-09T19:03:54.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "072c1b127fd2398b",
-    "source": "cnbc",
-    "originalTitle": "Anthropic releases Mythos-like AI model to the public two months after private rollout rocked Wall Street",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
-    "publishedAt": "2026-06-09T18:44:09.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c23ea79c322b0181",
-    "source": "cnbc",
-    "originalTitle": "Semiconductor shorts pile on as winning trade reverses",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/semiconductor-shorts-pile-on-as-winning-trade-reverses.html",
-    "publishedAt": "2026-06-09T18:26:25.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "36a172f0d3542380",
-    "source": "cnbc",
-    "originalTitle": "Investing in growth stocks isn't like betting on horses. Here's one new trade idea from Todd Gordon",
-    "originalUrl": "https://www.cnbc.com/2026/06/09/investing-in-growth-stocks-is-unlike-betting-on-horses-two-trade-ideas-from-todd-gordon.html",
-    "publishedAt": "2026-06-09T18:13:53.000Z",
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []

@@ -2,91 +2,91 @@
   {
     "code": "DJIA",
     "name": "NYダウ",
-    "value": 49918.78,
-    "previousValue": 50687.07,
+    "value": 51202.26,
+    "previousValue": 50866.78,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "SPX",
     "name": "S&P500",
-    "value": 7266.99,
-    "previousValue": 7553.68,
+    "value": 7431.46,
+    "previousValue": 7383.74,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "TOPIX",
     "name": "TOPIX(ETF)",
-    "value": 406.4,
-    "previousValue": 418.6,
+    "value": 412.2,
+    "previousValue": 408.8,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 160.517,
-    "previousValue": 159.99,
+    "value": 160.185,
+    "previousValue": 160.327,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "VIX",
     "name": "恐怖指数(VIX)",
-    "value": 22.22,
-    "previousValue": 15.4,
+    "value": 17.68,
+    "previousValue": 18.92,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "UST10Y",
     "name": "米10年債利回り",
-    "value": 4.542,
-    "previousValue": 4.477,
+    "value": 4.487,
+    "previousValue": 4.552,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "UST3M",
     "name": "米3ヶ月債利回り",
-    "value": 3.6349998,
-    "previousValue": 3.62,
+    "value": 3.618,
+    "previousValue": 3.628,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "WTI",
     "name": "原油(WTI)",
-    "value": 91.93,
+    "value": 84.29,
     "previousValue": 91.3,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "GOLD",
     "name": "金",
-    "value": 4093.5,
+    "value": 4239.9,
     "previousValue": 4335.9,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   },
   {
     "code": "HYG",
     "name": "HY社債ETF",
-    "value": 79.47,
-    "previousValue": 79.68,
+    "value": 79.94,
+    "previousValue": 79.43,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-11T04:15:04.817Z"
+    "recordedAt": "2026-06-13T04:04:59.145Z"
   }
 ]

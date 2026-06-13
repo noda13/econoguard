@@ -916,6 +916,20 @@
       "assessedAt": "2026-06-11T04:17:50.016Z",
       "delta": 0,
       "changeReasonJa": "中国上場銀行の利ざやの縮小と中国経済の減速が金融市場に与える影響の増大"
+    },
+    {
+      "category": "currency_finance",
+      "score": 39,
+      "level": "moderate",
+      "summaryJa": "NYダウとS&P500の上昇やドル円の安定化により、金融市場の不安定性は低下している。ただし、原油価格の変動や債利回りの動向には注意が必要である。",
+      "factorsJa": [
+        "NYダウとS&P500の上昇",
+        "ドル円の安定化",
+        "原油価格の変動"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": -12,
+      "changeReasonJa": "金融市場の指標が安定しているため、スコアを2ポイント下げた"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1823,6 +1837,20 @@
       "assessedAt": "2026-06-11T04:17:50.016Z",
       "delta": 0,
       "changeReasonJa": "地域の平和と安定への期待の増大"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "天皇皇后両陛下の外国訪問や高市首相の欧州訪問により、国際関係が強化されている。しかし、地政学的なリスク要因も存在する。",
+      "factorsJa": [
+        "天皇皇后両陛下の外国訪問",
+        "高市首相の欧州訪問",
+        "地政学的なリスク要因"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": 2,
+      "changeReasonJa": "国際関係の強化により、スコアを2ポイント上げた"
     }
   ],
   "technology": [
@@ -2713,6 +2741,20 @@
       "assessedAt": "2026-06-11T04:17:50.016Z",
       "delta": 3,
       "changeReasonJa": "AI技術の開発と新組織の設立によるテクノロジー分野の活性化"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "アンソロピックがミュトス級AIの提供を停止したことや、スペースXの上場により、テクノロジー分野の動向が注目されている。テクノロジー関連のリスクも高まっている。",
+      "factorsJa": [
+        "アンソロピックのミュトス級AIの提供停止",
+        "スペースXの上場",
+        "テクノロジー関連のリスク"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": 3,
+      "changeReasonJa": "テクノロジー関連のニュースが多く、スコアを3ポイント下げた"
     }
   ],
   "social_policy": [
@@ -3609,6 +3651,20 @@
       "assessedAt": "2026-06-11T04:17:50.016Z",
       "delta": 5,
       "changeReasonJa": "社会的不安定要因の増大と消費者保護政策への影響"
+    },
+    {
+      "category": "social_policy",
+      "score": 84,
+      "level": "critical",
+      "summaryJa": "社会政策関連のニュースは少ないが、経済への影響は依然として高い。社会的要因の変化に注意が必要である。",
+      "factorsJa": [
+        "社会政策関連のニュース",
+        "経済への影響",
+        "社会的要因の変化"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": -1,
+      "changeReasonJa": "社会政策関連のニュースが少ないため、スコアを1ポイント下げた"
     }
   ]
 }
