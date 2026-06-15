@@ -944,6 +944,25 @@
       "assessedAt": "2026-06-14T04:25:26.543Z",
       "delta": -8,
       "changeReasonJa": "ドル円の下落と金融規制への対応が要因となり、スコアが1点下がった"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "金融市場は好調な動きを見せているが、米イラン合意や原油価格の変動が金融市場に影響を与えている。日経平均が大幅に上昇し、6万9593円まで値上がりした。",
+      "factorsJa": [
+        "日経平均の上昇",
+        "原油価格の変動",
+        "米イラン合意"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 19,
+      "changeReasonJa": "金融市場の好調な動きと原油価格の変動による",
+      "sourceNewsIds": [
+        "f9d9ae48eb12966a",
+        "cf09fd7073ea5964",
+        "77ba8784aef81881"
+      ]
     }
   ],
   "geopolitics_supply_chain": [
@@ -1880,6 +1899,23 @@
       "assessedAt": "2026-06-14T04:25:26.543Z",
       "delta": -7,
       "changeReasonJa": "トランプ氏のコメントや日英首相会談が要因となり、スコアが2点上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 59,
+      "level": "elevated",
+      "summaryJa": "地政学的な影響が見られるが、影響度は中程度である。フィリピン外相の発言やオランダ海軍艦の東京寄港が地政学的な影響を及ぼしている。",
+      "factorsJa": [
+        "フィリピン外相の発言",
+        "オランダ海軍艦の東京寄港"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 16,
+      "changeReasonJa": "地政学的な影響の増加による",
+      "sourceNewsIds": [
+        "2ce0222275ad8780",
+        "cfab67c6bc6e68e3"
+      ]
     }
   ],
   "technology": [
@@ -2798,6 +2834,23 @@
       "assessedAt": "2026-06-14T04:25:26.543Z",
       "delta": -2,
       "changeReasonJa": "Amazonの幹部の伝達や日英伊の次期戦闘機契約が要因となり、スコアが2点下落した"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "テクノロジー分野は引き続き高いリスクを抱えている。半導体株の世界的な上昇や新エネルギー分野への影響が見られる。",
+      "factorsJa": [
+        "半導体株の上昇",
+        "新エネルギー分野への影響"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 2,
+      "changeReasonJa": "テクノロジー分野の動向の継続による",
+      "sourceNewsIds": [
+        "9b5a08efbfb2db79",
+        "f09ff6f8c6ed43a8"
+      ]
     }
   ],
   "social_policy": [
@@ -3722,6 +3775,23 @@
       "assessedAt": "2026-06-14T04:25:26.543Z",
       "delta": -1,
       "changeReasonJa": "ブラジルの差別問題や黒人運動の動向が要因となり、スコアが1点下落した"
+    },
+    {
+      "category": "social_policy",
+      "score": 85,
+      "level": "critical",
+      "summaryJa": "社会・政策分野は引き続き高いリスクを抱えている。地域格差の懸念や教育分野でのコラボレーションが注目されている。",
+      "factorsJa": [
+        "地域格差の懸念",
+        "教育分野でのコラボレーション"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 2,
+      "changeReasonJa": "社会・政策分野の動向の継続による",
+      "sourceNewsIds": [
+        "e3b6a33d9e38f7d7",
+        "c3623aa94321f972"
+      ]
     }
   ]
 }
