@@ -963,6 +963,20 @@
         "cf09fd7073ea5964",
         "77ba8784aef81881"
       ]
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "日本銀行が金利を1.0%に引き上げることを決定し、国債買い入れ減額は27年4月以降停止する。ドル円は160.322円で推移している。",
+      "factorsJa": [
+        "日本銀行の金利引き上げ",
+        "国債買い入れ減額の停止",
+        "ドル円の推移"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 0,
+      "changeReasonJa": "日本銀行の金利引き上げが金融市場に影響を与えたため、スコアを上げた"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1916,6 +1930,20 @@
         "2ce0222275ad8780",
         "cfab67c6bc6e68e3"
       ]
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 64,
+      "level": "high",
+      "summaryJa": "ドイツは食料備蓄を拡充する計画で、日本とも情報交換を行っている。食料安全保障への影響が懸念される。",
+      "factorsJa": [
+        "ドイツの食料備蓄拡充",
+        "日本との情報交換",
+        "食料安全保障への影響"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 5,
+      "changeReasonJa": "食料安全保障への懸念が高まったため、スコアを上げた"
     }
   ],
   "technology": [
@@ -2851,6 +2879,20 @@
         "9b5a08efbfb2db79",
         "f09ff6f8c6ed43a8"
       ]
+    },
+    {
+      "category": "technology",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "OpenAIがAI導入コンサルを30万人に提供する。外部企業とのパートナー制を導入する。AI技術の進化が続いている。",
+      "factorsJa": [
+        "OpenAIのAI導入コンサル",
+        "外部企業とのパートナー制",
+        "AI技術の進化"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 2,
+      "changeReasonJa": "AI技術の進化が続いているため、スコアを上げた"
     }
   ],
   "social_policy": [
@@ -3792,6 +3834,20 @@
         "e3b6a33d9e38f7d7",
         "c3623aa94321f972"
       ]
+    },
+    {
+      "category": "social_policy",
+      "score": 88,
+      "level": "critical",
+      "summaryJa": "宮崎市が市内3大学とふるさと納税を活用し、海外留学支援など活動を充実させる。社会政策への影響が懸念される。",
+      "factorsJa": [
+        "宮崎市の社会政策",
+        "ふるさと納税の活用",
+        "海外留学支援"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 3,
+      "changeReasonJa": "社会政策への懸念が高まったため、スコアを上げた"
     }
   ]
 }
