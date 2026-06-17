@@ -977,6 +977,20 @@
       "assessedAt": "2026-06-16T04:46:06.604Z",
       "delta": 0,
       "changeReasonJa": "日本銀行の金利引き上げが金融市場に影響を与えたため、スコアを上げた"
+    },
+    {
+      "category": "currency_finance",
+      "score": 43,
+      "level": "elevated",
+      "summaryJa": "ドル円が下落し、160円台前半で推移している。金融市場の動向に注目される。NYダウとS&P500が上昇している。",
+      "factorsJa": [
+        "ドル円の下落",
+        "NYダウとS&P500の上昇",
+        "金融市場の動向"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -7,
+      "changeReasonJa": "ドル円の下落と金融市場の動向により、スコアが5ポイント上昇した"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1944,6 +1958,20 @@
       "assessedAt": "2026-06-16T04:46:06.604Z",
       "delta": 5,
       "changeReasonJa": "食料安全保障への懸念が高まったため、スコアを上げた"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 66,
+      "level": "high",
+      "summaryJa": "米国防総省が太平洋軍の名称を8年ぶりに「インド」を削除して復活させた。地政学的な影響が見られる。",
+      "factorsJa": [
+        "米国防総省の名称変更",
+        "地政学的な影響",
+        "供給網への影響"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": 2,
+      "changeReasonJa": "地政学的な影響が懸念されるため、スコアが2ポイント上昇した"
     }
   ],
   "technology": [
@@ -2893,6 +2921,20 @@
       "assessedAt": "2026-06-16T04:46:06.604Z",
       "delta": 2,
       "changeReasonJa": "AI技術の進化が続いているため、スコアを上げた"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "中国レノボがAI技術を用いたサッカーW杯を実現させた。業績と株価の向上が期待される。",
+      "factorsJa": [
+        "AI技術の進展",
+        "業績と株価の向上",
+        "テクノロジー業界の動向"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -2,
+      "changeReasonJa": "AI技術の進展と業績の向上により、スコアが2ポイント下降した"
     }
   ],
   "social_policy": [
@@ -3848,6 +3890,20 @@
       "assessedAt": "2026-06-16T04:46:06.604Z",
       "delta": 3,
       "changeReasonJa": "社会政策への懸念が高まったため、スコアを上げた"
+    },
+    {
+      "category": "social_policy",
+      "score": 85,
+      "level": "critical",
+      "summaryJa": "文化シヤッター、アクティビスト対抗策が可決された。社会的な影響はあるものの、経済への直接的な影響は限定的である。",
+      "factorsJa": [
+        "社会的な影響",
+        "経済への直接的な影響",
+        "政策の変化"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -3,
+      "changeReasonJa": "社会的な影響が懸念されるため、スコアが3ポイント下降した"
     }
   ]
 }
