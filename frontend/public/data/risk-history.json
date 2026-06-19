@@ -991,6 +991,20 @@
       "assessedAt": "2026-06-17T04:26:20.802Z",
       "delta": -7,
       "changeReasonJa": "ドル円の下落と金融市場の動向により、スコアが5ポイント上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 38,
+      "level": "moderate",
+      "summaryJa": "ドル円が上昇し、株式市場も上昇している。米国の利上げ確率が高まっているが、金融市場への影響はまだ限定的である。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "株式市場の上昇",
+        "米国の利上げ確率の高まり"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -5,
+      "changeReasonJa": "ドル円の上昇と株式市場の上昇により、金融市場の不安定性が軽減されたため、スコアを低下させた。"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1972,6 +1986,20 @@
       "assessedAt": "2026-06-17T04:26:20.802Z",
       "delta": 2,
       "changeReasonJa": "地政学的な影響が懸念されるため、スコアが2ポイント上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 64,
+      "level": "high",
+      "summaryJa": "ホルムズ海峡危機と原油在庫の状況が地政学的リスクを高めている。原油価格の変動も経済に影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "ホルムズ海峡危機",
+        "原油在庫の状況",
+        "原油価格の変動"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -2,
+      "changeReasonJa": "ホルムズ海峡危機と原油在庫の状況が地政学的リスクを高めたため、スコアを上げた。"
     }
   ],
   "technology": [
@@ -2935,6 +2963,19 @@
       "assessedAt": "2026-06-17T04:26:20.802Z",
       "delta": -2,
       "changeReasonJa": "AI技術の進展と業績の向上により、スコアが2ポイント下降した"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "テクノロジー業界のニュースは限定的であるが、AI関連株の上昇はテクノロジー業界の成長を示唆している。",
+      "factorsJa": [
+        "AI関連株の上昇",
+        "テクノロジー業界の成長"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -3,
+      "changeReasonJa": "AI関連株の上昇により、テクノロジー業界の成長が期待されるため、スコアを上げた。"
     }
   ],
   "social_policy": [
@@ -3904,6 +3945,20 @@
       "assessedAt": "2026-06-17T04:26:20.802Z",
       "delta": -3,
       "changeReasonJa": "社会的な影響が懸念されるため、スコアが3ポイント下降した"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "社会政策に関するニュースは限定的であるが、インフレや食品価格の変動は社会政策に影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "インフレ",
+        "食品価格の変動",
+        "社会政策"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -3,
+      "changeReasonJa": "インフレや食品価格の変動が社会政策に影響を及ぼす可能性があるため、スコアを上げた。"
     }
   ]
 }
