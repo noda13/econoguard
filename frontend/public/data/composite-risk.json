@@ -1,27 +1,27 @@
 {
-  "compositeScore": 62,
-  "level": "high",
+  "compositeScore": 60,
+  "level": "elevated",
   "breakdown": [
     {
       "category": "currency_finance",
-      "score": 38,
+      "score": 34,
       "weight": 0.3
     },
     {
       "category": "geopolitics_supply_chain",
-      "score": 64,
+      "score": 59,
       "weight": 0.3
     },
     {
       "category": "technology",
-      "score": 75,
+      "score": 78,
       "weight": 0.2
     },
     {
       "category": "social_policy",
-      "score": 82,
+      "score": 80,
       "weight": 0.2
     }
   ],
-  "delta": -3
+  "delta": -2
 }

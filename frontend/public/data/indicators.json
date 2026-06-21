@@ -6,7 +6,7 @@
     "previousValue": 50848.75,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "SPX",
@@ -15,70 +15,70 @@
     "previousValue": 7394.3,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "TOPIX",
     "name": "TOPIX(ETF)",
-    "value": 427.9,
+    "value": 429.7,
     "previousValue": 424.5,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 161.356,
+    "value": 161.275,
     "previousValue": 159.955,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "VIX",
     "name": "恐怖指数(VIX)",
-    "value": 16.4,
-    "previousValue": 17.68,
+    "value": 16.78,
+    "previousValue": 16.2,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "UST10Y",
     "name": "米10年債利回り",
     "value": 4.4509997,
-    "previousValue": 4.487,
+    "previousValue": 4.4509997,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "UST3M",
     "name": "米3ヶ月債利回り",
-    "value": 3.658,
-    "previousValue": 3.618,
+    "value": 3.6580002,
+    "previousValue": 3.6580002,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "WTI",
     "name": "原油(WTI)",
-    "value": 75.67,
+    "value": 76.54,
     "previousValue": 80.75,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "GOLD",
     "name": "金",
-    "value": 4161.4,
+    "value": 4172.9,
     "previousValue": 4328,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   },
   {
     "code": "HYG",
@@ -87,6 +87,6 @@
     "previousValue": 79.94,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-06-19T04:44:30.336Z"
+    "recordedAt": "2026-06-21T04:40:45.220Z"
   }
 ]
