@@ -1019,6 +1019,20 @@
       "assessedAt": "2026-06-21T04:43:28.962Z",
       "delta": -4,
       "changeReasonJa": "ドル円の上昇と株式市場の好調が経済への影響を与えた"
+    },
+    {
+      "category": "currency_finance",
+      "score": 31,
+      "level": "moderate",
+      "summaryJa": "ドル円が上昇し、NYダウやS&P500も上昇しているが、米10年債利回りが上昇していることから、金融市場の動向に注意が必要である。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "NYダウとS&P500の上昇",
+        "米10年債利回りの上昇"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": -3,
+      "changeReasonJa": "ドル円の上昇と米国株式市場の好調さが要因となっている"
     }
   ],
   "geopolitics_supply_chain": [
@@ -2028,6 +2042,19 @@
       "assessedAt": "2026-06-21T04:43:28.962Z",
       "delta": -5,
       "changeReasonJa": "地政学的緊張の増加が経済への影響を与えた"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 48,
+      "level": "elevated",
+      "summaryJa": "中国の太陽光パネル業界の動向や、薬容器・包装の品薄が続いていることから、供給網への影響が懸念される。",
+      "factorsJa": [
+        "中国の太陽光パネル業界の動向",
+        "薬容器・包装の品薄"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": -11,
+      "changeReasonJa": "中国の太陽光パネル業界の動向と薬容器・包装の品薄が要因となっている"
     }
   ],
   "technology": [
@@ -3017,6 +3044,18 @@
       "assessedAt": "2026-06-21T04:43:28.962Z",
       "delta": 3,
       "changeReasonJa": "技術革新と流通業界の再編が経済への影響を与えた"
+    },
+    {
+      "category": "technology",
+      "score": 79,
+      "level": "high",
+      "summaryJa": "テクノロジー分野では特に大きなニュースは見られないが、前回のスコアから大きな変化はなし",
+      "factorsJa": [
+        "なし"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": 1,
+      "changeReasonJa": "特に大きな変化はなし"
     }
   ],
   "social_policy": [
@@ -4013,6 +4052,18 @@
       "assessedAt": "2026-06-21T04:43:28.962Z",
       "delta": -2,
       "changeReasonJa": "社会政策の変化が経済への影響を与えた"
+    },
+    {
+      "category": "social_policy",
+      "score": 81,
+      "level": "critical",
+      "summaryJa": "世界の海面水温が最高記録を更新し、気候変動の影響が社会や経済に及ぼす可能性が懸念される",
+      "factorsJa": [
+        "世界の海面水温の最高記録更新"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": 1,
+      "changeReasonJa": "世界の海面水温の最高記録更新が要因となっている"
     }
   ]
 }

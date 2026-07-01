@@ -10,5 +10,29 @@
     "titleJa": "米CPI(消費者物価指数)発表",
     "region": "US",
     "importance": "high"
+  },
+  {
+    "date": "2026-07-23",
+    "titleJa": "ECB理事会(政策金利決定)",
+    "region": "EU",
+    "importance": "high"
+  },
+  {
+    "date": "2026-07-29",
+    "titleJa": "FOMC政策金利発表",
+    "region": "US",
+    "importance": "high"
+  },
+  {
+    "date": "2026-07-29",
+    "titleJa": "米GDP速報値発表",
+    "region": "US",
+    "importance": "medium"
+  },
+  {
+    "date": "2026-07-30",
+    "titleJa": "日銀金融政策決定会合",
+    "region": "JP",
+    "importance": "high"
   }
 ]
