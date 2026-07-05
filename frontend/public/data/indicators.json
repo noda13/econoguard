@@ -1,38 +1,38 @@
 [
   {
-    "code": "BTC",
-    "name": "ビットコイン",
-    "value": 79182,
-    "previousValue": 81047,
-    "unit": "USD",
-    "source": "coingecko",
-    "recordedAt": "2026-05-14T03:41:03.191Z"
+    "code": "DJIA",
+    "name": "NYダウ",
+    "value": 50866.78,
+    "previousValue": 51032.46,
+    "unit": "pt",
+    "source": "yahoo",
+    "recordedAt": "2026-06-06T14:35:01.169Z"
   },
   {
-    "code": "ETH",
-    "name": "イーサリアム",
-    "value": 2246.37,
-    "previousValue": 2308.1,
-    "unit": "USD",
-    "source": "coingecko",
-    "recordedAt": "2026-05-14T03:41:03.191Z"
+    "code": "SPX",
+    "name": "S&P500",
+    "value": 7383.74,
+    "previousValue": 7580.06,
+    "unit": "pt",
+    "source": "yahoo",
+    "recordedAt": "2026-06-06T14:35:01.169Z"
   },
   {
-    "code": "GOLD",
-    "name": "金価格",
-    "value": 4674.25,
-    "previousValue": 4710.04,
-    "unit": "USD/oz",
-    "source": "coingecko",
-    "recordedAt": "2026-05-14T03:41:03.191Z"
+    "code": "TOPIX",
+    "name": "TOPIX(ETF)",
+    "value": 418.6,
+    "previousValue": 417.5,
+    "unit": "円",
+    "source": "yahoo",
+    "recordedAt": "2026-06-06T14:35:01.169Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 157.88,
-    "previousValue": 157.57,
+    "value": 160.293,
+    "previousValue": 159.353,
     "unit": "円",
-    "source": "coingecko",
-    "recordedAt": "2026-05-14T03:41:03.191Z"
+    "source": "yahoo",
+    "recordedAt": "2026-06-06T14:35:01.169Z"
   }
 ]
