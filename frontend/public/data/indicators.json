@@ -2,37 +2,91 @@
   {
     "code": "DJIA",
     "name": "NYダウ",
-    "value": 50866.78,
-    "previousValue": 51032.46,
+    "value": 52900.07,
+    "previousValue": 51920.62,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:35:01.169Z"
+    "recordedAt": "2026-07-03T03:33:06.645Z"
   },
   {
     "code": "SPX",
     "name": "S&P500",
-    "value": 7383.74,
-    "previousValue": 7580.06,
+    "value": 7483.24,
+    "previousValue": 7357.49,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:35:01.169Z"
+    "recordedAt": "2026-07-03T03:33:06.645Z"
   },
   {
     "code": "TOPIX",
     "name": "TOPIX(ETF)",
-    "value": 418.6,
-    "previousValue": 417.5,
+    "value": 429.9,
+    "previousValue": 421.7,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:35:01.169Z"
+    "recordedAt": "2026-07-03T03:33:06.645Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 160.293,
-    "previousValue": 159.353,
+    "value": 161.203,
+    "previousValue": 161.787,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-06-06T14:35:01.169Z"
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "VIX",
+    "name": "恐怖指数(VIX)",
+    "value": 16.15,
+    "previousValue": 18.41,
+    "unit": "pt",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "UST10Y",
+    "name": "米10年債利回り",
+    "value": 4.485,
+    "previousValue": 4.372,
+    "unit": "%",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "UST3M",
+    "name": "米3ヶ月債利回り",
+    "value": 3.668,
+    "previousValue": 3.663,
+    "unit": "%",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "WTI",
+    "name": "原油(WTI)",
+    "value": 69.11,
+    "previousValue": 70.75,
+    "unit": "USD",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "GOLD",
+    "name": "金",
+    "value": 4194.3,
+    "previousValue": 4022.3,
+    "unit": "USD",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
+  },
+  {
+    "code": "HYG",
+    "name": "HY社債ETF",
+    "value": 79.71,
+    "previousValue": 79.88,
+    "unit": "USD",
+    "source": "yahoo",
+    "recordedAt": "2026-07-03T03:33:06.645Z"
   }
 ]

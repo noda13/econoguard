@@ -820,6 +820,233 @@
         "ドル円の動向"
       ],
       "assessedAt": "2026-05-14T03:43:46.521Z"
+    },
+    {
+      "category": "currency_finance",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "ビットコインとイーサリアムの価格が下落し、ドル円が上昇している。金融市場への影響が見られるが、企業の不動産売却が18年ぶりの高水準となったことから、資産運用や不動産市場への影響も考慮する必要がある。",
+      "factorsJa": [
+        "ビットコインとイーサリアムの価格下落",
+        "ドル円の上昇",
+        "企業の不動産売却の増加"
+      ],
+      "assessedAt": "2026-06-06T13:43:48.793Z"
+    },
+    {
+      "category": "currency_finance",
+      "score": 63,
+      "level": "high",
+      "summaryJa": "ドル円が上昇し、恐怖指数(VIX)が上昇していることから、金融市場の不安定性が高まっている。NYダウとS&P500の下落も金融リスクを高めている。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "恐怖指数(VIX)の上昇",
+        "NYダウとS&P500の下落"
+      ],
+      "assessedAt": "2026-06-06T15:02:41.529Z",
+      "delta": -17,
+      "changeReasonJa": "ドル円の急上昇と金融市場の不安定性の増大"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、NYダウとS&P500が下落している。恐怖指数(VIX)が上昇し、米10年債利回りも上昇している。金融市場の不安定さが増している。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "NYダウとS&P500の下落",
+        "恐怖指数(VIX)の上昇"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -12,
+      "changeReasonJa": "ドル円の変動と株式市場の下落により、金融市場の不安定さが増したため"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、米雇用統計がAI熱を冷ましたことが要因である。日経平均が今年最大の下げとなり、3100円超安となった。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "米雇用統計",
+        "日経平均の下落"
+      ],
+      "assessedAt": "2026-06-08T04:21:19.896Z",
+      "delta": 0,
+      "changeReasonJa": "ドル円の上昇と日経平均の下落が要因でスコアが上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、為替市場の動向がマクロ経済に直接的な影響を及ぼしている。金融市場への影響も見られ、HY社債ETFが下落している。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "金融市場への影響",
+        "HY社債ETFの下落"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": -1,
+      "changeReasonJa": "ドル円の上昇と金融市場への影響が要因となってスコアが上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "ドル円が上昇し、米ハイテク株の安値と中東の情勢悪化が要因となっている。原油と金の価格が変動した。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "米ハイテク株の安値",
+        "中東の情勢悪化"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": 1,
+      "changeReasonJa": "ドル円の上昇と中東の情勢悪化が要因となっている"
+    },
+    {
+      "category": "currency_finance",
+      "score": 51,
+      "level": "elevated",
+      "summaryJa": "中国上場銀行の多くが利ざやの縮小に直面し、金融安定性への懸念が高まっている。また、ドル円が160円台半ばで小動きしている。中国経済の減速が金融市場に影響を与えている。",
+      "factorsJa": [
+        "中国上場銀行の利ざやの縮小",
+        "ドル円の動き",
+        "中国経済の減速"
+      ],
+      "assessedAt": "2026-06-11T04:17:50.016Z",
+      "delta": 0,
+      "changeReasonJa": "中国上場銀行の利ざやの縮小と中国経済の減速が金融市場に与える影響の増大"
+    },
+    {
+      "category": "currency_finance",
+      "score": 39,
+      "level": "moderate",
+      "summaryJa": "NYダウとS&P500の上昇やドル円の安定化により、金融市場の不安定性は低下している。ただし、原油価格の変動や債利回りの動向には注意が必要である。",
+      "factorsJa": [
+        "NYダウとS&P500の上昇",
+        "ドル円の安定化",
+        "原油価格の変動"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": -12,
+      "changeReasonJa": "金融市場の指標が安定しているため、スコアを2ポイント下げた"
+    },
+    {
+      "category": "currency_finance",
+      "score": 31,
+      "level": "moderate",
+      "summaryJa": "ドル円は160.185円で推移しており、前回比でやや下落している。NYダウとS&P500は上昇しているが、金融規制への対応や米国経済の動向が注目される。",
+      "factorsJa": [
+        "ドル円の下落",
+        "NYダウとS&P500の上昇",
+        "金融規制への対応"
+      ],
+      "assessedAt": "2026-06-14T04:25:26.543Z",
+      "delta": -8,
+      "changeReasonJa": "ドル円の下落と金融規制への対応が要因となり、スコアが1点下がった"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "金融市場は好調な動きを見せているが、米イラン合意や原油価格の変動が金融市場に影響を与えている。日経平均が大幅に上昇し、6万9593円まで値上がりした。",
+      "factorsJa": [
+        "日経平均の上昇",
+        "原油価格の変動",
+        "米イラン合意"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 19,
+      "changeReasonJa": "金融市場の好調な動きと原油価格の変動による",
+      "sourceNewsIds": [
+        "f9d9ae48eb12966a",
+        "cf09fd7073ea5964",
+        "77ba8784aef81881"
+      ]
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "日本銀行が金利を1.0%に引き上げることを決定し、国債買い入れ減額は27年4月以降停止する。ドル円は160.322円で推移している。",
+      "factorsJa": [
+        "日本銀行の金利引き上げ",
+        "国債買い入れ減額の停止",
+        "ドル円の推移"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 0,
+      "changeReasonJa": "日本銀行の金利引き上げが金融市場に影響を与えたため、スコアを上げた"
+    },
+    {
+      "category": "currency_finance",
+      "score": 43,
+      "level": "elevated",
+      "summaryJa": "ドル円が下落し、160円台前半で推移している。金融市場の動向に注目される。NYダウとS&P500が上昇している。",
+      "factorsJa": [
+        "ドル円の下落",
+        "NYダウとS&P500の上昇",
+        "金融市場の動向"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -7,
+      "changeReasonJa": "ドル円の下落と金融市場の動向により、スコアが5ポイント上昇した"
+    },
+    {
+      "category": "currency_finance",
+      "score": 38,
+      "level": "moderate",
+      "summaryJa": "ドル円が上昇し、株式市場も上昇している。米国の利上げ確率が高まっているが、金融市場への影響はまだ限定的である。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "株式市場の上昇",
+        "米国の利上げ確率の高まり"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -5,
+      "changeReasonJa": "ドル円の上昇と株式市場の上昇により、金融市場の不安定性が軽減されたため、スコアを低下させた。"
+    },
+    {
+      "category": "currency_finance",
+      "score": 34,
+      "level": "moderate",
+      "summaryJa": "ドル円が161.275円まで上昇し、NYダウとS&P500も上昇している。ただし、原油価格と金価格の変動は経済への影響を与える可能性がある。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "NYダウとS&P500の上昇",
+        "原油価格と金価格の変動"
+      ],
+      "assessedAt": "2026-06-21T04:43:28.962Z",
+      "delta": -4,
+      "changeReasonJa": "ドル円の上昇と株式市場の好調が経済への影響を与えた"
+    },
+    {
+      "category": "currency_finance",
+      "score": 31,
+      "level": "moderate",
+      "summaryJa": "ドル円が上昇し、NYダウやS&P500も上昇しているが、米10年債利回りが上昇していることから、金融市場の動向に注意が必要である。",
+      "factorsJa": [
+        "ドル円の上昇",
+        "NYダウとS&P500の上昇",
+        "米10年債利回りの上昇"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": -3,
+      "changeReasonJa": "ドル円の上昇と米国株式市場の好調さが要因となっている"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "金融市場の動向がマクロ経済に影響を及ぼす可能性がある。債券市場で長期金利が約30年ぶりの高水準となった。ドル円が変動している。",
+      "factorsJa": [
+        "金融市場の動向",
+        "債券市場の長期金利",
+        "ドル円の変動"
+      ],
+      "assessedAt": "2026-07-03T03:35:50.419Z",
+      "delta": 19,
+      "changeReasonJa": "金融市場の動向や債券市場の長期金利の変化が要因となってスコアが上昇した"
     }
   ],
   "geopolitics_supply_chain": [
@@ -1632,6 +1859,229 @@
         "地政学的緊張"
       ],
       "assessedAt": "2026-05-14T03:43:46.521Z"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 88,
+      "level": "critical",
+      "summaryJa": "レバノン大統領がイランを非難し、対米交渉に利用されないよう警告したことから、地政学的緊張が高まっている。地域の安定性に影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "レバノン大統領のイラン非難",
+        "地政学的緊張の高まり",
+        "地域の安定性への影響"
+      ],
+      "assessedAt": "2026-06-06T13:43:48.793Z"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 70,
+      "level": "high",
+      "summaryJa": "北朝鮮の軍事動向が地域の安定に影響を及ぼす可能性があり、地政学的リスクが高まっている。ウクライナがギリシャ沖に無人艇を進入させたことも地政学的緊張を高めている。",
+      "factorsJa": [
+        "北朝鮮の軍事動向",
+        "ウクライナの無人艇進入"
+      ],
+      "assessedAt": "2026-06-06T15:02:41.529Z",
+      "delta": -18,
+      "changeReasonJa": "北朝鮮の軍事動向とウクライナの無人艇進入による地政学的緊張の増大"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 60,
+      "level": "elevated",
+      "summaryJa": "習近平氏と金正恩氏の会談が予定されており、地政学的緊張が高まっている。核問題やトランプ氏との関係が重なる思惑がある。",
+      "factorsJa": [
+        "習近平氏と金正恩氏の会談",
+        "核問題",
+        "トランプ氏との関係"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -10,
+      "changeReasonJa": "地政学的緊張が高まったため"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 56,
+      "level": "elevated",
+      "summaryJa": "イランとイスラエルが攻撃応酬を繰り返しており、トランプ氏の自制要請でも止まらなかった。地政学的緊張が高まっている。",
+      "factorsJa": [
+        "イランとイスラエルによる攻撃応酬",
+        "トランプ氏の自制要請",
+        "地政学的緊張"
+      ],
+      "assessedAt": "2026-06-08T04:21:19.896Z",
+      "delta": -4,
+      "changeReasonJa": "地政学的緊張の高まりが要因でスコアが上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 54,
+      "level": "elevated",
+      "summaryJa": "中東情勢の不透明さや米中対立の懸念により、地政学的要因がグローバル経済に直接的な影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "中東情勢の不透明さ",
+        "米中対立の懸念",
+        "地政学的要因"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": -2,
+      "changeReasonJa": "中東情勢の不透明さや米中対立の懸念が要因となってスコアが上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 48,
+      "level": "elevated",
+      "summaryJa": "マレーシア首相はアジアの未来を語り、国際秩序における開放性の重要性を強調した。アジア経済の将来に影響が見られる。",
+      "factorsJa": [
+        "マレーシア首相の発言",
+        "アジア経済の将来",
+        "中東の情勢悪化"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -6,
+      "changeReasonJa": "マレーシア首相の発言と中東の情勢悪化が要因となっている"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 48,
+      "level": "elevated",
+      "summaryJa": "ラオスのソンサイ首相がアジアの成長と地域連結性の重要性を強調し、地域経済の発展に寄与する考え方が示されている。また、東ティモール大統領がアジアの未来について発言し、地域の平和と安定が経済発展に不可欠であると強調している。",
+      "factorsJa": [
+        "ラオスのソンサイ首相の発言",
+        "東ティモール大統領の発言",
+        "地域の平和と安定"
+      ],
+      "assessedAt": "2026-06-11T04:17:50.016Z",
+      "delta": 0,
+      "changeReasonJa": "地域の平和と安定への期待の増大"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "天皇皇后両陛下の外国訪問や高市首相の欧州訪問により、国際関係が強化されている。しかし、地政学的なリスク要因も存在する。",
+      "factorsJa": [
+        "天皇皇后両陛下の外国訪問",
+        "高市首相の欧州訪問",
+        "地政学的なリスク要因"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": 2,
+      "changeReasonJa": "国際関係の強化により、スコアを2ポイント上げた"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 43,
+      "level": "elevated",
+      "summaryJa": "トランプ氏のイラン合意に関するコメントやホルムズの完全開放の主張により、地政学的緊張が高まっている。日英首相会談やマクロン仏大統領のトランプ氏招待も地政学的影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "トランプ氏のイラン合意に関するコメント",
+        "ホルムズの完全開放の主張",
+        "日英首相会談",
+        "マクロン仏大統領のトランプ氏招待"
+      ],
+      "assessedAt": "2026-06-14T04:25:26.543Z",
+      "delta": -7,
+      "changeReasonJa": "トランプ氏のコメントや日英首相会談が要因となり、スコアが2点上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 59,
+      "level": "elevated",
+      "summaryJa": "地政学的な影響が見られるが、影響度は中程度である。フィリピン外相の発言やオランダ海軍艦の東京寄港が地政学的な影響を及ぼしている。",
+      "factorsJa": [
+        "フィリピン外相の発言",
+        "オランダ海軍艦の東京寄港"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 16,
+      "changeReasonJa": "地政学的な影響の増加による",
+      "sourceNewsIds": [
+        "2ce0222275ad8780",
+        "cfab67c6bc6e68e3"
+      ]
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 64,
+      "level": "high",
+      "summaryJa": "ドイツは食料備蓄を拡充する計画で、日本とも情報交換を行っている。食料安全保障への影響が懸念される。",
+      "factorsJa": [
+        "ドイツの食料備蓄拡充",
+        "日本との情報交換",
+        "食料安全保障への影響"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 5,
+      "changeReasonJa": "食料安全保障への懸念が高まったため、スコアを上げた"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 66,
+      "level": "high",
+      "summaryJa": "米国防総省が太平洋軍の名称を8年ぶりに「インド」を削除して復活させた。地政学的な影響が見られる。",
+      "factorsJa": [
+        "米国防総省の名称変更",
+        "地政学的な影響",
+        "供給網への影響"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": 2,
+      "changeReasonJa": "地政学的な影響が懸念されるため、スコアが2ポイント上昇した"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 64,
+      "level": "high",
+      "summaryJa": "ホルムズ海峡危機と原油在庫の状況が地政学的リスクを高めている。原油価格の変動も経済に影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "ホルムズ海峡危機",
+        "原油在庫の状況",
+        "原油価格の変動"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -2,
+      "changeReasonJa": "ホルムズ海峡危機と原油在庫の状況が地政学的リスクを高めたため、スコアを上げた。"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 59,
+      "level": "elevated",
+      "summaryJa": "英首相の辞意表明やポーランドとゼレンスキー氏の歴史問題が地政学的緊張に影響を与える。さらに、トランプ氏の政治的影響も国際関係に影響する。",
+      "factorsJa": [
+        "英首相の辞意表明",
+        "ポーランドとゼレンスキー氏の歴史問題",
+        "トランプ氏の政治的影響"
+      ],
+      "assessedAt": "2026-06-21T04:43:28.962Z",
+      "delta": -5,
+      "changeReasonJa": "地政学的緊張の増加が経済への影響を与えた"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 48,
+      "level": "elevated",
+      "summaryJa": "中国の太陽光パネル業界の動向や、薬容器・包装の品薄が続いていることから、供給網への影響が懸念される。",
+      "factorsJa": [
+        "中国の太陽光パネル業界の動向",
+        "薬容器・包装の品薄"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": -11,
+      "changeReasonJa": "中国の太陽光パネル業界の動向と薬容器・包装の品薄が要因となっている"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 39,
+      "level": "moderate",
+      "summaryJa": "地政学的影響は見られないが、ベネズエラでの地震や政治的な動向が注目される。直接的な経済リスクへの関連度は限定的である。",
+      "factorsJa": [
+        "ベネズエラでの地震",
+        "政治的な動向"
+      ],
+      "assessedAt": "2026-07-03T03:35:50.419Z",
+      "delta": -9,
+      "changeReasonJa": "地政学的影響は見られないためスコアが下がった"
     }
   ],
   "technology": [
@@ -2429,6 +2879,223 @@
         "テクノロジー関連の市場動向"
       ],
       "assessedAt": "2026-05-14T03:43:46.521Z"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "特に技術分野に関する重大なニュースは見られないが、モリタHDがナフサ高の長期化に先手を打ち、塗料用シンナーを再利用することを検討していることから、企業の戦略的な対応はある。",
+      "factorsJa": [
+        "モリタHDの塗料用シンナー再利用検討",
+        "企業の戦略的な対応",
+        "技術分野のニュースの減少"
+      ],
+      "assessedAt": "2026-06-06T13:43:48.793Z"
+    },
+    {
+      "category": "technology",
+      "score": 70,
+      "level": "high",
+      "summaryJa": "提供されたニュースではテクノロジー関連の重大なリスク要因は見られない。ただし、他のカテゴリからのリスクがテクノロジー業界に波及する可能性はある。",
+      "factorsJa": [
+        "なし"
+      ],
+      "assessedAt": "2026-06-06T15:02:41.529Z",
+      "delta": -5,
+      "changeReasonJa": "テクノロジー関連の重大なリスク要因の不存在"
+    },
+    {
+      "category": "technology",
+      "score": 68,
+      "level": "high",
+      "summaryJa": "スペースXのIPOが間近にあり、マスク氏が描く宇宙×AIの未来が注目されている。テクノロジーと経済の融合が進んでいる。",
+      "factorsJa": [
+        "スペースXのIPO",
+        "マスク氏の宇宙×AIの未来"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": -2,
+      "changeReasonJa": "テクノロジーと経済の融合が進んだため"
+    },
+    {
+      "category": "technology",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "iPhoneとAIの融合が進んでおり、WWDC26で現地生解説が行われる。AI技術の進化が注目されている。",
+      "factorsJa": [
+        "iPhoneとAIの融合",
+        "WWDC26での現地生解説",
+        "AI技術の進化"
+      ],
+      "assessedAt": "2026-06-08T04:21:19.896Z",
+      "delta": 4,
+      "changeReasonJa": "AI技術の進化が要因でスコアが上昇した"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "AIの浪費により、社員1人当たり月1000万円の損失が発生する可能性がある。技術関連のニュースは業界全体に波及効果をもたらす可能性がある。",
+      "factorsJa": [
+        "AIの浪費",
+        "技術関連のニュース",
+        "業界全体への波及効果"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": 3,
+      "changeReasonJa": "AIの浪費と技術関連のニュースが要因となってスコアが上昇した"
+    },
+    {
+      "category": "technology",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "Appleの新しいSiriの投入が、欧州と中国での規制により遅れている。テクノロジー企業のグローバル展開に課題が見られる。",
+      "factorsJa": [
+        "Appleの新しいSiriの投入",
+        "欧州と中国での規制",
+        "テクノロジー企業のグローバル展開"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -3,
+      "changeReasonJa": "Appleの新しいSiriの投入が遅れていることが要因となっている"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "AI技術の開発が加速し、新組織が設立される。また、宇宙ロケット試射への政府補償を盛り込んだ改正法案が成立する見通しとなり、新興企業の参入が促進される可能性がある。",
+      "factorsJa": [
+        "AI技術の開発",
+        "新組織の設立",
+        "宇宙ロケット試射への政府補償"
+      ],
+      "assessedAt": "2026-06-11T04:17:50.016Z",
+      "delta": 3,
+      "changeReasonJa": "AI技術の開発と新組織の設立によるテクノロジー分野の活性化"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "アンソロピックがミュトス級AIの提供を停止したことや、スペースXの上場により、テクノロジー分野の動向が注目されている。テクノロジー関連のリスクも高まっている。",
+      "factorsJa": [
+        "アンソロピックのミュトス級AIの提供停止",
+        "スペースXの上場",
+        "テクノロジー関連のリスク"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": 3,
+      "changeReasonJa": "テクノロジー関連のニュースが多く、スコアを3ポイント下げた"
+    },
+    {
+      "category": "technology",
+      "score": 76,
+      "level": "high",
+      "summaryJa": "Amazonの幹部が米政府にミュトスの「抜け穴」リスクについて伝達しており、テクノロジー企業の規制対応が注目される。日英伊の次期戦闘機契約もテクノロジー分野の動向を示唆している。",
+      "factorsJa": [
+        "Amazonの幹部のミュトスの「抜け穴」リスクに関する伝達",
+        "日英伊の次期戦闘機契約",
+        "テクノロジー企業の規制対応"
+      ],
+      "assessedAt": "2026-06-14T04:25:26.543Z",
+      "delta": -2,
+      "changeReasonJa": "Amazonの幹部の伝達や日英伊の次期戦闘機契約が要因となり、スコアが2点下落した"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "テクノロジー分野は引き続き高いリスクを抱えている。半導体株の世界的な上昇や新エネルギー分野への影響が見られる。",
+      "factorsJa": [
+        "半導体株の上昇",
+        "新エネルギー分野への影響"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 2,
+      "changeReasonJa": "テクノロジー分野の動向の継続による",
+      "sourceNewsIds": [
+        "9b5a08efbfb2db79",
+        "f09ff6f8c6ed43a8"
+      ]
+    },
+    {
+      "category": "technology",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "OpenAIがAI導入コンサルを30万人に提供する。外部企業とのパートナー制を導入する。AI技術の進化が続いている。",
+      "factorsJa": [
+        "OpenAIのAI導入コンサル",
+        "外部企業とのパートナー制",
+        "AI技術の進化"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 2,
+      "changeReasonJa": "AI技術の進化が続いているため、スコアを上げた"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "中国レノボがAI技術を用いたサッカーW杯を実現させた。業績と株価の向上が期待される。",
+      "factorsJa": [
+        "AI技術の進展",
+        "業績と株価の向上",
+        "テクノロジー業界の動向"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -2,
+      "changeReasonJa": "AI技術の進展と業績の向上により、スコアが2ポイント下降した"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "テクノロジー業界のニュースは限定的であるが、AI関連株の上昇はテクノロジー業界の成長を示唆している。",
+      "factorsJa": [
+        "AI関連株の上昇",
+        "テクノロジー業界の成長"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -3,
+      "changeReasonJa": "AI関連株の上昇により、テクノロジー業界の成長が期待されるため、スコアを上げた。"
+    },
+    {
+      "category": "technology",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "TOTOの半導体部材への投資計画が技術革新と経済成長に貢献する可能性がある。さらに、ヤマダとエディオンの統合が流通業界の再編の一歩となり、経済に間接的な影響を与える可能性がある。",
+      "factorsJa": [
+        "TOTOの半導体部材への投資計画",
+        "ヤマダとエディオンの統合"
+      ],
+      "assessedAt": "2026-06-21T04:43:28.962Z",
+      "delta": 3,
+      "changeReasonJa": "技術革新と流通業界の再編が経済への影響を与えた"
+    },
+    {
+      "category": "technology",
+      "score": 79,
+      "level": "high",
+      "summaryJa": "テクノロジー分野では特に大きなニュースは見られないが、前回のスコアから大きな変化はなし",
+      "factorsJa": [
+        "なし"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": 1,
+      "changeReasonJa": "特に大きな変化はなし"
+    },
+    {
+      "category": "technology",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "キオクシアが次世代メモリー「第10世代」のサンプル出荷を開始した。技術革新による産業への影響が期待される。直接的な経済リスクへの影響はまだ限定的である。",
+      "factorsJa": [
+        "キオクシアの次世代メモリー",
+        "技術革新"
+      ],
+      "assessedAt": "2026-07-03T03:35:50.419Z",
+      "delta": -4,
+      "changeReasonJa": "技術革新の進展が要因となってスコアが上昇した"
     }
   ],
   "social_policy": [
@@ -3231,6 +3898,225 @@
         "街角景気の悪化"
       ],
       "assessedAt": "2026-05-14T03:43:46.521Z"
+    },
+    {
+      "category": "social_policy",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "石破前首相が国旗損壊罪法案について刑罰の適切性を疑問視していることから、政治的な影響はあるが、直接的な経済リスクへの影響は見られない。与党は政治資金の問題解決を優先している。",
+      "factorsJa": [
+        "石破前首相の国旗損壊罪法案への疑問",
+        "与党の政治資金問題解決への取り組み",
+        "政治情勢への影響"
+      ],
+      "assessedAt": "2026-06-06T13:43:48.793Z"
+    },
+    {
+      "category": "social_policy",
+      "score": 75,
+      "level": "high",
+      "summaryJa": "与党が政治資金問題の解決に取り組む必要性について言及しており、社会政策に関連するリスクが存在する。石破前首相の国旗損壊罪法案への疑問表明も社会政策の不確実性を高めている。",
+      "factorsJa": [
+        "政治資金問題",
+        "国旗損壊罪法案への疑問"
+      ],
+      "assessedAt": "2026-06-06T15:02:41.529Z",
+      "delta": 3,
+      "changeReasonJa": "政治資金問題と国旗損壊罪法案への疑問による社会政策の不確実性の増大"
+    },
+    {
+      "category": "social_policy",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "アメリカで高校での金融教育の義務化が広がり、職業選択などに良い影響が期待される。地方財政への影響が懸念されている。",
+      "factorsJa": [
+        "アメリカでの金融教育の義務化",
+        "地方財政への影響"
+      ],
+      "assessedAt": "2026-06-07T04:16:46.556Z",
+      "delta": 3,
+      "changeReasonJa": "金融教育の進展と地方財政への懸念が高まったため"
+    },
+    {
+      "category": "social_policy",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "大阪・池田小事件から25年、追悼式が行われた。学校の安全と命の尊さを再び考える機会となった。",
+      "factorsJa": [
+        "大阪・池田小事件からの25年",
+        "追悼式",
+        "学校の安全と命の尊さ"
+      ],
+      "assessedAt": "2026-06-08T04:21:19.896Z",
+      "delta": 2,
+      "changeReasonJa": "社会的な問題への意識の高まりが要因でスコアが上昇した"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "政府は「こども実行計画」を発表し、安全なSNS環境を確保するための法改正を視野に入れている。社会政策への影響が見られ、経済への影響も懸念される。",
+      "factorsJa": [
+        "こども実行計画",
+        "安全なSNS環境",
+        "法改正"
+      ],
+      "assessedAt": "2026-06-09T03:52:42.086Z",
+      "delta": 2,
+      "changeReasonJa": "政府のこども実行計画と安全なSNS環境の確保が要因となってスコアが上昇した"
+    },
+    {
+      "category": "social_policy",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "経済安保で重要な海外事業について、国がリスクを肩代わりする改正法が成立した。経済安全保障政策が強化される。",
+      "factorsJa": [
+        "経済安保",
+        "海外事業",
+        "国がリスクを肩代わりする改正法"
+      ],
+      "assessedAt": "2026-06-10T04:03:32.500Z",
+      "delta": -2,
+      "changeReasonJa": "経済安保で重要な海外事業について、国がリスクを肩代わりする改正法が成立したことが要因となっている"
+    },
+    {
+      "category": "social_policy",
+      "score": 85,
+      "level": "critical",
+      "summaryJa": "ローンオフェンダーのテロ対策で警察と貸倉庫業界が協力し、銃自作を警戒している。また、東京高裁の判決は消費者保護政策に影響を与える可能性がある。",
+      "factorsJa": [
+        "ローンオフェンダーのテロ対策",
+        "東京高裁の判決",
+        "消費者保護政策"
+      ],
+      "assessedAt": "2026-06-11T04:17:50.016Z",
+      "delta": 5,
+      "changeReasonJa": "社会的不安定要因の増大と消費者保護政策への影響"
+    },
+    {
+      "category": "social_policy",
+      "score": 84,
+      "level": "critical",
+      "summaryJa": "社会政策関連のニュースは少ないが、経済への影響は依然として高い。社会的要因の変化に注意が必要である。",
+      "factorsJa": [
+        "社会政策関連のニュース",
+        "経済への影響",
+        "社会的要因の変化"
+      ],
+      "assessedAt": "2026-06-13T04:07:42.561Z",
+      "delta": -1,
+      "changeReasonJa": "社会政策関連のニュースが少ないため、スコアを1ポイント下げた"
+    },
+    {
+      "category": "social_policy",
+      "score": 83,
+      "level": "critical",
+      "summaryJa": "ブラジルの差別問題や黒人運動の先駆者による不平等の可視化が注目される。人種差別への厳罰化も社会政策の動向を示唆している。",
+      "factorsJa": [
+        "ブラジルの差別問題",
+        "黒人運動の先駆者による不平等の可視化",
+        "人種差別への厳罰化"
+      ],
+      "assessedAt": "2026-06-14T04:25:26.543Z",
+      "delta": -1,
+      "changeReasonJa": "ブラジルの差別問題や黒人運動の動向が要因となり、スコアが1点下落した"
+    },
+    {
+      "category": "social_policy",
+      "score": 85,
+      "level": "critical",
+      "summaryJa": "社会・政策分野は引き続き高いリスクを抱えている。地域格差の懸念や教育分野でのコラボレーションが注目されている。",
+      "factorsJa": [
+        "地域格差の懸念",
+        "教育分野でのコラボレーション"
+      ],
+      "assessedAt": "2026-06-15T04:48:33.056Z",
+      "delta": 2,
+      "changeReasonJa": "社会・政策分野の動向の継続による",
+      "sourceNewsIds": [
+        "e3b6a33d9e38f7d7",
+        "c3623aa94321f972"
+      ]
+    },
+    {
+      "category": "social_policy",
+      "score": 88,
+      "level": "critical",
+      "summaryJa": "宮崎市が市内3大学とふるさと納税を活用し、海外留学支援など活動を充実させる。社会政策への影響が懸念される。",
+      "factorsJa": [
+        "宮崎市の社会政策",
+        "ふるさと納税の活用",
+        "海外留学支援"
+      ],
+      "assessedAt": "2026-06-16T04:46:06.604Z",
+      "delta": 3,
+      "changeReasonJa": "社会政策への懸念が高まったため、スコアを上げた"
+    },
+    {
+      "category": "social_policy",
+      "score": 85,
+      "level": "critical",
+      "summaryJa": "文化シヤッター、アクティビスト対抗策が可決された。社会的な影響はあるものの、経済への直接的な影響は限定的である。",
+      "factorsJa": [
+        "社会的な影響",
+        "経済への直接的な影響",
+        "政策の変化"
+      ],
+      "assessedAt": "2026-06-17T04:26:20.802Z",
+      "delta": -3,
+      "changeReasonJa": "社会的な影響が懸念されるため、スコアが3ポイント下降した"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "社会政策に関するニュースは限定的であるが、インフレや食品価格の変動は社会政策に影響を及ぼす可能性がある。",
+      "factorsJa": [
+        "インフレ",
+        "食品価格の変動",
+        "社会政策"
+      ],
+      "assessedAt": "2026-06-19T04:47:15.491Z",
+      "delta": -3,
+      "changeReasonJa": "インフレや食品価格の変動が社会政策に影響を及ぼす可能性があるため、スコアを上げた。"
+    },
+    {
+      "category": "social_policy",
+      "score": 80,
+      "level": "high",
+      "summaryJa": "子どものSNS規制拡大やこども家庭庁の学童に昼食を提供する取り組みが社会政策に影響を与える。さらに、経済への影響も考慮される。",
+      "factorsJa": [
+        "子どものSNS規制拡大",
+        "こども家庭庁の学童に昼食を提供する取り組み"
+      ],
+      "assessedAt": "2026-06-21T04:43:28.962Z",
+      "delta": -2,
+      "changeReasonJa": "社会政策の変化が経済への影響を与えた"
+    },
+    {
+      "category": "social_policy",
+      "score": 81,
+      "level": "critical",
+      "summaryJa": "世界の海面水温が最高記録を更新し、気候変動の影響が社会や経済に及ぼす可能性が懸念される",
+      "factorsJa": [
+        "世界の海面水温の最高記録更新"
+      ],
+      "assessedAt": "2026-07-01T04:13:19.418Z",
+      "delta": 1,
+      "changeReasonJa": "世界の海面水温の最高記録更新が要因となっている"
+    },
+    {
+      "category": "social_policy",
+      "score": 78,
+      "level": "high",
+      "summaryJa": "人口減少や社会的影響について論じられている。経済への長期的な影響が懸念される。直接的なリスクへの関連度は限定的であるが、社会問題への影響が見られる。",
+      "factorsJa": [
+        "人口減少",
+        "社会的影響"
+      ],
+      "assessedAt": "2026-07-03T03:35:50.419Z",
+      "delta": -3,
+      "changeReasonJa": "社会問題への影響が見られるためスコアが上昇した"
     }
   ]
 }
