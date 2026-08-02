@@ -1,5 +1,5 @@
 {
-  "compositeScore": 57,
+  "compositeScore": 58,
   "level": "elevated",
   "breakdown": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "category": "geopolitics_supply_chain",
-      "score": 39,
+      "score": 44,
       "weight": 0.3
     },
     {
       "category": "technology",
-      "score": 75,
+      "score": 70,
       "weight": 0.2
     },
     {
       "category": "social_policy",
-      "score": 78,
+      "score": 80,
       "weight": 0.2
     }
   ],
