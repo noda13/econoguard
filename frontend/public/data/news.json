@@ -1,5 +1,771 @@
 [
   {
+    "id": "a894320145671b00",
+    "source": "nikkei",
+    "originalTitle": "商品9時30分　原油が反落　米イラン協議再開に期待　金は続落",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL030K70T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "原油の価格が反落し、金の価格も続落した。米イラン協議の再開に期待が寄せられている。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "23665b70980828d6",
+    "source": "nikkei",
+    "originalTitle": "円急騰、一時155円台　追加の為替介入に警戒",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB020N90S6A800C2000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "円の価値が急騰し、一時155円台に達した。追加の為替介入に警戒が広がっている。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "3b397f890a234591",
+    "source": "nikkei",
+    "originalTitle": "片山財務相「米国と協調して円買い介入」　追加介入も示唆",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUA030BQ0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "片山財務相が米国と協調して円買い介入を行うことを示唆した。追加介入も示唆された。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "525cb92931f94c74",
+    "source": "nikkei",
+    "originalTitle": "韓国株、一時下落率4%強　サムスン電子とSKハイニックスに売り",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL030LS0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "韓国株式市場が下落し、サムスン電子とSKハイニックスに売りが集まった。韓国株の下落は、グローバル経済に間接的な影響を与える可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "dcf6c7eaf814fcc0",
+    "source": "nikkei",
+    "originalTitle": "ドバイ原油・3日午前、下落",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB030GS0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "ドバイ原油価格が下落した。原油価格の変動は、グローバル経済に影響を与える可能性がある。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "fd9b09500934c9bc",
+    "source": "nikkei",
+    "originalTitle": "東証寄り付き　日経平均は反落　一時1200円安　戻り待ちの売り　米ハイテク株高は支え",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL030B30T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "東証が反落し、日経平均が下落した。戻り待ちの売りが要因のひとつとなった。米ハイテク株高は支えとなった。",
+    "relevanceScore": 60,
+    "riskCategories": []
+  },
+  {
+    "id": "e0071206781ececd",
+    "source": "nikkei",
+    "originalTitle": "債券寄り付き　長期金利、2.805%に上昇　米金利高が重荷",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL030540T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "債券市場で長期金利が上昇し、米金利高が重荷となった。金利の変動は、グローバル経済に影響を与える可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": []
+  },
+  {
+    "id": "f1e30aa21809af04",
+    "source": "nikkei",
+    "originalTitle": "日経平均、反落で始まる　戻り待ちの売り　下げ幅一時700円",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL030B50T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "日経平均が反落で始まり、戻り待ちの売りが要因のひとつとなった。下げ幅は一時700円となった。",
+    "relevanceScore": 60,
+    "riskCategories": []
+  },
+  {
+    "id": "7da105d47a86415f",
+    "source": "nikkei",
+    "originalTitle": "米財務長官「さらなる協調介入ためらわず」　投機的な円売りに対抗",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN030CJ0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "米財務長官が、投機的な円売りに対抗するため、さらなる協調介入を行う用意があると述べた。為替市場への介入は、グローバル経済に直接的な影響を与える可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "8148888a3f1624bc",
+    "source": "nikkei",
+    "originalTitle": "英アストラゼネカ、米製薬大手BMSと合併協議　FT報道",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGR0305U0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "英アストラゼネカと米製薬大手BMSの合併協議が進行中。医薬品市場に大きな影響を与える可能性があるが、具体的な合併内容や影響度はまだ不明。",
+    "relevanceScore": 40,
+    "riskCategories": []
+  },
+  {
+    "id": "5da4bc52e520fde9",
+    "source": "nikkei",
+    "originalTitle": "日経平均先物、大取で反落　200円安の6万3520円で始まる",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL0308S0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "日経平均先物が反落し、200円安の6万3520円で始まった。金融市場の短期的な変動に影響を与える可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": []
+  },
+  {
+    "id": "d53071334ef114e9",
+    "source": "nikkei",
+    "originalTitle": "外為8時30分　円相場、大幅に上昇し157円台後半　対ユーロでも上昇",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL0304N0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "円相場が大幅に上昇し、157円台後半となった。対ユーロでも上昇した。通貨市場の変動に影響を与える可能性がある。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "d643a50c3bc9f99e",
+    "source": "nikkei",
+    "originalTitle": "トランプ氏「3日にイランと話し合う」　ホルムズ海峡や核問題を協議",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN0306I0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "トランプ氏がイランと話し合うことを表明し、ホルムズ海峡や核問題を協議する予定。地政学的影響が予想される。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "036898ed6aab27e0",
+    "source": "nikkei",
+    "originalTitle": "AI・半導体株、7月は逆回転 「シチュエーショナル救済」が転機か",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOFL313DD0R30C26A7000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "AI・半導体株が7月に逆回転し、「シチュエーショナル救済」が転機となる可能性がある。技術と市場の動向に影響を与える可能性がある。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "technology"
+    ]
+  },
+  {
+    "id": "f01d11584e21d826",
+    "source": "nikkei",
+    "originalTitle": "トランプ氏、円安阻止の協調介入「日本を常に支援する」",
+    "originalUrl": "https://www.nikkei.com/article/DGXZQOGN0305T0T00C26A8000000/",
+    "publishedAt": "2026-08-03T03:17:02.311Z",
+    "summaryJa": "トランプ氏が円安阻止の協調介入について日本を支援する意向を表明した。通貨市場と国際協力に影響を与える可能性がある。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "4a3703bc9bb63642",
+    "source": "bloomberg",
+    "originalTitle": "Why Bonds Are at Center of US-Japan Intervention on Yen",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-08-03/why-bonds-are-at-center-of-us-japan-intervention-on-yen-video",
+    "publishedAt": "2026-08-03T03:08:34.000Z",
+    "summaryJa": "米国と日本が円の安値に対して介入する動きを見せているが、国債が中心となっている。円安に伴う経済への影響が懸念される。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "046974cabd3a1d57",
+    "source": "cnbc",
+    "originalTitle": "Oil drops over 4% as Middle East tensions ebb on diplomatic efforts",
+    "originalUrl": "https://www.cnbc.com/2026/08/03/oil-prices-today-wti-brent-hormuz-trump-iran.html",
+    "publishedAt": "2026-08-03T02:33:19.000Z",
+    "summaryJa": "中東の緊張が緩和したことで原油価格が4%以上下落した。原油価格の変動は経済に影響を及ぼすが、この場合は短期的影響が主である。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "9bc3ca2d6021c51a",
+    "source": "cnbc",
+    "originalTitle": "Stock futures rally as investors gear up for jobs report, key earnings: Live updates",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/stock-market-today-live-updates.html",
+    "publishedAt": "2026-08-03T02:29:21.000Z",
+    "summaryJa": "雇用統計と主要企業の業績発表を控え、株式市場が上昇した。投資家は重要な経済指標に注目している。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "a62a46cadfec18df",
+    "source": "cnbc",
+    "originalTitle": "Trump says Iran talks to resume Monday after calling off planned strikes",
+    "originalUrl": "https://www.cnbc.com/2026/08/03/trump-iran-us-negotiations-peace-proposals-.html",
+    "publishedAt": "2026-08-03T02:23:21.000Z",
+    "summaryJa": "イランとの交渉が再開される見通し。地政学的緊張の緩和は経済にプラスの影響を与える可能性がある。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "c2f49fcca804656d",
+    "source": "bloomberg",
+    "originalTitle": "Fanuc Shares Dive Most in 40 Years After Procurement Fears Hit",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/fanuc-shares-dive-most-in-40-years-after-procurement-fears-hit",
+    "publishedAt": "2026-08-03T02:13:56.000Z",
+    "summaryJa": "ファナックの株価が40年ぶりに大幅に下落した。調達に関する懸念が要因となっている。企業の業績は経済に影響を及ぼすが、この場合は業界への波及効果が主である。",
+    "relevanceScore": 30,
+    "riskCategories": []
+  },
+  {
+    "id": "37dc34ff3cb1f8a9",
+    "source": "bloomberg",
+    "originalTitle": "Yen Rises Sharply With Traders on Intervention Watch",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-08-03/yen-rises-sharply-with-traders-on-intervention-watch-video",
+    "publishedAt": "2026-08-03T02:08:27.000Z",
+    "summaryJa": "円が急上昇し、介入の観測が高まっている。為替市場の動きは経済に直接影響を及ぼす。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "475bfc38d9b45464",
+    "source": "bloomberg",
+    "originalTitle": "Yen Bearish Bets Face Unwind Risk After US-Japan Intervention",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/yen-bearish-bets-face-unwind-risk-after-us-japan-intervention",
+    "publishedAt": "2026-08-03T01:56:38.000Z",
+    "summaryJa": "米国と日本の介入により、円の下落を予想していた投資家が損をみる可能性がある。為替市場の動きは金融市場に影響を及ぼす。",
+    "relevanceScore": 85,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "78be7e81d86334ed",
+    "source": "bloomberg",
+    "originalTitle": "Iron Ore Hits One-Year Low on Trader Concerns and Demand Outlook",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/iron-ore-hits-one-year-low-on-trader-concerns-and-demand-outlook",
+    "publishedAt": "2026-08-03T01:56:07.000Z",
+    "summaryJa": "鉄鉱石価格が1年ぶりの低水準に下落した。需要の見通しと取引の懸念が要因となっている。資源価格の変動は経済に影響を及ぼす。",
+    "relevanceScore": 45,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "62cb497096674a5f",
+    "source": "bloomberg",
+    "originalTitle": "China’s Factory Activity Gauge Slows as Economy Weakens",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/china-s-factory-activity-gauge-slows-as-economy-weakens",
+    "publishedAt": "2026-08-03T01:46:39.000Z",
+    "summaryJa": "中国の製造業活動指数が減速した。中国経済の減速はグローバル経済に影響を及ぼす可能性がある。",
+    "relevanceScore": 75,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "854836ef50831b15",
+    "source": "bloomberg",
+    "originalTitle": "Chinese Government Bond Futures Kick Off Trading in Hong Kong",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/chinese-government-bond-futures-kick-off-trading-in-hong-kong",
+    "publishedAt": "2026-08-03T01:35:08.000Z",
+    "summaryJa": "中国国債先物取引が香港で開始され、グローバル投資家へのアクセスが拡大する見込みです。アジアの金融市場への影響が期待されます。",
+    "relevanceScore": 60,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "6406fcfac3b87428",
+    "source": "bloomberg",
+    "originalTitle": "Stock-Loving Korean President Under Fire Over Wild Market Swings",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/stock-loving-korean-president-under-fire-over-wild-market-swings",
+    "publishedAt": "2026-08-03T01:30:50.000Z",
+    "summaryJa": "韓国大統領が株式市場の乱高下について批判されています。韓国経済への信頼性が揺らぐ可能性があります。",
+    "relevanceScore": 50,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "1486f14f66647f08",
+    "source": "bloomberg",
+    "originalTitle": "India’s IPO Boom Cools as Weak Markets Force Issuers to Cut Back",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/india-s-ipo-boom-cools-as-weak-markets-force-issuers-to-cut-back",
+    "publishedAt": "2026-08-03T01:30:00.000Z",
+    "summaryJa": "インドのIPOブームが弱い市場により減速しています。インドの株式市場と企業への影響が見られます。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "9512a4b2769cade2",
+    "source": "bloomberg",
+    "originalTitle": "Japan’s Use of Fed Repo May Ease Pressure on Treasury Market",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/japan-s-use-of-fed-facility-may-ease-pressure-on-treasury-market",
+    "publishedAt": "2026-08-03T01:26:04.000Z",
+    "summaryJa": "日本が米連邦準備制度のリポを利用することで、米国債市場への圧力が軽減される可能性があります。グローバル金融市場への影響が期待されます。",
+    "relevanceScore": 70,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "74cde2aa2f4d824b",
+    "source": "ft",
+    "originalTitle": "Trump says Iran talks to resume after US called off major attack",
+    "originalUrl": "https://www.ft.com/content/c9bd508c-2915-4b34-a5a5-553bff9548a5?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-03T01:24:32.000Z",
+    "summaryJa": "イランとの交渉が再開される見込みです。地政学的緊張が緩和する可能性があります。",
+    "relevanceScore": 80,
+    "riskCategories": [
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "3d52a8130aeaa41e",
+    "source": "bloomberg",
+    "originalTitle": "Yen Traders Brace for Intervention as Trump Backs Japan",
+    "originalUrl": "https://www.bloomberg.com/news/videos/2026-08-03/yen-traders-brace-for-intervention-as-trump-backs-japan-video",
+    "publishedAt": "2026-08-03T01:14:17.000Z",
+    "summaryJa": "円安が進む中、トランプ大統領が日本を支持したことにより、為替介入の可能性が高まっています。日本経済と為替市場への影響が期待されます。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "090be49d93b9eba6",
+    "source": "bloomberg",
+    "originalTitle": "India Exchanges Launch Closing Auction, Challenging Arbitrage Fund Returns",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/lucrative-arb-trade-challenged-in-india-s-closing-price-overhaul",
+    "publishedAt": "2026-08-03T01:00:00.000Z",
+    "summaryJa": "インドの取引所が終値オークションを開始し、アービトラージファンドの収益に影響を与える可能性があります。インドの金融市場への影響が見られます。",
+    "relevanceScore": 30,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "c67e5b721a25e37d",
+    "source": "cnbc",
+    "originalTitle": "U.S., Japan confirm coordinated yen intervention, signal readiness for more",
+    "originalUrl": "https://www.cnbc.com/2026/08/03/yen-intervention-us-japan-trump-bessent-katayama.html",
+    "publishedAt": "2026-08-03T00:59:33.000Z",
+    "summaryJa": "米国と日本が協調して円安に対処することを確認しました。為替市場への影響が期待されます。",
+    "relevanceScore": 95,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "f2a4584094beb75d",
+    "source": "bloomberg",
+    "originalTitle": "Korean Stocks Drop as Chipmakers Reverse Friday’s Record Gains",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/korean-stocks-drop-as-chipmakers-reverse-friday-s-record-gains",
+    "publishedAt": "2026-08-03T00:59:28.000Z",
+    "summaryJa": "韓国株式市場が下落し、半導体株が前日の記録的な上昇を取り消しました。韓国経済への影響が見られます。",
+    "relevanceScore": 40,
+    "riskCategories": [
+      "currency_finance"
+    ]
+  },
+  {
+    "id": "aa768a9a430b3562",
+    "source": "ft",
+    "originalTitle": "Japan vows to intervene again with US over yen if needed",
+    "originalUrl": "https://www.ft.com/content/5de204a4-4db6-458c-aa9a-324e6bd5e766?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-03T00:48:08.000Z",
+    "summaryJa": "日本が必要に応じて米国と協調して円安に対処することを表明しました。為替市場への影響が期待されます。",
+    "relevanceScore": 90,
+    "riskCategories": [
+      "currency_finance",
+      "geopolitics_supply_chain"
+    ]
+  },
+  {
+    "id": "6397f21f143aa8ef",
+    "source": "bloomberg",
+    "originalTitle": "CXMT Price Targets Are $1 Trillion Apart as Analysts Differ",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-03/cxmt-s-1-trillion-target-gap-flags-high-stakes-in-chip-battle",
+    "publishedAt": "2026-08-03T00:00:02.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1a7f45b3d725279b",
+    "source": "ft",
+    "originalTitle": "AstraZeneca holds talks with Bristol Myers Squibb over $400bn tie-up",
+    "originalUrl": "https://www.ft.com/content/e9027253-e13c-460a-a4b1-f9047e5a6ca7?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T23:59:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b525a42b473f07da",
+    "source": "bloomberg",
+    "originalTitle": "Yen Bears Face Risks on Joint US-Japan Action, Strategists Say",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-02/yen-bears-face-risks-on-joint-us-japan-action-strategists-say",
+    "publishedAt": "2026-08-02T23:35:41.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "24b9d0cf1778f518",
+    "source": "cnbc",
+    "originalTitle": "Two die as firefighting helicopters collide in Greece; French blaze changes course",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/two-die-as-firefighting-helicopters-collide-in-greece.html",
+    "publishedAt": "2026-08-02T22:53:32.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "6ec89452c8f70f6c",
+    "source": "bloomberg",
+    "originalTitle": "Japan Stocks Slide as Exporters Fall on Yen Intervention Worries",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-02/japanese-stocks-set-to-fall-on-yen-worries-kioxia-guidance-miss",
+    "publishedAt": "2026-08-02T22:39:33.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "f273afed7919cf92",
+    "source": "cnbc",
+    "originalTitle": "AstraZeneca in talks with Bristol Myers Squibb on $400 billion megadeal, FT reports",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/astrazeneca-and-bristol-myers-squibb-mull-400-billion-deal-report-.html",
+    "publishedAt": "2026-08-02T22:17:47.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bd4123bac0b5e391",
+    "source": "bloomberg",
+    "originalTitle": "Oil Falls on Iran Deal Optimism, Yen Strengthens: Markets Wrap",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-02/oil-slumps-us-futures-rise-on-iran-talks-optimism-markets-wrap",
+    "publishedAt": "2026-08-02T22:09:16.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "87a13214944bc5f2",
+    "source": "bloomberg",
+    "originalTitle": "Latest Oil Market News and Analysis for Aug. 3",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-02/latest-oil-market-news-and-analysis-for-aug-3",
+    "publishedAt": "2026-08-02T22:02:28.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8006942cdfcae3ab",
+    "source": "ft",
+    "originalTitle": "Uefa threatens legal action over Infantino’s failed Fifa commercialisation",
+    "originalUrl": "https://www.ft.com/content/ddb7c0d4-c156-48a0-b30f-d03f605a1a9c?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T22:01:57.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "4be8fb7a487c288e",
+    "source": "cnbc",
+    "originalTitle": "Here's my power rankings for the big 4 hyperscalers after this earnings season",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/heres-my-power-rankings-for-the-big-4-hyperscalers-after-this-earnings-season.html",
+    "publishedAt": "2026-08-02T20:27:44.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3cb60ca3f8646474",
+    "source": "cnbc",
+    "originalTitle": "GOP Sen. Moreno says ex-son-in-law Max Miller shouldn't serve in House, needs 'serious psychological help'",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/bernie-moreno-max-miller-house-psychological-help-emily-moreno.html",
+    "publishedAt": "2026-08-02T19:13:47.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "f40521e219741e9e",
+    "source": "cnbc",
+    "originalTitle": "Op-ed: The U.S. lead over China in AI is all but gone. We need a change in national strategy",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/ai-model-competition-us-china.html",
+    "publishedAt": "2026-08-02T18:23:03.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "61171cc56717d9d4",
+    "source": "marketwatch",
+    "originalTitle": "We’re in our 60s with $1.5 million. Would a trust be more effective than a will to prevent conflict among our heirs?",
+    "originalUrl": "https://www.marketwatch.com/story/we-already-have-wills-were-in-our-60s-with-1-5-million-how-do-we-prevent-family-drama-among-our-heirs-bf7b0eb1?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T17:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "99c3e4beee404c6c",
+    "source": "ft",
+    "originalTitle": "A red card for the boss of world football",
+    "originalUrl": "https://www.ft.com/content/162287ce-0267-47e9-aeee-16f93d3fc309?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T16:17:32.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "95df6a896e035258",
+    "source": "economist",
+    "originalTitle": "\n        What will Kevin Warsh do if America’s economy breaks?\n      ",
+    "originalUrl": "https://www.economist.com/finance-and-economics/2026/08/02/what-will-kevin-warsh-do-if-americas-economy-breaks",
+    "publishedAt": "2026-08-02T16:12:02.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "6dd4c527eb002264",
+    "source": "cnbc",
+    "originalTitle": "OPEC+ agrees September oil hike, completing rollback of voluntary cuts",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/opec-agrees-september-oil-hike-completing-rollback-of-voluntary-cuts.html",
+    "publishedAt": "2026-08-02T16:02:53.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "a73e4788bc41df3a",
+    "source": "ft",
+    "originalTitle": "America’s biggest companies report ‘rock solid’ profits as consumers face higher costs",
+    "originalUrl": "https://www.ft.com/content/b4f150ea-9ea3-4bb4-b1e0-014cf1f0df26?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T16:00:06.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "2146816a04d28b69",
+    "source": "marketwatch",
+    "originalTitle": "My girlfriend is 62. Can she claim her late husband’s full Social Security benefit — or does she have to wait?",
+    "originalUrl": "https://www.marketwatch.com/story/my-girlfriend-is-62-can-she-claim-her-late-husbands-full-social-security-benefit-or-does-she-have-to-wait-315c0fa1?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T16:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "bd7f610eb6994238",
+    "source": "cnbc",
+    "originalTitle": "'Spider-Man: Brand New Day' chases 'Avengers: Endgame' opening record with $355 million domestic debut",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/spider-man-brand-new-day-box-office-355-million-domestic-opening.html",
+    "publishedAt": "2026-08-02T15:54:05.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "94f79580322764d1",
+    "source": "ft",
+    "originalTitle": "Morocco counts its dead and missing after mass swim to Ceuta",
+    "originalUrl": "https://www.ft.com/content/a01171e8-f8a1-4e2c-b3f7-f79f9cd11651?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T15:21:57.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "1aa76c5e4974c751",
+    "source": "marketwatch",
+    "originalTitle": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
+    "originalUrl": "https://www.marketwatch.com/story/heres-whats-worth-streaming-in-august-2026-on-netflix-hulu-hbo-max-and-more-21b78a08?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T15:19:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "5a9f045baf92fe24",
+    "source": "cnbc",
+    "originalTitle": "Why people are dropping out of the workforce and not looking for new jobs: 'The market wore me down'",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/why-people-are-dropping-out-of-the-workforce-and-not-looking-for-new-jobs-the-market-wore-me-down.html",
+    "publishedAt": "2026-08-02T14:30:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "8171d262164cc2ae",
+    "source": "marketwatch",
+    "originalTitle": "My ex-husband’s sister died — so why is Fidelity asking me for her death certificate?",
+    "originalUrl": "https://www.marketwatch.com/story/its-like-buying-a-lottery-ticket-fidelity-asked-for-my-former-sister-in-laws-death-certificate-does-this-mean-im-due-a-windfall-2ebdcd69?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T14:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "b73475b52f951c37",
+    "source": "marketwatch",
+    "originalTitle": "S&P 500 profit growth is getting even wilder as Amazon makes its mark",
+    "originalUrl": "https://www.marketwatch.com/story/s-p-500-profit-growth-is-getting-even-wilder-as-amazon-makes-its-mark-5ddf2082?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T14:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "349758411cecd9e0",
+    "source": "cnbc",
+    "originalTitle": "Investors scored on Iran war's oil market boom. Staying long the trade will get trickier",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/oil-prices-iran-war-energy-market.html",
+    "publishedAt": "2026-08-02T13:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "e4b2452aba37f40f",
+    "source": "marketwatch",
+    "originalTitle": "‘We have always been civil’: My sister refuses to replace me as executor. Can I step down before she dies?",
+    "originalUrl": "https://www.marketwatch.com/story/we-have-always-been-civil-my-sister-refuses-to-replace-me-as-executor-can-i-step-down-before-she-dies-84a835a9?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T13:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "fac5c3bd1f2894d2",
+    "source": "marketwatch",
+    "originalTitle": "How Apple’s cheap MacBook Neo sparked a war in budget laptops",
+    "originalUrl": "https://www.marketwatch.com/story/how-apples-cheap-macbook-neo-sparked-a-war-in-budget-laptops-8fbaf839?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T13:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "922ebd31b7f5de58",
+    "source": "bloomberg",
+    "originalTitle": "Yen Rises Amid Speculation of More Intervention After US Support",
+    "originalUrl": "https://www.bloomberg.com/news/articles/2026-08-02/yen-traders-brace-for-more-intervention-with-us-at-japan-s-side",
+    "publishedAt": "2026-08-02T12:47:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "3959ca93058af914",
+    "source": "cnbc",
+    "originalTitle": "Ukrainian drones kill two in Russia, strike Wildberries warehouse, governors say",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/ukrainian-drones-kill-two-russia-governors-say.html",
+    "publishedAt": "2026-08-02T12:06:04.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "85e0e642ba2b12b9",
+    "source": "cnbc",
+    "originalTitle": "Top Wall Street analysts are bullish on these 3 dividend stocks for passive income ",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/top-analysts-are-bullish-on-these-dividend-stocks-for-passive-income-.html",
+    "publishedAt": "2026-08-02T12:01:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7f530b60810e6d0e",
+    "source": "ft",
+    "originalTitle": "‘Crush this lady’: how eBay harassment campaign led to $56mn payout ",
+    "originalUrl": "https://www.ft.com/content/06ec1b03-d4af-40cf-b12a-4ba5a410f6d2?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T12:00:05.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "ea874a14212d2b3f",
+    "source": "cnbc",
+    "originalTitle": "Why flights are so expensive and will likely stay that way",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/flights-are-getting-even-more-expensive-as-fuel-prices-rise.html",
+    "publishedAt": "2026-08-02T12:00:01.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7f5768607b98beac",
+    "source": "marketwatch",
+    "originalTitle": "Investors are rotating into financial stocks. The Fed’s next move could determine how far the rally runs.",
+    "originalUrl": "https://www.marketwatch.com/story/investors-are-rotating-into-financial-stocks-the-feds-next-move-could-determine-how-far-the-rally-runs-662c63df?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T12:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "420ae878153978db",
+    "source": "marketwatch",
+    "originalTitle": "Financial stocks are crushing it. These charts show why the ‘breakout’ rally may have just begun.",
+    "originalUrl": "https://www.marketwatch.com/story/financial-stocks-are-crushing-it-these-charts-show-why-the-breakout-rally-may-have-just-begun-6db3cc12?mod=mw_rss_topstories",
+    "publishedAt": "2026-08-02T12:00:00.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "582ad8b1483e84bb",
+    "source": "cnbc",
+    "originalTitle": "AMD and Sandisk are two of the big chip stocks with earnings momentum in the new week",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/amd-sandisk-are-two-of-the-big-chip-stocks-with-earnings-momentum.html",
+    "publishedAt": "2026-08-02T11:56:25.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "7336904bd36b4d6b",
+    "source": "ft",
+    "originalTitle": "Iran sets the pace in war with Trump",
+    "originalUrl": "https://www.ft.com/content/a29819ef-ffb9-4d2a-9925-e3d6e6e6e797?syn-25a6b1a6=1",
+    "publishedAt": "2026-08-02T05:37:40.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "cf789a836315c666",
+    "source": "cnbc",
+    "originalTitle": "An exam leak in India exposed a Gen Z jobs crisis that goes much deeper",
+    "originalUrl": "https://www.cnbc.com/2026/08/02/india-exam-leak-protests-jobs-crisis-gen-z-unemployment-modi.html",
+    "publishedAt": "2026-08-02T05:18:21.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "e3a5734538e265ae",
     "source": "nikkei",
     "originalTitle": "米水道サイバー攻撃7州に　中西部、イラン関与か",
@@ -129,6 +895,26 @@
     "riskCategories": [
       "geopolitics_supply_chain"
     ]
+  },
+  {
+    "id": "4fc902678fdecfab",
+    "source": "cnbc",
+    "originalTitle": "Capital One says it closed Trump Organization's accounts after anti-money laundering probe",
+    "originalUrl": "https://www.cnbc.com/2026/08/01/capital-one-closed-trump-organization-accounts-after-investigation.html",
+    "publishedAt": "2026-08-02T01:56:07.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
+    "id": "188a02a56adc7a2e",
+    "source": "cnbc",
+    "originalTitle": "Trump lashes out at Pirro after she moves to drop Reflecting Pool vandalism case, saying 'flawed installation' to blame",
+    "originalUrl": "https://www.cnbc.com/2026/07/31/trump-pirro-reflecting-pool-olympian-david-hearn.html",
+    "publishedAt": "2026-08-02T01:35:50.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
   },
   {
     "id": "f283e15fa2723174",
@@ -759,6 +1545,16 @@
     "riskCategories": []
   },
   {
+    "id": "91585a36c1fa4ea3",
+    "source": "cnbc",
+    "originalTitle": "Fast-fashion retailer Shein’s 3-year IPO odyssey may have cost it the ‘golden time’ to go public ",
+    "originalUrl": "https://www.cnbc.com/2026/07/31/shein-ipo-hong-kong-ftc-investigation-tariffs-fast-fashion-.html",
+    "publishedAt": "2026-07-31T06:33:30.000Z",
+    "summaryJa": "",
+    "relevanceScore": 0,
+    "riskCategories": []
+  },
+  {
     "id": "672f19e053588213",
     "source": "boj",
     "originalTitle": "当面の金融政策運営について",
@@ -1127,617 +1923,5 @@
     "summaryJa": "",
     "relevanceScore": 0,
     "riskCategories": []
-  },
-  {
-    "id": "6249342e16734a38",
-    "source": "economist",
-    "originalTitle": "\n        Can China dominate AI exports, too?\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/23/can-china-dominate-ai-exports-too",
-    "publishedAt": "2026-07-23T09:03:47.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9b9a77d7755d5510",
-    "source": "economist",
-    "originalTitle": "\n        The rise of the deserving rich\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/23/the-rise-of-the-deserving-rich",
-    "publishedAt": "2026-07-23T08:59:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "68b19327e7fac9c2",
-    "source": "economist",
-    "originalTitle": "\n        Can prediction markets win over Wall Street?\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/23/can-prediction-markets-win-over-wall-street",
-    "publishedAt": "2026-07-23T08:59:27.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a2d13120172e640f",
-    "source": "boj",
-    "originalTitle": "実質輸出入の動向",
-    "originalUrl": "http://www.boj.or.jp/research/research_data/reri/index.htm",
-    "publishedAt": "2026-07-23T07:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4410e9ca8f7b618a",
-    "source": "boj",
-    "originalTitle": "日本銀行が保有する国債の銘柄別残高",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/mei/release/2026/mei260717.xlsx",
-    "publishedAt": "2026-07-22T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cc650fbdb28dca54",
-    "source": "boj",
-    "originalTitle": "営業毎旬報告（7月20日現在）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/acmai/release/2026/ac260720.htm",
-    "publishedAt": "2026-07-22T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a7bfbf5da701d2e1",
-    "source": "boj",
-    "originalTitle": "「気候変動関連の市場機能サーベイ」第5回説明会",
-    "originalUrl": "http://www.boj.or.jp/paym/m-climate/mcli260722a.htm",
-    "publishedAt": "2026-07-22T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "59686970f2f16f3e",
-    "source": "boj",
-    "originalTitle": "FSBレポ統計の日本分集計結果",
-    "originalUrl": "http://www.boj.or.jp/statistics/bis/repo/index.htm",
-    "publishedAt": "2026-07-21T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8ffed4a00108b1eb",
-    "source": "economist",
-    "originalTitle": "\n        How investors learned to live with inflation\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/21/how-investors-learned-to-live-with-inflation",
-    "publishedAt": "2026-07-21T17:29:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2525426b46519c85",
-    "source": "ecb",
-    "originalTitle": " ECB appoints Boris Kisselevsky as Director General Secretariat ",
-    "originalUrl": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260721_1~8c6ba4c5fb.en.html",
-    "publishedAt": "2026-07-21T14:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "85d6dc54fbe46635",
-    "source": "ecb",
-    "originalTitle": " July 2026 euro area bank lending survey ",
-    "originalUrl": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260721~44ee50f75c.en.html",
-    "publishedAt": "2026-07-21T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "28537e85b6aa48bf",
-    "source": "boj",
-    "originalTitle": "「金融研究」掲載論文（2026年収録分）",
-    "originalUrl": "http://www.boj.or.jp/research/imes/mes/mes26.htm",
-    "publishedAt": "2026-07-21T02:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8860205f040a632d",
-    "source": "ecb",
-    "originalTitle": " Survey on the Access to Finance of Enterprises: lending conditions tightened ",
-    "originalUrl": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260720~cafc3874a7.en.html",
-    "publishedAt": "2026-07-20T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "0072d5a8623b50c8",
-    "source": "boj",
-    "originalTitle": "気候変動対応を支援するための資金供給オペレーションの実施結果",
-    "originalUrl": "http://www.boj.or.jp/mopo/mpmdeci/mpr_2026/mpr260717a.pdf",
-    "publishedAt": "2026-07-17T07:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "35e3d985a7313325",
-    "source": "boj",
-    "originalTitle": "報告省令レート（8月分）",
-    "originalUrl": "http://www.boj.or.jp/about/services/tame/tame_rate/syorei/hou2608.htm",
-    "publishedAt": "2026-07-17T00:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "afd1c2a3ad070be5",
-    "source": "boj",
-    "originalTitle": "基準外国為替相場及び裁定外国為替相場（8月分）",
-    "originalUrl": "http://www.boj.or.jp/about/services/tame/tame_rate/kijun/kiju2608.htm",
-    "publishedAt": "2026-07-17T00:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "274047699d70a130",
-    "source": "boj",
-    "originalTitle": "主要銀行貸出動向アンケート調査（7月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/dl/loan/loos/release/loos2607.pdf",
-    "publishedAt": "2026-07-16T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "49ff5c378cca9751",
-    "source": "fed",
-    "originalTitle": "Agencies issue joint statement on handling of highly sensitive information during bank examinations",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260716a.htm",
-    "publishedAt": "2026-07-16T18:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "60e8db74725e051a",
-    "source": "fed",
-    "originalTitle": "Federal Reserve Board issues enforcement action with former chief lending officer of Heritage State Bank",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260716a.htm",
-    "publishedAt": "2026-07-16T15:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4b23c2881ca64405",
-    "source": "economist",
-    "originalTitle": "\n        How to shrink the Fed’s $7trn balance-sheet\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/16/how-to-shrink-the-feds-7trn-balance-sheet",
-    "publishedAt": "2026-07-16T09:06:46.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1cebfac39810a67c",
-    "source": "economist",
-    "originalTitle": "\n        Can Kevin Warsh’s Fed force 5 reimagine monetary policymaking?\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/16/can-kevin-warshs-fed-force-5-reimagine-monetary-policymaking",
-    "publishedAt": "2026-07-16T09:02:38.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8c22df8e5e95eed5",
-    "source": "boj",
-    "originalTitle": "業態別の日銀当座預金残高（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/cabs/cabs.xlsx",
-    "publishedAt": "2026-07-16T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ce65087778d5083a",
-    "source": "boj",
-    "originalTitle": "「生活意識に関するアンケート調査」（第106回）の結果",
-    "originalUrl": "http://www.boj.or.jp/research/o_survey/ishiki2607.htm",
-    "publishedAt": "2026-07-16T04:30:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "fd7a3568f2927ded",
-    "source": "economist",
-    "originalTitle": "\n        China’s trade gap is narrowing. And other surprises\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/15/chinas-trade-gap-is-narrowing-and-other-surprises",
-    "publishedAt": "2026-07-15T17:55:22.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e960539b86f11232",
-    "source": "boj",
-    "originalTitle": "金融政策決定会合議事録等（2016年1月～6月開催分）",
-    "originalUrl": "http://www.boj.or.jp/mopo/mpmsche_minu/record_2016/gjrk.htm",
-    "publishedAt": "2026-07-14T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3ef42b7b5cb9bc51",
-    "source": "economist",
-    "originalTitle": "\n        America’s Hormuz brinkmanship is worsening a global fuel crunch\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/14/americas-hormuz-brinkmanship-is-worsening-a-global-fuel-crunch",
-    "publishedAt": "2026-07-14T18:22:01.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "44dc4ce06e3e5626",
-    "source": "fed",
-    "originalTitle": "Minutes of the Board's discount rate meetings on June 8 and June 17, 2026",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260714a.htm",
-    "publishedAt": "2026-07-14T18:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "4000b8c1a3b6bb25",
-    "source": "economist",
-    "originalTitle": "\n        What investment gurus get wrong\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/14/what-investment-gurus-get-wrong",
-    "publishedAt": "2026-07-14T17:21:18.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9934fa1e5ecf266b",
-    "source": "boj",
-    "originalTitle": "日本銀行が保有する国債の銘柄別残高",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/mei/release/2026/mei260710.xlsx",
-    "publishedAt": "2026-07-14T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "caecc81011c0556f",
-    "source": "boj",
-    "originalTitle": "営業毎旬報告（7月10日現在）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/acmai/release/2026/ac260710.htm",
-    "publishedAt": "2026-07-14T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "129b3ea5f4ea8b53",
-    "source": "economist",
-    "originalTitle": "\n        The stubborn scarcity of female breadwinners\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/13/the-stubborn-scarcity-of-female-breadwinners",
-    "publishedAt": "2026-07-13T19:12:11.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "47a8449697651b64",
-    "source": "boj",
-    "originalTitle": "令和8年7月滋賀県甲賀市の土砂崩れに係る災害等に対する金融上の措置について（滋賀県）",
-    "originalUrl": "http://www.boj.or.jp/about/bcp/fso/fso260713a.pdf",
-    "publishedAt": "2026-07-13T08:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "dec23e13c41135fa",
-    "source": "economist",
-    "originalTitle": "\n        Storm clouds gather over America’s financial supremacy\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/12/storm-clouds-gather-over-americas-financial-supremacy",
-    "publishedAt": "2026-07-12T17:05:30.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "7d63b434be09e537",
-    "source": "boj",
-    "originalTitle": "フェイルの発生状況（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/set/bffail/sjgb2606.pdf",
-    "publishedAt": "2026-07-10T07:30:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c8f0970fbf9fa3d6",
-    "source": "boj",
-    "originalTitle": "（日銀レビュー）高粒度データを用いた大手行の外貨預金の顧客動態・預金スプレッドの考察",
-    "originalUrl": "http://www.boj.or.jp/research/wps_rev/rev_2026/rev26j10.htm",
-    "publishedAt": "2026-07-10T07:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "8dff28d80903811f",
-    "source": "boj",
-    "originalTitle": "企業物価指数（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2606.pdf",
-    "publishedAt": "2026-07-09T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9f2ade1fda654169",
-    "source": "fed",
-    "originalTitle": "Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm",
-    "publishedAt": "2026-07-09T19:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "c98132ecfc38b72f",
-    "source": "fed",
-    "originalTitle": "Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260709a.htm",
-    "publishedAt": "2026-07-09T15:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "04d281c97169c227",
-    "source": "economist",
-    "originalTitle": "\n        China may struggle to fund Xi Jinping’s tech dreams\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/09/china-may-struggle-to-fund-xi-jinpings-tech-dreams",
-    "publishedAt": "2026-07-09T08:27:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "ea81f827ffd3578a",
-    "source": "economist",
-    "originalTitle": "\n        An ageing society might not cost too much\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/09/an-ageing-society-might-not-cost-too-much",
-    "publishedAt": "2026-07-09T08:26:42.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2d9b3887649e6531",
-    "source": "boj",
-    "originalTitle": "地域経済報告（さくらレポート、2026年7月）",
-    "originalUrl": "http://www.boj.or.jp/research/brp/rer/rer260709.htm",
-    "publishedAt": "2026-07-09T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "f504e2a33c3be0b7",
-    "source": "boj",
-    "originalTitle": "東海地域業況判断DI（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/other/toukai/toukai.xlsx",
-    "publishedAt": "2026-07-09T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e6edd00b2676482e",
-    "source": "boj",
-    "originalTitle": "関東甲信越地域業況判断DI（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/other/kantou/kantou.xlsx",
-    "publishedAt": "2026-07-09T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "44655f896f23cb9d",
-    "source": "boj",
-    "originalTitle": "マネーストック（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/money/ms/ms2606.pdf",
-    "publishedAt": "2026-07-08T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "1b1fd99c4775f0d5",
-    "source": "fed",
-    "originalTitle": "Minutes of the Federal Open Market Committee, June 16-17, 2026",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260708a.htm",
-    "publishedAt": "2026-07-08T18:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "9cefe05c52ee3185",
-    "source": "economist",
-    "originalTitle": "\n        Three ways the LNG market could crack before winter\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/08/three-ways-the-lng-market-could-crack-before-winter",
-    "publishedAt": "2026-07-08T14:08:15.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "90832bb0b50c34e9",
-    "source": "boj",
-    "originalTitle": "貸出金・債券・預金の期間別残高（2025年9月末）",
-    "originalUrl": "http://www.boj.or.jp/statistics/sj/sjmatu.xlsx",
-    "publishedAt": "2026-07-08T01:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3406853dbb9bef7b",
-    "source": "boj",
-    "originalTitle": "貸出・預金動向（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/dl/depo/kashi/kasi2606.pdf",
-    "publishedAt": "2026-07-07T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e6e79679c2e9bdfa",
-    "source": "boj",
-    "originalTitle": "業種別・地域別直接投資（2026年第1四半期）",
-    "originalUrl": "http://www.boj.or.jp/statistics/br/bop_06/bpdata/diiqcy.htm",
-    "publishedAt": "2026-07-07T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "bd0fcbaf4c9570e2",
-    "source": "economist",
-    "originalTitle": "\n        AI has taken over the stock market. The bond market is next\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/07/ai-has-taken-over-the-stock-market-the-bond-market-is-next",
-    "publishedAt": "2026-07-07T20:08:30.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "b9353457b1b2c1d5",
-    "source": "economist",
-    "originalTitle": "\n        Europe’s economy is a mess. Its stock markets are a steal\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/07/europes-economy-is-a-mess-its-stock-markets-are-a-steal",
-    "publishedAt": "2026-07-07T19:20:24.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d0832c708f953e2f",
-    "source": "fed",
-    "originalTitle": "Federal Reserve Board requests comment on a proposal to amend its requirements for banks to maintain anti-money laundering programs",
-    "originalUrl": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260707a.htm",
-    "publishedAt": "2026-07-07T19:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cdf02c08c6813799",
-    "source": "boj",
-    "originalTitle": "コール市場残高（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/market/short/call/call.xlsx",
-    "publishedAt": "2026-07-07T06:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "59d01ce63e4a6132",
-    "source": "boj",
-    "originalTitle": "消費活動指数",
-    "originalUrl": "http://www.boj.or.jp/research/research_data/cai/index.htm",
-    "publishedAt": "2026-07-07T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "a8ee55203d3fea96",
-    "source": "boj",
-    "originalTitle": "マネタリーベースと日本銀行の取引（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/mbt/mbt2606.pdf",
-    "publishedAt": "2026-07-06T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "e539c8ba5247c7b5",
-    "source": "boj",
-    "originalTitle": "日本銀行の対政府取引（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/other/tseifu/release/2026/seifu2606.pdf",
-    "publishedAt": "2026-07-06T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "d110aefe8340e9b4",
-    "source": "boj",
-    "originalTitle": "オペレーション（6月）",
-    "originalUrl": "http://www.boj.or.jp/statistics/boj/fm/ope/m_release/2026/ope2606.xlsx",
-    "publishedAt": "2026-07-06T23:50:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "cdfd28223049263f",
-    "source": "economist",
-    "originalTitle": "\n        The World Bank has ditched its climate targets\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/06/the-world-bank-has-ditched-its-climate-targets",
-    "publishedAt": "2026-07-06T19:40:33.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "3f4b817da1ebcef1",
-    "source": "economist",
-    "originalTitle": "\n        Women’s progress at work is stalling\n      ",
-    "originalUrl": "https://www.economist.com/finance-and-economics/2026/07/05/womens-progress-at-work-is-stalling",
-    "publishedAt": "2026-07-05T17:22:02.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "2c9d5b68b29d1f49",
-    "source": "boj",
-    "originalTitle": "需給ギャップ・潜在成長率および労働需給関連指標",
-    "originalUrl": "http://www.boj.or.jp/research/research_data/gap/index.htm",
-    "publishedAt": "2026-07-03T05:00:00.000Z",
-    "summaryJa": "",
-    "relevanceScore": 0,
-    "riskCategories": []
-  },
-  {
-    "id": "eff877641b8c5a22",
-    "source": "nikkei",
-    "originalTitle": "日本株ETFの「分配金売り」、1.7兆円規模　活況相場で影響軽微か",
-    "originalUrl": "https://www.nikkei.com/article/DGXZQOUB302XF0Q6A630C2000000/",
-    "publishedAt": "2026-07-03T03:33:06.308Z",
-    "summaryJa": "日本株ETFの「分配金売り」が1.7兆円規模に達した。活況相場で影響は軽微かもしれないが、金融市場への影響が見られる。関連度はある。",
-    "relevanceScore": 50,
-    "riskCategories": [
-      "currency_finance"
-    ]
   }
 ]

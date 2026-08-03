@@ -2,18 +2,6 @@
   "currency_finance": [
     {
       "category": "currency_finance",
-      "score": 72,
-      "level": "high",
-      "summaryJa": "ドル円が155.77円とやや下落し、ビットコインとイーサリアムが上昇している。円安が続き、企業の経営に影響を与える可能性がある。",
-      "factorsJa": [
-        "ドル円の下落",
-        "ビットコインとイーサリアムの上昇",
-        "円安の影響"
-      ],
-      "assessedAt": "2026-05-04T03:59:20.852Z"
-    },
-    {
-      "category": "currency_finance",
       "score": 70,
       "level": "high",
       "summaryJa": "ドル円が上昇し、ビットコインの価格も上昇している。米長期金利の上昇が要因となっているが、NY債券市場では長期債が下落し、10年債利回りが上昇した。",
@@ -472,21 +460,23 @@
       "assessedAt": "2026-08-02T03:17:38.616Z",
       "delta": 0,
       "changeReasonJa": "ドル円の下落と日米の経済介入劇場により、通貨市場への影響が予想されるため、スコアが上昇した。"
+    },
+    {
+      "category": "currency_finance",
+      "score": 50,
+      "level": "elevated",
+      "summaryJa": "ドル円が下落し、為替市場への介入の可能性が高まっている。米財務長官が協調介入の用意があると述べた。",
+      "factorsJa": [
+        "ドル円の下落",
+        "為替市場への介入の可能性",
+        "米財務長官の協調介入の用意"
+      ],
+      "assessedAt": "2026-08-03T03:19:45.875Z",
+      "delta": 0,
+      "changeReasonJa": "ドル円の下落と為替市場への介入の可能性の高まりにより、スコアが上昇した"
     }
   ],
   "geopolitics_supply_chain": [
-    {
-      "category": "geopolitics_supply_chain",
-      "score": 96,
-      "level": "critical",
-      "summaryJa": "トランプ氏のホルムズ海峡からの脱出を支援する意向表明や、地政学的緊張が高まる可能性がある。供給網にも影響を与える可能性がある。",
-      "factorsJa": [
-        "トランプ氏のホルムズ海峡からの脱出を支援する意向",
-        "地政学的緊張の高まり",
-        "供給網への影響"
-      ],
-      "assessedAt": "2026-05-04T03:59:20.852Z"
-    },
     {
       "category": "geopolitics_supply_chain",
       "score": 94,
@@ -939,21 +929,22 @@
       "assessedAt": "2026-08-02T03:17:38.616Z",
       "delta": 5,
       "changeReasonJa": "地政学的緊張が高まる可能性があるため、スコアが上昇した。"
+    },
+    {
+      "category": "geopolitics_supply_chain",
+      "score": 38,
+      "level": "moderate",
+      "summaryJa": "日本たたきが米国市場を狙っているが、勢力圏争い「第1列島線」で揺さぶりが起きている。ただし、重大な地政学的リスクは見られない。",
+      "factorsJa": [
+        "日本たたきの米国市場進出",
+        "勢力圏争い"
+      ],
+      "assessedAt": "2026-08-03T03:19:45.875Z",
+      "delta": -6,
+      "changeReasonJa": "地政学的リスクの増加は見られないため、スコアに大きな変化はなかった"
     }
   ],
   "technology": [
-    {
-      "category": "technology",
-      "score": 82,
-      "level": "critical",
-      "summaryJa": "テーマパークに新施設がオープンし、体験レジャーの最前線がわかる。消費者行動の変化が見られる。また、企業の人材育成が注目される。",
-      "factorsJa": [
-        "テーマパークの新施設",
-        "消費者行動の変化",
-        "企業の人材育成"
-      ],
-      "assessedAt": "2026-05-04T03:59:20.852Z"
-    },
     {
       "category": "technology",
       "score": 80,
@@ -1395,21 +1386,22 @@
       "assessedAt": "2026-08-02T03:17:38.616Z",
       "delta": -5,
       "changeReasonJa": "AIの倫理的な使用と規制が技術と社会政策の両方に影響を及ぼす可能性があるため、スコアが上昇した。"
+    },
+    {
+      "category": "technology",
+      "score": 72,
+      "level": "high",
+      "summaryJa": "ファナックの株価が下落したが、キオクシアHDの株価が上昇した。テクノロジー企業の業績はまちまちである。",
+      "factorsJa": [
+        "ファナックの株価下落",
+        "キオクシアHDの株価上昇"
+      ],
+      "assessedAt": "2026-08-03T03:19:45.875Z",
+      "delta": 2,
+      "changeReasonJa": "テクノロジー企業の業績の混乱により、スコアがわずかに上昇した"
     }
   ],
   "social_policy": [
-    {
-      "category": "social_policy",
-      "score": 78,
-      "level": "high",
-      "summaryJa": "地域経済への影響が見られ、都道府県の経済発展が期待される。環境問題が深刻化する可能性がある。",
-      "factorsJa": [
-        "地域経済への影響",
-        "都道府県の経済発展",
-        "環境問題の深刻化"
-      ],
-      "assessedAt": "2026-05-04T03:59:20.852Z"
-    },
     {
       "category": "social_policy",
       "score": 75,
@@ -1855,6 +1847,18 @@
       "assessedAt": "2026-08-02T03:17:38.616Z",
       "delta": 2,
       "changeReasonJa": "子どものSNS規制と市町村の脱炭素努力が社会政策と技術分野に影響を及ぼす可能性があるため、スコアが上昇した。"
+    },
+    {
+      "category": "social_policy",
+      "score": 82,
+      "level": "critical",
+      "summaryJa": "政府が知財・無形資産への投資状況を開示する要綱を公表した。社会政策の変化が経済に与える影響は大きい。",
+      "factorsJa": [
+        "政府の知財・無形資産への投資状況の開示"
+      ],
+      "assessedAt": "2026-08-03T03:19:45.875Z",
+      "delta": 2,
+      "changeReasonJa": "政府の社会政策の変化により、スコアが上昇した"
     }
   ]
 }
