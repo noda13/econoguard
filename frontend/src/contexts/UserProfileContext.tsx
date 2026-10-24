@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 import type { UserProfile } from '../lib/types/profile';
 
 const STORAGE_KEY = 'econoguard-profile';
@@ -27,14 +27,15 @@ function isValidProfile(obj: unknown): obj is UserProfile {
   if (obj === null || typeof obj !== 'object') return false;
   const p = obj as Record<string, unknown>;
 
-  if (typeof p.age !== 'number' || p.age < 20 || p.age > 80) return false;
+  if (typeof p.age !== 'number' || !Number.isFinite(p.age) || p.age < 20 || p.age > 80) return false;
 
   if (p.sensitivity !== 'sensitive' && p.sensitivity !== 'standard' && p.sensitivity !== 'relaxed') return false;
 
   if (p.allocation === null || typeof p.allocation !== 'object') return false;
   const alloc = p.allocation as Record<string, unknown>;
   for (const key of ALLOCATION_KEYS) {
-    if (typeof alloc[key] !== 'number' || alloc[key] < 0 || alloc[key] > 100) return false;
+    const value = alloc[key];
+    if (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 100) return false;
   }
 
   // Reject allocations that don't sum to ~100 (tolerance ±1 for rounding)
@@ -59,20 +60,29 @@ export function UserProfileProvider({ children }: { children: ReactNode }) {
   const [profile, setProfileState] = useState<UserProfile | null>(loadProfile);
 
   const setProfile = useCallback((p: UserProfile) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+    } catch {
+      // Persistence is best-effort (private mode, quota); in-memory state still applies.
+    }
     setProfileState(p);
   }, []);
 
   const clearProfile = useCallback(() => {
-    localStorage.removeItem(STORAGE_KEY);
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Persistence is best-effort; in-memory state still applies.
+    }
     setProfileState(null);
   }, []);
 
-  return (
-    <UserProfileContext.Provider value={{ profile, setProfile, clearProfile, isConfigured: profile !== null }}>
-      {children}
-    </UserProfileContext.Provider>
+  const value = useMemo<UserProfileContextValue>(
+    () => ({ profile, setProfile, clearProfile, isConfigured: profile !== null }),
+    [profile, setProfile, clearProfile],
   );
+
+  return <UserProfileContext.Provider value={value}>{children}</UserProfileContext.Provider>;
 }
 
 export function useUserProfile() {

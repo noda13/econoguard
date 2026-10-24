@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchCompositeRisk, fetchRisks } from '../../services/api';
-import { riskLevelConfig } from '../../lib/riskColors';
+import { riskLevelConfig, categoryLabels } from '../../lib/riskColors';
 import { usePersonalizedRisk } from '../../hooks/usePersonalizedRisk';
 import { ACTION_SIGNAL_CONFIG } from '../../lib/actionSignals';
+import { INVESTMENT_DISCLAIMER } from '../../lib/disclaimer';
 
 export function CompositeRiskBanner() {
   const { data } = useQuery({
@@ -20,6 +21,7 @@ export function CompositeRiskBanner() {
   if (!data) return null;
 
   const config = riskLevelConfig[data.level] || riskLevelConfig.moderate;
+  const signalConfig = personalized ? ACTION_SIGNAL_CONFIG[personalized.signal] : null;
 
   return (
     <div className={`rounded-lg border-2 ${config.borderColor} ${config.bgColor} p-5`}>
@@ -45,10 +47,7 @@ export function CompositeRiskBanner() {
           {data.breakdown.map((item) => (
             <div key={item.category} className="text-center">
               <div className="text-xs text-gray-500 mb-1">
-                {item.category === 'currency_finance' ? '通貨・金融'
-                  : item.category === 'geopolitics_supply_chain' ? '地政学'
-                  : item.category === 'technology' ? 'テクノロジー'
-                  : '社会・政策'}
+                {categoryLabels[item.category] ?? item.category}
               </div>
               <div className="text-sm font-mono text-gray-300">{item.score}</div>
               <div className="text-xs text-gray-600">x{item.weight}</div>
@@ -56,26 +55,24 @@ export function CompositeRiskBanner() {
           ))}
         </div>
       </div>
-      {personalized && (() => {
-        const signalConfig = ACTION_SIGNAL_CONFIG[personalized.signal];
-        return (
-          <div className="mt-4 pt-4 border-t border-gray-700/50">
-            <div className="flex items-center gap-4 flex-wrap">
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm text-gray-400">あなたのリスク:</span>
-                <span className={`text-2xl font-bold ${signalConfig.color}`}>
-                  {personalized.personalizedScore}
-                </span>
-                <span className="text-sm text-gray-500">/100</span>
-                <span className={`text-xs px-2 py-0.5 rounded-full ${signalConfig.bgColor} ${signalConfig.color} font-bold border ${signalConfig.borderColor}`}>
-                  {signalConfig.label}
-                </span>
-              </div>
-              <p className="text-sm text-gray-400">{personalized.interpretation}</p>
+      {personalized && signalConfig && (
+        <div className="mt-4 pt-4 border-t border-gray-700/50">
+          <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-baseline gap-2">
+              <span className="text-sm text-gray-400">あなたのリスク:</span>
+              <span className={`text-2xl font-bold ${signalConfig.color}`}>
+                {personalized.personalizedScore}
+              </span>
+              <span className="text-sm text-gray-500">/100</span>
+              <span className={`text-xs px-2 py-0.5 rounded-full ${signalConfig.bgColor} ${signalConfig.color} font-bold border ${signalConfig.borderColor}`}>
+                {signalConfig.label}
+              </span>
             </div>
+            <p className="text-sm text-gray-400">{personalized.interpretation}</p>
           </div>
-        );
-      })()}
+          <p className="mt-2 text-xs text-gray-500">{INVESTMENT_DISCLAIMER}</p>
+        </div>
+      )}
       {!isConfigured && (
         <div className="mt-3 text-xs text-gray-500">
           歯車アイコンからプロフィールを設定すると、パーソナライズされたリスク評価が表示されます

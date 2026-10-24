@@ -33,7 +33,6 @@ export interface NewsArticle {
   publishedAt: string;
   summaryJa: string;
   relevanceScore: number;
-  // Always string[] after fetch boundary normalization (was string | string[])
   riskCategories: string[];
   createdAt?: string;
 }
@@ -44,7 +43,6 @@ export interface RiskAssessment {
   score: number;
   level: string;
   summaryJa: string;
-  // Always string[] after fetch boundary normalization (was string | string[])
   factorsJa: string[];
   assessedAt: string;
   createdAt?: string;
@@ -86,6 +84,7 @@ export interface EconomicIndicator {
   unit: string;
   source: string;
   recordedAt: string;
+  stale?: boolean;
 }
 
 export interface CompositeRisk {
@@ -101,51 +100,51 @@ export interface CompositeRisk {
 
 // --- Static JSON fetchers ---
 
-async function fetchStaticJson<T>(filename: string, fallback: T): Promise<T> {
-  try {
-    const base = import.meta.env.BASE_URL || '/';
-    const res = await fetch(`${base}data/${filename}`);
-    if (!res.ok) return fallback;
-    return await res.json();
-  } catch {
-    return fallback;
-  }
+async function fetchStaticJson<T>(filename: string): Promise<T> {
+  const base = import.meta.env.BASE_URL || '/';
+  const res = await fetch(`${base}data/${filename}`);
+  if (!res.ok) throw new Error(`Failed to load ${filename} (${res.status})`);
+  return (await res.json()) as T;
 }
 
 // --- API functions ---
 
-export const fetchNews = async (limit = 20, _category?: string): Promise<NewsArticle[]> => {
+export const fetchNews = async (limit = 20, category?: string): Promise<NewsArticle[]> => {
   if (isStatic) {
-    const all = await fetchStaticJson<NewsArticle[]>('news.json', []);
-    return all.slice(0, limit).map(normalizeNewsArticle);
+    const all = (await fetchStaticJson<NewsArticle[]>('news.json')).map(normalizeNewsArticle);
+    const matched = category ? all.filter((a) => a.riskCategories.includes(category)) : all;
+    return matched.slice(0, limit);
   }
   const params: Record<string, string> = { limit: String(limit) };
-  if (_category) params.category = _category;
+  if (category) params.category = category;
   const { data } = await api.get<NewsArticle[]>('/news', { params });
   return data.map(normalizeNewsArticle);
 };
 
 export const fetchRisks = async (): Promise<RiskAssessment[]> => {
   if (isStatic) {
-    const all = await fetchStaticJson<RiskAssessment[]>('risks.json', []);
+    const all = await fetchStaticJson<RiskAssessment[]>('risks.json');
     return all.map(normalizeRiskAssessment);
   }
   const { data } = await api.get<RiskAssessment[]>('/risks');
   return data.map(normalizeRiskAssessment);
 };
 
-export const fetchRiskHistory = async (category: string, _days = 30): Promise<RiskAssessment[]> => {
+export const fetchRiskHistory = async (category: string, days = 30): Promise<RiskAssessment[]> => {
   if (isStatic) {
-    const history = await fetchStaticJson<Record<string, RiskAssessment[]>>('risk-history.json', {});
-    return (history[category] || []).map(normalizeRiskAssessment);
+    const history = await fetchStaticJson<Record<string, RiskAssessment[]>>('risk-history.json');
+    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+    return (history[category] || [])
+      .filter((entry) => new Date(entry.assessedAt).getTime() >= cutoff)
+      .map(normalizeRiskAssessment);
   }
-  const { data } = await api.get<RiskAssessment[]>(`/risks/${category}`, { params: { days: _days } });
+  const { data } = await api.get<RiskAssessment[]>(`/risks/${category}`, { params: { days } });
   return data.map(normalizeRiskAssessment);
 };
 
 export const fetchIndicators = async (): Promise<EconomicIndicator[]> => {
   if (isStatic) {
-    return fetchStaticJson<EconomicIndicator[]>('indicators.json', []);
+    return fetchStaticJson<EconomicIndicator[]>('indicators.json');
   }
   const { data } = await api.get('/indicators');
   return data;
@@ -153,10 +152,20 @@ export const fetchIndicators = async (): Promise<EconomicIndicator[]> => {
 
 export const fetchCompositeRisk = async (): Promise<CompositeRisk> => {
   if (isStatic) {
-    return fetchStaticJson<CompositeRisk>('composite-risk.json', { compositeScore: 0, level: 'low', breakdown: [] });
+    return fetchStaticJson<CompositeRisk>('composite-risk.json');
   }
   const { data } = await api.get('/risks/composite');
   return data;
+};
+
+export const fetchLastUpdated = async (): Promise<string | undefined> => {
+  if (!isStatic) return undefined;
+  try {
+    const meta = await fetchStaticJson<{ lastUpdated: string }>('meta.json');
+    return meta.lastUpdated;
+  } catch {
+    return undefined;
+  }
 };
 
 export interface EconomicEvent {
@@ -168,7 +177,7 @@ export interface EconomicEvent {
 
 export const fetchEvents = async (): Promise<EconomicEvent[]> => {
   if (isStatic) {
-    return fetchStaticJson<EconomicEvent[]>('events.json', []);
+    return fetchStaticJson<EconomicEvent[]>('events.json');
   }
   // Backend mode not implemented yet — return empty
   return [];

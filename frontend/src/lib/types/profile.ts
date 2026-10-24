@@ -23,7 +23,7 @@ export type ActionSignal = 'hold' | 'watch' | 'prepare' | 'hedge' | 'act';
 export interface CategoryImpact {
   category: string;
   impactLevel: 'high' | 'medium' | 'low';
-  affectedPct: number;          // % of user's portfolio affected
+  affectedPct: number;          // blended exposure % (high-impact classes × 1.0 + medium × 0.5)
   description: string;          // Japanese description
 }
 

@@ -8,17 +8,19 @@ export function formatDate(dateStr: string): string {
   });
 }
 
-export function formatChange(current: number, previous: number | null): { text: string; isPositive: boolean } | null {
-  // Guard: null or zero previous makes percent change undefined/infinite
+export function formatChange(
+  current: number,
+  previous: number | null,
+): { text: string; direction: 'up' | 'down' | 'flat' } | null {
   if (previous === null || previous === 0) return null;
   const diff = current - previous;
-  const ratio = (diff / previous) * 100;
-  // Extra safety: reject non-finite results (e.g. subnormal floats)
+  const ratio = (diff / Math.abs(previous)) * 100;
+  // Subnormal floats can overflow the division to Infinity
   if (!Number.isFinite(ratio)) return null;
   const pct = ratio.toFixed(2);
   return {
     text: `${diff > 0 ? '+' : ''}${pct}%`,
-    isPositive: diff > 0,
+    direction: diff > 0 ? 'up' : diff < 0 ? 'down' : 'flat',
   };
 }
 
@@ -27,4 +29,14 @@ export function formatNumber(value: number, decimals = 2): string {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });
+}
+
+export function safeHttpUrl(url: string): string | undefined {
+  const trimmed = url.trim();
+  try {
+    const { protocol } = new URL(trimmed);
+    return protocol === 'http:' || protocol === 'https:' ? trimmed : undefined;
+  } catch {
+    return undefined;
+  }
 }

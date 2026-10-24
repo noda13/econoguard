@@ -1,6 +1,6 @@
-import { useQuery } from '@tanstack/react-query';
 import { riskLevelConfig, categoryLabels } from '../../lib/riskColors';
-import { fetchNews } from '../../services/api';
+import { safeHttpUrl } from '../../lib/formatters';
+import { useNews } from '../../hooks/useNews';
 import type { RiskAssessment, NewsArticle } from '../../services/api';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import { calculateCategoryImpact } from '../../lib/personalizedRisk';
@@ -12,20 +12,17 @@ interface Props {
 export function RiskGauge({ risk }: Props) {
   const config = riskLevelConfig[risk.level] || riskLevelConfig.moderate;
   const label = categoryLabels[risk.category] || risk.category;
-  const factors: string[] = Array.isArray(risk.factorsJa) ? risk.factorsJa : [];
   const { profile, isConfigured } = useUserProfile();
   const impact = isConfigured && profile
     ? calculateCategoryImpact(risk.category, risk.score, profile.allocation)
     : null;
 
-  const { data: allNews } = useQuery({ queryKey: ['news'], queryFn: fetchNews });
+  const { data: allNews } = useNews();
 
-  // Resolve source news articles from IDs
   const sourceNews: NewsArticle[] = (risk.sourceNewsIds ?? [])
     .map(id => allNews?.find(a => a.id === id))
     .filter((a): a is NewsArticle => a !== undefined);
 
-  // Delta badge
   const delta = risk.delta;
   const deltaEl = delta !== undefined ? (
     <span className={`text-xs font-mono ml-2 ${
@@ -53,7 +50,7 @@ export function RiskGauge({ risk }: Props) {
         <p className="text-xs text-gray-500 italic mb-2">{risk.changeReasonJa}</p>
       )}
       <div className="space-y-1 mb-2">
-        {factors.slice(0, 3).map((factor, i) => (
+        {risk.factorsJa.slice(0, 3).map((factor, i) => (
           <div key={`${i}-${factor}`} className="text-xs text-gray-500 flex items-start gap-1">
             <span className="mt-0.5">•</span>
             <span>{factor}</span>
@@ -64,18 +61,27 @@ export function RiskGauge({ risk }: Props) {
         <div className="mt-2 pt-2 border-t border-gray-700/30">
           <p className="text-xs text-gray-600 mb-1">根拠ニュース</p>
           <div className="space-y-1">
-            {sourceNews.map(article => (
-              <a
-                key={article.id}
-                href={article.originalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-xs text-blue-500 hover:text-blue-400 truncate"
-                title={article.originalTitle}
-              >
-                {article.originalTitle.slice(0, 60)}{article.originalTitle.length > 60 ? '…' : ''}
-              </a>
-            ))}
+            {sourceNews.map(article => {
+              const href = safeHttpUrl(article.originalUrl);
+              const title = `${article.originalTitle.slice(0, 60)}${article.originalTitle.length > 60 ? '…' : ''}`;
+              const className = 'block text-xs text-blue-500 hover:text-blue-400 truncate';
+              return href ? (
+                <a
+                  key={article.id}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                  title={article.originalTitle}
+                >
+                  {title}
+                </a>
+              ) : (
+                <span key={article.id} className={className} title={article.originalTitle}>
+                  {title}
+                </span>
+              );
+            })}
           </div>
         </div>
       )}

@@ -6,6 +6,13 @@ export const riskLevelConfig: Record<string, { label: string; color: string; bgC
   critical: { label: '危機的', color: 'text-red-300', bgColor: 'bg-red-950/50', borderColor: 'border-red-400' },
 };
 
+export const RISK_CATEGORIES = [
+  'currency_finance',
+  'geopolitics_supply_chain',
+  'technology',
+  'social_policy',
+] as const;
+
 export const categoryLabels: Record<string, string> = {
   currency_finance: '通貨・金融',
   geopolitics_supply_chain: '地政学・供給網',
