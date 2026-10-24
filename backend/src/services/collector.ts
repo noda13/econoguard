@@ -19,13 +19,29 @@ interface CollectionResult {
   riskAssessment: { assessed: boolean };
 }
 
-// [Fix #6] KNOWN LIMITATION: _isRunning is an in-process boolean lock.
-// It prevents concurrent collections within a single Node.js process but does NOT protect
-// against multiple instances running simultaneously (e.g. horizontally-scaled deployments,
-// process restarts mid-run, or serverless re-invocations).
-// If multi-instance deployments are needed in future, replace this with a distributed lock
-// (e.g. a DB-backed advisory lock or a Redis SETNX lock).
+// In-process lock: it only protects a single instance. Running several instances
+// would need a distributed lock.
 let _isRunning = false;
+
+export function isCollectionRunning(): boolean {
+  return _isRunning;
+}
+
+export async function markStaleRunningLogs(): Promise<number> {
+  const result = await prisma.collectionLog.updateMany({
+    where: { status: 'running' },
+    data: {
+      status: 'error',
+      completedAt: new Date(),
+      message: 'Interrupted: process restarted',
+    },
+  });
+  return result.count;
+}
+
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
 
 export async function runCollection(): Promise<CollectionResult> {
   if (_isRunning) {
@@ -55,13 +71,19 @@ export async function runCollection(): Promise<CollectionResult> {
       console.log('\n--- Collecting indicators ---');
       const indicatorResult = await collectIndicators();
 
+      const issues: string[] = [];
+      if (indicatorResult.collected === 0) {
+        issues.push('no indicators collected');
+      }
+
       // Step 3: Summarize new articles
       let summaryResult = { summarized: 0 };
       try {
         console.log('\n--- Summarizing news ---');
         summaryResult = await summarizeUnsummarized();
       } catch (error) {
-        console.error('Summarization failed (non-fatal):', error instanceof Error ? error.message : error);
+        console.error('Summarization failed (non-fatal):', errorMessage(error));
+        issues.push(`summarization failed: ${errorMessage(error)}`);
       }
 
       // Step 4: Assess risks
@@ -69,8 +91,12 @@ export async function runCollection(): Promise<CollectionResult> {
       try {
         console.log('\n--- Assessing risks ---');
         riskResult = await assessRisks();
+        if (!riskResult.assessed) {
+          issues.push('risk assessment not performed');
+        }
       } catch (error) {
-        console.error('Risk assessment failed (non-fatal):', error instanceof Error ? error.message : error);
+        console.error('Risk assessment failed (non-fatal):', errorMessage(error));
+        issues.push(`risk assessment failed: ${errorMessage(error)}`);
       }
 
       const duration = ((Date.now() - startTime) / 1000).toFixed(1);
@@ -82,14 +108,15 @@ export async function runCollection(): Promise<CollectionResult> {
       console.log(`Risk assessed: ${riskResult.assessed}`);
       console.log(`Tokens used: ${tokenUsage.inputTokens} in, ${tokenUsage.outputTokens} out`);
 
+      const summaryLine = `News: ${newsResult.collected}. Summarized: ${summaryResult.summarized}. Risk: ${riskResult.assessed}.`;
       await prisma.collectionLog.update({
         where: { id: log.id },
         data: {
-          status: 'success',
+          status: issues.length > 0 ? 'partial' : 'success',
           completedAt: new Date(),
           articlesCollected: newsResult.collected,
           tokensUsed: tokenUsage.inputTokens + tokenUsage.outputTokens,
-          message: `News: ${newsResult.collected}. Summarized: ${summaryResult.summarized}. Risk: ${riskResult.assessed}.`,
+          message: issues.length > 0 ? `${summaryLine} Issues: ${issues.join('; ')}.` : summaryLine,
         },
       });
 
@@ -100,17 +127,21 @@ export async function runCollection(): Promise<CollectionResult> {
         riskAssessment: riskResult,
       };
     } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
+      const message = errorMessage(error);
       console.error('Collection failed:', message);
 
-      await prisma.collectionLog.update({
-        where: { id: log.id },
-        data: {
-          status: 'error',
-          completedAt: new Date(),
-          message,
-        },
-      });
+      try {
+        await prisma.collectionLog.update({
+          where: { id: log.id },
+          data: {
+            status: 'error',
+            completedAt: new Date(),
+            message,
+          },
+        });
+      } catch (updateError) {
+        console.error('Failed to record collection failure:', errorMessage(updateError));
+      }
 
       throw error;
     }

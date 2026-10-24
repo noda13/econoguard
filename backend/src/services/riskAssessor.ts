@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import prisma from '../lib/prisma.js';
-import { callLLM, isConfigured } from './llm.js';
+import { callLLM, isConfigured, parseLLMJson } from './llm.js';
+import { INDICATOR_CODES } from './indicatorCollector.js';
 import { scoreToLevel, riskCategorySchema } from '../schemas/api.js';
 
 const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリストです。提供されたニュース要約と経済指標データに基づき、以下の4つのリスクカテゴリについて評価を行ってください。
@@ -52,14 +53,21 @@ const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリスト
 }`;
 
 const riskAssessmentInputSchema = z.object({
-  assessments: z.array(
-    z.object({
-      category: riskCategorySchema,
-      score: z.number().min(0).max(100),
-      summary: z.string(),
-      factors: z.array(z.string()),
-    })
-  ),
+  assessments: z
+    .array(
+      z.object({
+        category: riskCategorySchema,
+        score: z.number().min(0).max(100),
+        summary: z.string().max(1000),
+        factors: z.array(z.string().max(200)).max(10),
+      })
+    )
+    .refine(
+      (items) =>
+        items.length === riskCategorySchema.options.length &&
+        new Set(items.map((item) => item.category)).size === riskCategorySchema.options.length,
+      { message: 'assessments must contain each risk category exactly once' },
+    ),
 });
 
 async function buildContext(): Promise<string> {
@@ -67,6 +75,7 @@ async function buildContext(): Promise<string> {
   const recentNews = await prisma.newsArticle.findMany({
     where: {
       summaryJa: { not: '' },
+      relevanceScore: { gte: 30 },
     },
     orderBy: { publishedAt: 'desc' },
     take: 30,
@@ -80,26 +89,26 @@ async function buildContext(): Promise<string> {
   });
 
   // Get latest indicators
-  const indicatorCodes = ['VIX', 'USDJPY', 'US_CPI', 'US_FFR', 'GOLD', 'US10Y', 'BTC', 'ETH'];
-  const indicators = await Promise.all(
-    indicatorCodes.map((code) =>
+  const latestIndicators = await Promise.all(
+    INDICATOR_CODES.map((code) =>
       prisma.economicIndicator.findFirst({
         where: { code },
         orderBy: { recordedAt: 'desc' },
       })
     )
   );
+  const indicators = latestIndicators.filter((ind) => ind !== null);
 
   // Get previous risk scores
-  const categories = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
-  const previousScores = await Promise.all(
-    categories.map((category) =>
+  const latestScores = await Promise.all(
+    riskCategorySchema.options.map((category) =>
       prisma.riskAssessment.findFirst({
         where: { category },
         orderBy: { assessedAt: 'desc' },
       })
     )
   );
+  const previousScores = latestScores.filter((prev) => prev !== null);
 
   // Build context string
   let context = '## 最新ニュース要約\n\n';
@@ -115,17 +124,15 @@ async function buildContext(): Promise<string> {
   }
 
   context += '\n## 経済指標\n\n';
-  for (const ind of indicators.filter(Boolean)) {
-    if (!ind) continue;
-    const change = ind.previousValue
+  for (const ind of indicators) {
+    const change = ind.previousValue !== null
       ? ` (前回: ${ind.previousValue}${ind.unit})`
       : '';
     context += `- ${ind.name}: ${ind.value}${ind.unit}${change}\n`;
   }
 
   context += '\n## 前回のリスクスコア\n\n';
-  for (const prev of previousScores.filter(Boolean)) {
-    if (!prev) continue;
+  for (const prev of previousScores) {
     context += `- ${prev.category}: ${prev.score}/100 (${prev.level})\n`;
   }
 
@@ -134,7 +141,7 @@ async function buildContext(): Promise<string> {
 
 export async function assessRisks(): Promise<{ assessed: boolean }> {
   if (!isConfigured()) {
-    console.log('No LLM provider configured, skipping risk assessment');
+    console.log('LLM provider unavailable, skipping risk assessment');
     return { assessed: false };
   }
 
@@ -145,15 +152,9 @@ export async function assessRisks(): Promise<{ assessed: boolean }> {
   const { text, usage } = await callLLM(SYSTEM_PROMPT, context);
   console.log(`  LLM tokens: ${usage.inputTokens} in, ${usage.outputTokens} out`);
 
-  // Parse JSON response - handle markdown code blocks
-  let jsonStr = text.trim();
-  if (jsonStr.startsWith('```')) {
-    jsonStr = jsonStr.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
-  }
-
   let parsed: unknown;
   try {
-    parsed = JSON.parse(jsonStr);
+    parsed = parseLLMJson(text);
   } catch (err) {
     console.error('Failed to parse LLM JSON response:', err instanceof Error ? err.message : err);
     return { assessed: false };
@@ -165,25 +166,29 @@ export async function assessRisks(): Promise<{ assessed: boolean }> {
     return { assessed: false };
   }
 
-  const result = validation.data;
   const now = new Date();
+  const scored = validation.data.assessments.map((assessment) => {
+    const score = Math.round(assessment.score);
+    return { ...assessment, score, level: scoreToLevel(score) };
+  });
 
-  for (const assessment of result.assessments) {
-    const clampedScore = Math.round(Math.max(0, Math.min(100, assessment.score)));
-    const level = scoreToLevel(clampedScore);
+  await prisma.$transaction(
+    scored.map((assessment) =>
+      prisma.riskAssessment.create({
+        data: {
+          category: assessment.category,
+          score: assessment.score,
+          level: assessment.level,
+          summaryJa: assessment.summary,
+          factorsJa: JSON.stringify(assessment.factors),
+          assessedAt: now,
+        },
+      })
+    ),
+  );
 
-    await prisma.riskAssessment.create({
-      data: {
-        category: assessment.category,
-        score: clampedScore,
-        level,
-        summaryJa: assessment.summary,
-        factorsJa: JSON.stringify(assessment.factors),
-        assessedAt: now,
-      },
-    });
-
-    console.log(`  ${assessment.category}: ${clampedScore}/100 (${level})`);
+  for (const assessment of scored) {
+    console.log(`  ${assessment.category}: ${assessment.score}/100 (${assessment.level})`);
   }
 
   console.log('Risk assessment complete');

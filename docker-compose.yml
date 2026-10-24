@@ -1,3 +1,4 @@
+# Dev setup: NODE_ENV=development, so production-only config checks (ADMIN_SECRET, ALLOWED_ORIGINS) are not enforced.
 services:
   backend:
     build:
@@ -9,20 +10,21 @@ services:
       NODE_ENV: development
       PORT: 8901
       TZ: Asia/Tokyo
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-flash-latest}
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
       NEWSAPI_KEY: ${NEWSAPI_KEY:-}
       FRED_API_KEY: ${FRED_API_KEY:-}
       OPENEXCHANGERATES_APP_ID: ${OPENEXCHANGERATES_APP_ID:-}
+      ADMIN_SECRET: ${ADMIN_SECRET:-}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-}
       PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING: 1
     ports:
       - "8901:8901"
     volumes:
       - ./backend/src:/app/src
       - ./backend/prisma:/app/prisma
-      - backend_data:/app/prisma/migrations
 
   frontend:
     build:
@@ -37,6 +39,3 @@ services:
       - ./frontend/src:/app/src
     environment:
       VITE_API_URL: http://backend:8901
-
-volumes:
-  backend_data:

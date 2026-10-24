@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import prisma from '../lib/prisma.js';
-import { callLLM, isConfigured } from './llm.js';
+import { callLLM, isConfigured, parseLLMJson } from './llm.js';
 import { riskCategorySchema } from '../schemas/api.js';
 
 const BATCH_SIZE = 10;
@@ -35,7 +35,7 @@ const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリスト
 const summaryResultSchema = z.array(
   z.object({
     index: z.number().int(),
-    summaryJa: z.string(),
+    summaryJa: z.string().max(1000),
     relevanceScore: z.number(),
     riskCategories: z.array(riskCategorySchema),
   })
@@ -51,15 +51,9 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
     console.log(`  LLM tokens: ${usage.inputTokens} in, ${usage.outputTokens} out`);
 
     let count = 0;
-    // Parse the JSON response - handle markdown code blocks
-    let jsonStr = text.trim();
-    if (jsonStr.startsWith('```')) {
-      jsonStr = jsonStr.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
-    }
-
     let parsed: unknown;
     try {
-      parsed = JSON.parse(jsonStr);
+      parsed = parseLLMJson(text);
     } catch (parseErr) {
       console.error('Failed to parse LLM JSON response:', parseErr instanceof Error ? parseErr.message : parseErr);
       return 0;
@@ -99,7 +93,7 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
 
 export async function summarizeUnsummarized(): Promise<{ summarized: number }> {
   if (!isConfigured()) {
-    console.log('No LLM provider configured, skipping summarization');
+    console.log('LLM provider unavailable, skipping summarization');
     return { summarized: 0 };
   }
 
