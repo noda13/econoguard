@@ -5,7 +5,7 @@ import { UserProfileProvider } from './contexts/UserProfileContext';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchInterval: 5 * 60 * 1000, // 5 minutes
+      refetchInterval: 30 * 60 * 1000,
       staleTime: 60 * 1000,
     },
   },

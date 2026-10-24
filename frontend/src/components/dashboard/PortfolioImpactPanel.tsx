@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchCompositeRisk, fetchRisks } from '../../services/api';
 import { usePersonalizedRisk } from '../../hooks/usePersonalizedRisk';
 import { categoryLabels } from '../../lib/riskColors';
+import { INVESTMENT_DISCLAIMER } from '../../lib/disclaimer';
 
 export function PortfolioImpactPanel() {
   const { data: compositeRisk } = useQuery({
@@ -46,6 +47,7 @@ export function PortfolioImpactPanel() {
           );
         })}
       </div>
+      <p className="mt-3 text-xs text-gray-500">{INVESTMENT_DISCLAIMER}</p>
     </div>
   );
 }

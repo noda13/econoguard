@@ -82,33 +82,15 @@ export const PROFILE_PRESETS: ProfilePreset[] = [
       cash: 25,
     },
   },
-  {
-    id: 'custom',
-    label: 'カスタム',
-    allocation: {
-      domestic_equity: 0,
-      developed_equity: 0,
-      emerging_equity: 0,
-      domestic_bond: 0,
-      developed_bond: 0,
-      emerging_bond: 0,
-      domestic_reit: 0,
-      developed_reit: 0,
-      cash: 100,
-    },
-  },
 ];
 
-// Reference the intended preset by id so this stays correct even if
-// the PROFILE_PRESETS array is reordered. Falls back to the first preset
-// if 'all_country' is ever removed.
-const _defaultPreset =
+const defaultPreset =
   PROFILE_PRESETS.find((p) => p.id === 'all_country') ?? PROFILE_PRESETS[0];
 
 export const DEFAULT_PROFILE: UserProfile = {
   age: 40,
   sensitivity: 'standard',
-  allocation: _defaultPreset.allocation,
+  allocation: defaultPreset.allocation,
 };
 
 export const ASSET_CLASS_LABELS: Record<keyof AssetAllocation, string> = {

@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   backend:
-    name: Backend (type-check)
+    name: Backend & scripts (type-check & test)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -35,6 +35,12 @@ jobs:
 
       - name: Type check
         run: pnpm --filter backend exec tsc --noEmit
+
+      - name: Type check scripts
+        run: pnpm run type-check:scripts
+
+      - name: Unit tests
+        run: pnpm test
 
   frontend:
     name: Frontend (type-check & build)

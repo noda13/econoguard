@@ -10,53 +10,41 @@ const router: Router = Router();
 const weightFor = (category: string): number =>
   RISK_WEIGHTS[category as RiskCategory] ?? 0;
 
-const RISK_CATEGORIES = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'] as const;
-
-// GET /api/risks - Get latest risk assessments for all categories
-router.get('/', asyncHandler(async (_req, res) => {
-  const categories = RISK_CATEGORIES;
-
-  const latestRisks = await Promise.all(
-    categories.map((category) =>
+async function getLatestAssessments() {
+  const latest = await Promise.all(
+    riskCategorySchema.options.map((category) =>
       prisma.riskAssessment.findFirst({
         where: { category },
         orderBy: { assessedAt: 'desc' },
       })
     )
   );
+  return latest.filter((risk) => risk !== null);
+}
 
-  res.json(latestRisks.filter(Boolean));
+// GET /api/risks - Get latest risk assessments for all categories
+router.get('/', asyncHandler(async (_req, res) => {
+  res.json(await getLatestAssessments());
 }));
 
 // GET /api/risks/composite - Get composite (weighted average) risk index
 router.get('/composite', asyncHandler(async (_req, res) => {
-  const categories = RISK_CATEGORIES;
-
-  const latestRisks = await Promise.all(
-    categories.map((category) =>
-      prisma.riskAssessment.findFirst({
-        where: { category },
-        orderBy: { assessedAt: 'desc' },
-      })
-    )
-  );
-
-  const validRisks = latestRisks.filter(Boolean);
-  if (validRisks.length === 0) {
+  const risks = await getLatestAssessments();
+  if (risks.length === 0) {
     res.json({ compositeScore: 0, level: 'low', breakdown: [] });
     return;
   }
 
   // Only sum weights for categories that actually have data so the index is
   // not biased downward when some categories are absent.
-  const totalWeight = validRisks.reduce((s, r) => s + weightFor(r!.category), 0);
+  const totalWeight = risks.reduce((s, r) => s + weightFor(r.category), 0);
   if (totalWeight === 0) {
     res.json({ compositeScore: 0, level: 'low', breakdown: [] });
     return;
   }
 
   const compositeScore = Math.round(
-    validRisks.reduce((sum, risk) => sum + (risk!.score * weightFor(risk!.category)), 0) / totalWeight
+    risks.reduce((sum, risk) => sum + (risk.score * weightFor(risk.category)), 0) / totalWeight
   );
 
   const level = scoreToLevel(compositeScore);
@@ -64,10 +52,10 @@ router.get('/composite', asyncHandler(async (_req, res) => {
   res.json({
     compositeScore,
     level,
-    breakdown: validRisks.map((r) => ({
-      category: r!.category,
-      score: r!.score,
-      weight: weightFor(r!.category),
+    breakdown: risks.map((r) => ({
+      category: r.category,
+      score: r.score,
+      weight: weightFor(r.category),
     })),
   });
 }));

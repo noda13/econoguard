@@ -7,12 +7,17 @@
     "dev": "pnpm --parallel -r run dev",
     "dev:frontend": "pnpm --filter frontend dev",
     "dev:backend": "pnpm --filter backend dev",
-    "collect": "tsx scripts/collect-static.ts"
+    "collect": "tsx scripts/collect-static.ts",
+    "type-check:scripts": "tsc -p scripts/tsconfig.json",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "tsx": "^4.19.2",
-    "rss-parser": "^3.13.0",
     "@google/generative-ai": "^0.24.0",
+    "@types/node": "^22.7.5",
+    "rss-parser": "^3.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.7",
     "zod": "^3.24.1"
   },
   "pnpm": {

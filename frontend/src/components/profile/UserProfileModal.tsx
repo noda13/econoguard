@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import type { AssetAllocation, MonitoringSensitivity } from '../../lib/types/profile';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import {
@@ -19,7 +19,15 @@ const SENSITIVITY_OPTIONS: { value: MonitoringSensitivity; label: string; subtit
   { value: 'relaxed', label: '鈍感', subtitle: '大きな変動のみ' },
 ];
 
-const PRESET_LIST = PROFILE_PRESETS.filter((p) => p.id !== 'custom');
+const MIN_AGE = 20;
+const MAX_AGE = 80;
+
+const TITLE_ID = 'profile-modal-title';
+const AGE_ERROR_ID = 'profile-age-error';
+const SENSITIVITY_LABEL_ID = 'profile-sensitivity-label';
+
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 function allocationEquals(a: AssetAllocation, b: AssetAllocation): boolean {
   return (Object.keys(a) as (keyof AssetAllocation)[]).every((key) => a[key] === b[key]);
@@ -29,24 +37,40 @@ function allocationTotal(allocation: AssetAllocation): number {
   return (Object.values(allocation) as number[]).reduce((sum, v) => sum + v, 0);
 }
 
+function parseAge(raw: string): number | null {
+  const trimmed = raw.trim();
+  if (!/^\d+$/.test(trimmed)) return null;
+  const n = Number(trimmed);
+  return n >= MIN_AGE && n <= MAX_AGE ? n : null;
+}
+
 export function UserProfileModal({ isOpen, onClose }: Props) {
   const { profile, setProfile, clearProfile } = useUserProfile();
 
-  const [age, setAge] = useState(DEFAULT_PROFILE.age);
+  const [ageInput, setAgeInput] = useState(String(DEFAULT_PROFILE.age));
   const [sensitivity, setSensitivity] = useState<MonitoringSensitivity>(DEFAULT_PROFILE.sensitivity);
   const [allocation, setAllocation] = useState<AssetAllocation>(DEFAULT_PROFILE.allocation);
 
-  // Reset local state whenever the modal opens
+  const dialogRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (isOpen) {
       const source = profile ?? DEFAULT_PROFILE;
-      setAge(source.age);
+      setAgeInput(String(source.age));
       setSensitivity(source.sensitivity);
       setAllocation({ ...source.allocation });
     }
   }, [isOpen, profile]);
 
-  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    dialogRef.current?.focus();
+    return () => {
+      previouslyFocused?.focus();
+    };
+  }, [isOpen]);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -64,24 +88,52 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   if (!isOpen) return null;
 
   const total = allocationTotal(allocation);
-  const canSave = total === 100;
-  const activePreset = PRESET_LIST.find((p) => allocationEquals(p.allocation, allocation));
+  const parsedAge = parseAge(ageInput);
+  const ageValid = parsedAge !== null;
+  const canSave = total === 100 && ageValid;
+  const activePreset = PROFILE_PRESETS.find((p) => allocationEquals(p.allocation, allocation));
 
   function handleAllocationChange(key: keyof AssetAllocation, value: number) {
     setAllocation((prev) => ({ ...prev, [key]: value }));
   }
 
   function handleSave() {
-    if (Number.isNaN(age)) return;
-    const clampedAge = Math.max(20, Math.min(80, age));
-    if (allocationTotal(allocation) !== 100) return;
-    setProfile({ age: clampedAge, sensitivity, allocation });
+    if (parsedAge === null || total !== 100) return;
+    setProfile({ age: parsedAge, sensitivity, allocation });
     onClose();
   }
 
-  function handleReset() {
+  function handleClear() {
     clearProfile();
     onClose();
+  }
+
+  function handleDialogKeyDown(e: ReactKeyboardEvent<HTMLDivElement>) {
+    if (e.key !== 'Tab') return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR));
+    if (focusable.length === 0) {
+      e.preventDefault();
+      dialog.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+
+    if (!dialog.contains(active)) {
+      e.preventDefault();
+      (e.shiftKey ? last : first).focus();
+    } else if (e.shiftKey && (active === first || active === dialog)) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 
   return (
@@ -91,16 +143,24 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-lg mx-4 bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={TITLE_ID}
+        tabIndex={-1}
+        onKeyDown={handleDialogKeyDown}
+        className="relative w-full max-w-lg mx-4 bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col focus:outline-none"
+      >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-700 flex-shrink-0">
-          <h2 className="text-lg font-semibold text-gray-100">プロフィール設定</h2>
+          <h2 id={TITLE_ID} className="text-lg font-semibold text-gray-100">プロフィール設定</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-200 transition-colors p-1 rounded"
             aria-label="閉じる"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -120,25 +180,33 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
               <input
                 id="profile-age"
                 type="number"
-                min={20}
-                max={80}
-                value={age}
-                onChange={(e) => {
-                const n = Number(e.target.value);
-                if (!Number.isNaN(n)) setAge(n);
-              }}
-                className="w-24 px-3 py-1.5 rounded-md bg-gray-700 border border-gray-600 text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                inputMode="numeric"
+                min={MIN_AGE}
+                max={MAX_AGE}
+                value={ageInput}
+                onChange={(e) => setAgeInput(e.target.value)}
+                aria-invalid={!ageValid}
+                aria-describedby={ageValid ? undefined : AGE_ERROR_ID}
+                className={`w-24 px-3 py-1.5 rounded-md bg-gray-700 border text-gray-100 text-sm focus:outline-none focus:ring-2 ${
+                  ageValid ? 'border-gray-600 focus:ring-blue-500' : 'border-red-500 focus:ring-red-500'
+                }`}
               />
+              {!ageValid && (
+                <p id={AGE_ERROR_ID} role="alert" className="mt-1 text-xs text-red-400">
+                  {`年齢は${MIN_AGE}〜${MAX_AGE}の整数で入力してください`}
+                </p>
+              )}
             </div>
 
             {/* 監視感度 */}
-            <div>
-              <label className="block text-sm text-gray-300 mb-2">監視感度</label>
+            <div role="group" aria-labelledby={SENSITIVITY_LABEL_ID}>
+              <span id={SENSITIVITY_LABEL_ID} className="block text-sm text-gray-300 mb-2">監視感度</span>
               <div className="flex gap-2">
                 {SENSITIVITY_OPTIONS.map((opt) => (
                   <button
                     key={opt.value}
                     onClick={() => setSensitivity(opt.value)}
+                    aria-pressed={sensitivity === opt.value}
                     className={`flex-1 flex flex-col items-center px-3 py-2 rounded-lg text-sm transition-colors ${
                       sensitivity === opt.value
                         ? 'bg-blue-600 text-white'
@@ -161,10 +229,11 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
 
             {/* Preset buttons */}
             <div className="flex flex-wrap gap-2 mb-5">
-              {PRESET_LIST.map((preset) => (
+              {PROFILE_PRESETS.map((preset) => (
                 <button
                   key={preset.id}
                   onClick={() => setAllocation({ ...preset.allocation })}
+                  aria-pressed={activePreset?.id === preset.id}
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                     activePreset?.id === preset.id
                       ? 'bg-blue-600 text-white'
@@ -193,6 +262,7 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
                     step={5}
                     value={allocation[key]}
                     onChange={(e) => handleAllocationChange(key, Number(e.target.value))}
+                    aria-label={ASSET_CLASS_LABELS[key]}
                     className="w-full h-1.5 rounded-full appearance-none cursor-pointer bg-gray-700 accent-blue-500"
                   />
                 </div>
@@ -217,10 +287,10 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
         {/* Footer */}
         <div className="flex items-center justify-end gap-2 px-6 py-4 border-t border-gray-700 flex-shrink-0">
           <button
-            onClick={handleReset}
+            onClick={handleClear}
             className="px-4 py-2 rounded-lg text-sm bg-gray-700 text-gray-300 hover:bg-gray-600 transition-colors"
           >
-            リセット
+            設定をクリア
           </button>
           <button
             onClick={onClose}

@@ -1,12 +1,14 @@
 import crypto from 'node:crypto';
 import { Router, Request, Response, NextFunction } from 'express';
-import { runCollection, CollectionInProgressError } from '../services/collector.js';
+import { runCollection, isCollectionRunning, CollectionInProgressError } from '../services/collector.js';
 import prisma from '../lib/prisma.js';
+import { asyncHandler } from '../lib/asyncHandler.js';
+import { config } from '../lib/config.js';
 
 const router: Router = Router();
 
 function adminAuth(req: Request, res: Response, next: NextFunction): void {
-  const secret = process.env.ADMIN_SECRET;
+  const secret = config.adminSecret;
   if (!secret) {
     res.status(503).json({ error: 'Admin routes are disabled: ADMIN_SECRET is not configured' });
     return;
@@ -28,50 +30,38 @@ function adminAuth(req: Request, res: Response, next: NextFunction): void {
 router.use(adminAuth);
 
 // GET /api/admin/status - Get last collection status
-router.get('/status', async (_req, res) => {
-  try {
-    const lastLog = await prisma.collectionLog.findFirst({
-      orderBy: { startedAt: 'desc' },
-    });
+router.get('/status', asyncHandler(async (_req, res) => {
+  const lastLog = await prisma.collectionLog.findFirst({
+    orderBy: { startedAt: 'desc' },
+  });
 
-    const articleCount = await prisma.newsArticle.count();
-    const unsummarizedCount = await prisma.newsArticle.count({
-      where: { summaryJa: '' },
-    });
+  const articleCount = await prisma.newsArticle.count();
+  const unsummarizedCount = await prisma.newsArticle.count({
+    where: { summaryJa: '' },
+  });
 
-    res.json({
-      lastCollection: lastLog,
-      stats: {
-        totalArticles: articleCount,
-        unsummarized: unsummarizedCount,
-      },
-    });
-  } catch (error) {
-    res.status(500).json({
-      error: 'Failed to fetch status',
-      message: error instanceof Error ? error.message : String(error),
-    });
+  res.json({
+    lastCollection: lastLog,
+    stats: {
+      totalArticles: articleCount,
+      unsummarized: unsummarizedCount,
+    },
+  });
+}));
+
+// POST /api/admin/collect - Start data collection in the background; poll GET /status for the outcome
+router.post('/collect', asyncHandler(async (_req, res) => {
+  if (isCollectionRunning()) {
+    res.status(409).json({ error: 'Collection already in progress' });
+    return;
   }
-});
 
-// POST /api/admin/collect - Manually trigger data collection
-router.post('/collect', async (_req, res) => {
-  try {
-    const result = await runCollection();
-    res.json({
-      message: 'Collection completed',
-      result,
-    });
-  } catch (error) {
-    if (error instanceof CollectionInProgressError) {
-      res.status(409).json({ error: 'Collection already in progress' });
-      return;
-    }
-    res.status(500).json({
-      error: 'Collection failed',
-      message: error instanceof Error ? error.message : String(error),
-    });
-  }
-});
+  runCollection().catch((error: unknown) => {
+    if (error instanceof CollectionInProgressError) return;
+    console.error('[Admin] Background collection failed:', error instanceof Error ? error.message : error);
+  });
+
+  res.status(202).json({ message: 'Collection started' });
+}));
 
 export default router;

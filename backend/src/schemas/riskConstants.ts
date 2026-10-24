@@ -1,10 +1,14 @@
 // Canonical type definitions live here so riskConstants has no upstream deps.
 export type RiskLevel = 'low' | 'moderate' | 'elevated' | 'high' | 'critical';
-export type RiskCategory =
-  | 'currency_finance'
-  | 'geopolitics_supply_chain'
-  | 'technology'
-  | 'social_policy';
+
+export const RISK_CATEGORIES = [
+  'currency_finance',
+  'geopolitics_supply_chain',
+  'technology',
+  'social_policy',
+] as const;
+
+export type RiskCategory = (typeof RISK_CATEGORIES)[number];
 
 export const RISK_WEIGHTS: Record<RiskCategory, number> = {
   currency_finance: 0.3,

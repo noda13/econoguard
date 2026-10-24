@@ -1,18 +1,22 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import newsRoutes from './routes/news.js';
 import risksRoutes from './routes/risks.js';
 import indicatorsRoutes from './routes/indicators.js';
 import adminRoutes from './routes/admin.js';
 import { startScheduler } from './jobs/scheduler.js';
+import { markStaleRunningLogs } from './services/collector.js';
 import prisma from './lib/prisma.js';
 import { config } from './lib/config.js';
 
-dotenv.config();
-
 const app = express();
+app.disable('x-powered-by');
+
+app.use((_req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  next();
+});
 
 // CORS: in production ALLOWED_ORIGINS is required (enforced by config); in development fall back permissive
 const allowedOrigins = config.allowedOrigins.length > 0 ? config.allowedOrigins : null;
@@ -22,7 +26,7 @@ app.use(cors({
     ? (origin, cb) => {
         // Allow requests with no origin (e.g. same-origin / server-to-server)
         if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
-        cb(new Error(`CORS: origin '${origin}' not allowed`));
+        cb(null, false);
       }
     : true, // permissive in development when ALLOWED_ORIGINS not set
   credentials: false,
@@ -42,8 +46,14 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-const server = app.listen(config.port, '0.0.0.0', () => {
+const server = app.listen(config.port, '0.0.0.0', async () => {
   console.log(`Econoguard server running on port ${config.port}`);
+  try {
+    const stale = await markStaleRunningLogs();
+    console.log(`[Startup] Marked ${stale} interrupted collection log(s)`);
+  } catch (error) {
+    console.error('[Startup] Failed to mark interrupted collection logs:', error instanceof Error ? error.message : error);
+  }
   startScheduler();
 });
 

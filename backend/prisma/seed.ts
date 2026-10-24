@@ -3,7 +3,21 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  // Seed risk assessments
+  if (process.env.NODE_ENV === 'production') {
+    console.log('Seed skipped: NODE_ENV is production');
+    return;
+  }
+
+  const [riskCount, newsCount, indicatorCount] = await Promise.all([
+    prisma.riskAssessment.count(),
+    prisma.newsArticle.count(),
+    prisma.economicIndicator.count(),
+  ]);
+  if (riskCount > 0 || newsCount > 0 || indicatorCount > 0) {
+    console.log('Seed skipped: database already has data');
+    return;
+  }
+
   const now = new Date();
   const categories = [
     {
@@ -58,16 +72,6 @@ async function main() {
     },
   ];
 
-  for (const cat of categories) {
-    await prisma.riskAssessment.create({
-      data: {
-        ...cat,
-        assessedAt: now,
-      },
-    });
-  }
-
-  // Seed news articles
   const articles = [
     {
       sourceId: 'seed-1',
@@ -121,11 +125,6 @@ async function main() {
     },
   ];
 
-  for (const article of articles) {
-    await prisma.newsArticle.create({ data: article });
-  }
-
-  // Seed economic indicators
   const indicators = [
     { code: 'VIX', name: 'VIX恐怖指数', value: 28.5, previousValue: 24.2, unit: '', source: 'fred', recordedAt: now },
     { code: 'USDJPY', name: 'ドル円', value: 142.35, previousValue: 148.20, unit: '円', source: 'openexchangerates', recordedAt: now },
@@ -136,9 +135,13 @@ async function main() {
     { code: 'BTC', name: 'ビットコイン', value: 82500.0, previousValue: 78200.0, unit: 'USD', source: 'coingecko', recordedAt: now },
   ];
 
-  for (const ind of indicators) {
-    await prisma.economicIndicator.create({ data: ind });
-  }
+  await prisma.$transaction([
+    ...categories.map((cat) =>
+      prisma.riskAssessment.create({ data: { ...cat, assessedAt: now } }),
+    ),
+    ...articles.map((article) => prisma.newsArticle.create({ data: article })),
+    ...indicators.map((ind) => prisma.economicIndicator.create({ data: ind })),
+  ]);
 
   console.log('Seed data created successfully');
 }

@@ -18,7 +18,6 @@ async function scheduledCollection() {
     console.log('[Scheduler] Scheduled collection completed');
   } catch (error) {
     if (error instanceof CollectionInProgressError) {
-      // runCollection's own lock fired — this is expected, not an error.
       console.log('[Scheduler] Collection already running (runCollection lock), skipping');
       return;
     }

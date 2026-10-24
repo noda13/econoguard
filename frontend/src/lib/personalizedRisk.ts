@@ -7,6 +7,7 @@ import type {
   PersonalizedResult,
 } from './types/profile';
 import { getSignalFromScore } from './actionSignals';
+import { RISK_CATEGORIES } from './riskColors';
 import type { RiskAssessment, CompositeRisk } from '../services/api';
 
 // ---------------------------------------------------------------------------
@@ -74,18 +75,29 @@ export function getSensitivityMultiplier(sensitivity: MonitoringSensitivity): nu
 // ---------------------------------------------------------------------------
 
 /**
- * Personalize a generic risk score with the user's age, equity weight, and
- * monitoring-sensitivity preference. Returns a clamped integer 0–100.
+ * Combines the age, equity-weight, and monitoring-sensitivity multipliers by
+ * summing their deviations from 1.0, then caps the result to 0.7–1.4.
+ *
+ * Multiplying them directly reaches ≈2.0 for an older, equity-heavy, sensitive
+ * profile, which pushed a mid-range generic composite (≈43) into 「即時対応」.
+ */
+export function getCombinedMultiplier(profile: UserProfile): number {
+  const age = calculateAgeSensitivity(profile.age);
+  const equity = calculateEquitySensitivity(profile.allocation);
+  const sensitivity = getSensitivityMultiplier(profile.sensitivity);
+
+  return clamp(1 + (age - 1) + (equity - 1) + (sensitivity - 1), 0.7, 1.4);
+}
+
+/**
+ * Scale a generic risk score by the profile's combined multiplier.
+ * Returns a clamped integer 0–100.
  */
 export function calculatePersonalizedScore(
   genericScore: number,
   profile: UserProfile,
 ): number {
-  const ageSensitivity = calculateAgeSensitivity(profile.age);
-  const equitySensitivity = calculateEquitySensitivity(profile.allocation);
-  const sensitivityMultiplier = getSensitivityMultiplier(profile.sensitivity);
-
-  const raw = genericScore * ageSensitivity * equitySensitivity * sensitivityMultiplier;
+  const raw = genericScore * getCombinedMultiplier(profile);
   return Math.round(clamp(raw, 0, 100));
 }
 
@@ -93,15 +105,7 @@ export function calculatePersonalizedScore(
 // 4. Category → asset-class impact mapping
 // ---------------------------------------------------------------------------
 
-/**
- * The four known risk categories produced by the backend.
- * Add new values here if the backend adds categories.
- */
-export type RiskCategory =
-  | 'currency_finance'
-  | 'geopolitics_supply_chain'
-  | 'technology'
-  | 'social_policy';
+export type RiskCategory = (typeof RISK_CATEGORIES)[number];
 
 const CATEGORY_IMPACT_MAP: Record<
   RiskCategory,
@@ -133,20 +137,25 @@ const CATEGORY_IMPACT_MAP: Record<
 // 5. Per-category impact calculation
 // ---------------------------------------------------------------------------
 
+const CATEGORY_RISK_TEXT: Record<RiskCategory, string> = {
+  currency_finance: '円高進行時に為替差損が生じるリスクがあります',
+  geopolitics_supply_chain: '地政学的な緊張により供給網が混乱するリスクがあります',
+  technology: '規制強化や半導体関連のリスクがあります',
+  social_policy: '政策変更や金利動向の影響を受けるリスクがあります',
+};
+
 /**
  * Given a risk category and the user's allocation, returns how strongly that
  * category affects the portfolio.
  *
- * affectedPct weighting: high assets × 1.0 + medium assets × 0.5.
- * This reflects the practical exposure gradient — high-impact asset classes
- * carry full weight; medium-impact classes are partially relevant.
- * Low-impact classes are excluded from the percentage to keep the number
- * conservative (do not inflate perceived exposure).
+ * affectedPct is a blended figure across asset classes (high-impact classes
+ * × 1.0 + medium-impact classes × 0.5), not the share of any single class.
+ * Low-impact classes are excluded so the number does not inflate perceived
+ * exposure.
  *
- * impactLevel determination: combines affectedPct with the category's own
- * risk score so that a high-score category is more likely to be surfaced as
- * "high" impact, and a low-score category can be downgraded to "low" even
- * when portfolio exposure is moderate.
+ * impactLevel combines affectedPct with the category's own risk score so a
+ * high-score category is more likely to surface as "high" and a low-score
+ * category can be downgraded even when exposure is moderate.
  *   - affectedPct thresholds: ≥40 → high base, ≥15 → medium base, else low base
  *   - score factor: score ≥ 70 upgrades one level; score < 30 downgrades one level
  */
@@ -155,9 +164,10 @@ export function calculateCategoryImpact(
   score: number,
   allocation: AssetAllocation,
 ): CategoryImpact {
-  const mapping = CATEGORY_IMPACT_MAP[category as RiskCategory];
+  const mapping = Object.prototype.hasOwnProperty.call(CATEGORY_IMPACT_MAP, category)
+    ? CATEGORY_IMPACT_MAP[category as RiskCategory]
+    : undefined;
 
-  // If the category is unknown, warn in dev and return a neutral low-impact result
   if (!mapping) {
     if (import.meta.env.DEV) {
       console.warn(`[calculateCategoryImpact] Unknown risk category: "${category}". Add it to CATEGORY_IMPACT_MAP.`);
@@ -166,40 +176,24 @@ export function calculateCategoryImpact(
       category,
       impactLevel: 'low',
       affectedPct: 0,
-      description: '該当カテゴリの影響は限定的です。現在のポートフォリオへの影響は限定的です。',
+      description: '現在のポートフォリオへの影響は限定的です。',
     };
   }
 
-  // Weighted sum: high × 1.0 + medium × 0.5
-  // This reflects realistic exposure — medium-sensitivity assets contribute
-  // half their allocation to the "affected" pool.
   const highSum = mapping.high.reduce((sum, key) => sum + allocation[key], 0);
   const mediumSum = mapping.medium.reduce((sum, key) => sum + allocation[key], 0);
   const affectedPct = Math.round(highSum + mediumSum * 0.5);
 
-  // Base impact level from portfolio exposure percentage
   let baseLevel: 0 | 1 | 2 = affectedPct >= 40 ? 2 : affectedPct >= 15 ? 1 : 0;
-  //   2 = high, 1 = medium, 0 = low
 
-  // Adjust one step up/down based on the category's actual risk score
-  // (score is 0–100; ≥70 upgrades, <30 downgrades)
   if (score >= 70 && baseLevel < 2) baseLevel = (baseLevel + 1) as 0 | 1 | 2;
   if (score < 30 && baseLevel > 0) baseLevel = (baseLevel - 1) as 0 | 1 | 2;
 
   const levelLabels: ['low', 'medium', 'high'] = ['low', 'medium', 'high'];
   const impactLevel: 'high' | 'medium' | 'low' = levelLabels[baseLevel];
 
-  // Build the Japanese description
-  const lowSuffix = impactLevel === 'low' ? '。現在のポートフォリオへの影響は限定的です。' : '';
-
-  const descriptionMap: Record<RiskCategory, string> = {
-    currency_finance: `ドル建て資産(${affectedPct}%)に直接影響。円高進行時の為替差損リスク${lowSuffix}`,
-    geopolitics_supply_chain: `新興国資産(${affectedPct}%)への地政学リスク。供給網の混乱が懸念${lowSuffix}`,
-    technology: `先進国株式(${affectedPct}%)のテック比率に注意。規制・半導体リスク${lowSuffix}`,
-    social_policy: `国内資産(${affectedPct}%)に政策変更の影響。金利動向に注意${lowSuffix}`,
-  };
-
-  const description = descriptionMap[category as RiskCategory] ?? `リスクカテゴリ(${affectedPct}%)への影響${lowSuffix}`;
+  const lowSuffix = impactLevel === 'low' ? '現在のポートフォリオへの影響は限定的です。' : '';
+  const description = `${CATEGORY_RISK_TEXT[category as RiskCategory]}（影響を受ける割合: 約${affectedPct}%）。${lowSuffix}`;
 
   return { category, impactLevel, affectedPct, description };
 }
@@ -254,17 +248,13 @@ export function personalizeRisk(
  * Returns warning / alert thresholds in the *generic* score scale so that
  * reference lines on the trend chart align correctly with the raw API values.
  *
- * Divide the desired personalized thresholds (40 / 60) by the combined
- * personalization multiplier to map them back to generic score space.
+ * Divides the personalized thresholds (40 / 60) by the same multiplier used by
+ * calculatePersonalizedScore to map them back to generic score space.
  */
 export function getPersonalizedThresholds(
   profile: UserProfile,
 ): { warning: number; alert: number } {
-  const ageSensitivity = calculateAgeSensitivity(profile.age);
-  const equitySensitivity = calculateEquitySensitivity(profile.allocation);
-  const sensitivityMultiplier = getSensitivityMultiplier(profile.sensitivity);
-
-  const combinedMultiplier = ageSensitivity * equitySensitivity * sensitivityMultiplier;
+  const combinedMultiplier = getCombinedMultiplier(profile);
 
   return {
     warning: clamp(Math.round(40 / combinedMultiplier), 10, 90),

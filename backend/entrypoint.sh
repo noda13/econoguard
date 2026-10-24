@@ -1,10 +1,16 @@
 #!/bin/sh
+set -e
 
-echo "Running Prisma migrations..."
-pnpm prisma migrate deploy || echo "Migration failed or already exists"
+echo "Applying Prisma migrations..."
+pnpm prisma migrate deploy
 
-echo "Seeding database (if empty)..."
+echo "Seeding database (only when empty and not in production)..."
 pnpm run prisma:seed
 
-echo "Starting Econoguard server..."
-pnpm run dev
+if [ "$NODE_ENV" = "production" ]; then
+  echo "Starting Econoguard server (production)..."
+  exec pnpm run start
+else
+  echo "Starting Econoguard server (development, watch mode)..."
+  exec pnpm run dev
+fi

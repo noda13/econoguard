@@ -36,7 +36,6 @@ model EconomicIndicator {
   createdAt     DateTime @default(now())
 
   @@unique([code, recordedAt])
-  @@index([code, recordedAt])
   @@map("economic_indicators")
 }
 

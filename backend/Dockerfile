@@ -11,6 +11,7 @@ RUN npm install -g pnpm@9
 
 COPY package.json ./
 
+# pnpm-lock.yaml lives at the workspace root, outside this build context, so the lockfile cannot be frozen; pnpm@9 is pinned because pnpm 10 skips dependency build scripts such as prisma's
 RUN pnpm install --no-frozen-lockfile
 
 COPY prisma ./prisma/
