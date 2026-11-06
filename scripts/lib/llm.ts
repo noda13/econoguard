@@ -65,24 +65,75 @@ export async function callLLM(system: string, user: string): Promise<string> {
   return callOpenAICompatible(system, user, config);
 }
 
-async function callOpenAICompatible(system: string, user: string, config: LLMConfig): Promise<string> {
-  const res = await fetch(`${config.baseUrl}/chat/completions`, {
-    method: 'POST',
-    signal: AbortSignal.timeout(30000),
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.key}` },
-    body: JSON.stringify({
-      model: config.model,
-      messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
-      temperature: 0.3,
-      max_tokens: 4096,
-      response_format: { type: 'json_object' },
-    }),
+const MAX_ATTEMPTS = 3;
+const BASE_DELAY_MS = 2000;
+const MAX_DELAY_MS = 30_000;
+
+let sleep: (ms: number) => Promise<void> = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+export function setSleep(fn: (ms: number) => Promise<void>): void {
+  sleep = fn;
+}
+
+class HttpError extends Error {
+  constructor(message: string, readonly status: number, readonly retryAfterMs?: number) {
+    super(message);
+  }
+}
+
+function parseRetryAfter(value: string | null): number | undefined {
+  if (!value) return undefined;
+  const seconds = Number(value);
+  return Number.isFinite(seconds) && seconds >= 0 ? seconds * 1000 : undefined;
+}
+
+function isRetryable(err: unknown): boolean {
+  const status = (err as { status?: unknown } | null)?.status;
+  if (typeof status === 'number') return status === 429 || status >= 500;
+  // fetch rejects with TypeError on network failure; AbortSignal.timeout aborts with TimeoutError.
+  return err instanceof TypeError || (err as { name?: string } | null)?.name === 'TimeoutError';
+}
+
+async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (attempt >= MAX_ATTEMPTS || !isRetryable(err)) throw err;
+      const hinted = err instanceof HttpError ? err.retryAfterMs : undefined;
+      const delay = Math.min(hinted ?? BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
+      console.warn(`LLM request failed (${err instanceof Error ? err.message.slice(0, 120) : err}); retry ${attempt}/${MAX_ATTEMPTS - 1} in ${delay}ms`);
+      await sleep(delay);
+    }
+  }
+}
+
+function callOpenAICompatible(system: string, user: string, config: LLMConfig): Promise<string> {
+  return withRetry(async () => {
+    const res = await fetch(`${config.baseUrl}/chat/completions`, {
+      method: 'POST',
+      signal: AbortSignal.timeout(30000),
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${config.key}` },
+      body: JSON.stringify({
+        model: config.model,
+        messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
+        temperature: 0.3,
+        max_tokens: 4096,
+        response_format: { type: 'json_object' },
+      }),
+    });
+    if (!res.ok) {
+      throw new HttpError(
+        `${config.provider} ${res.status}: ${await res.text()}`,
+        res.status,
+        parseRetryAfter(res.headers.get('retry-after')),
+      );
+    }
+    const data = await res.json() as { choices?: Array<{ message?: { content?: string } }> };
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error(`${config.provider} returned empty or malformed response (no choices[0].message.content)`);
+    return content;
   });
-  if (!res.ok) throw new Error(`${config.provider} ${res.status}: ${await res.text()}`);
-  const data = await res.json() as { choices?: Array<{ message?: { content?: string } }> };
-  const content = data.choices?.[0]?.message?.content;
-  if (!content) throw new Error(`${config.provider} returned empty or malformed response (no choices[0].message.content)`);
-  return content;
 }
 
 async function callGemini(system: string, user: string, key: string): Promise<string> {
@@ -93,11 +144,13 @@ async function callGemini(system: string, user: string, key: string): Promise<st
     systemInstruction: system,
     generationConfig: { responseMimeType: 'application/json' },
   });
-  const r = await model.generateContent(
-    { contents: [{ role: 'user', parts: [{ text: user }] }] },
-    { signal: AbortSignal.timeout(60_000) },
-  );
-  return r.response.text();
+  return withRetry(async () => {
+    const r = await model.generateContent(
+      { contents: [{ role: 'user', parts: [{ text: user }] }] },
+      { signal: AbortSignal.timeout(60_000) },
+    );
+    return r.response.text();
+  });
 }
 
 function stripFence(text: string): string {

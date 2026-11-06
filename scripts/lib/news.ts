@@ -1,6 +1,6 @@
 import Parser from 'rss-parser';
 import crypto from 'crypto';
-import type { NewsArticle } from './types.js';
+import { MAX_SUMMARY_ATTEMPTS, type NewsArticle } from './types.js';
 
 export const RSS_SOURCES = [
   { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'bloomberg' },
@@ -23,15 +23,24 @@ const MIN_RELEVANCE = 30;
 const MAX_NEWS = 200;
 const MAX_SEEN_IDS = 2000;
 
-// Unsummarized articles are kept so they are not dropped before the next LLM run can score them.
+function isSummaryExhausted(a: NewsArticle): boolean {
+  return !a.summaryJa && (a.summaryAttempts ?? 0) >= MAX_SUMMARY_ATTEMPTS;
+}
+
+// Unsummarized articles are kept so they are not dropped before the next LLM run can score them,
+// until their retries are exhausted.
 export function selectPublishedNews(news: NewsArticle[]): NewsArticle[] {
-  return news.filter(a => !a.summaryJa || a.relevanceScore >= MIN_RELEVANCE).slice(0, MAX_NEWS);
+  return news
+    .filter(a => a.summaryJa ? a.relevanceScore >= MIN_RELEVANCE : !isSummaryExhausted(a))
+    .slice(0, MAX_NEWS);
 }
 
 // Low-relevance articles leave news.json but still reappear in the RSS feeds; remembering their ids
 // keeps them from consuming the per-run summarize budget again.
 export function nextSeenIds(prevSeen: string[], news: NewsArticle[]): string[] {
-  const dropped = news.filter(a => a.summaryJa && a.relevanceScore < MIN_RELEVANCE).map(a => a.id);
+  const dropped = news
+    .filter(a => (a.summaryJa && a.relevanceScore < MIN_RELEVANCE) || isSummaryExhausted(a))
+    .map(a => a.id);
   return [...new Set([...prevSeen, ...dropped])].slice(-MAX_SEEN_IDS);
 }
 
@@ -65,9 +74,20 @@ export async function collectNews(existing: NewsArticle[], seenIds: string[] = [
     }),
   );
 
+  const reasons: string[] = [];
   for (const r of results) {
-    if (r.status === 'fulfilled') fresh.push(...r.value);
-    else console.error(`  RSS failed:`, r.reason instanceof Error ? r.reason.message : r.reason);
+    if (r.status === 'fulfilled') {
+      fresh.push(...r.value);
+    } else {
+      const reason = r.reason instanceof Error ? r.reason.message : String(r.reason);
+      reasons.push(reason);
+      console.error(`  RSS failed:`, reason);
+    }
+  }
+
+  // 全滅時に正常終了すると CI が古いデータのまま緑でコミットしてしまうため、書き込み前に失敗させる
+  if (RSS_SOURCES.length > 0 && reasons.length === RSS_SOURCES.length) {
+    throw new Error(`All ${RSS_SOURCES.length} RSS sources failed: ${[...new Set(reasons)].join('; ')}`);
   }
 
   const all = [...fresh, ...existing];

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { collectNews, nextSeenIds, selectPublishedNews, RSS_SOURCES } from './news.js';
-import type { NewsArticle } from './types.js';
+import { MAX_SUMMARY_ATTEMPTS, type NewsArticle } from './types.js';
 
 const parseURL = vi.fn();
 
@@ -88,6 +88,14 @@ describe('selectPublishedNews', () => {
     expect(selectPublishedNews(news).map(a => a.id)).toEqual(['pending', 'relevant']);
   });
 
+  it('keeps unsummarized articles below the attempt limit and drops those that reached it', () => {
+    const news = [
+      article('retrying', { summaryAttempts: MAX_SUMMARY_ATTEMPTS - 1 }),
+      article('exhausted', { summaryAttempts: MAX_SUMMARY_ATTEMPTS }),
+    ];
+    expect(selectPublishedNews(news).map(a => a.id)).toEqual(['retrying']);
+  });
+
   it('caps the list at 200', () => {
     expect(selectPublishedNews(Array.from({ length: 300 }, (_, i) => article(`a${i}`)))).toHaveLength(200);
   });
@@ -98,6 +106,11 @@ describe('nextSeenIds', () => {
     const news = [article('noise', { summaryJa: 's', relevanceScore: 5 }), article('pending'), article('good', { summaryJa: 's', relevanceScore: 80 })];
     expect(nextSeenIds(['old', 'noise'], news)).toEqual(['old', 'noise']);
     expect(nextSeenIds(['old'], news)).toEqual(['old', 'noise']);
+  });
+
+  it('adds ids of unsummarized articles that reached the attempt limit', () => {
+    const news = [article('exhausted', { summaryAttempts: MAX_SUMMARY_ATTEMPTS }), article('retrying', { summaryAttempts: 1 })];
+    expect(nextSeenIds(['old'], news)).toEqual(['old', 'exhausted']);
   });
 
   it('keeps only the most recent 2000 ids', () => {

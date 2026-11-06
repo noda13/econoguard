@@ -1,3 +1,6 @@
+// Lives here (not in summarize.ts) so news.ts can use it without importing the LLM client.
+export const MAX_SUMMARY_ATTEMPTS = 3;
+
 export interface NewsArticle {
   id: string;
   source: string;
@@ -7,6 +10,7 @@ export interface NewsArticle {
   summaryJa: string;
   relevanceScore: number;
   riskCategories: string[];
+  summaryAttempts?: number;
 }
 
 export interface EconomicIndicator {
