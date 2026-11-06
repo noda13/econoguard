@@ -1,7 +1,8 @@
 // NOTE: This file must be updated annually. Events listed for 2026 and 2027.
 // 2026-2027: FOMC, ECB, BOJ (decision day = day 2 of each meeting), BLS jobs report and CPI dates, and the
-// US GDP advance estimates for 2026 were checked against the official calendars. FOMC 2027 dates are tentative
-// per the Fed. Japan GDP dates (except 2026-11-16) are NOT verified, and 2027 GDP releases are not listed.
+// US GDP advance estimates for 2026, and the 2026 Japan GDP preliminary releases were checked against the official
+// calendars. FOMC 2027 dates are tentative per the Fed. 2027-02-15 (Japan GDP) is the Cabinet Office's tentative
+// schedule; later 2027 Japan GDP releases are unpublished and not listed.
 // The jobs report moves off Friday when a holiday or a shutdown shifts it (2026-02-11, 2026-07-02).
 
 export interface EconomicEvent {
@@ -43,7 +44,7 @@ export const ECONOMIC_EVENTS: EconomicEvent[] = [
   // May 2026
   { date: '2026-05-08', titleJa: '米雇用統計(非農業部門雇用者数)発表', region: 'US', importance: 'high' },
   { date: '2026-05-12', titleJa: '米CPI(消費者物価指数)発表', region: 'US', importance: 'high' },
-  { date: '2026-05-18', titleJa: '日本GDP速報値発表', region: 'JP', importance: 'medium' },
+  { date: '2026-05-19', titleJa: '日本GDP速報値発表', region: 'JP', importance: 'medium' },
 
   // June 2026
   { date: '2026-06-05', titleJa: '米雇用統計(非農業部門雇用者数)発表', region: 'US', importance: 'high' },
@@ -102,6 +103,7 @@ export const ECONOMIC_EVENTS: EconomicEvent[] = [
   { date: '2027-02-04', titleJa: 'ECB理事会(政策金利決定)', region: 'EU', importance: 'high' },
   { date: '2027-02-05', titleJa: '米雇用統計(非農業部門雇用者数)発表', region: 'US', importance: 'high' },
   { date: '2027-02-11', titleJa: '米CPI(消費者物価指数)発表', region: 'US', importance: 'high' },
+  { date: '2027-02-15', titleJa: '日本GDP速報値発表', region: 'JP', importance: 'medium' },
 
   // March 2027
   { date: '2027-03-05', titleJa: '米雇用統計(非農業部門雇用者数)発表', region: 'US', importance: 'high' },
