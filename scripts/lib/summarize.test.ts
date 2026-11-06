@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { summarize } from './summarize.js';
+import { MAX_SUMMARY_ATTEMPTS, summarize } from './summarize.js';
 import { callLLM } from './llm.js';
 import type { NewsArticle } from './types.js';
 
@@ -93,5 +93,36 @@ describe('summarize', () => {
     await vi.runAllTimersAsync();
     await done;
     expect(callLLMMock).toHaveBeenCalledTimes(5);
+  });
+
+  describe('retry limit', () => {
+    it('increments summaryAttempts only for articles that stay unsummarized after the batch', async () => {
+      callLLMMock.mockResolvedValue(JSON.stringify({ results: [result(0), result(1, { relevanceScore: 150 })] }));
+      const news = [article(0), article(1), article(2, { summaryAttempts: 1 })];
+      await summarize(news);
+      expect(news[0].summaryAttempts).toBeUndefined();
+      expect(news[1].summaryAttempts).toBe(1);
+      expect(news[2].summaryAttempts).toBe(2);
+    });
+
+    it('increments summaryAttempts for every article in a batch that throws', async () => {
+      callLLMMock.mockRejectedValue(new Error('boom'));
+      const news = [article(0), article(1)];
+      await summarize(news);
+      expect(news.map(a => a.summaryAttempts)).toEqual([1, 1]);
+    });
+
+    it('skips articles that reached the attempt limit', async () => {
+      callLLMMock.mockResolvedValue(JSON.stringify({ results: [result(0)] }));
+      const news = [article(0, { summaryAttempts: MAX_SUMMARY_ATTEMPTS }), article(1)];
+      await summarize(news);
+      expect(callLLMMock.mock.calls[0][1]).toBe('[0] test: title 1');
+      expect(news[0].summaryAttempts).toBe(MAX_SUMMARY_ATTEMPTS);
+    });
+
+    it('does not call the LLM when every unsummarized article reached the limit', async () => {
+      await summarize([article(0, { summaryAttempts: MAX_SUMMARY_ATTEMPTS })]);
+      expect(callLLMMock).not.toHaveBeenCalled();
+    });
   });
 });

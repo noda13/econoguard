@@ -1,7 +1,9 @@
 import { z } from 'zod';
 import { RISK_CATEGORIES } from '../../backend/src/schemas/riskConstants.js';
 import { callLLM, parseJson } from './llm.js';
-import type { NewsArticle } from './types.js';
+import { MAX_SUMMARY_ATTEMPTS, type NewsArticle } from './types.js';
+
+export { MAX_SUMMARY_ATTEMPTS };
 
 const BATCH_DELAY_MS = 30_000;
 
@@ -28,7 +30,7 @@ const summaryItemSchema = z.object({
 const summaryResponseSchema = z.object({ results: z.array(z.unknown()) });
 
 export async function summarize(articles: NewsArticle[]): Promise<void> {
-  const todo = articles.filter(a => !a.summaryJa);
+  const todo = articles.filter(a => !a.summaryJa && (a.summaryAttempts ?? 0) < MAX_SUMMARY_ATTEMPTS);
   if (!todo.length) return;
 
   for (let i = 0; i < Math.min(todo.length, 50); i += 10) {
@@ -56,6 +58,10 @@ export async function summarize(articles: NewsArticle[]): Promise<void> {
       }
       console.log(`  Batch ${Math.floor(i / 10) + 1} done (${accepted} summarized)`);
     } catch (e) { console.error('  Summarize failed:', e instanceof Error ? e.message : e); }
+    // A permanently failing article would otherwise occupy the per-run budget and news.json forever.
+    for (const a of batch) {
+      if (!a.summaryJa) a.summaryAttempts = (a.summaryAttempts ?? 0) + 1;
+    }
     if (i + 10 < todo.length) await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
   }
 }
