@@ -24,7 +24,7 @@ WORKDIR /app/backend
 COPY --chown=node:node backend/prisma ./prisma/
 RUN pnpm run prisma:generate
 
-# Listed explicitly rather than copying backend/ wholesale: the legacy (non-BuildKit) builder ignores Dockerfile.dockerignore and would copy the host's node_modules, .env and dev.db over the image's.
+# Listed explicitly as defense in depth: BuildKit reads Dockerfile.dockerignore but the legacy builder reads the root .dockerignore, so a wholesale COPY would depend on both ignore files staying in sync.
 COPY --chown=node:node backend/src ./src/
 COPY --chown=node:node backend/tsconfig.json backend/entrypoint.sh ./
 

@@ -21,7 +21,7 @@ const SYS = `あなたはグローバル経済リスクアナリストです。�
 
 const summaryItemSchema = z.object({
   index: z.number().int().min(0),
-  summaryJa: z.string(),
+  summaryJa: z.string().trim().min(1),
   relevanceScore: z.number().int().min(0).max(100),
   riskCategories: z.array(z.enum(RISK_CATEGORIES)),
 });

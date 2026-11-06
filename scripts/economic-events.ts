@@ -178,6 +178,3 @@ export function checkEventCoverage(
     ? `ECONOMIC_EVENTS has no events after ${last || 'N/A'}; the upcoming-events list will be empty. Update scripts/economic-events.ts.`
     : `ECONOMIC_EVENTS ends on ${last} (${daysLeft} days ahead, below ${minDaysAhead}). Update scripts/economic-events.ts.`;
 }
-
-const coverageWarning = checkEventCoverage(new Date());
-if (coverageWarning) console.warn(`[economic-events] ${coverageWarning}`);

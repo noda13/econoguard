@@ -71,11 +71,17 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
     };
   }, [isOpen]);
 
+  const saved = profile ?? DEFAULT_PROFILE;
+  const isDirty =
+    ageInput !== String(saved.age) ||
+    sensitivity !== saved.sensitivity ||
+    !allocationEquals(allocation, saved.allocation);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape' && !isDirty) onClose();
     },
-    [onClose],
+    [onClose, isDirty],
   );
 
   useEffect(() => {
@@ -92,11 +98,6 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   const ageValid = parsedAge !== null;
   const canSave = total === 100 && ageValid;
   const activePreset = PROFILE_PRESETS.find((p) => allocationEquals(p.allocation, allocation));
-  const saved = profile ?? DEFAULT_PROFILE;
-  const isDirty =
-    ageInput !== String(saved.age) ||
-    sensitivity !== saved.sensitivity ||
-    !allocationEquals(allocation, saved.allocation);
   const diff = 100 - total;
   const saveHint = !ageValid
     ? `年齢を${MIN_AGE}〜${MAX_AGE}の整数で入力すると保存できます`

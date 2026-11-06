@@ -62,6 +62,16 @@ describe('summarize', () => {
     expect(news[1].summaryJa).toBe('');
   });
 
+  it('treats a blank summary as invalid so the article stays unsummarized instead of being marked done', async () => {
+    callLLMMock.mockResolvedValue(JSON.stringify({
+      results: [result(0, { summaryJa: '   ', relevanceScore: 5, riskCategories: [] }), result(1)],
+    }));
+    const news = [article(0), article(1)];
+    await summarize(news);
+    expect(news[0]).toMatchObject({ summaryJa: '', relevanceScore: 0 });
+    expect(news[1].summaryJa).toBe('summary 1');
+  });
+
   it('continues with the next batch when one batch fails', async () => {
     vi.useFakeTimers();
     callLLMMock

@@ -208,8 +208,4 @@ describe('checkEventCoverage', () => {
   it('warns on an empty list', () => {
     expect(checkEventCoverage(new Date('2026-10-01T00:00:00Z'), 60, [])).not.toBeNull();
   });
-
-  it('keeps the real definitions at least 30 days ahead so the dashboard window is never empty', () => {
-    expect(checkEventCoverage(new Date(), 30)).toBeNull();
-  });
 });

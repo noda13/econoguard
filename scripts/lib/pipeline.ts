@@ -6,6 +6,7 @@ import { summarize } from './summarize.js';
 import { assess, mergeRisks } from './assess.js';
 import { computeComposite } from './composite.js';
 import { selectUpcomingEvents } from './events.js';
+import { checkEventCoverage } from '../economic-events.js';
 import { updateRiskHistory } from './risk-history.js';
 import type { CompositeRisk, EconomicIndicator, NewsArticle, RiskAssessment } from './types.js';
 
@@ -19,6 +20,9 @@ interface Meta {
 
 export async function runCollection(now: Date = new Date()): Promise<void> {
   console.log('=== Econoguard Static Collection ===\n');
+
+  const coverageWarning = checkEventCoverage(now);
+  if (coverageWarning) console.warn(`[economic-events] ${coverageWarning}`);
 
   const prevNews = readJson<NewsArticle[]>('news.json', [], isArray);
   const seenIds = readJson<string[]>('seen-ids.json', [], isArray);

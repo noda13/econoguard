@@ -28,14 +28,14 @@ services:
 
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: frontend/Dockerfile
     container_name: econoguard-frontend
     ports:
       - "3901:3901"
     depends_on:
       - backend
     volumes:
-      - ./frontend/src:/app/src
+      - ./frontend/src:/app/frontend/src
     environment:
       VITE_API_URL: http://backend:8901

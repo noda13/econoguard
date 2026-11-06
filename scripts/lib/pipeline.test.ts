@@ -136,6 +136,16 @@ describe('runCollection', () => {
     expect(collectNews).toHaveBeenCalledWith([], ['old']);
   });
 
+  it('warns when the event definitions are about to run out', async () => {
+    await runCollection(new Date('2028-01-01T00:00:00.000Z'));
+    expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('[economic-events]'));
+  });
+
+  it('does not warn about event coverage while the definitions are far enough ahead', async () => {
+    await runCollection(NOW);
+    expect(console.warn).not.toHaveBeenCalledWith(expect.stringContaining('[economic-events]'));
+  });
+
   it('lets a corrupt input file abort the run before anything is written', async () => {
     vi.mocked(readJson).mockImplementation(() => { throw new Error('risk-history.json is not valid JSON'); });
     await expect(runCollection(NOW)).rejects.toThrow('not valid JSON');
