@@ -14,9 +14,9 @@ export function PortfolioImpactPanel() {
     queryFn: fetchRisks,
   });
 
-  const { result: personalized, isConfigured } = usePersonalizedRisk(compositeRisk, risks);
+  const { result: personalized } = usePersonalizedRisk(compositeRisk, risks);
 
-  if (!isConfigured || !personalized) return null;
+  if (!personalized) return null;
 
   const impactLevelConfig = {
     high: { label: '高', color: 'text-red-400', bgColor: 'bg-red-900/30', borderColor: 'border-red-500' },

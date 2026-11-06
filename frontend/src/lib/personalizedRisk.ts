@@ -7,6 +7,7 @@ import type {
   PersonalizedResult,
 } from './types/profile';
 import { getSignalFromScore } from './actionSignals';
+import { CHART_ALERT_SCORE, CHART_WARNING_SCORE } from './riskThresholds';
 import { RISK_CATEGORIES } from './riskColors';
 import type { RiskAssessment, CompositeRisk } from '../services/api';
 
@@ -204,18 +205,22 @@ export function calculateCategoryImpact(
 
 /**
  * Personalize composite + category risk data with the user's profile.
+ * Returns null when the composite score is not a finite number.
  */
 export function personalizeRisk(
   compositeRisk: CompositeRisk,
   risks: RiskAssessment[],
   profile: UserProfile,
-): PersonalizedResult {
+): PersonalizedResult | null {
+  if (!Number.isFinite(compositeRisk.compositeScore)) return null;
+
   const personalizedScore = calculatePersonalizedScore(
     compositeRisk.compositeScore,
     profile,
   );
 
-  const signal: ActionSignal = getSignalFromScore(personalizedScore);
+  const signal: ActionSignal | null = getSignalFromScore(personalizedScore);
+  if (signal === null) return null;
 
   const categoryImpacts: CategoryImpact[] = risks.map((risk) =>
     calculateCategoryImpact(risk.category, risk.score, profile.allocation),
@@ -248,7 +253,7 @@ export function personalizeRisk(
  * Returns warning / alert thresholds in the *generic* score scale so that
  * reference lines on the trend chart align correctly with the raw API values.
  *
- * Divides the personalized thresholds (40 / 60) by the same multiplier used by
+ * Divides the personalized thresholds (CHART_WARNING_SCORE / CHART_ALERT_SCORE) by the same multiplier used by
  * calculatePersonalizedScore to map them back to generic score space.
  */
 export function getPersonalizedThresholds(
@@ -257,8 +262,8 @@ export function getPersonalizedThresholds(
   const combinedMultiplier = getCombinedMultiplier(profile);
 
   return {
-    warning: clamp(Math.round(40 / combinedMultiplier), 10, 90),
-    alert: clamp(Math.round(60 / combinedMultiplier), 10, 90),
+    warning: clamp(Math.round(CHART_WARNING_SCORE / combinedMultiplier), 10, 90),
+    alert: clamp(Math.round(CHART_ALERT_SCORE / combinedMultiplier), 10, 90),
   };
 }
 
@@ -301,7 +306,6 @@ export function getIndicatorRelevance(
       if (totalEquity > 30) return 'medium';
       return 'low';
 
-    case 'US10Y':
     case 'UST10Y':
       if (allocation.developed_bond > 20) return 'high';
       if (totalEquity > 50) return 'medium';
@@ -320,7 +324,7 @@ export function getIndicatorRelevance(
       return 'low';
 
     case 'GOLD':
-      // Gold is a safe haven — relevant when equity exposure is high OR when the user already holds commodities
+      // Gold is a safe haven — relevant when equity exposure is high
       if (totalEquity > 70) return 'high';
       if (totalEquity > 40) return 'medium';
       return 'low';
@@ -329,12 +333,6 @@ export function getIndicatorRelevance(
       // High-yield bond ETF — relevant for credit risk, especially with high equity or EM exposure
       if (allocation.developed_equity > 30 || allocation.emerging_equity > 10) return 'high';
       if (totalEquity > 30) return 'medium';
-      return 'low';
-
-    case 'US_CPI':
-    case 'US_FFR':
-      if (foreignExposure > 50) return 'high';
-      if (foreignExposure > 20) return 'medium';
       return 'low';
 
     default:

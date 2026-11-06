@@ -1,7 +1,7 @@
 import prisma from '../lib/prisma.js';
-import { collectNews } from './newsCollector.js';
+import { collectNews, type NewsCollectionResult } from './newsCollector.js';
 import { collectIndicators } from './indicatorCollector.js';
-import { summarizeUnsummarized } from './summarizer.js';
+import { summarizeUnsummarized, type SummarizeResult } from './summarizer.js';
 import { assessRisks } from './riskAssessor.js';
 import { getSessionTokenUsage, resetSessionTokenUsage, ensureProviderReady } from './llm.js';
 
@@ -13,9 +13,9 @@ export class CollectionInProgressError extends Error {
 }
 
 interface CollectionResult {
-  news: { collected: number; skipped: number };
+  news: NewsCollectionResult;
   indicators: { collected: number; failed: number };
-  summarization: { summarized: number };
+  summarization: SummarizeResult;
   riskAssessment: { assessed: boolean };
 }
 
@@ -72,15 +72,23 @@ export async function runCollection(): Promise<CollectionResult> {
       const indicatorResult = await collectIndicators();
 
       const issues: string[] = [];
+      if (newsResult.feedsFailed > 0) {
+        issues.push(`news sources failed: ${newsResult.feedsFailed}/${newsResult.feedsTotal}`);
+      }
       if (indicatorResult.collected === 0) {
         issues.push('no indicators collected');
+      } else if (indicatorResult.failed > 0) {
+        issues.push(`${indicatorResult.failed} indicator(s) failed`);
       }
 
       // Step 3: Summarize new articles
-      let summaryResult = { summarized: 0 };
+      let summaryResult: SummarizeResult = { summarized: 0, failedBatches: 0, pending: 0 };
       try {
         console.log('\n--- Summarizing news ---');
         summaryResult = await summarizeUnsummarized();
+        if (summaryResult.failedBatches > 0) {
+          issues.push(`summarization incomplete: ${summaryResult.failedBatches} batch(es) failed, ${summaryResult.pending} article(s) pending`);
+        }
       } catch (error) {
         console.error('Summarization failed (non-fatal):', errorMessage(error));
         issues.push(`summarization failed: ${errorMessage(error)}`);
@@ -123,7 +131,7 @@ export async function runCollection(): Promise<CollectionResult> {
       return {
         news: newsResult,
         indicators: indicatorResult,
-        summarization: { summarized: summaryResult.summarized },
+        summarization: summaryResult,
         riskAssessment: riskResult,
       };
     } catch (error) {

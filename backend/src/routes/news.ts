@@ -27,6 +27,18 @@ router.get('/', asyncHandler(async (req, res) => {
     where,
     orderBy: { publishedAt: 'desc' },
     take: limit,
+    select: {
+      id: true,
+      sourceId: true,
+      source: true,
+      originalTitle: true,
+      originalUrl: true,
+      publishedAt: true,
+      summaryJa: true,
+      relevanceScore: true,
+      riskCategories: true,
+      createdAt: true,
+    },
   });
 
   res.json(articles);

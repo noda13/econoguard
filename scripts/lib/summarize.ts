@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { RISK_CATEGORIES } from '../../backend/src/schemas/riskConstants.js';
 import { callLLM, parseJson } from './llm.js';
 import type { NewsArticle } from './types.js';
 
@@ -22,7 +23,7 @@ const summaryItemSchema = z.object({
   index: z.number().int().min(0),
   summaryJa: z.string(),
   relevanceScore: z.number().int().min(0).max(100),
-  riskCategories: z.array(z.enum(['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'])),
+  riskCategories: z.array(z.enum(RISK_CATEGORIES)),
 });
 const summaryResponseSchema = z.object({ results: z.array(z.unknown()) });
 
@@ -48,7 +49,7 @@ export async function summarize(articles: NewsArticle[]): Promise<void> {
         const r = res.data;
         if (batch[r.index]) {
           batch[r.index].summaryJa = r.summaryJa;
-          batch[r.index].relevanceScore = Math.min(100, Math.max(0, r.relevanceScore));
+          batch[r.index].relevanceScore = r.relevanceScore;
           batch[r.index].riskCategories = r.riskCategories;
           accepted++;
         }

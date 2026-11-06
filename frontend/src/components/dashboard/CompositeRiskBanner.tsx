@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchCompositeRisk, fetchRisks } from '../../services/api';
 import { riskLevelConfig, categoryLabels } from '../../lib/riskColors';
 import { usePersonalizedRisk } from '../../hooks/usePersonalizedRisk';
+import { useUserProfile } from '../../contexts/UserProfileContext';
 import { ACTION_SIGNAL_CONFIG } from '../../lib/actionSignals';
 import { INVESTMENT_DISCLAIMER } from '../../lib/disclaimer';
 
@@ -16,7 +17,8 @@ export function CompositeRiskBanner() {
     queryFn: fetchRisks,
   });
 
-  const { result: personalized, isConfigured } = usePersonalizedRisk(data, risks);
+  const { profile } = useUserProfile();
+  const { result: personalized } = usePersonalizedRisk(data, risks);
 
   if (!data) return null;
 
@@ -29,7 +31,7 @@ export function CompositeRiskBanner() {
         <div>
           <h2 className="text-sm font-medium text-gray-400 mb-1">総合リスク指数</h2>
           <div className="flex items-baseline gap-2">
-            <span className={`text-5xl font-bold ${config.color}`}>{data.compositeScore}</span>
+            <span className={`text-5xl font-bold ${config.color}`}>{Number.isFinite(data.compositeScore) ? data.compositeScore : '--'}</span>
             <span className="text-lg text-gray-500">/100</span>
             <span className={`text-sm px-3 py-1 rounded-full ${config.bgColor} ${config.color} font-bold border ${config.borderColor}`}>
               {config.label}
@@ -73,7 +75,7 @@ export function CompositeRiskBanner() {
           <p className="mt-2 text-xs text-gray-500">{INVESTMENT_DISCLAIMER}</p>
         </div>
       )}
-      {!isConfigured && (
+      {!profile && (
         <div className="mt-3 text-xs text-gray-500">
           歯車アイコンからプロフィールを設定すると、パーソナライズされたリスク評価が表示されます
         </div>

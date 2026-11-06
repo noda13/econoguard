@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { assess, computeQuantSignal } from './assess.js';
+import { assess, computeQuantSignal, mergeRisks } from './assess.js';
 import { callLLM } from './llm.js';
 import type { EconomicIndicator, NewsArticle, RiskAssessment } from './types.js';
 
@@ -116,6 +116,13 @@ describe('computeQuantSignal: geopolitics_supply_chain', () => {
   it('returns null when neither WTI nor GOLD is available', () => {
     expect(computeQuantSignal('geopolitics_supply_chain', [])).toBeNull();
     expect(computeQuantSignal('geopolitics_supply_chain', [ind('VIX', 40, 20)])).toBeNull();
+  });
+});
+
+describe('computeQuantSignal: stale indicators', () => {
+  it('ignores indicators flagged stale', () => {
+    expect(computeQuantSignal('currency_finance', [{ ...ind('VIX', 60), stale: true }])).toBeNull();
+    expect(computeQuantSignal('currency_finance', [{ ...ind('VIX', 60), stale: true }, ind('UST10Y', 3), ind('UST3M', 5)])).toBe(67);
   });
 });
 
@@ -236,6 +243,12 @@ describe('assess', () => {
     expect(results.map(r => r.category)).toEqual(['social_policy']);
   });
 
+  it('keeps only the first entry when the LLM repeats a category', async () => {
+    respondWith([llmEntry('technology', 40), llmEntry('technology', 90), llmEntry('social_policy', 10)]);
+    const results = await assess([], [], []);
+    expect(results.map(r => [r.category, r.score])).toEqual([['technology', 40], ['social_policy', 10]]);
+  });
+
   it('accepts the score bounds 0 and 100', async () => {
     respondWith([llmEntry('technology', 0), llmEntry('social_policy', 100)]);
     const results = await assess([], [], []);
@@ -273,5 +286,26 @@ describe('assess', () => {
     expect(userMessage).not.toContain('unsummarized');
     expect(userMessage).toContain('[id:n19]');
     expect(userMessage).not.toContain('[id:n20]');
+  });
+});
+
+describe('mergeRisks', () => {
+  const entry = (category: string, score: number): RiskAssessment => ({
+    category, score, level: 'low', summaryJa: '', factorsJa: [], assessedAt: '2026-10-24T00:00:00.000Z',
+  });
+
+  it('carries forward previous entries for categories missing from the fresh result', () => {
+    const prev = [entry('currency_finance', 10), entry('technology', 20), entry('social_policy', 30)];
+    const merged = mergeRisks(prev, [entry('technology', 99)]);
+    expect(merged.map(r => [r.category, r.score])).toEqual([
+      ['currency_finance', 10],
+      ['technology', 99],
+      ['social_policy', 30],
+    ]);
+  });
+
+  it('drops unknown categories and leaves categories with no data out', () => {
+    const merged = mergeRisks([entry('mystery', 1)], [entry('technology', 5)]);
+    expect(merged.map(r => r.category)).toEqual(['technology']);
   });
 });

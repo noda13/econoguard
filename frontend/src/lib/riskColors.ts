@@ -19,10 +19,3 @@ export const categoryLabels: Record<string, string> = {
   technology: 'テクノロジー',
   social_policy: '社会・政策',
 };
-
-export const categoryIcons: Record<string, string> = {
-  currency_finance: '💰',
-  geopolitics_supply_chain: '🌍',
-  technology: '🔧',
-  social_policy: '🏛️',
-};

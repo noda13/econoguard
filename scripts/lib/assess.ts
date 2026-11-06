@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { scoreToLevel, type RiskCategory } from '../../backend/src/schemas/riskConstants.js';
+import { RISK_CATEGORIES, scoreToLevel } from '../../backend/src/schemas/riskConstants.js';
 import { callLLM, parseJson } from './llm.js';
 import type { EconomicIndicator, NewsArticle, RiskAssessment } from './types.js';
 
@@ -16,10 +16,8 @@ const SYS = `あなたはグローバル経済リスクアナリストです。�
 
 4カテゴリ全て含めてください。sourceNewsIdsはニュースリストの[id:xxx]から最大3件選んでください。`;
 
-const KNOWN_CATEGORIES: RiskCategory[] = ['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy'];
-
 const assessmentSchema = z.object({
-  category: z.enum(['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy']),
+  category: z.enum(RISK_CATEGORIES),
   score: z.number().int().min(0).max(100),
   summary: z.string(),
   factors: z.array(z.string()),
@@ -29,7 +27,7 @@ const assessmentSchema = z.object({
 const responseSchema = z.object({ assessments: z.array(z.unknown()) });
 
 export function computeQuantSignal(category: string, indicators: EconomicIndicator[]): number | null {
-  const get = (code: string) => indicators.find(i => i.code === code);
+  const get = (code: string) => indicators.find(i => i.code === code && !i.stale);
 
   if (category === 'currency_finance') {
     const vix = get('VIX');
@@ -90,6 +88,7 @@ export async function assess(news: NewsArticle[], indicators: EconomicIndicator[
   const { assessments: rawItems } = responseSchema.parse(parsed);
   const now = new Date().toISOString();
   const validated: RiskAssessment[] = [];
+  const seen = new Set<string>();
 
   for (const item of rawItems) {
     const result = assessmentSchema.safeParse(item);
@@ -98,7 +97,12 @@ export async function assess(news: NewsArticle[], indicators: EconomicIndicator[
       continue;
     }
     const a = result.data;
-    const llmScore = Math.round(Math.min(100, Math.max(0, a.score)));
+    if (seen.has(a.category)) {
+      console.warn(`[assess] Dropping duplicate assessment for category: ${a.category}`);
+      continue;
+    }
+    seen.add(a.category);
+    const llmScore = a.score;
 
     const quantSignal = computeQuantSignal(a.category, indicators);
     const finalScore = quantSignal !== null
@@ -126,11 +130,21 @@ export async function assess(news: NewsArticle[], indicators: EconomicIndicator[
 
   if (validated.length === 0) throw new Error('LLM assessment returned no valid entries');
 
-  for (const cat of KNOWN_CATEGORIES) {
-    if (!validated.some(v => v.category === cat)) {
+  for (const cat of RISK_CATEGORIES) {
+    if (!seen.has(cat)) {
       console.warn(`[assess] Missing expected category in LLM response: ${cat}`);
     }
   }
 
   return validated;
+}
+
+// Categories the LLM omitted keep their previous assessment so a partial response cannot erase them.
+export function mergeRisks(prev: RiskAssessment[], fresh: RiskAssessment[]): RiskAssessment[] {
+  const merged: RiskAssessment[] = [];
+  for (const category of RISK_CATEGORIES) {
+    const entry = fresh.find(r => r.category === category) ?? prev.find(r => r.category === category);
+    if (entry) merged.push(entry);
+  }
+  return merged;
 }

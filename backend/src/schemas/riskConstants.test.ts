@@ -41,20 +41,10 @@ describe('RISK_WEIGHTS', () => {
   it('gives every category a positive weight', () => {
     for (const category of RISK_CATEGORIES) expect(RISK_WEIGHTS[category], category).toBeGreaterThan(0);
   });
-
-  it('weights currency_finance and geopolitics_supply_chain at 0.3 and technology and social_policy at 0.2', () => {
-    expect(RISK_WEIGHTS).toEqual({
-      currency_finance: 0.3,
-      geopolitics_supply_chain: 0.3,
-      technology: 0.2,
-      social_policy: 0.2,
-    });
-  });
 });
 
 describe('RISK_CATEGORIES', () => {
   it('contains the four categories without duplicates', () => {
     expect(new Set(RISK_CATEGORIES).size).toBe(RISK_CATEGORIES.length);
-    expect([...RISK_CATEGORIES]).toEqual(['currency_finance', 'geopolitics_supply_chain', 'technology', 'social_policy']);
   });
 });

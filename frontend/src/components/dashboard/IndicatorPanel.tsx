@@ -23,7 +23,7 @@ export function IndicatorPanel() {
     queryKey: ['indicators'],
     queryFn: fetchIndicators,
   });
-  const { profile, isConfigured } = useUserProfile();
+  const { profile } = useUserProfile();
 
   if (isLoading) return <LoadingSpinner />;
 
@@ -38,7 +38,7 @@ export function IndicatorPanel() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {indicators.map((ind) => {
             const change = formatChange(ind.value, ind.previousValue);
-            const relevance = isConfigured && profile
+            const relevance = profile
               ? getIndicatorRelevance(ind.code, profile.allocation)
               : null;
             return (

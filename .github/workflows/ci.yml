@@ -15,13 +15,13 @@ jobs:
     name: Backend & scripts (type-check & test)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '22'
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6
         with:
           version: 10
 
@@ -31,10 +31,10 @@ jobs:
       - name: Generate Prisma Client
         env:
           DATABASE_URL: 'file:./dev.db'
-        run: pnpm --filter backend run prisma:generate
+        run: pnpm --filter econoguard-backend run prisma:generate
 
       - name: Type check
-        run: pnpm --filter backend exec tsc --noEmit
+        run: pnpm --filter econoguard-backend exec tsc --noEmit
 
       - name: Type check scripts
         run: pnpm run type-check:scripts
@@ -46,13 +46,13 @@ jobs:
     name: Frontend (type-check & build)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '22'
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6
         with:
           version: 10
 
@@ -60,7 +60,7 @@ jobs:
         run: pnpm install --ignore-scripts
 
       - name: Type check
-        run: pnpm --filter frontend run type-check
+        run: pnpm --filter econoguard-frontend run type-check
 
       - name: Build
-        run: pnpm --filter frontend run build
+        run: pnpm --filter econoguard-frontend run build

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
-    "dev:frontend": "pnpm --filter frontend dev",
-    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter econoguard-frontend dev",
+    "dev:backend": "pnpm --filter econoguard-backend dev",
     "collect": "tsx scripts/collect-static.ts",
     "type-check:scripts": "tsc -p scripts/tsconfig.json",
     "test": "vitest run"

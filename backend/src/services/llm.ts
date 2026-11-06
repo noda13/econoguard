@@ -42,12 +42,49 @@ function addUsage(usage: TokenUsage) {
   sessionTokenUsage.outputTokens += usage.outputTokens;
 }
 
+// Returns the balanced {...} / [...] span that begins at `start`, or null if it never closes.
+function balancedSpan(text: string, start: number): string | null {
+  const open = text[start];
+  const close = open === '{' ? '}' : ']';
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (ch === '\\') escaped = true;
+      else if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') inString = true;
+    else if (ch === open) depth++;
+    else if (ch === close && --depth === 0) return text.slice(start, i + 1);
+  }
+  return null;
+}
+
+// Models still wrap JSON in prose or fences even when asked for JSON, so fall back to scanning for the first parseable object/array.
 export function parseLLMJson(text: string): unknown {
   let json = text.trim();
   if (json.startsWith('```')) {
     json = json.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
   }
-  return JSON.parse(json);
+  try {
+    return JSON.parse(json);
+  } catch (error) {
+    for (let i = 0; i < json.length; i++) {
+      if (json[i] !== '{' && json[i] !== '[') continue;
+      const span = balancedSpan(json, i);
+      if (!span) continue;
+      try {
+        return JSON.parse(span);
+      } catch {
+        // Not JSON (e.g. brackets in prose); try the next candidate start.
+      }
+    }
+    throw error;
+  }
 }
 
 // --- Gemini Provider ---
@@ -65,6 +102,7 @@ async function callGemini(systemPrompt: string, userMessage: string): Promise<LL
   const model = getGeminiClient().getGenerativeModel({
     model: config.geminiModel,
     systemInstruction: systemPrompt,
+    generationConfig: { responseMimeType: 'application/json' },
   });
 
   const timeout = AbortSignal.timeout(GEMINI_TIMEOUT_MS);
@@ -93,6 +131,9 @@ async function callGemini(systemPrompt: string, userMessage: string): Promise<LL
 
 // --- Ollama Provider ---
 
+// Ollama's default context window is small and silently truncates the start of the prompt, which drops the system prompt's output-format instructions.
+const OLLAMA_NUM_CTX = 8192;
+
 async function callOllama(systemPrompt: string, userMessage: string): Promise<LLMResponse> {
   const response = await fetch(`${config.ollamaBaseUrl}/api/generate`, {
     method: 'POST',
@@ -102,9 +143,11 @@ async function callOllama(systemPrompt: string, userMessage: string): Promise<LL
       prompt: userMessage,
       system: systemPrompt,
       stream: false,
+      format: 'json',
       options: {
         temperature: 0.3,
         num_predict: 4096,
+        num_ctx: OLLAMA_NUM_CTX,
       },
     }),
     signal: AbortSignal.timeout(60_000),

@@ -6,6 +6,7 @@ import { categoryLabels, RISK_CATEGORIES } from '../../lib/riskColors';
 import { LoadingSpinner } from '../common/LoadingSpinner';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import { getPersonalizedThresholds } from '../../lib/personalizedRisk';
+import { CHART_ALERT_SCORE, CHART_WARNING_SCORE } from '../../lib/riskThresholds';
 
 const CATEGORY_COLORS: Record<string, string> = {
   currency_finance: '#f87171',
@@ -28,8 +29,8 @@ interface ChartDataPoint {
 }
 
 export function RiskTrendChart() {
-  const { profile, isConfigured } = useUserProfile();
-  const thresholds = isConfigured && profile ? getPersonalizedThresholds(profile) : null;
+  const { profile } = useUserProfile();
+  const thresholds = profile ? getPersonalizedThresholds(profile) : null;
 
   const { histories, isLoading, isError } = useQueries({
     queries: RISK_CATEGORIES.map((cat) => ({
@@ -93,8 +94,8 @@ export function RiskTrendChart() {
               labelStyle={{ color: '#d1d5db' }}
             />
             <Legend wrapperStyle={{ fontSize: '12px' }} />
-            <ReferenceLine y={60} stroke="#ef4444" strokeDasharray="3 3" strokeOpacity={0.5} />
-            <ReferenceLine y={40} stroke="#eab308" strokeDasharray="3 3" strokeOpacity={0.3} />
+            <ReferenceLine y={CHART_ALERT_SCORE} stroke="#ef4444" strokeDasharray="3 3" strokeOpacity={0.5} />
+            <ReferenceLine y={CHART_WARNING_SCORE} stroke="#eab308" strokeDasharray="3 3" strokeOpacity={0.3} />
             {thresholds && (
               <>
                 <ReferenceLine

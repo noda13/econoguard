@@ -6,6 +6,7 @@ import {
   DEFAULT_PROFILE,
   ASSET_CLASS_LABELS,
 } from '../../lib/profilePresets';
+import { MIN_AGE, MAX_AGE } from '../../lib/profileValidation';
 import { AllocationPieChart } from './AllocationPieChart';
 
 interface Props {
@@ -19,12 +20,10 @@ const SENSITIVITY_OPTIONS: { value: MonitoringSensitivity; label: string; subtit
   { value: 'relaxed', label: '鈍感', subtitle: '大きな変動のみ' },
 ];
 
-const MIN_AGE = 20;
-const MAX_AGE = 80;
-
 const TITLE_ID = 'profile-modal-title';
 const AGE_ERROR_ID = 'profile-age-error';
 const SENSITIVITY_LABEL_ID = 'profile-sensitivity-label';
+const SAVE_HINT_ID = 'profile-save-hint';
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -52,6 +51,7 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   const [allocation, setAllocation] = useState<AssetAllocation>(DEFAULT_PROFILE.allocation);
 
   const dialogRef = useRef<HTMLDivElement>(null);
+  const overlayPressStartedRef = useRef(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -92,6 +92,19 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   const ageValid = parsedAge !== null;
   const canSave = total === 100 && ageValid;
   const activePreset = PROFILE_PRESETS.find((p) => allocationEquals(p.allocation, allocation));
+  const saved = profile ?? DEFAULT_PROFILE;
+  const isDirty =
+    ageInput !== String(saved.age) ||
+    sensitivity !== saved.sensitivity ||
+    !allocationEquals(allocation, saved.allocation);
+  const diff = 100 - total;
+  const saveHint = !ageValid
+    ? `年齢を${MIN_AGE}〜${MAX_AGE}の整数で入力すると保存できます`
+    : diff > 0
+      ? `配分の合計があと${diff}%足りないため保存できません`
+      : diff < 0
+        ? `配分の合計が${-diff}%超過しているため保存できません`
+        : null;
 
   function handleAllocationChange(key: keyof AssetAllocation, value: number) {
     setAllocation((prev) => ({ ...prev, [key]: value }));
@@ -139,8 +152,14 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+      onMouseDown={(e) => {
+        overlayPressStartedRef.current = e.target === e.currentTarget;
+      }}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        // A slider drag released outside the dialog fires click on the overlay; unsaved edits must survive it.
+        const startedOnOverlay = overlayPressStartedRef.current;
+        overlayPressStartedRef.current = false;
+        if (e.target === e.currentTarget && startedOnOverlay && !isDirty) onClose();
       }}
     >
       <div
@@ -259,7 +278,7 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
                     type="range"
                     min={0}
                     max={100}
-                    step={5}
+                    step={1}
                     value={allocation[key]}
                     onChange={(e) => handleAllocationChange(key, Number(e.target.value))}
                     aria-label={ASSET_CLASS_LABELS[key]}
@@ -273,7 +292,7 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
             <div className="flex items-center justify-between mb-5">
               <span className="text-sm text-gray-400">合計</span>
               <span className={`text-sm font-bold ${total === 100 ? 'text-green-400' : 'text-red-400'}`}>
-                {total}%
+                {total}%{diff !== 0 && `（${diff > 0 ? `あと${diff}%` : `${-diff}%超過`}）`}
               </span>
             </div>
 
@@ -285,7 +304,14 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-end gap-2 px-6 py-4 border-t border-gray-700 flex-shrink-0">
+        <div className="flex items-center justify-end gap-2 px-6 py-4 border-t border-gray-700 flex-shrink-0 flex-wrap">
+          <p
+            id={SAVE_HINT_ID}
+            role="status"
+            className="w-full text-right text-xs text-red-400 empty:hidden"
+          >
+            {saveHint}
+          </p>
           <button
             onClick={handleClear}
             className="px-4 py-2 rounded-lg text-sm bg-gray-700 text-gray-300 hover:bg-gray-600 transition-colors"
@@ -301,6 +327,7 @@ export function UserProfileModal({ isOpen, onClose }: Props) {
           <button
             onClick={handleSave}
             disabled={!canSave}
+            aria-describedby={saveHint ? SAVE_HINT_ID : undefined}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               canSave
                 ? 'bg-blue-600 text-white hover:bg-blue-500'

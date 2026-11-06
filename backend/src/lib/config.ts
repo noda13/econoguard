@@ -8,7 +8,8 @@ const DEFAULT_GEMINI_MODEL = 'gemini-flash-latest';
 const schema = z
   .object({
     PORT: z.coerce.number().int().positive().default(8901),
-    NODE_ENV: z.string().optional().default('development'),
+    // An enum, not a free string: a typo such as 'prod' would otherwise skip the production checks below.
+    NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
     // LLM providers
     GEMINI_API_KEY: z.string().optional().default(''),
     GEMINI_MODEL: z.string().optional().transform((v) => v?.trim() || DEFAULT_GEMINI_MODEL),

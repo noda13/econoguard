@@ -12,8 +12,8 @@ interface Props {
 export function RiskGauge({ risk }: Props) {
   const config = riskLevelConfig[risk.level] || riskLevelConfig.moderate;
   const label = categoryLabels[risk.category] || risk.category;
-  const { profile, isConfigured } = useUserProfile();
-  const impact = isConfigured && profile
+  const { profile } = useUserProfile();
+  const impact = profile
     ? calculateCategoryImpact(risk.category, risk.score, profile.allocation)
     : null;
 

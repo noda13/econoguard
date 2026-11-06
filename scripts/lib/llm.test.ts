@@ -39,6 +39,18 @@ describe('parseJson', () => {
     expect(parseJson('{"a":"```"}')).toEqual({ a: '```' });
   });
 
+  it('extracts the JSON object from surrounding prose', () => {
+    expect(parseJson('Here is the result:\n{"a":{"b":1}}\nHope this helps.')).toEqual({ a: { b: 1 } });
+  });
+
+  it('extracts a JSON array from surrounding prose', () => {
+    expect(parseJson('Sure: [1,2,3] done')).toEqual([1, 2, 3]);
+  });
+
+  it('extracts JSON from a fence that follows a preamble', () => {
+    expect(parseJson('Result:\n```json\n{"a":1}\n```')).toEqual({ a: 1 });
+  });
+
   it('throws a normalised error for invalid JSON and logs the raw text', () => {
     expect(() => parseJson('not json')).toThrow('LLM returned invalid JSON');
     expect(console.error).toHaveBeenCalledWith('Raw text (first 200 chars):', 'not json');

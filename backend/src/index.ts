@@ -5,7 +5,7 @@ import newsRoutes from './routes/news.js';
 import risksRoutes from './routes/risks.js';
 import indicatorsRoutes from './routes/indicators.js';
 import adminRoutes from './routes/admin.js';
-import { startScheduler } from './jobs/scheduler.js';
+import { startScheduler, stopScheduler } from './jobs/scheduler.js';
 import { markStaleRunningLogs } from './services/collector.js';
 import prisma from './lib/prisma.js';
 import { config } from './lib/config.js';
@@ -31,8 +31,6 @@ app.use(cors({
     : true, // permissive in development when ALLOWED_ORIGINS not set
   credentials: false,
 }));
-
-app.use(express.json());
 
 app.use('/api/news', newsRoutes);
 app.use('/api/risks', risksRoutes);
@@ -69,6 +67,7 @@ async function shutdown(signal: string) {
     process.exit(1);
   }, 10_000);
   force.unref();
+  stopScheduler();
   server.close(async () => {
     try {
       await prisma.$disconnect();
