@@ -21,36 +21,56 @@ const SYSTEM_PROMPT = `あなたはグローバル経済リスクアナリスト
    - "social_policy": 社会・政策リスク（中央銀行政策、財政政策、社会不安、人口動態）
    relevanceScoreが30未満の記事は空配列[]にしてください。
 
-必ず以下のJSON配列形式で応答してください（余計な説明は不要）:
-[
-  {
-    "index": 0,
-    "summaryJa": "...",
-    "relevanceScore": 80,
-    "riskCategories": ["currency_finance", "geopolitics_supply_chain"]
-  },
-  ...
-]`;
+記事にはタイトルのほかに本文の抜粋（Content）が付くことがあります。タイトルと本文に書かれていない事実は推測で補わないでください。
 
-const summaryResultSchema = z.array(
-  z.object({
-    index: z.number().int(),
-    summaryJa: z.string().max(1000),
-    relevanceScore: z.number(),
-    riskCategories: z.array(riskCategorySchema),
-  })
-);
+必ず以下のJSON形式で応答してください（余計な説明は不要）:
+{
+  "articles": [
+    {
+      "index": 0,
+      "summaryJa": "...",
+      "relevanceScore": 80,
+      "riskCategories": ["currency_finance", "geopolitics_supply_chain"]
+    },
+    ...
+  ]
+}`;
 
-async function summarizeBatch(articles: { id: number; originalTitle: string; source: string }[]): Promise<number> {
+const summaryItemSchema = z.object({
+  index: z.number().int(),
+  summaryJa: z.string().trim().min(1).max(1000),
+  relevanceScore: z.number(),
+  riskCategories: z.array(riskCategorySchema),
+});
+
+// JSON mode requires an object at the root, so the prompt asks for {"articles": [...]}; a bare array is still accepted.
+function extractItems(parsed: unknown): unknown[] | null {
+  if (Array.isArray(parsed)) return parsed;
+  if (parsed && typeof parsed === 'object' && Array.isArray((parsed as { articles?: unknown }).articles)) {
+    return (parsed as { articles: unknown[] }).articles;
+  }
+  return null;
+}
+
+interface ArticleInput {
+  id: number;
+  originalTitle: string;
+  source: string;
+  rawContent: string | null;
+}
+
+async function summarizeBatch(articles: ArticleInput[]): Promise<number> {
   const userMessage = articles
-    .map((a, i) => `[${i}] Source: ${a.source}\nTitle: ${a.originalTitle}`)
+    .map((a, i) => {
+      const body = a.rawContent ? `\nContent: ${a.rawContent}` : '';
+      return `[${i}] Source: ${a.source}\nTitle: ${a.originalTitle}${body}`;
+    })
     .join('\n\n');
 
   try {
     const { text, usage } = await callLLM(SYSTEM_PROMPT, userMessage);
     console.log(`  LLM tokens: ${usage.inputTokens} in, ${usage.outputTokens} out`);
 
-    let count = 0;
     let parsed: unknown;
     try {
       parsed = parseLLMJson(text);
@@ -59,26 +79,30 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
       return 0;
     }
 
-    const validation = summaryResultSchema.safeParse(parsed);
-    if (!validation.success) {
-      console.error('LLM response failed schema validation:', validation.error.message);
+    const items = extractItems(parsed);
+    if (!items) {
+      console.error('LLM response has no article list');
       return 0;
     }
 
-    for (const result of validation.data) {
+    let count = 0;
+    const done = new Set<number>();
+    for (const item of items) {
+      const validation = summaryItemSchema.safeParse(item);
+      if (!validation.success) {
+        console.error('Skipping invalid summary item:', validation.error.message);
+        continue;
+      }
+      const result = validation.data;
       const article = articles[result.index];
-      if (!article) continue;
-
-      const rawScore = result.relevanceScore;
-      const relevanceScore = Number.isFinite(rawScore)
-        ? Math.round(Math.max(0, Math.min(100, rawScore)))
-        : 0;
+      if (!article || done.has(result.index)) continue;
+      done.add(result.index);
 
       await prisma.newsArticle.update({
         where: { id: article.id },
         data: {
           summaryJa: result.summaryJa,
-          relevanceScore,
+          relevanceScore: Math.round(Math.max(0, Math.min(100, result.relevanceScore))),
           riskCategories: JSON.stringify(result.riskCategories),
         },
       });
@@ -91,33 +115,40 @@ async function summarizeBatch(articles: { id: number; originalTitle: string; sou
   }
 }
 
-export async function summarizeUnsummarized(): Promise<{ summarized: number }> {
+export interface SummarizeResult {
+  summarized: number;
+  failedBatches: number;
+  pending: number;
+}
+
+export async function summarizeUnsummarized(): Promise<SummarizeResult> {
   if (!isConfigured()) {
     console.log('LLM provider unavailable, skipping summarization');
-    return { summarized: 0 };
+    return { summarized: 0, failedBatches: 0, pending: 0 };
   }
 
-  // Find articles without summaries
   const unsummarized = await prisma.newsArticle.findMany({
     where: { summaryJa: '' },
     orderBy: { publishedAt: 'desc' },
     take: 50, // Process max 50 articles per run
-    select: { id: true, originalTitle: true, source: true },
+    select: { id: true, originalTitle: true, source: true, rawContent: true },
   });
 
   if (unsummarized.length === 0) {
     console.log('No articles to summarize');
-    return { summarized: 0 };
+    return { summarized: 0, failedBatches: 0, pending: 0 };
   }
 
   console.log(`Summarizing ${unsummarized.length} articles in batches of ${BATCH_SIZE}...`);
   let summarized = 0;
+  let failedBatches = 0;
 
   for (let i = 0; i < unsummarized.length; i += BATCH_SIZE) {
     const batch = unsummarized.slice(i, i + BATCH_SIZE);
     console.log(`  Batch ${Math.floor(i / BATCH_SIZE) + 1}: ${batch.length} articles`);
     const count = await summarizeBatch(batch);
     summarized += count;
+    if (count < batch.length) failedBatches++;
 
     // Small delay between batches to be nice to the API
     if (i + BATCH_SIZE < unsummarized.length) {
@@ -125,6 +156,7 @@ export async function summarizeUnsummarized(): Promise<{ summarized: number }> {
     }
   }
 
-  console.log(`Summarization complete: ${summarized} articles processed`);
-  return { summarized };
+  const pending = unsummarized.length - summarized;
+  console.log(`Summarization complete: ${summarized} articles processed, ${pending} pending`);
+  return { summarized, failedBatches, pending };
 }

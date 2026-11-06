@@ -1,4 +1,5 @@
 import type { ActionSignal } from './types/profile';
+import { SIGNAL_BOUNDS } from './riskThresholds';
 
 export interface SignalConfig {
   label: string;
@@ -46,10 +47,12 @@ export const ACTION_SIGNAL_CONFIG: Record<ActionSignal, SignalConfig> = {
   },
 };
 
-export function getSignalFromScore(score: number): ActionSignal {
-  if (score <= 30) return 'hold';
-  if (score <= 50) return 'watch';
-  if (score <= 70) return 'prepare';
-  if (score <= 85) return 'hedge';
+/** Returns null for a non-finite score so missing data is never shown as the worst signal. */
+export function getSignalFromScore(score: number): ActionSignal | null {
+  if (!Number.isFinite(score)) return null;
+  if (score <= SIGNAL_BOUNDS.hold) return 'hold';
+  if (score <= SIGNAL_BOUNDS.watch) return 'watch';
+  if (score <= SIGNAL_BOUNDS.prepare) return 'prepare';
+  if (score <= SIGNAL_BOUNDS.hedge) return 'hedge';
   return 'act';
 }

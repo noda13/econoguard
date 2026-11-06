@@ -19,9 +19,30 @@ function genId(url: string, title: string): string {
   return crypto.createHash('sha256').update(`${url}:${title}`).digest('hex').slice(0, 16);
 }
 
-export async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[]> {
+const MIN_RELEVANCE = 30;
+const MAX_NEWS = 200;
+const MAX_SEEN_IDS = 2000;
+
+// Unsummarized articles are kept so they are not dropped before the next LLM run can score them.
+export function selectPublishedNews(news: NewsArticle[]): NewsArticle[] {
+  return news.filter(a => !a.summaryJa || a.relevanceScore >= MIN_RELEVANCE).slice(0, MAX_NEWS);
+}
+
+// Low-relevance articles leave news.json but still reappear in the RSS feeds; remembering their ids
+// keeps them from consuming the per-run summarize budget again.
+export function nextSeenIds(prevSeen: string[], news: NewsArticle[]): string[] {
+  const dropped = news.filter(a => a.summaryJa && a.relevanceScore < MIN_RELEVANCE).map(a => a.id);
+  return [...new Set([...prevSeen, ...dropped])].slice(-MAX_SEEN_IDS);
+}
+
+function toIsoOrNow(pubDate: string | undefined): string {
+  const d = pubDate ? new Date(pubDate) : new Date();
+  return Number.isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
+}
+
+export async function collectNews(existing: NewsArticle[], seenIds: string[] = []): Promise<NewsArticle[]> {
   const parser = new Parser({ timeout: 10000, headers: { 'User-Agent': 'Econoguard/1.0' } });
-  const ids = new Set(existing.map(a => a.id));
+  const ids = new Set([...existing.map(a => a.id), ...seenIds]);
   const fresh: NewsArticle[] = [];
 
   const results = await Promise.allSettled(
@@ -32,9 +53,10 @@ export async function collectNews(existing: NewsArticle[]): Promise<NewsArticle[
         if (!item.title || !item.link) continue;
         const id = genId(item.link, item.title);
         if (ids.has(id)) continue;
+        ids.add(id);
         items.push({
           id, source: src.source, originalTitle: item.title, originalUrl: item.link,
-          publishedAt: item.pubDate ? new Date(item.pubDate).toISOString() : new Date().toISOString(),
+          publishedAt: toIsoOrNow(item.pubDate),
           summaryJa: '', relevanceScore: 0, riskCategories: [],
         });
       }

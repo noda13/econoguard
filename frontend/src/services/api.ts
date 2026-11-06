@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { filterRecentHistory } from '../lib/history';
 
 // Detect if running in static mode (GitHub Pages)
 const isStatic = import.meta.env.VITE_STATIC_DATA === 'true';
@@ -133,10 +134,7 @@ export const fetchRisks = async (): Promise<RiskAssessment[]> => {
 export const fetchRiskHistory = async (category: string, days = 30): Promise<RiskAssessment[]> => {
   if (isStatic) {
     const history = await fetchStaticJson<Record<string, RiskAssessment[]>>('risk-history.json');
-    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
-    return (history[category] || [])
-      .filter((entry) => new Date(entry.assessedAt).getTime() >= cutoff)
-      .map(normalizeRiskAssessment);
+    return filterRecentHistory(history[category] || [], days).map(normalizeRiskAssessment);
   }
   const { data } = await api.get<RiskAssessment[]>(`/risks/${category}`, { params: { days } });
   return data.map(normalizeRiskAssessment);
@@ -175,10 +173,4 @@ export interface EconomicEvent {
   importance: 'high' | 'medium';
 }
 
-export const fetchEvents = async (): Promise<EconomicEvent[]> => {
-  if (isStatic) {
-    return fetchStaticJson<EconomicEvent[]>('events.json');
-  }
-  // Backend mode not implemented yet — return empty
-  return [];
-};
+export const fetchEvents = (): Promise<EconomicEvent[]> => fetchStaticJson<EconomicEvent[]>('events.json');

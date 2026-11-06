@@ -60,4 +60,24 @@ describe('parseLLMJson', () => {
   it('throws on invalid JSON inside a fence', () => {
     expect(() => parseLLMJson('```json\n{"a":\n```')).toThrow(SyntaxError);
   });
+
+  it('extracts JSON that follows a leading sentence', () => {
+    expect(parseLLMJson('Here is the JSON: {"a":1}')).toEqual({ a: 1 });
+  });
+
+  it('extracts JSON followed by trailing commentary', () => {
+    expect(parseLLMJson('[{"a":1}]\n\nHope this helps!')).toEqual([{ a: 1 }]);
+  });
+
+  it('skips brackets in the prose before the payload', () => {
+    expect(parseLLMJson('Note [see below]: result is {"a":[1,2]} done')).toEqual({ a: [1, 2] });
+  });
+
+  it('is not confused by braces inside JSON strings', () => {
+    expect(parseLLMJson('Result: {"a":"}{\\"x"} end')).toEqual({ a: '}{"x' });
+  });
+
+  it('throws when no balanced JSON exists in the text', () => {
+    expect(() => parseLLMJson('prefix {"a": [1, 2')).toThrow(SyntaxError);
+  });
 });

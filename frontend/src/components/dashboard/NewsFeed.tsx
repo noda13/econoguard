@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useNews } from '../../hooks/useNews';
 import { LoadingSpinner } from '../common/LoadingSpinner';
-import { formatDate } from '../../lib/formatters';
+import { formatDate, safeHttpUrl } from '../../lib/formatters';
 import { categoryLabels } from '../../lib/riskColors';
 
 export function NewsFeed() {
@@ -28,7 +28,9 @@ export function NewsFeed() {
         <p className="text-sm text-gray-500">関連度の高いニュースはありません</p>
       ) : (
         <div className="space-y-3">
-          {filtered.map((article) => (
+          {filtered.map((article) => {
+            const href = safeHttpUrl(article.originalUrl);
+            return (
             <div key={article.id} className="bg-gray-800 rounded-lg p-4 border border-gray-700">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-gray-500 uppercase font-mono">{article.source}</span>
@@ -38,7 +40,20 @@ export function NewsFeed() {
                   <span className="text-xs bg-red-900/30 text-red-400 px-1.5 py-0.5 rounded">重要</span>
                 )}
               </div>
-              <h3 className="text-sm font-medium text-gray-200 mb-1">{article.originalTitle}</h3>
+              <h3 className="text-sm font-medium text-gray-200 mb-1">
+                {href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-400 hover:underline"
+                  >
+                    {article.originalTitle}
+                  </a>
+                ) : (
+                  article.originalTitle
+                )}
+              </h3>
               <p className="text-sm text-gray-400 mb-2">{article.summaryJa}</p>
               <div className="flex gap-1 flex-wrap">
                 {article.riskCategories.map((cat) => (
@@ -48,7 +63,8 @@ export function NewsFeed() {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

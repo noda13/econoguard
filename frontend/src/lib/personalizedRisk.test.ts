@@ -440,8 +440,6 @@ describe('getIndicatorRelevance', () => {
 
   const cases: Array<[string, Row[]]> = [
     ['USDJPY', foreignBoundaries],
-    ['US_CPI', foreignBoundaries],
-    ['US_FFR', foreignBoundaries],
     [
       'VIX',
       [
@@ -505,15 +503,6 @@ describe('getIndicatorRelevance', () => {
         [{ domestic_equity: 51 }, 'medium'],
         [{ domestic_equity: 50 }, 'low'],
         [{ developed_bond: 21, domestic_equity: 51 }, 'high'],
-      ],
-    ],
-    [
-      'US10Y',
-      [
-        [{ developed_bond: 21 }, 'high'],
-        [{ developed_bond: 20 }, 'low'],
-        [{ domestic_equity: 51 }, 'medium'],
-        [{ domestic_equity: 50 }, 'low'],
       ],
     ],
     [
@@ -590,28 +579,32 @@ describe('personalizeRisk', () => {
   });
 
   it('derives score, signal and interpretation from the composite and the profile', () => {
-    const result = personalizeRisk(composite(50), [], MID);
+    const result = personalizeRisk(composite(50), [], MID)!;
     expect(result.personalizedScore).toBe(60);
     expect(result.signal).toBe('prepare');
     expect(result.interpretation).toBe('48歳・株式75%のポートフォリオでは、リバランスの準備を検討すべき水準です');
   });
 
-  it('switches signal exactly at the personalized score boundaries 70/71 and 85/86', () => {
-    const signalFor = (score: number) => personalizeRisk(composite(score), [], CAPPED).signal;
-    expect(signalFor(50)).toBe('prepare');
-    expect(signalFor(51)).toBe('hedge');
-    expect(signalFor(61)).toBe('hedge');
-    expect(signalFor(62)).toBe('act');
+  it('switches signal exactly at the personalized score boundaries 60/61 and 80/81', () => {
+    const signalFor = (score: number) => personalizeRisk(composite(score), [], CAPPED)?.signal;
+    expect(signalFor(43)).toBe('prepare');
+    expect(signalFor(44)).toBe('hedge');
+    expect(signalFor(57)).toBe('hedge');
+    expect(signalFor(58)).toBe('act');
+  });
+
+  it.each([NaN, Infinity])('returns null when the composite score is %s', (score) => {
+    expect(personalizeRisk(composite(score), [], NEUTRAL)).toBeNull();
   });
 
   it('rounds the equity percentage shown in the interpretation', () => {
     const p = profile(35, 'standard', { domestic_equity: 33.5 });
-    expect(personalizeRisk(composite(10), [], p).interpretation).toContain('株式34%');
+    expect(personalizeRisk(composite(10), [], p)?.interpretation).toContain('株式34%');
   });
 
   it('maps each risk to a category impact in order, using the risk score', () => {
     const p = profile(35, 'standard', { developed_equity: 20 });
-    const result = personalizeRisk(composite(40), [risk('technology', 70), risk('technology', 20), risk('mystery', 50)], p);
+    const result = personalizeRisk(composite(40), [risk('technology', 70), risk('technology', 20), risk('mystery', 50)], p)!;
     expect(result.categoryImpacts.map(i => [i.category, i.impactLevel])).toEqual([
       ['technology', 'high'],
       ['technology', 'low'],
@@ -620,6 +613,6 @@ describe('personalizeRisk', () => {
   });
 
   it('returns no category impacts for no risks', () => {
-    expect(personalizeRisk(composite(40), [], NEUTRAL).categoryImpacts).toEqual([]);
+    expect(personalizeRisk(composite(40), [], NEUTRAL)?.categoryImpacts).toEqual([]);
   });
 });

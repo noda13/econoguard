@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ECONOMIC_EVENTS, type EconomicEvent } from '../economic-events.js';
+import { checkEventCoverage, ECONOMIC_EVENTS, type EconomicEvent } from '../economic-events.js';
 import { selectUpcomingEvents } from './events.js';
 
 function ev(date: string, titleJa = date): EconomicEvent {
@@ -88,11 +88,11 @@ describe('selectUpcomingEvents', () => {
     const result = selectUpcomingEvents(new Date('2026-10-24T00:00:00Z'));
     expect(dates(result)).toEqual([
       '2026-10-28',
-      '2026-10-28',
       '2026-10-29',
       '2026-10-29',
+      '2026-10-30',
       '2026-11-06',
-      '2026-11-12',
+      '2026-11-10',
       '2026-11-16',
     ]);
   });
@@ -169,8 +169,43 @@ describe('ECONOMIC_EVENTS data integrity', () => {
   it('holds FOMC decisions on Wednesdays, ECB decisions on Thursdays and the jobs report on Fridays', () => {
     const weekdayOf = (date: string) => new Date(`${date}T00:00:00Z`).getUTCDay();
     const all = (needle: string) => ECONOMIC_EVENTS.filter(e => e.titleJa.includes(needle)).map(e => e.date);
+    // BLS moves the release earlier when Friday is a federal holiday (2026-07-03) and delayed 2026-02-11 after a shutdown.
+    const holidayEves = new Set(['2026-07-02']);
+    const delayedReleases = new Set(['2026-02-11']);
     for (const d of all('FOMC')) expect(weekdayOf(d), `FOMC ${d}`).toBe(3);
     for (const d of all('ECB')) expect(weekdayOf(d), `ECB ${d}`).toBe(4);
-    for (const d of all('雇用統計')) expect(weekdayOf(d), `jobs report ${d}`).toBe(5);
+    for (const d of all('雇用統計')) {
+      if (holidayEves.has(d)) expect(weekdayOf(d), `jobs report ${d}`).toBe(4);
+      else if (!delayedReleases.has(d)) expect(weekdayOf(d), `jobs report ${d}`).toBe(5);
+    }
+  });
+
+  it('matches the official 2026-2027 BOJ decision dates (second day of each meeting)', () => {
+    expect(byTitle('日銀', '2026')).toEqual([
+      '2026-01-23', '2026-03-19', '2026-04-28', '2026-06-16', '2026-07-31', '2026-09-18', '2026-10-30', '2026-12-18',
+    ]);
+    expect(byTitle('日銀', '2027')).toEqual([
+      '2027-01-22', '2027-03-18', '2027-04-28', '2027-06-11', '2027-07-22', '2027-09-22', '2027-10-29', '2027-12-17',
+    ]);
+  });
+});
+
+describe('checkEventCoverage', () => {
+  const events = [ev('2026-12-18')];
+
+  it('warns when the last event is already in the past', () => {
+    expect(checkEventCoverage(new Date('2026-12-19T00:00:00Z'), 60, events)).toMatch(/no events after 2026-12-18/);
+  });
+
+  it('warns when the last event is closer than the minimum horizon', () => {
+    expect(checkEventCoverage(new Date('2026-11-07T00:00:00Z'), 60, events)).toMatch(/ends on 2026-12-18 \(41 days ahead/);
+  });
+
+  it('returns null when the horizon is long enough', () => {
+    expect(checkEventCoverage(new Date('2026-10-01T00:00:00Z'), 60, events)).toBeNull();
+  });
+
+  it('warns on an empty list', () => {
+    expect(checkEventCoverage(new Date('2026-10-01T00:00:00Z'), 60, [])).not.toBeNull();
   });
 });

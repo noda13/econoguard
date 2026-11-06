@@ -13,8 +13,6 @@ export interface LLMConfig {
 const PROVIDER_DEFAULTS: Record<string, { baseUrl: string; model: string }> = {
   groq:     { baseUrl: 'https://api.groq.com/openai/v1', model: 'llama-3.3-70b-versatile' },
   openai:   { baseUrl: 'https://api.openai.com/v1', model: 'gpt-4o-mini' },
-  together: { baseUrl: 'https://api.together.xyz/v1', model: 'meta-llama/Llama-3.3-70B-Instruct-Turbo' },
-  openrouter: { baseUrl: 'https://openrouter.ai/api/v1', model: 'meta-llama/llama-3.3-70b-instruct' },
 };
 
 export function detectProvider(): LLMConfig | null {
@@ -59,7 +57,7 @@ export function detectProvider(): LLMConfig | null {
 
 export async function callLLM(system: string, user: string): Promise<string> {
   const config = detectProvider();
-  if (!config) throw new Error('No LLM configured. Set GROQ_API_KEY, GEMINI_API_KEY, or LLM_API_KEY+LLM_BASE_URL.');
+  if (!config) throw new Error('No LLM configured. Set GROQ_API_KEY, GEMINI_API_KEY, OPENAI_API_KEY, or LLM_API_KEY+LLM_BASE_URL.');
 
   if (config.provider === 'gemini') {
     return callGemini(system, user, config.key);
@@ -93,6 +91,7 @@ async function callGemini(system: string, user: string, key: string): Promise<st
   const model = genAI.getGenerativeModel({
     model: process.env.LLM_MODEL || 'gemini-flash-latest',
     systemInstruction: system,
+    generationConfig: { responseMimeType: 'application/json' },
   });
   const r = await model.generateContent(
     { contents: [{ role: 'user', parts: [{ text: user }] }] },
@@ -101,12 +100,24 @@ async function callGemini(system: string, user: string, key: string): Promise<st
   return r.response.text();
 }
 
+function stripFence(text: string): string {
+  const s = text.trim();
+  return s.startsWith('```') ? s.replace(/^```(?:json)?\r?\n?/, '').replace(/\r?\n?```$/, '') : s;
+}
+
 export function parseJson(text: string): unknown {
+  const s = stripFence(text);
   try {
-    let s = text.trim();
-    if (s.startsWith('```')) s = s.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
     return JSON.parse(s);
   } catch (e) {
+    // Models sometimes wrap the payload in prose despite JSON mode; fall back to the outermost object/array.
+    const open = s.search(/[{[]/);
+    if (open !== -1) {
+      const close = s.lastIndexOf(s[open] === '{' ? '}' : ']');
+      if (close > open) {
+        try { return JSON.parse(s.slice(open, close + 1)); } catch { /* reported below */ }
+      }
+    }
     console.error('JSON parse failed:', e instanceof Error ? e.message : e);
     console.error('Raw text (first 200 chars):', text.slice(0, 200));
     throw new Error('LLM returned invalid JSON');

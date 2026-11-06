@@ -16,7 +16,7 @@ const MS_PER_DAY = 24 * 60 * 60 * 1000;
 export function DashboardPage() {
   const { data: risks, isError: isRisksError } = useQuery({ queryKey: ['risks'], queryFn: fetchRisks });
   const { isError: isCompositeError } = useQuery({ queryKey: ['compositeRisk'], queryFn: fetchCompositeRisk });
-  const { data: collectedAt } = useQuery({ queryKey: ['lastUpdated'], queryFn: fetchLastUpdated });
+  const { data: riskUpdatedAt } = useQuery({ queryKey: ['lastUpdated'], queryFn: fetchLastUpdated });
 
   const lastUpdated = useMemo(() => {
     if (!risks?.length) return undefined;
@@ -25,14 +25,14 @@ export function DashboardPage() {
     ).assessedAt;
   }, [risks]);
 
-  const ageMs = collectedAt ? Date.now() - new Date(collectedAt).getTime() : 0;
+  const ageMs = riskUpdatedAt ? Date.now() - new Date(riskUpdatedAt).getTime() : 0;
   const staleDays = ageMs > STALE_THRESHOLD_DAYS * MS_PER_DAY ? Math.floor(ageMs / MS_PER_DAY) : 0;
 
   return (
     <DashboardLayout lastUpdated={lastUpdated}>
       {staleDays > 0 && (
         <div className="rounded-lg border border-amber-700 bg-amber-900/30 px-4 py-3 text-sm text-amber-300">
-          データが {staleDays} 日間更新されていません。表示内容は古い可能性があります。
+          リスク評価が {staleDays} 日間更新されていません。表示内容は古い可能性があります。
         </div>
       )}
       {(isRisksError || isCompositeError) && (

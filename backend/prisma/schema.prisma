@@ -17,6 +17,7 @@ model NewsArticle {
   summaryJa      String   @default("")
   relevanceScore Float    @default(0)
   riskCategories String   @default("[]")
+  rawContent     String?
   createdAt      DateTime @default(now())
 
   @@index([publishedAt])

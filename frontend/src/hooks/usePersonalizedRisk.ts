@@ -8,12 +8,12 @@ export function usePersonalizedRisk(
   compositeRisk: CompositeRisk | undefined,
   risks: RiskAssessment[] | undefined,
 ) {
-  const { profile, isConfigured } = useUserProfile();
+  const { profile } = useUserProfile();
 
   const result = useMemo<PersonalizedResult | null>(() => {
-    if (!isConfigured || !profile || !compositeRisk || !risks) return null;
+    if (!profile || !compositeRisk || !risks) return null;
     return personalizeRisk(compositeRisk, risks, profile);
-  }, [isConfigured, profile, compositeRisk, risks]);
+  }, [profile, compositeRisk, risks]);
 
-  return { result, isConfigured };
+  return { result };
 }

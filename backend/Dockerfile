@@ -1,28 +1,33 @@
+# Build context is the repository root (see docker-compose.yml) so the workspace lockfile can be frozen.
 FROM node:22-slim
-
-WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     openssl \
     libssl3 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g pnpm@9
+# Same major as CI; pnpm 9 and 10 differ in whether dependency build scripts (prisma) run, so keep them aligned.
+RUN npm install -g pnpm@10.33.4
 
-COPY package.json ./
+WORKDIR /app
+RUN chown node:node /app
+USER node
 
-# pnpm-lock.yaml lives at the workspace root, outside this build context, so the lockfile cannot be frozen; pnpm@9 is pinned because pnpm 10 skips dependency build scripts such as prisma's
-RUN pnpm install --no-frozen-lockfile
+COPY --chown=node:node package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
+COPY --chown=node:node backend/package.json backend/
 
-COPY prisma ./prisma/
+# The lockfile records autoInstallPeers=false; without the flag a frozen install rejects it as a settings mismatch.
+RUN pnpm install --frozen-lockfile --filter econoguard-backend...
 
+WORKDIR /app/backend
+
+COPY --chown=node:node backend/prisma ./prisma/
 RUN pnpm run prisma:generate
 
-COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
-
-COPY . .
+# Listed explicitly as defense in depth: BuildKit reads Dockerfile.dockerignore but the legacy builder reads the root .dockerignore, so a wholesale COPY would depend on both ignore files staying in sync.
+COPY --chown=node:node backend/src ./src/
+COPY --chown=node:node backend/tsconfig.json backend/entrypoint.sh ./
 
 EXPOSE 8901
 
-CMD ["/bin/sh", "/app/entrypoint.sh"]
+CMD ["/bin/sh", "/app/backend/entrypoint.sh"]

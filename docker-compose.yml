@@ -2,8 +2,8 @@
 services:
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: econoguard-backend
     environment:
       DATABASE_URL: file:./dev.db
@@ -21,21 +21,21 @@ services:
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-}
       PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING: 1
     ports:
-      - "8901:8901"
+      - "127.0.0.1:8901:8901"
     volumes:
-      - ./backend/src:/app/src
-      - ./backend/prisma:/app/prisma
+      - ./backend/src:/app/backend/src
+      - ./backend/prisma:/app/backend/prisma
 
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: frontend/Dockerfile
     container_name: econoguard-frontend
     ports:
       - "3901:3901"
     depends_on:
       - backend
     volumes:
-      - ./frontend/src:/app/src
+      - ./frontend/src:/app/frontend/src
     environment:
       VITE_API_URL: http://backend:8901

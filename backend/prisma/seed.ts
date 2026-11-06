@@ -130,7 +130,7 @@ async function main() {
     { code: 'USDJPY', name: 'ドル円', value: 142.35, previousValue: 148.20, unit: '円', source: 'openexchangerates', recordedAt: now },
     { code: 'US_CPI', name: '米国CPI（前年比）', value: 3.2, previousValue: 3.0, unit: '%', source: 'fred', recordedAt: now },
     { code: 'US_FFR', name: '米国政策金利', value: 5.25, previousValue: 5.25, unit: '%', source: 'fred', recordedAt: now },
-    { code: 'GOLD', name: '金価格', value: 3245.0, previousValue: 3105.0, unit: 'USD/oz', source: 'fred', recordedAt: now },
+    { code: 'GOLD', name: '金価格', value: 3245.0, previousValue: 3105.0, unit: 'USD/oz', source: 'yahoo', recordedAt: now },
     { code: 'US10Y', name: '米10年国債利回り', value: 4.38, previousValue: 4.25, unit: '%', source: 'fred', recordedAt: now },
     { code: 'BTC', name: 'ビットコイン', value: 82500.0, previousValue: 78200.0, unit: 'USD', source: 'coingecko', recordedAt: now },
   ];
