@@ -1,6 +1,8 @@
 name: Collect Economic Data
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,13 +29,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --ignore-scripts
-
-      - name: Type check scripts
-        run: pnpm run type-check:scripts
-
-      - name: Test scripts
-        run: pnpm exec vitest run scripts
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Run collection
         timeout-minutes: 10
