@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import { buildDataUrlPattern, buildNavigateFallbackDenylist } from './pwa-config';
 
 const base = process.env.VITE_BASE_PATH || '/';
-const dataUrlPattern = new RegExp(`${base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}data/[^/]+\\.json$`);
+const dataUrlPattern = buildDataUrlPattern(base);
 
 export default defineConfig({
   plugins: [
@@ -37,7 +38,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
         navigateFallback: `${base}index.html`,
         // バックエンド API は常にネットワークへ流し、SPA フォールバックの対象にもしない
-        navigateFallbackDenylist: [/^\/api\//, new RegExp(`^${base}api/`)],
+        navigateFallbackDenylist: buildNavigateFallbackDenylist(base),
         runtimeCaching: [
           {
             // データ JSON は precache せず、オンライン時は常に最新を取得する
