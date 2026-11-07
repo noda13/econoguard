@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { filterRecentHistory } from '../lib/history';
+import type { Meta } from '../lib/runHealth';
 
 // Detect if running in static mode (GitHub Pages)
 const isStatic = import.meta.env.VITE_STATIC_DATA === 'true';
@@ -156,11 +157,10 @@ export const fetchCompositeRisk = async (): Promise<CompositeRisk> => {
   return data;
 };
 
-export const fetchLastUpdated = async (): Promise<string | undefined> => {
+export const fetchMeta = async (): Promise<Meta | undefined> => {
   if (!isStatic) return undefined;
   try {
-    const meta = await fetchStaticJson<{ lastUpdated: string }>('meta.json');
-    return meta.lastUpdated;
+    return await fetchStaticJson<Meta>('meta.json');
   } catch {
     return undefined;
   }

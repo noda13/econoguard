@@ -1,6 +1,12 @@
 // Lives here (not in summarize.ts) so news.ts can use it without importing the LLM client.
 export const MAX_SUMMARY_ATTEMPTS = 3;
 
+export interface RunHealth {
+  sources: { total: number; failed: string[] };
+  summaries: { attempted: number; failed: number };
+  assessment: 'ok' | 'failed' | 'skipped';
+}
+
 export interface NewsArticle {
   id: string;
   source: string;

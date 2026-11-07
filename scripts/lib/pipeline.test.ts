@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { runCollection } from './pipeline.js';
 import { readJson, writeJsonBatch } from './io.js';
 import { detectProvider } from './llm.js';
-import { collectNews } from './news.js';
+import { collectNews, RSS_SOURCES } from './news.js';
 import { collectIndicators } from './indicators.js';
 import { summarize } from './summarize.js';
 import { assess } from './assess.js';
@@ -51,7 +51,7 @@ describe('runCollection', () => {
     vi.mocked(detectProvider).mockReset().mockReturnValue(null);
     vi.mocked(collectNews).mockReset().mockResolvedValue([]);
     vi.mocked(collectIndicators).mockReset().mockResolvedValue([]);
-    vi.mocked(summarize).mockReset().mockResolvedValue();
+    vi.mocked(summarize).mockReset().mockResolvedValue({ attempted: 0, failed: 0 });
     vi.mocked(assess).mockReset();
     vi.spyOn(console, 'log').mockImplementation(() => {});
     vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -98,7 +98,15 @@ describe('runCollection', () => {
 
     const out = written();
     for (const f of ['risks.json', 'risk-history.json', 'composite-risk.json']) expect(out).not.toHaveProperty(f);
-    expect(out['meta.json']).toEqual({ lastUpdated: '2026-08-04T00:00:00.000Z', lastCollectedAt: NOW.toISOString() });
+    expect(out['meta.json']).toEqual({
+      lastUpdated: '2026-08-04T00:00:00.000Z',
+      lastCollectedAt: NOW.toISOString(),
+      lastRun: {
+        sources: { total: RSS_SOURCES.length, failed: [] },
+        summaries: { attempted: 0, failed: 0 },
+        assessment: 'skipped',
+      },
+    });
     expect(summarize).not.toHaveBeenCalled();
   });
 
@@ -112,6 +120,30 @@ describe('runCollection', () => {
     const out = written();
     for (const f of ['risks.json', 'risk-history.json', 'composite-risk.json']) expect(out).not.toHaveProperty(f);
     expect(out['meta.json']).not.toHaveProperty('lastUpdated');
+  });
+
+  it('records failed sources, summary counts and a successful assessment in lastRun', async () => {
+    vi.mocked(detectProvider).mockReturnValue(llm);
+    vi.mocked(collectNews).mockImplementation(async (_e, _s, failed) => { failed?.push('ft', 'wsj'); return []; });
+    vi.mocked(summarize).mockResolvedValue({ attempted: 10, failed: 4 });
+    vi.mocked(assess).mockResolvedValue(CATEGORIES.map(c => risk(c, 50, NOW.toISOString())));
+
+    await runCollection(NOW);
+
+    expect(written()['meta.json'].lastRun).toEqual({
+      sources: { total: RSS_SOURCES.length, failed: ['ft', 'wsj'] },
+      summaries: { attempted: 10, failed: 4 },
+      assessment: 'ok',
+    });
+  });
+
+  it('records assessment as failed in lastRun when the assessment throws', async () => {
+    vi.mocked(detectProvider).mockReturnValue(llm);
+    vi.mocked(assess).mockRejectedValue(new Error('bad json'));
+
+    await runCollection(NOW);
+
+    expect(written()['meta.json'].lastRun.assessment).toBe('failed');
   });
 
   it('computes the composite once when none exists yet', async () => {
@@ -133,7 +165,7 @@ describe('runCollection', () => {
     const out = written();
     expect(out['news.json'].map((a: NewsArticle) => a.id)).toEqual(['pending', 'keep']);
     expect(out['seen-ids.json']).toEqual(['old', 'noise']);
-    expect(collectNews).toHaveBeenCalledWith([], ['old']);
+    expect(collectNews).toHaveBeenCalledWith([], ['old'], expect.any(Array));
   });
 
   it('warns when the event definitions are about to run out', async () => {

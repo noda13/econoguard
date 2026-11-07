@@ -95,6 +95,31 @@ describe('summarize', () => {
     expect(callLLMMock).toHaveBeenCalledTimes(5);
   });
 
+  describe('result counts', () => {
+    it('returns zero counts when there is nothing to summarize', async () => {
+      expect(await summarize([article(0, { summaryJa: 'done' })])).toEqual({ attempted: 0, failed: 0 });
+    });
+
+    it('counts attempted articles and those still unsummarized afterwards', async () => {
+      callLLMMock.mockResolvedValue(JSON.stringify({ results: [result(0)] }));
+      const news = [article(0), article(1), article(2, { summaryJa: 'done' })];
+      expect(await summarize(news)).toEqual({ attempted: 2, failed: 1 });
+    });
+
+    it('counts every attempted article as failed when the batch throws', async () => {
+      callLLMMock.mockRejectedValue(new Error('boom'));
+      expect(await summarize([article(0), article(1)])).toEqual({ attempted: 2, failed: 2 });
+    });
+
+    it('caps attempted at the per-run limit', async () => {
+      vi.useFakeTimers();
+      callLLMMock.mockResolvedValue(JSON.stringify({ results: [] }));
+      const done = summarize(Array.from({ length: 80 }, (_, i) => article(i)));
+      await vi.runAllTimersAsync();
+      expect(await done).toEqual({ attempted: 50, failed: 50 });
+    });
+  });
+
   describe('retry limit', () => {
     it('increments summaryAttempts only for articles that stay unsummarized after the batch', async () => {
       callLLMMock.mockResolvedValue(JSON.stringify({ results: [result(0), result(1, { relevanceScore: 150 })] }));
