@@ -94,12 +94,12 @@ function isRetryable(err: unknown): boolean {
   return err instanceof TypeError || (err as { name?: string } | null)?.name === 'TimeoutError';
 }
 
-async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, retryable: (err: unknown) => boolean = isRetryable): Promise<T> {
   for (let attempt = 1; ; attempt++) {
     try {
       return await fn();
     } catch (err) {
-      if (attempt >= MAX_ATTEMPTS || !isRetryable(err)) throw err;
+      if (attempt >= MAX_ATTEMPTS || !retryable(err)) throw err;
       const hinted = err instanceof HttpError ? err.retryAfterMs : undefined;
       const delay = Math.min(hinted ?? BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
       console.warn(`LLM request failed (${err instanceof Error ? err.message.slice(0, 120) : err}); retry ${attempt}/${MAX_ATTEMPTS - 1} in ${delay}ms`);
@@ -137,7 +137,16 @@ function callOpenAICompatible(system: string, user: string, config: LLMConfig): 
 }
 
 async function callGemini(system: string, user: string, key: string): Promise<string> {
-  const { GoogleGenerativeAI } = await import('@google/generative-ai');
+  const { GoogleGenerativeAI, GoogleGenerativeAIError, GoogleGenerativeAIFetchError, GoogleGenerativeAIAbortError } =
+    await import('@google/generative-ai');
+  // The SDK wraps fetch failures in a status-less GoogleGenerativeAIError and converts aborts to
+  // GoogleGenerativeAIAbortError (both with name "Error"; the constructor prefixes the message), so the generic check cannot see them.
+  const geminiRetryable = (err: unknown): boolean =>
+    isRetryable(err) ||
+    err instanceof GoogleGenerativeAIAbortError ||
+    (err instanceof GoogleGenerativeAIError &&
+      !(err instanceof GoogleGenerativeAIFetchError) &&
+      /^\[GoogleGenerativeAI Error\]: Error fetching from /.test(err.message));
   const genAI = new GoogleGenerativeAI(key);
   const model = genAI.getGenerativeModel({
     model: process.env.LLM_MODEL || 'gemini-flash-latest',
@@ -150,7 +159,7 @@ async function callGemini(system: string, user: string, key: string): Promise<st
       { signal: AbortSignal.timeout(60_000) },
     );
     return r.response.text();
-  });
+  }, geminiRetryable);
 }
 
 function stripFence(text: string): string {
