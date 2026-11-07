@@ -11,7 +11,7 @@ vi.mock('@google/generative-ai', async (importOriginal) => {
   };
 });
 
-import { GoogleGenerativeAIFetchError } from '@google/generative-ai';
+import { GoogleGenerativeAIAbortError, GoogleGenerativeAIError, GoogleGenerativeAIFetchError } from '@google/generative-ai';
 import { callLLM, setSleep } from './llm.js';
 
 // SDK の実エラーと同じ形（status: number を持つ）で投げる
@@ -78,6 +78,43 @@ describe('callLLM gemini retry', () => {
     generateContent.mockImplementation(async () => { throw fetchError(500, 'Internal Server Error'); });
 
     await expect(callLLM('sys', 'user')).rejects.toThrow('[500 Internal Server Error]');
+    expect(generateContent).toHaveBeenCalledTimes(3);
+    expect(sleeps).toEqual([2000, 4000]);
+  });
+
+  it('retries a network failure wrapped by the SDK as a status-less GoogleGenerativeAIError', async () => {
+    generateContent
+      .mockRejectedValueOnce(new GoogleGenerativeAIError('Error fetching from https://example.test: fetch failed'))
+      .mockResolvedValueOnce(okResult);
+
+    await expect(callLLM('sys', 'user')).resolves.toBe('{"ok":true}');
+    expect(generateContent).toHaveBeenCalledTimes(2);
+    expect(sleeps).toEqual([2000]);
+  });
+
+  it('retries an abort converted by the SDK to GoogleGenerativeAIAbortError', async () => {
+    generateContent
+      .mockRejectedValueOnce(new GoogleGenerativeAIAbortError('Request aborted when fetching https://example.test: aborted'))
+      .mockResolvedValueOnce(okResult);
+
+    await expect(callLLM('sys', 'user')).resolves.toBe('{"ok":true}');
+    expect(generateContent).toHaveBeenCalledTimes(2);
+  });
+
+  it('does not retry a status-less GoogleGenerativeAIError unrelated to fetching', async () => {
+    generateContent.mockRejectedValueOnce(new GoogleGenerativeAIError('Failed to parse stream'));
+
+    await expect(callLLM('sys', 'user')).rejects.toThrow('Failed to parse stream');
+    expect(generateContent).toHaveBeenCalledTimes(1);
+    expect(sleeps).toEqual([]);
+  });
+
+  it('throws after 3 attempts on persistent network failure', async () => {
+    generateContent.mockImplementation(async () => {
+      throw new GoogleGenerativeAIError('Error fetching from https://example.test: fetch failed');
+    });
+
+    await expect(callLLM('sys', 'user')).rejects.toThrow('Error fetching from');
     expect(generateContent).toHaveBeenCalledTimes(3);
     expect(sleeps).toEqual([2000, 4000]);
   });
