@@ -1,6 +1,10 @@
-import { ReactNode, useState } from 'react';
-import { UserProfileModal } from '../profile/UserProfileModal';
+import { lazy, ReactNode, Suspense, useState } from 'react';
 import { useUserProfile } from '../../contexts/UserProfileContext';
+
+// モーダルは開くまで不要なため、recharts を含む円グラフごと初期ロードから外す
+const UserProfileModal = lazy(() =>
+  import('../profile/UserProfileModal').then(m => ({ default: m.UserProfileModal })),
+);
 
 interface Props {
   children: ReactNode;
@@ -55,7 +59,11 @@ export function DashboardLayout({ children, lastUpdated }: Props) {
       <main className="max-w-7xl mx-auto px-6 py-6 space-y-6">
         {children}
       </main>
-      <UserProfileModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <UserProfileModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        </Suspense>
+      )}
     </div>
   );
 }

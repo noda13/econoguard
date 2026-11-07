@@ -1,15 +1,20 @@
-import { useMemo } from 'react';
+import { lazy, Suspense, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { DashboardLayout } from '../components/layout/DashboardLayout';
 import { CompositeRiskBanner } from '../components/dashboard/CompositeRiskBanner';
 import { RiskOverview } from '../components/dashboard/RiskOverview';
-import { RiskTrendChart } from '../components/dashboard/RiskTrendChart';
 import { IndicatorPanel } from '../components/dashboard/IndicatorPanel';
 import { NewsFeed } from '../components/dashboard/NewsFeed';
 import { PortfolioImpactPanel } from '../components/dashboard/PortfolioImpactPanel';
 import { EventCalendar } from '../components/dashboard/EventCalendar';
+import { LoadingSpinner } from '../components/common/LoadingSpinner';
 import { getRunWarnings } from '../lib/runHealth';
 import { fetchRisks, fetchCompositeRisk, fetchMeta } from '../services/api';
+
+// recharts が初期ロードの大半を占めるため、チャートは遅延読み込みする
+const RiskTrendChart = lazy(() =>
+  import('../components/dashboard/RiskTrendChart').then(m => ({ default: m.RiskTrendChart })),
+);
 
 const STALE_THRESHOLD_DAYS = 3;
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
@@ -52,7 +57,9 @@ export function DashboardPage() {
       <CompositeRiskBanner />
       <RiskOverview />
       <PortfolioImpactPanel />
-      <RiskTrendChart />
+      <Suspense fallback={<LoadingSpinner />}>
+        <RiskTrendChart />
+      </Suspense>
       <IndicatorPanel />
       <EventCalendar />
       <NewsFeed />
