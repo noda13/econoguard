@@ -31,4 +31,22 @@ describe('collectNews source failures', () => {
     const news = await collectNews([]);
     expect(news.map(a => a.originalTitle)).toEqual(['ok']);
   });
+
+  it('reports the names of the failed sources to the collector', async () => {
+    let call = 0;
+    parseURL.mockImplementation(async () => {
+      if (call++ % 2 === 0) return { items: [] };
+      throw new Error('403');
+    });
+    const failed: string[] = [];
+    await collectNews([], [], failed);
+    expect(failed).toEqual(RSS_SOURCES.filter((_, i) => i % 2 === 1).map(s => s.source));
+  });
+
+  it('leaves the collector empty when every source succeeds', async () => {
+    parseURL.mockResolvedValue({ items: [] });
+    const failed: string[] = [];
+    await collectNews([], [], failed);
+    expect(failed).toEqual([]);
+  });
 });

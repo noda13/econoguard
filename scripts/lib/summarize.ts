@@ -29,11 +29,14 @@ const summaryItemSchema = z.object({
 });
 const summaryResponseSchema = z.object({ results: z.array(z.unknown()) });
 
-export async function summarize(articles: NewsArticle[]): Promise<void> {
-  const todo = articles.filter(a => !a.summaryJa && (a.summaryAttempts ?? 0) < MAX_SUMMARY_ATTEMPTS);
-  if (!todo.length) return;
+const MAX_PER_RUN = 50;
 
-  for (let i = 0; i < Math.min(todo.length, 50); i += 10) {
+export async function summarize(articles: NewsArticle[]): Promise<{ attempted: number; failed: number }> {
+  const todo = articles.filter(a => !a.summaryJa && (a.summaryAttempts ?? 0) < MAX_SUMMARY_ATTEMPTS);
+  const targets = todo.slice(0, MAX_PER_RUN);
+  if (!todo.length) return { attempted: 0, failed: 0 };
+
+  for (let i = 0; i < Math.min(todo.length, MAX_PER_RUN); i += 10) {
     const batch = todo.slice(i, i + 10);
     const msg = batch.map((a, j) => `[${j}] ${a.source}: ${a.originalTitle}`).join('\n');
     try {
@@ -64,4 +67,5 @@ export async function summarize(articles: NewsArticle[]): Promise<void> {
     }
     if (i + 10 < todo.length) await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
   }
+  return { attempted: targets.length, failed: targets.filter(a => !a.summaryJa).length };
 }

@@ -49,7 +49,11 @@ function toIsoOrNow(pubDate: string | undefined): string {
   return Number.isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
 }
 
-export async function collectNews(existing: NewsArticle[], seenIds: string[] = []): Promise<NewsArticle[]> {
+export async function collectNews(
+  existing: NewsArticle[],
+  seenIds: string[] = [],
+  failedSources: string[] = [],
+): Promise<NewsArticle[]> {
   const parser = new Parser({ timeout: 10000, headers: { 'User-Agent': 'Econoguard/1.0' } });
   const ids = new Set([...existing.map(a => a.id), ...seenIds]);
   const fresh: NewsArticle[] = [];
@@ -75,12 +79,13 @@ export async function collectNews(existing: NewsArticle[], seenIds: string[] = [
   );
 
   const reasons: string[] = [];
-  for (const r of results) {
+  for (const [i, r] of results.entries()) {
     if (r.status === 'fulfilled') {
       fresh.push(...r.value);
     } else {
       const reason = r.reason instanceof Error ? r.reason.message : String(r.reason);
       reasons.push(reason);
+      failedSources.push(RSS_SOURCES[i].source);
       console.error(`  RSS failed:`, reason);
     }
   }
