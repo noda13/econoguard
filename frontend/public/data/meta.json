@@ -1,3 +1,15 @@
 {
-  "lastUpdated": "2026-08-04T02:48:34.398Z"
+  "lastUpdated": "2026-08-04T02:48:34.398Z",
+  "lastCollectedAt": "2026-11-08T05:57:21.766Z",
+  "lastRun": {
+    "sources": {
+      "total": 10,
+      "failed": []
+    },
+    "summaries": {
+      "attempted": 50,
+      "failed": 50
+    },
+    "assessment": "failed"
+  }
 }
