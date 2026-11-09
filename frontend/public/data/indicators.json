@@ -6,7 +6,7 @@
     "previousValue": 51523.05859375,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "SPX",
@@ -15,25 +15,25 @@
     "previousValue": 7353.72998046875,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "TOPIX",
     "name": "TOPIX(ETF)",
-    "value": 388.6,
-    "previousValue": 415.6000061035156,
+    "value": 402.2,
+    "previousValue": 388.6000061035156,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "USDJPY",
     "name": "ドル円",
-    "value": 158.425,
+    "value": 158.219,
     "previousValue": 157.4980010986328,
     "unit": "円",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "VIX",
@@ -42,7 +42,7 @@
     "previousValue": 28.18000030517578,
     "unit": "pt",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "UST10Y",
@@ -51,7 +51,7 @@
     "previousValue": 4.836999893188477,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "UST3M",
@@ -60,25 +60,25 @@
     "previousValue": 3.986999988555908,
     "unit": "%",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "WTI",
     "name": "原油(WTI)",
-    "value": 90.83,
-    "previousValue": 90.5199966430664,
+    "value": 90.23,
+    "previousValue": 90.83000183105469,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "GOLD",
     "name": "金",
-    "value": 4074.9,
-    "previousValue": 4113.5,
+    "value": 4128.4,
+    "previousValue": 4074.89990234375,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   },
   {
     "code": "HYG",
@@ -87,6 +87,6 @@
     "previousValue": 77.27999877929688,
     "unit": "USD",
     "source": "yahoo",
-    "recordedAt": "2026-11-08T05:57:22.501Z"
+    "recordedAt": "2026-11-09T06:20:31.062Z"
   }
 ]
